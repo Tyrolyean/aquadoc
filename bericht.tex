@@ -1,0 +1,237 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[european, siunitx, strokediode]{circuitikz}
+\usepackage{pgfplots} 
+\usepackage{float}
+\usepackage{fontspec}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage{titling}
+\usepackage{csvsimple}
+\usepackage{filecontents}
+\usepackage{pdfpages}
+\usepackage{listings}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Manuel Ljubic, Jack Neuner, Daniel Plank}
+\title{AquadDoc}
+\setmainfont{Arial}
+
+% #############################################################################
+% Compilation options. Used to enable or disable some parts of the document.
+% #############################################################################
+
+% Include the used datasheets in the document
+\def\datasheets{0}
+
+\def\psocdisasm{0}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\thetitle}
+\lhead{HN4-FTKL}
+\cfoot{Seite \thepage}
+\rfoot{Ljubic, Plank, Neuner}
+
+\begin{document}
+\begin{titlepage}
+\begin{center}
+\setlength{\fboxrule}{.5mm}
+\framebox{
+
+	\parbox{\textwidth}{
+	
+		\vspace{6mm}
+		\centering
+		\textbf{\Huge HN4-FTKL}
+		\break
+		\Large{
+			Abteilung Elektronik \break
+		}
+		
+		\normalsize{
+			an der Höheren technischen Bundeslehranstalt 1 \break
+			Innsbruck, Anichstraße 26 – 28 \break
+		}
+	}
+}
+\break
+\vspace{1mm}
+\setlength{\fboxrule}{.1mm}
+\framebox{
+	\parbox{\textwidth}{
+		\textbf{\maketitle}
+		\break Dokumentation des Wasserhaushalts einer 
+	Wasserversorgungsanlage für Kleinsiedlungsgebiete
+		
+	}
+}
+
+\end{center}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+\section{Aufgabenstelleung}
+
+\subsection{Aufbau}
+\begin{figure}
+	\centering
+	\def\svgwidth{\columnwidth}
+	\input{aufbau.pdf_tex}
+
+	\label{fig:schemaufb}
+	
+
+\end{figure}
+
+Ein Hochbehälter hat ein Fassungsvermögen um 1 Tag Wasser speichern zu können
+und ein Feuer zu löschen.
+
+\subsection{Sensoren}
+
+\begin{itemize}
+	\item{Wasser zwischen Quelle und Brunnen und Brunnen und Häuser} \\
+	 Umsetzung mittels Rotor mit Magnet an einer Schaufel, welcher einen
+	 REED-Kontakt schaltet. Aufgabe: Prellt dieser Schalter?
+	 \begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\textwidth]{Reed.png}
+		\label{fig:reed}
+		\caption{Schemata eines Reed-Schalters}
+	\end{figure}
+
+	\item{Wassertemperatur} \\
+	Digitaler Sensor --> Auflösung von 0.01°C
+
+	\item{Wasserstand}
+	Füllstand HB: Drucksensor, Ultraschallsensor, Potentiometer mit
+	Schwimmer, etc.
+
+	\item{Türschalter}
+	\item{Batteriestandsanzeige}
+
+
+\end{itemize}
+
+Anforderungen an die Funkübertragung:
+\begin{itemize}
+	\item{Datensicherheit}
+	\item{Übertragungsmöglichkeit (Manchester Kodierung)}
+	\item{Übertragungsantenne}
+\end{itemize}
+
+Gefundene Bauteile auf neuhold-elektronik.at:
+\begin{itemize}
+	\item{DS1722}: \\
+	SPI Digital Thermometer. 8-12 bit Auflösung.
+
+	\item{HC - SR04}: \\
+	PWM Ultraschall Messmodul. 2mA standby strom.
+	
+	\item{MAX640}: \\
+	5V Step-Down DC-DC Converter.
+
+	
+\end{itemize}
+
+\section{Test mittels Aurduino}
+
+Es wird ein Arduino verwendet um die gegebenen Sensoren DS1722 bzw. HC-SR04 zu 
+testen. Die SPI anschlüsse des Arduinos werden mit den Anschlüssen der
+jeweiligen Sensoren verbunden und auf die Verwendung der richtigen 
+Versorgungsspannung wird geachtet.
+
+\newpage
+\subsection{HC-SR04}
+
+\lstinputlisting[language=C++, numbers=left, frame=trBL, breaklines=true,
+ breakautoindent=true, formfeed=\newpage, label={lst:ardu_hc-sr04},
+ caption={Arduino Programm für HC-SR04}]{arduino/HC-SR04/HC-SR04.ino}
+
+\newpage
+\subsection{DS1722}
+
+\lstinputlisting[language=C++, numbers=left, frame=trBL, breaklines=true,
+ breakautoindent=true, formfeed=\newpage, label={lst:ardu_ds1722},
+ caption={Arduino Programm für DS1722}]{arduino/DS1722/DS1722.ino}
+
+\if\psocdisasm
+
+\section{PSoC}
+
+\subsection{General Information}
+
+The Programmble System on a chip (also known as PSoC) is a family of ARM 32bit
+Microprocessors with a few FPGA elements present on the IC. At the beginning of
+writing of this document neither feasible documentation from the side of Cypress
+nor any sourcecode is present.
+
+The focus of this document is soley on the CY8C5888LTI-LP097 chip, which is part
+of the PSoC 5 series of integrated circuits.
+
+\subsection{Reason}
+
+The reason for this document is, that the PSoC series of chips from cypress is
+used by us in school, but no one actually has knowledge of it's inner workings,
+or how this thing works beyond the PSoC-Creator, which is an IDE for 
+windows(TM).
+
+\subsection{Hardware component Description}
+
+\subsubsection{CPU}
+
+The cpu on the given PSoC is ARM Cortex M3 based clocked at a maximum of 80 MHz.
+The PSoC creator uses a standart ARM-GCC which is developed and maintained by
+the KEIL Software, a subsidary of the ARM Holding. It therefore uses an open
+toolchain, which is freely available and maintained.
+
+\subsection{PGA}
+
+The PSoC has a onboard PGA used to connect internal ports to some gates and
+harware components. The drawing program in the PSoC IDE has a design elaborator,
+used to 
+
+
+\fi
+
+\section{Addendum}
+
+\subsection{Literaturverzeichnis}
+
+\begin{itemize}
+	
+	\item{HC-SR04 Datenblatt}
+	\item{DS1722 Datenblatt}
+	\item{MAX640 Datenblatt}
+	\item{CY8C5888LTI-LP097 Datenblatt}
+
+\end{itemize}
+
+\if\datasheets
+	Die Angeführten Datenblätter wurden dem Dokument am Ende beigefügt.
+\fi
+
+\if\datasheets
+	\subsection{Datenblätter}
+
+	\subsubsection{HC-SR04}
+	\includepdf[pages={1-}]{../../../data/datasheets/HCSR04-1022824.pdf}
+
+	\subsubsection{DS1722}
+	\includepdf[pages={1-}]{../../../data/datasheets/DS1722.pdf}
+
+	\subsubsection{MAX640}
+	\includepdf[pages={1-}]{../../../data/datasheets/MAX639-MAX653.pdf}
+
+	\subsubsection{CY8C5888LTI-LP097}
+	\includepdf[pages={1-}]{../../../data/datasheets/CY8C5888LTI-LP097.pdf}
+
+\fi % End of datasheet section
+\end{document}
+

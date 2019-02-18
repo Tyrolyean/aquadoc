@@ -1,0 +1,84 @@
+%% Creator: Inkscape inkscape 0.92.4, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'aufbau.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{2230.73753306bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.52370877)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{aufbau.pdf}}%
+    \put(0.03523475,0.32927083){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Qulellfassung\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{aufbau.pdf}}%
+    \put(0.01314834,0.27593653){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}QF1\end{tabular}}}}%
+    \put(0.20190592,0.23947867){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}BS1\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{aufbau.pdf}}%
+    \put(0.11717082,0.32555448){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}105m\end{tabular}}}}%
+    \put(0.21891173,0.2952239){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Brunnenstube\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{aufbau.pdf}}%
+    \put(0.51233862,0.15586082){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Hauptbrunnen\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{aufbau.pdf}}%
+    \put(0.35479367,0.24241882){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}200m-2km\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{aufbau.pdf}}%
+    \put(0.71079873,0.48471063){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Qulellfassung\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{aufbau.pdf}}%
+    \put(0.62696918,0.45490928){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}QF2\end{tabular}}}}%
+    \put(0.63284947,0.36964495){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}BS2\end{tabular}}}}%
+    \put(0.70983435,0.36716347){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Brunnenstube\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{aufbau.pdf}}%
+    \put(0.78571367,0.08004028){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Haushalt\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{aufbau.pdf}}%
+    \put(0.89541655,0.08505027){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}Haushalt\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{aufbau.pdf}}%
+    \put(0.80315466,0.25886013){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}BS ... Brunnbenstube\end{tabular}}}}%
+    \put(0.80315466,0.24016078){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}HB... Hauptbrunnen\end{tabular}}}}%
+    \put(0.80315466,0.22144967){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}HH... Haushalt\end{tabular}}}}%
+    \put(0.80315466,0.20275034){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}QF... Quellfassung\end{tabular}}}}%
+  \end{picture}%
+\endgroup%

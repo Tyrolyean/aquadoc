@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created by diasvg.py -->
+<svg width="81.786cm" height="44.642cm" viewBox="6.582 -9.418 88.369 35.224"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect x="6.632" y="3.850" width="5.892" height="6.088" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="6.632" y="3.850" width="5.892" height="6.088" fill="none" stroke="#000000" stroke-width="0.100" />
+<rect x="6.632" y="3.850" width="5.892" height="6.088" fill="none" stroke="#000000" stroke-width="0.100" />
+<text x="9.578" y="7.115"  fill="#000000" text-anchor="middle" font-size="0.80" font-family="sans" font-style="normal" font-weight="400">
+Qulellfassung</text>
+<rect x="22.250" y="6.745" width="5.892" height="6.088" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="22.250" y="6.745" width="5.892" height="6.088" fill="none" stroke="#000000" stroke-width="0.100" />
+<rect x="22.250" y="6.745" width="5.892" height="6.088" fill="none" stroke="#000000" stroke-width="0.100" />
+<text x="7.700" y="11.650"  fill="#000000" text-anchor="start" font-size="1.76" font-family="sans" font-style="normal" font-weight="400">
+QF1</text>
+<text x="23.750" y="14.750"  fill="#000000" text-anchor="start" font-size="1.76" font-family="sans" font-style="normal" font-weight="400">
+BS1</text>
+<line x1="12.524" y1="6.894" x2="21.783" y2="9.650" stroke="#000000" stroke-width="0.100" />
+<polygon fill="#000000" stroke="none" stroke-width="0.100" points="22.143,9.757 21.592,9.854 21.783,9.650 21.735,9.375 "/>
+<polygon fill="none" stroke="#000000" stroke-width="0.100"  points="22.143,9.757 21.592,9.854 21.783,9.650 21.735,9.375 "/>
+<text x="16.545" y="7.431"  fill="#000000" text-anchor="start" font-size="0.80" font-family="sans" font-style="normal" font-weight="400">
+105m</text>
+<text x="25.196" y="10.010"  fill="#000000" text-anchor="middle" font-size="0.80" font-family="sans" font-style="normal" font-weight="400">
+Brunnenstube</text>
+<rect x="47.200" y="18.995" width="5.892" height="6.088" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="47.200" y="18.995" width="5.892" height="6.088" fill="none" stroke="#000000" stroke-width="0.100" />
+<rect x="47.200" y="18.995" width="5.892" height="6.088" fill="none" stroke="#000000" stroke-width="0.100" />
+<text x="50.146" y="21.860"  fill="#000000" text-anchor="middle" font-size="0.80" font-family="sans" font-style="normal" font-weight="400">
+Hauptbrunnen</text>
+<line x1="28.142" y1="9.789" x2="46.790" y2="21.776" stroke="#000000" stroke-width="0.100" />
+<polygon fill="#000000" stroke="none" stroke-width="0.100" points="47.106,21.979 46.550,21.919 46.790,21.776 46.821,21.498 "/>
+<polygon fill="none" stroke="#000000" stroke-width="0.100"  points="47.106,21.979 46.550,21.919 46.790,21.776 46.821,21.498 "/>
+<text x="36.750" y="14.500"  fill="#000000" text-anchor="start" font-size="0.80" font-family="sans" font-style="normal" font-weight="400">
+200m-2km</text>
+<rect x="64.075" y="-9.368" width="5.892" height="6.088" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="64.075" y="-9.368" width="5.892" height="6.088" fill="none" stroke="#000000" stroke-width="0.100" />
+<rect x="64.075" y="-9.368" width="5.892" height="6.088" fill="none" stroke="#000000" stroke-width="0.100" />
+<text x="67.021" y="-6.102"  fill="#000000" text-anchor="middle" font-size="0.80" font-family="sans" font-style="normal" font-weight="400">
+Qulellfassung</text>
+<rect x="63.993" y="0.628" width="5.892" height="6.088" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="63.993" y="0.628" width="5.892" height="6.088" fill="none" stroke="#000000" stroke-width="0.100" />
+<rect x="63.993" y="0.628" width="5.892" height="6.088" fill="none" stroke="#000000" stroke-width="0.100" />
+<text x="59.893" y="-3.568"  fill="#000000" text-anchor="start" font-size="1.76" font-family="sans" font-style="normal" font-weight="400">
+QF2</text>
+<text x="60.393" y="3.682"  fill="#000000" text-anchor="start" font-size="1.76" font-family="sans" font-style="normal" font-weight="400">
+BS2</text>
+<text x="66.939" y="3.893"  fill="#000000" text-anchor="middle" font-size="0.80" font-family="sans" font-style="normal" font-weight="400">
+Brunnenstube</text>
+<line x1="67.021" y1="-3.279" x2="66.949" y2="0.141" stroke="#000000" stroke-width="0.100" />
+<polygon fill="#000000" stroke="none" stroke-width="0.100" points="66.941,0.516 66.702,0.011 66.949,0.141 67.202,0.021 "/>
+<polygon fill="none" stroke="#000000" stroke-width="0.100"  points="66.941,0.516 66.702,0.011 66.949,0.141 67.202,0.021 "/>
+<line x1="66.939" y1="6.716" x2="53.418" y2="21.678" stroke="#000000" stroke-width="0.100" />
+<polygon fill="#000000" stroke="none" stroke-width="0.100" points="53.167,21.956 53.317,21.418 53.418,21.678 53.688,21.753 "/>
+<polygon fill="none" stroke="#000000" stroke-width="0.100"  points="53.167,21.956 53.317,21.418 53.418,21.678 53.688,21.753 "/>
+<rect x="71.082" y="25.700" width="4.618" height="4.772" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="71.082" y="25.700" width="4.618" height="4.772" fill="none" stroke="#000000" stroke-width="0.100" />
+<rect x="71.082" y="25.700" width="4.618" height="4.772" fill="none" stroke="#000000" stroke-width="0.100" />
+<text x="73.391" y="28.307"  fill="#000000" text-anchor="middle" font-size="0.80" font-family="sans" font-style="normal" font-weight="400">
+Haushalt</text>
+<line x1="50.111" y1="25.133" x2="50.000" y2="35.050" stroke="#000000" stroke-width="0.100" />
+<line x1="50.050" y1="34.900" x2="86.700" y2="34.950" stroke="#000000" stroke-width="0.100" />
+<rect x="80.550" y="25.440" width="4.618" height="4.772" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="80.550" y="25.440" width="4.618" height="4.772" fill="none" stroke="#000000" stroke-width="0.100" />
+<rect x="80.550" y="25.440" width="4.618" height="4.772" fill="none" stroke="#000000" stroke-width="0.100" />
+<text x="82.719" y="27.881"  fill="#000000" text-anchor="middle" font-size="0.80" font-family="sans" font-style="normal" font-weight="400">
+Haushalt</text>
+<line x1="73.391" y1="30.472" x2="73.354" y2="34.626" stroke="#000000" stroke-width="0.100" />
+<polygon fill="#000000" stroke="none" stroke-width="0.100" points="73.351,35.001 73.106,34.499 73.354,34.626 73.606,34.503 "/>
+<polygon fill="none" stroke="#000000" stroke-width="0.100"  points="73.351,35.001 73.106,34.499 73.354,34.626 73.606,34.503 "/>
+<line x1="82.859" y1="30.212" x2="82.851" y2="34.476" stroke="#000000" stroke-width="0.100" />
+<polygon fill="#000000" stroke="none" stroke-width="0.100" points="82.850,34.851 82.601,34.350 82.851,34.476 83.101,34.351 "/>
+<polygon fill="none" stroke="#000000" stroke-width="0.100"  points="82.850,34.851 82.601,34.350 82.851,34.476 83.101,34.351 "/>
+<text x="74.874" y="13.102"  fill="#000000" text-anchor="start" font-size="1.59" font-family="sans" font-style="normal" font-weight="400">
+BS ... Brunnbenstube</text>
+<text x="74.874" y="14.692"  fill="#000000" text-anchor="start" font-size="1.59" font-family="sans" font-style="normal" font-weight="400">
+HB... Hauptbrunnen</text>
+<text x="74.874" y="16.283"  fill="#000000" text-anchor="start" font-size="1.59" font-family="sans" font-style="normal" font-weight="400">
+HH... Haushalt</text>
+<text x="74.874" y="17.873"  fill="#000000" text-anchor="start" font-size="1.59" font-family="sans" font-style="normal" font-weight="400">
+QF... Quellfassung</text>
+</svg>
