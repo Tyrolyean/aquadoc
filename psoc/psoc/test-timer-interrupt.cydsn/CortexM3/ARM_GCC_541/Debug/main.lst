@@ -1,0 +1,689 @@
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqlyLET.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.main,"ax",%progbits
+  20              		.align	2
+  21              		.global	main
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	main, %function
+  25              	main:
+  26              	.LFB63:
+  27              		.file 1 "main.c"
+   1:main.c        **** /* ========================================
+   2:main.c        ****  *
+   3:main.c        ****  * Copyright YOUR COMPANY, THE YEAR
+   4:main.c        ****  * All Rights Reserved
+   5:main.c        ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:main.c        ****  *
+   7:main.c        ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:main.c        ****  * WHICH IS THE PROPERTY OF your company.
+   9:main.c        ****  *
+  10:main.c        ****  * ========================================
+  11:main.c        **** */
+  12:main.c        **** 
+  13:main.c        **** #include <stdlib.h>
+  14:main.c        **** #include <unistd.h>
+  15:main.c        **** 
+  16:main.c        **** #include "project.h"
+  17:main.c        **** 
+  18:main.c        **** int main(void){
+  28              		.loc 1 18 0
+  29              		.cfi_startproc
+  30              		@ Volatile: function does not return.
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33 0000 08B5     		push	{r3, lr}
+  34              		.cfi_def_cfa_offset 8
+  35              		.cfi_offset 3, -8
+  36              		.cfi_offset 14, -4
+  19:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+  37              		.loc 1 19 0
+  38              		.syntax unified
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqlyLET.s 			page 2
+
+
+  39              	@ 19 "main.c" 1
+  40 0002 62B6     		CPSIE   i
+  41              	@ 0 "" 2
+  42              		.thumb
+  43              		.syntax unified
+  44              	.L2:
+  20:main.c        **** 
+  21:main.c        ****     for(;;){
+  22:main.c        ****         /* Place your application code here. */
+  23:main.c        ****         LED_OUT_Write(1);
+  45              		.loc 1 23 0 discriminator 1
+  46 0004 0120     		movs	r0, #1
+  47 0006 FFF7FEFF 		bl	LED_OUT_Write
+  48              	.LVL0:
+  24:main.c        ****         sleep(1);
+  49              		.loc 1 24 0 discriminator 1
+  50 000a 0120     		movs	r0, #1
+  51 000c FFF7FEFF 		bl	sleep
+  52              	.LVL1:
+  25:main.c        ****         LED_OUT_Write(0);
+  53              		.loc 1 25 0 discriminator 1
+  54 0010 0020     		movs	r0, #0
+  55 0012 FFF7FEFF 		bl	LED_OUT_Write
+  56              	.LVL2:
+  26:main.c        ****         sleep(0);
+  57              		.loc 1 26 0 discriminator 1
+  58 0016 0020     		movs	r0, #0
+  59 0018 FFF7FEFF 		bl	sleep
+  60              	.LVL3:
+  61 001c F2E7     		b	.L2
+  62              		.cfi_endproc
+  63              	.LFE63:
+  64              		.size	main, .-main
+  65 001e 00BF     		.section	.text.ISR_1m,"ax",%progbits
+  66              		.align	2
+  67              		.global	ISR_1m
+  68              		.thumb
+  69              		.thumb_func
+  70              		.type	ISR_1m, %function
+  71              	ISR_1m:
+  72              	.LFB64:
+  27:main.c        ****     }
+  28:main.c        ****     
+  29:main.c        **** }
+  30:main.c        **** 
+  31:main.c        **** CY_ISR(ISR_1m){
+  73              		.loc 1 31 0
+  74              		.cfi_startproc
+  75              		@ args = 0, pretend = 0, frame = 0
+  76              		@ frame_needed = 0, uses_anonymous_args = 0
+  77 0000 08B5     		push	{r3, lr}
+  78              		.cfi_def_cfa_offset 8
+  79              		.cfi_offset 3, -8
+  80              		.cfi_offset 14, -4
+  32:main.c        ****     LED_OUT_Write(1);
+  81              		.loc 1 32 0
+  82 0002 0120     		movs	r0, #1
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqlyLET.s 			page 3
+
+
+  83 0004 FFF7FEFF 		bl	LED_OUT_Write
+  84              	.LVL4:
+  33:main.c        ****     sleep(1);
+  85              		.loc 1 33 0
+  86 0008 0120     		movs	r0, #1
+  87 000a FFF7FEFF 		bl	sleep
+  88              	.LVL5:
+  34:main.c        ****     LED_OUT_Write(0);
+  89              		.loc 1 34 0
+  90 000e 0020     		movs	r0, #0
+  91 0010 FFF7FEFF 		bl	LED_OUT_Write
+  92              	.LVL6:
+  93 0014 08BD     		pop	{r3, pc}
+  94              		.cfi_endproc
+  95              	.LFE64:
+  96              		.size	ISR_1m, .-ISR_1m
+  97 0016 00BF     		.text
+  98              	.Letext0:
+  99              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 100              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 101              		.file 4 "Generated_Source\\PSoC5/LED_OUT.h"
+ 102              		.file 5 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 103              		.file 6 "Generated_Source\\PSoC5/core_cm3.h"
+ 104              		.section	.debug_info,"",%progbits
+ 105              	.Ldebug_info0:
+ 106 0000 75010000 		.4byte	0x175
+ 107 0004 0400     		.2byte	0x4
+ 108 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 109 000a 04       		.byte	0x4
+ 110 000b 01       		.uleb128 0x1
+ 111 000c 33000000 		.4byte	.LASF18
+ 112 0010 0C       		.byte	0xc
+ 113 0011 27000000 		.4byte	.LASF19
+ 114 0015 0C010000 		.4byte	.LASF20
+ 115 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 116 001d 00000000 		.4byte	0
+ 117 0021 00000000 		.4byte	.Ldebug_line0
+ 118 0025 02       		.uleb128 0x2
+ 119 0026 04       		.byte	0x4
+ 120 0027 07       		.byte	0x7
+ 121 0028 1A000000 		.4byte	.LASF0
+ 122 002c 03       		.uleb128 0x3
+ 123 002d 04       		.byte	0x4
+ 124 002e 05       		.byte	0x5
+ 125 002f 696E7400 		.ascii	"int\000"
+ 126 0033 02       		.uleb128 0x2
+ 127 0034 08       		.byte	0x8
+ 128 0035 05       		.byte	0x5
+ 129 0036 51010000 		.4byte	.LASF1
+ 130 003a 02       		.uleb128 0x2
+ 131 003b 08       		.byte	0x8
+ 132 003c 04       		.byte	0x4
+ 133 003d 78010000 		.4byte	.LASF2
+ 134 0041 02       		.uleb128 0x2
+ 135 0042 01       		.byte	0x1
+ 136 0043 06       		.byte	0x6
+ 137 0044 6C010000 		.4byte	.LASF3
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqlyLET.s 			page 4
+
+
+ 138 0048 02       		.uleb128 0x2
+ 139 0049 01       		.byte	0x1
+ 140 004a 08       		.byte	0x8
+ 141 004b EA000000 		.4byte	.LASF4
+ 142 004f 02       		.uleb128 0x2
+ 143 0050 02       		.byte	0x2
+ 144 0051 05       		.byte	0x5
+ 145 0052 94010000 		.4byte	.LASF5
+ 146 0056 02       		.uleb128 0x2
+ 147 0057 02       		.byte	0x2
+ 148 0058 07       		.byte	0x7
+ 149 0059 07000000 		.4byte	.LASF6
+ 150 005d 04       		.uleb128 0x4
+ 151 005e 84010000 		.4byte	.LASF12
+ 152 0062 02       		.byte	0x2
+ 153 0063 3F       		.byte	0x3f
+ 154 0064 68000000 		.4byte	0x68
+ 155 0068 02       		.uleb128 0x2
+ 156 0069 04       		.byte	0x4
+ 157 006a 05       		.byte	0x5
+ 158 006b 03010000 		.4byte	.LASF7
+ 159 006f 02       		.uleb128 0x2
+ 160 0070 04       		.byte	0x4
+ 161 0071 07       		.byte	0x7
+ 162 0072 C1000000 		.4byte	.LASF8
+ 163 0076 02       		.uleb128 0x2
+ 164 0077 08       		.byte	0x8
+ 165 0078 07       		.byte	0x7
+ 166 0079 D3000000 		.4byte	.LASF9
+ 167 007d 02       		.uleb128 0x2
+ 168 007e 04       		.byte	0x4
+ 169 007f 07       		.byte	0x7
+ 170 0080 A6010000 		.4byte	.LASF10
+ 171 0084 02       		.uleb128 0x2
+ 172 0085 01       		.byte	0x1
+ 173 0086 08       		.byte	0x8
+ 174 0087 F8000000 		.4byte	.LASF11
+ 175 008b 04       		.uleb128 0x4
+ 176 008c 9E010000 		.4byte	.LASF13
+ 177 0090 03       		.byte	0x3
+ 178 0091 2C       		.byte	0x2c
+ 179 0092 5D000000 		.4byte	0x5d
+ 180 0096 02       		.uleb128 0x2
+ 181 0097 04       		.byte	0x4
+ 182 0098 04       		.byte	0x4
+ 183 0099 8E010000 		.4byte	.LASF14
+ 184 009d 02       		.uleb128 0x2
+ 185 009e 08       		.byte	0x8
+ 186 009f 04       		.byte	0x4
+ 187 00a0 4A010000 		.4byte	.LASF15
+ 188 00a4 05       		.uleb128 0x5
+ 189 00a5 2E000000 		.4byte	.LASF21
+ 190 00a9 01       		.byte	0x1
+ 191 00aa 12       		.byte	0x12
+ 192 00ab 2C000000 		.4byte	0x2c
+ 193 00af 00000000 		.4byte	.LFB63
+ 194 00b3 1E000000 		.4byte	.LFE63-.LFB63
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqlyLET.s 			page 5
+
+
+ 195 00b7 01       		.uleb128 0x1
+ 196 00b8 9C       		.byte	0x9c
+ 197 00b9 06010000 		.4byte	0x106
+ 198 00bd 06       		.uleb128 0x6
+ 199 00be 0A000000 		.4byte	.LVL0
+ 200 00c2 62010000 		.4byte	0x162
+ 201 00c6 D0000000 		.4byte	0xd0
+ 202 00ca 07       		.uleb128 0x7
+ 203 00cb 01       		.uleb128 0x1
+ 204 00cc 50       		.byte	0x50
+ 205 00cd 01       		.uleb128 0x1
+ 206 00ce 31       		.byte	0x31
+ 207 00cf 00       		.byte	0
+ 208 00d0 06       		.uleb128 0x6
+ 209 00d1 10000000 		.4byte	.LVL1
+ 210 00d5 6D010000 		.4byte	0x16d
+ 211 00d9 E3000000 		.4byte	0xe3
+ 212 00dd 07       		.uleb128 0x7
+ 213 00de 01       		.uleb128 0x1
+ 214 00df 50       		.byte	0x50
+ 215 00e0 01       		.uleb128 0x1
+ 216 00e1 31       		.byte	0x31
+ 217 00e2 00       		.byte	0
+ 218 00e3 06       		.uleb128 0x6
+ 219 00e4 16000000 		.4byte	.LVL2
+ 220 00e8 62010000 		.4byte	0x162
+ 221 00ec F6000000 		.4byte	0xf6
+ 222 00f0 07       		.uleb128 0x7
+ 223 00f1 01       		.uleb128 0x1
+ 224 00f2 50       		.byte	0x50
+ 225 00f3 01       		.uleb128 0x1
+ 226 00f4 30       		.byte	0x30
+ 227 00f5 00       		.byte	0
+ 228 00f6 08       		.uleb128 0x8
+ 229 00f7 1C000000 		.4byte	.LVL3
+ 230 00fb 6D010000 		.4byte	0x16d
+ 231 00ff 07       		.uleb128 0x7
+ 232 0100 01       		.uleb128 0x1
+ 233 0101 50       		.byte	0x50
+ 234 0102 01       		.uleb128 0x1
+ 235 0103 30       		.byte	0x30
+ 236 0104 00       		.byte	0
+ 237 0105 00       		.byte	0
+ 238 0106 09       		.uleb128 0x9
+ 239 0107 00000000 		.4byte	.LASF22
+ 240 010b 01       		.byte	0x1
+ 241 010c 1F       		.byte	0x1f
+ 242 010d 00000000 		.4byte	.LFB64
+ 243 0111 16000000 		.4byte	.LFE64-.LFB64
+ 244 0115 01       		.uleb128 0x1
+ 245 0116 9C       		.byte	0x9c
+ 246 0117 51010000 		.4byte	0x151
+ 247 011b 06       		.uleb128 0x6
+ 248 011c 08000000 		.4byte	.LVL4
+ 249 0120 62010000 		.4byte	0x162
+ 250 0124 2E010000 		.4byte	0x12e
+ 251 0128 07       		.uleb128 0x7
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqlyLET.s 			page 6
+
+
+ 252 0129 01       		.uleb128 0x1
+ 253 012a 50       		.byte	0x50
+ 254 012b 01       		.uleb128 0x1
+ 255 012c 31       		.byte	0x31
+ 256 012d 00       		.byte	0
+ 257 012e 06       		.uleb128 0x6
+ 258 012f 0E000000 		.4byte	.LVL5
+ 259 0133 6D010000 		.4byte	0x16d
+ 260 0137 41010000 		.4byte	0x141
+ 261 013b 07       		.uleb128 0x7
+ 262 013c 01       		.uleb128 0x1
+ 263 013d 50       		.byte	0x50
+ 264 013e 01       		.uleb128 0x1
+ 265 013f 31       		.byte	0x31
+ 266 0140 00       		.byte	0
+ 267 0141 08       		.uleb128 0x8
+ 268 0142 14000000 		.4byte	.LVL6
+ 269 0146 62010000 		.4byte	0x162
+ 270 014a 07       		.uleb128 0x7
+ 271 014b 01       		.uleb128 0x1
+ 272 014c 50       		.byte	0x50
+ 273 014d 01       		.uleb128 0x1
+ 274 014e 30       		.byte	0x30
+ 275 014f 00       		.byte	0
+ 276 0150 00       		.byte	0
+ 277 0151 0A       		.uleb128 0xa
+ 278 0152 5F010000 		.4byte	.LASF23
+ 279 0156 06       		.byte	0x6
+ 280 0157 1207     		.2byte	0x712
+ 281 0159 5D010000 		.4byte	0x15d
+ 282 015d 0B       		.uleb128 0xb
+ 283 015e 8B000000 		.4byte	0x8b
+ 284 0162 0C       		.uleb128 0xc
+ 285 0163 3C010000 		.4byte	.LASF16
+ 286 0167 3C010000 		.4byte	.LASF16
+ 287 016b 04       		.byte	0x4
+ 288 016c 26       		.byte	0x26
+ 289 016d 0C       		.uleb128 0xc
+ 290 016e FD000000 		.4byte	.LASF17
+ 291 0172 FD000000 		.4byte	.LASF17
+ 292 0176 05       		.byte	0x5
+ 293 0177 D1       		.byte	0xd1
+ 294 0178 00       		.byte	0
+ 295              		.section	.debug_abbrev,"",%progbits
+ 296              	.Ldebug_abbrev0:
+ 297 0000 01       		.uleb128 0x1
+ 298 0001 11       		.uleb128 0x11
+ 299 0002 01       		.byte	0x1
+ 300 0003 25       		.uleb128 0x25
+ 301 0004 0E       		.uleb128 0xe
+ 302 0005 13       		.uleb128 0x13
+ 303 0006 0B       		.uleb128 0xb
+ 304 0007 03       		.uleb128 0x3
+ 305 0008 0E       		.uleb128 0xe
+ 306 0009 1B       		.uleb128 0x1b
+ 307 000a 0E       		.uleb128 0xe
+ 308 000b 55       		.uleb128 0x55
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqlyLET.s 			page 7
+
+
+ 309 000c 17       		.uleb128 0x17
+ 310 000d 11       		.uleb128 0x11
+ 311 000e 01       		.uleb128 0x1
+ 312 000f 10       		.uleb128 0x10
+ 313 0010 17       		.uleb128 0x17
+ 314 0011 00       		.byte	0
+ 315 0012 00       		.byte	0
+ 316 0013 02       		.uleb128 0x2
+ 317 0014 24       		.uleb128 0x24
+ 318 0015 00       		.byte	0
+ 319 0016 0B       		.uleb128 0xb
+ 320 0017 0B       		.uleb128 0xb
+ 321 0018 3E       		.uleb128 0x3e
+ 322 0019 0B       		.uleb128 0xb
+ 323 001a 03       		.uleb128 0x3
+ 324 001b 0E       		.uleb128 0xe
+ 325 001c 00       		.byte	0
+ 326 001d 00       		.byte	0
+ 327 001e 03       		.uleb128 0x3
+ 328 001f 24       		.uleb128 0x24
+ 329 0020 00       		.byte	0
+ 330 0021 0B       		.uleb128 0xb
+ 331 0022 0B       		.uleb128 0xb
+ 332 0023 3E       		.uleb128 0x3e
+ 333 0024 0B       		.uleb128 0xb
+ 334 0025 03       		.uleb128 0x3
+ 335 0026 08       		.uleb128 0x8
+ 336 0027 00       		.byte	0
+ 337 0028 00       		.byte	0
+ 338 0029 04       		.uleb128 0x4
+ 339 002a 16       		.uleb128 0x16
+ 340 002b 00       		.byte	0
+ 341 002c 03       		.uleb128 0x3
+ 342 002d 0E       		.uleb128 0xe
+ 343 002e 3A       		.uleb128 0x3a
+ 344 002f 0B       		.uleb128 0xb
+ 345 0030 3B       		.uleb128 0x3b
+ 346 0031 0B       		.uleb128 0xb
+ 347 0032 49       		.uleb128 0x49
+ 348 0033 13       		.uleb128 0x13
+ 349 0034 00       		.byte	0
+ 350 0035 00       		.byte	0
+ 351 0036 05       		.uleb128 0x5
+ 352 0037 2E       		.uleb128 0x2e
+ 353 0038 01       		.byte	0x1
+ 354 0039 3F       		.uleb128 0x3f
+ 355 003a 19       		.uleb128 0x19
+ 356 003b 03       		.uleb128 0x3
+ 357 003c 0E       		.uleb128 0xe
+ 358 003d 3A       		.uleb128 0x3a
+ 359 003e 0B       		.uleb128 0xb
+ 360 003f 3B       		.uleb128 0x3b
+ 361 0040 0B       		.uleb128 0xb
+ 362 0041 27       		.uleb128 0x27
+ 363 0042 19       		.uleb128 0x19
+ 364 0043 49       		.uleb128 0x49
+ 365 0044 13       		.uleb128 0x13
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqlyLET.s 			page 8
+
+
+ 366 0045 8701     		.uleb128 0x87
+ 367 0047 19       		.uleb128 0x19
+ 368 0048 11       		.uleb128 0x11
+ 369 0049 01       		.uleb128 0x1
+ 370 004a 12       		.uleb128 0x12
+ 371 004b 06       		.uleb128 0x6
+ 372 004c 40       		.uleb128 0x40
+ 373 004d 18       		.uleb128 0x18
+ 374 004e 9742     		.uleb128 0x2117
+ 375 0050 19       		.uleb128 0x19
+ 376 0051 01       		.uleb128 0x1
+ 377 0052 13       		.uleb128 0x13
+ 378 0053 00       		.byte	0
+ 379 0054 00       		.byte	0
+ 380 0055 06       		.uleb128 0x6
+ 381 0056 898201   		.uleb128 0x4109
+ 382 0059 01       		.byte	0x1
+ 383 005a 11       		.uleb128 0x11
+ 384 005b 01       		.uleb128 0x1
+ 385 005c 31       		.uleb128 0x31
+ 386 005d 13       		.uleb128 0x13
+ 387 005e 01       		.uleb128 0x1
+ 388 005f 13       		.uleb128 0x13
+ 389 0060 00       		.byte	0
+ 390 0061 00       		.byte	0
+ 391 0062 07       		.uleb128 0x7
+ 392 0063 8A8201   		.uleb128 0x410a
+ 393 0066 00       		.byte	0
+ 394 0067 02       		.uleb128 0x2
+ 395 0068 18       		.uleb128 0x18
+ 396 0069 9142     		.uleb128 0x2111
+ 397 006b 18       		.uleb128 0x18
+ 398 006c 00       		.byte	0
+ 399 006d 00       		.byte	0
+ 400 006e 08       		.uleb128 0x8
+ 401 006f 898201   		.uleb128 0x4109
+ 402 0072 01       		.byte	0x1
+ 403 0073 11       		.uleb128 0x11
+ 404 0074 01       		.uleb128 0x1
+ 405 0075 31       		.uleb128 0x31
+ 406 0076 13       		.uleb128 0x13
+ 407 0077 00       		.byte	0
+ 408 0078 00       		.byte	0
+ 409 0079 09       		.uleb128 0x9
+ 410 007a 2E       		.uleb128 0x2e
+ 411 007b 01       		.byte	0x1
+ 412 007c 3F       		.uleb128 0x3f
+ 413 007d 19       		.uleb128 0x19
+ 414 007e 03       		.uleb128 0x3
+ 415 007f 0E       		.uleb128 0xe
+ 416 0080 3A       		.uleb128 0x3a
+ 417 0081 0B       		.uleb128 0xb
+ 418 0082 3B       		.uleb128 0x3b
+ 419 0083 0B       		.uleb128 0xb
+ 420 0084 27       		.uleb128 0x27
+ 421 0085 19       		.uleb128 0x19
+ 422 0086 11       		.uleb128 0x11
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqlyLET.s 			page 9
+
+
+ 423 0087 01       		.uleb128 0x1
+ 424 0088 12       		.uleb128 0x12
+ 425 0089 06       		.uleb128 0x6
+ 426 008a 40       		.uleb128 0x40
+ 427 008b 18       		.uleb128 0x18
+ 428 008c 9742     		.uleb128 0x2117
+ 429 008e 19       		.uleb128 0x19
+ 430 008f 01       		.uleb128 0x1
+ 431 0090 13       		.uleb128 0x13
+ 432 0091 00       		.byte	0
+ 433 0092 00       		.byte	0
+ 434 0093 0A       		.uleb128 0xa
+ 435 0094 34       		.uleb128 0x34
+ 436 0095 00       		.byte	0
+ 437 0096 03       		.uleb128 0x3
+ 438 0097 0E       		.uleb128 0xe
+ 439 0098 3A       		.uleb128 0x3a
+ 440 0099 0B       		.uleb128 0xb
+ 441 009a 3B       		.uleb128 0x3b
+ 442 009b 05       		.uleb128 0x5
+ 443 009c 49       		.uleb128 0x49
+ 444 009d 13       		.uleb128 0x13
+ 445 009e 3F       		.uleb128 0x3f
+ 446 009f 19       		.uleb128 0x19
+ 447 00a0 3C       		.uleb128 0x3c
+ 448 00a1 19       		.uleb128 0x19
+ 449 00a2 00       		.byte	0
+ 450 00a3 00       		.byte	0
+ 451 00a4 0B       		.uleb128 0xb
+ 452 00a5 35       		.uleb128 0x35
+ 453 00a6 00       		.byte	0
+ 454 00a7 49       		.uleb128 0x49
+ 455 00a8 13       		.uleb128 0x13
+ 456 00a9 00       		.byte	0
+ 457 00aa 00       		.byte	0
+ 458 00ab 0C       		.uleb128 0xc
+ 459 00ac 2E       		.uleb128 0x2e
+ 460 00ad 00       		.byte	0
+ 461 00ae 3F       		.uleb128 0x3f
+ 462 00af 19       		.uleb128 0x19
+ 463 00b0 3C       		.uleb128 0x3c
+ 464 00b1 19       		.uleb128 0x19
+ 465 00b2 6E       		.uleb128 0x6e
+ 466 00b3 0E       		.uleb128 0xe
+ 467 00b4 03       		.uleb128 0x3
+ 468 00b5 0E       		.uleb128 0xe
+ 469 00b6 3A       		.uleb128 0x3a
+ 470 00b7 0B       		.uleb128 0xb
+ 471 00b8 3B       		.uleb128 0x3b
+ 472 00b9 0B       		.uleb128 0xb
+ 473 00ba 00       		.byte	0
+ 474 00bb 00       		.byte	0
+ 475 00bc 00       		.byte	0
+ 476              		.section	.debug_aranges,"",%progbits
+ 477 0000 24000000 		.4byte	0x24
+ 478 0004 0200     		.2byte	0x2
+ 479 0006 00000000 		.4byte	.Ldebug_info0
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqlyLET.s 			page 10
+
+
+ 480 000a 04       		.byte	0x4
+ 481 000b 00       		.byte	0
+ 482 000c 0000     		.2byte	0
+ 483 000e 0000     		.2byte	0
+ 484 0010 00000000 		.4byte	.LFB63
+ 485 0014 1E000000 		.4byte	.LFE63-.LFB63
+ 486 0018 00000000 		.4byte	.LFB64
+ 487 001c 16000000 		.4byte	.LFE64-.LFB64
+ 488 0020 00000000 		.4byte	0
+ 489 0024 00000000 		.4byte	0
+ 490              		.section	.debug_ranges,"",%progbits
+ 491              	.Ldebug_ranges0:
+ 492 0000 00000000 		.4byte	.LFB63
+ 493 0004 1E000000 		.4byte	.LFE63
+ 494 0008 00000000 		.4byte	.LFB64
+ 495 000c 16000000 		.4byte	.LFE64
+ 496 0010 00000000 		.4byte	0
+ 497 0014 00000000 		.4byte	0
+ 498              		.section	.debug_line,"",%progbits
+ 499              	.Ldebug_line0:
+ 500 0000 94010000 		.section	.debug_str,"MS",%progbits,1
+ 500      02005801 
+ 500      00000201 
+ 500      FB0E0D00 
+ 500      01010101 
+ 501              	.LASF22:
+ 502 0000 4953525F 		.ascii	"ISR_1m\000"
+ 502      316D00
+ 503              	.LASF6:
+ 504 0007 73686F72 		.ascii	"short unsigned int\000"
+ 504      7420756E 
+ 504      7369676E 
+ 504      65642069 
+ 504      6E7400
+ 505              	.LASF0:
+ 506 001a 756E7369 		.ascii	"unsigned int\000"
+ 506      676E6564 
+ 506      20696E74 
+ 506      00
+ 507              	.LASF19:
+ 508 0027 6D61696E 		.ascii	"main.c\000"
+ 508      2E6300
+ 509              	.LASF21:
+ 510 002e 6D61696E 		.ascii	"main\000"
+ 510      00
+ 511              	.LASF18:
+ 512 0033 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 512      43313120 
+ 512      352E342E 
+ 512      31203230 
+ 512      31363036 
+ 513 0066 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 513      20726576 
+ 513      6973696F 
+ 513      6E203233 
+ 513      37373135 
+ 514 0099 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqlyLET.s 			page 11
+
+
+ 514      66756E63 
+ 514      74696F6E 
+ 514      2D736563 
+ 514      74696F6E 
+ 515              	.LASF8:
+ 516 00c1 6C6F6E67 		.ascii	"long unsigned int\000"
+ 516      20756E73 
+ 516      69676E65 
+ 516      6420696E 
+ 516      7400
+ 517              	.LASF9:
+ 518 00d3 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 518      206C6F6E 
+ 518      6720756E 
+ 518      7369676E 
+ 518      65642069 
+ 519              	.LASF4:
+ 520 00ea 756E7369 		.ascii	"unsigned char\000"
+ 520      676E6564 
+ 520      20636861 
+ 520      7200
+ 521              	.LASF11:
+ 522 00f8 63686172 		.ascii	"char\000"
+ 522      00
+ 523              	.LASF17:
+ 524 00fd 736C6565 		.ascii	"sleep\000"
+ 524      7000
+ 525              	.LASF7:
+ 526 0103 6C6F6E67 		.ascii	"long int\000"
+ 526      20696E74 
+ 526      00
+ 527              	.LASF20:
+ 528 010c 453A5C61 		.ascii	"E:\\aquadoc\\psoc\\psoc\\test-timer-interrupt.cydsn"
+ 528      71756164 
+ 528      6F635C70 
+ 528      736F635C 
+ 528      70736F63 
+ 529 013b 00       		.ascii	"\000"
+ 530              	.LASF16:
+ 531 013c 4C45445F 		.ascii	"LED_OUT_Write\000"
+ 531      4F55545F 
+ 531      57726974 
+ 531      6500
+ 532              	.LASF15:
+ 533 014a 646F7562 		.ascii	"double\000"
+ 533      6C6500
+ 534              	.LASF1:
+ 535 0151 6C6F6E67 		.ascii	"long long int\000"
+ 535      206C6F6E 
+ 535      6720696E 
+ 535      7400
+ 536              	.LASF23:
+ 537 015f 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 537      52784275 
+ 537      66666572 
+ 537      00
+ 538              	.LASF3:
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqlyLET.s 			page 12
+
+
+ 539 016c 7369676E 		.ascii	"signed char\000"
+ 539      65642063 
+ 539      68617200 
+ 540              	.LASF2:
+ 541 0178 6C6F6E67 		.ascii	"long double\000"
+ 541      20646F75 
+ 541      626C6500 
+ 542              	.LASF12:
+ 543 0184 5F5F696E 		.ascii	"__int32_t\000"
+ 543      7433325F 
+ 543      7400
+ 544              	.LASF14:
+ 545 018e 666C6F61 		.ascii	"float\000"
+ 545      7400
+ 546              	.LASF5:
+ 547 0194 73686F72 		.ascii	"short int\000"
+ 547      7420696E 
+ 547      7400
+ 548              	.LASF13:
+ 549 019e 696E7433 		.ascii	"int32_t\000"
+ 549      325F7400 
+ 550              	.LASF10:
+ 551 01a6 73697A65 		.ascii	"sizetype\000"
+ 551      74797065 
+ 551      00
+ 552              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
