@@ -165,7 +165,7 @@ CY_ISR(ISR_1m_Interrupt)
 
     /*  Place your Interrupt code here. */
     /* `#START ISR_1m_Interrupt` */
-
+    isr_timer();
     /* `#END` */
 }
 

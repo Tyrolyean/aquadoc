@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 1
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccYqDznx.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 1
   28:Generated_Source\PSoC5/Timer_1_PM.c **** * Summary:
   29:Generated_Source\PSoC5/Timer_1_PM.c **** *     Save the current user configuration
   30:Generated_Source\PSoC5/Timer_1_PM.c **** *
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 2
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccYqDznx.s 			page 2
 
 
   31:Generated_Source\PSoC5/Timer_1_PM.c **** * Parameters:
@@ -89,12 +89,12 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 1
   37 0002 FFF7FEFF 		bl	Timer_1_ReadCounter
   38              	.LVL0:
   39 0006 044C     		ldr	r4, .L3
-  40 0008 6080     		strh	r0, [r4, #2]	@ movhi
+  40 0008 6060     		str	r0, [r4, #4]
   47:Generated_Source\PSoC5/Timer_1_PM.c ****         Timer_1_backup.InterruptMaskValue = Timer_1_STATUS_MASK;
   41              		.loc 1 47 0
   42 000a 044B     		ldr	r3, .L3+4
   43 000c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
-  44 000e 2371     		strb	r3, [r4, #4]
+  44 000e 2372     		strb	r3, [r4, #8]
   48:Generated_Source\PSoC5/Timer_1_PM.c ****         #if (Timer_1_UsingHWCaptureCounter)
   49:Generated_Source\PSoC5/Timer_1_PM.c ****             Timer_1_backup.TimerCaptureCounter = Timer_1_ReadCaptureCount();
   50:Generated_Source\PSoC5/Timer_1_PM.c ****         #endif /* Back Up capture counter register  */
@@ -104,7 +104,7 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 1
   45              		.loc 1 53 0
   46 0010 FFF7FEFF 		bl	Timer_1_ReadControlRegister
   47              	.LVL1:
-  48 0014 6071     		strb	r0, [r4, #5]
+  48 0014 6072     		strb	r0, [r4, #9]
   49 0016 10BD     		pop	{r4, pc}
   50              	.L4:
   51              		.align	2
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 1
   59              		.align	2
   60              		.global	Timer_1_RestoreConfig
   61              		.thumb
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 3
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccYqDznx.s 			page 3
 
 
   62              		.thumb_func
@@ -163,12 +163,12 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 1
   81:Generated_Source\PSoC5/Timer_1_PM.c ****         Timer_1_WriteCounter(Timer_1_backup.TimerUdb);
   74              		.loc 1 81 0
   75 0002 054C     		ldr	r4, .L7
-  76 0004 6088     		ldrh	r0, [r4, #2]
+  76 0004 6068     		ldr	r0, [r4, #4]
   77 0006 FFF7FEFF 		bl	Timer_1_WriteCounter
   78              	.LVL2:
   82:Generated_Source\PSoC5/Timer_1_PM.c ****         Timer_1_STATUS_MASK =Timer_1_backup.InterruptMaskValue;
   79              		.loc 1 82 0
-  80 000a 2279     		ldrb	r2, [r4, #4]	@ zero_extendqisi2
+  80 000a 227A     		ldrb	r2, [r4, #8]	@ zero_extendqisi2
   81 000c 034B     		ldr	r3, .L7+4
   82 000e 1A70     		strb	r2, [r3]
   83:Generated_Source\PSoC5/Timer_1_PM.c ****         #if (Timer_1_UsingHWCaptureCounter)
@@ -178,10 +178,10 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 1
   87:Generated_Source\PSoC5/Timer_1_PM.c ****         #if(!Timer_1_UDB_CONTROL_REG_REMOVED)
   88:Generated_Source\PSoC5/Timer_1_PM.c ****             Timer_1_WriteControlRegister(Timer_1_backup.TimerControlRegister);
   83              		.loc 1 88 0
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 4
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccYqDznx.s 			page 4
 
 
-  84 0010 6079     		ldrb	r0, [r4, #5]	@ zero_extendqisi2
+  84 0010 607A     		ldrb	r0, [r4, #9]	@ zero_extendqisi2
   85 0012 FFF7FEFF 		bl	Timer_1_WriteControlRegister
   86              	.LVL3:
   87 0016 10BD     		pop	{r4, pc}
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 1
  115:Generated_Source\PSoC5/Timer_1_PM.c ****         /* Save Counter's enable state */
  116:Generated_Source\PSoC5/Timer_1_PM.c ****         if(Timer_1_CTRL_ENABLE == (Timer_1_CONTROL & Timer_1_CTRL_ENABLE))
  112              		.loc 1 116 0
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 5
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccYqDznx.s 			page 5
 
 
  113 0002 084B     		ldr	r3, .L13
@@ -278,7 +278,7 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 1
  135              	.L14:
  136              		.align	2
  137              	.L13:
- 138 0024 7A640040 		.word	1073767546
+ 138 0024 79640040 		.word	1073767545
  139 0028 00000000 		.word	.LANCHOR0
  140              		.cfi_endproc
  141              	.LFE2:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 1
  133:Generated_Source\PSoC5/Timer_1_PM.c **** * Function Name: Timer_1_Wakeup
  134:Generated_Source\PSoC5/Timer_1_PM.c **** ********************************************************************************
  135:Generated_Source\PSoC5/Timer_1_PM.c **** *
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 6
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccYqDznx.s 			page 6
 
 
  136:Generated_Source\PSoC5/Timer_1_PM.c **** * Summary:
@@ -354,13 +354,14 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 1
  180              		.align	2
  181              		.set	.LANCHOR0,. + 0
  182              		.type	Timer_1_backup, %object
- 183              		.size	Timer_1_backup, 6
+ 183              		.size	Timer_1_backup, 12
  184              	Timer_1_backup:
- 185 0000 00000000 		.space	6
- 185      0000
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 7
+ 185 0000 00000000 		.space	12
+ 185      00000000 
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccYqDznx.s 			page 7
 
 
+ 185      00000000 
  186              		.text
  187              	.Letext0:
  188              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
@@ -417,10 +418,10 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 1
  239 0060 696E7400 		.ascii	"int\000"
  240 0064 02       		.uleb128 0x2
  241 0065 04       		.byte	0x4
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccYqDznx.s 			page 8
+
+
  242 0066 07       		.byte	0x7
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 8
-
-
  243 0067 CC010000 		.4byte	.LASF8
  244 006b 04       		.uleb128 0x4
  245 006c 70010000 		.4byte	.LASF9
@@ -428,10 +429,10 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 1
  247 0071 E401     		.2byte	0x1e4
  248 0073 2C000000 		.4byte	0x2c
  249 0077 04       		.uleb128 0x4
- 250 0078 8C010000 		.4byte	.LASF10
+ 250 0078 A9010000 		.4byte	.LASF10
  251 007c 02       		.byte	0x2
- 252 007d E501     		.2byte	0x1e5
- 253 007f 3A000000 		.4byte	0x3a
+ 252 007d E601     		.2byte	0x1e6
+ 253 007f 48000000 		.4byte	0x48
  254 0083 02       		.uleb128 0x2
  255 0084 04       		.byte	0x4
  256 0085 04       		.byte	0x4
@@ -460,7 +461,7 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 1
  279 00b2 07       		.byte	0x7
  280 00b3 1B020000 		.4byte	.LASF16
  281 00b7 06       		.uleb128 0x6
- 282 00b8 06       		.byte	0x6
+ 282 00b8 0C       		.byte	0xc
  283 00b9 03       		.byte	0x3
  284 00ba 43       		.byte	0x43
  285 00bb F0000000 		.4byte	0xf0
@@ -475,22 +476,22 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 1
  294 00d0 03       		.byte	0x3
  295 00d1 48       		.byte	0x48
  296 00d2 77000000 		.4byte	0x77
- 297 00d6 02       		.byte	0x2
+ 297 00d6 04       		.byte	0x4
  298 00d7 07       		.uleb128 0x7
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccYqDznx.s 			page 9
+
+
  299 00d8 A1020000 		.4byte	.LASF19
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 9
-
-
  300 00dc 03       		.byte	0x3
  301 00dd 49       		.byte	0x49
  302 00de 6B000000 		.4byte	0x6b
- 303 00e2 04       		.byte	0x4
+ 303 00e2 08       		.byte	0x8
  304 00e3 07       		.uleb128 0x7
  305 00e4 B4020000 		.4byte	.LASF20
  306 00e8 03       		.byte	0x3
  307 00e9 4F       		.byte	0x4f
  308 00ea 6B000000 		.4byte	0x6b
- 309 00ee 05       		.byte	0x5
+ 309 00ee 09       		.byte	0x9
  310 00ef 00       		.byte	0
  311 00f0 08       		.uleb128 0x8
  312 00f1 11000000 		.4byte	.LASF21
@@ -537,10 +538,10 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 1
  353 0156 2C000000 		.4byte	.LFE2-.LFB2
  354 015a 01       		.uleb128 0x1
  355 015b 9C       		.byte	0x9c
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccYqDznx.s 			page 10
+
+
  356 015c 73010000 		.4byte	0x173
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 10
-
-
  357 0160 0A       		.uleb128 0xa
  358 0161 1E000000 		.4byte	.LVL4
  359 0165 D8010000 		.4byte	0x1d8
@@ -588,8 +589,8 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 1
  401 01cb 03       		.byte	0x3
  402 01cc 6A       		.byte	0x6a
  403 01cd 0C       		.uleb128 0xc
- 404 01ce 93010000 		.4byte	.LASF29
- 405 01d2 93010000 		.4byte	.LASF29
+ 404 01ce 8C010000 		.4byte	.LASF29
+ 405 01d2 8C010000 		.4byte	.LASF29
  406 01d6 03       		.byte	0x3
  407 01d7 64       		.byte	0x64
  408 01d8 0C       		.uleb128 0xc
@@ -597,10 +598,10 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 1
  410 01dd 94020000 		.4byte	.LASF30
  411 01e1 03       		.byte	0x3
  412 01e2 5B       		.byte	0x5b
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccYqDznx.s 			page 11
+
+
  413 01e3 0C       		.uleb128 0xc
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 11
-
-
  414 01e4 76010000 		.4byte	.LASF31
  415 01e8 76010000 		.4byte	.LASF31
  416 01ec 03       		.byte	0x3
@@ -657,10 +658,10 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 1
  467 002e 3A       		.uleb128 0x3a
  468 002f 0B       		.uleb128 0xb
  469 0030 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccYqDznx.s 			page 12
+
+
  470 0031 05       		.uleb128 0x5
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 12
-
-
  471 0032 49       		.uleb128 0x49
  472 0033 13       		.uleb128 0x13
  473 0034 00       		.byte	0
@@ -717,10 +718,10 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 1
  524 0067 2E       		.uleb128 0x2e
  525 0068 01       		.byte	0x1
  526 0069 3F       		.uleb128 0x3f
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccYqDznx.s 			page 13
+
+
  527 006a 19       		.uleb128 0x19
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 13
-
-
  528 006b 03       		.uleb128 0x3
  529 006c 0E       		.uleb128 0xe
  530 006d 3A       		.uleb128 0x3a
@@ -777,10 +778,10 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 1
  581 00a3 03       		.uleb128 0x3
  582 00a4 0E       		.uleb128 0xe
  583 00a5 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccYqDznx.s 			page 14
+
+
  584 00a6 0B       		.uleb128 0xb
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 14
-
-
  585 00a7 3B       		.uleb128 0x3b
  586 00a8 0B       		.uleb128 0xb
  587 00a9 00       		.byte	0
@@ -837,10 +838,10 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 1
  626      72756374 
  627              	.LASF34:
  628 0026 453A5C61 		.ascii	"E:\\aquadoc\\psoc\\psoc\\test-timer-interrupt.cydsn"
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccYqDznx.s 			page 15
+
+
  628      71756164 
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 15
-
-
  628      6F635C70 
  628      736F635C 
  628      70736F63 
@@ -897,10 +898,10 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 1
  648              	.LASF5:
  649 0150 6C6F6E67 		.ascii	"long unsigned int\000"
  649      20756E73 
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccYqDznx.s 			page 16
+
+
  649      69676E65 
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 16
-
-
  649      6420696E 
  649      7400
  650              	.LASF24:
@@ -919,15 +920,15 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 1
  656              	.LASF12:
  657 0185 646F7562 		.ascii	"double\000"
  657      6C6500
- 658              	.LASF10:
- 659 018c 75696E74 		.ascii	"uint16\000"
- 659      313600
- 660              	.LASF29:
- 661 0193 54696D65 		.ascii	"Timer_1_WriteControlRegister\000"
- 661      725F315F 
- 661      57726974 
- 661      65436F6E 
- 661      74726F6C 
+ 658              	.LASF29:
+ 659 018c 54696D65 		.ascii	"Timer_1_WriteControlRegister\000"
+ 659      725F315F 
+ 659      57726974 
+ 659      65436F6E 
+ 659      74726F6C 
+ 660              	.LASF10:
+ 661 01a9 75696E74 		.ascii	"uint32\000"
+ 661      333200
  662              	.LASF27:
  663 01b0 54696D65 		.ascii	"Timer_1_ReadControlRegister\000"
  663      725F315F 
@@ -957,10 +958,10 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 1
  671      52657374 
  671      6F726543 
  671      6F6E6669 
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccYqDznx.s 			page 17
+
+
  672              	.LASF16:
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 17
-
-
  673 021b 73697A65 		.ascii	"sizetype\000"
  673      74797065 
  673      00
@@ -1017,10 +1018,10 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 1
  695      756500
  696              	.LASF20:
  697 02b4 54696D65 		.ascii	"TimerControlRegister\000"
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccYqDznx.s 			page 18
+
+
  697      72436F6E 
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccogjblP.s 			page 18
-
-
  697      74726F6C 
  697      52656769 
  697      73746572 
