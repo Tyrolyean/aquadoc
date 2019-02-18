@@ -1,18 +1,14 @@
---------------- Build Started: 02/18/2019 10:58:17 Project: test-timer-interrupt, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+--------------- Build Started: 02/18/2019 12:09:12 Project: test-timer-interrupt, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
 The code generation step is up to date.
-arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM3\ARM_GCC_541\Debug\main.o
-main.c: In function 'main':
-main.c:25:9: warning: implicit declaration of function 'LED_OUT_write' [-Wimplicit-function-declaration]
-         LED_OUT_write(1);
-         ^
+The compile step is up to date, no work needs to be done.
 arm-none-eabi-ar.exe -rs .\CortexM3\ARM_GCC_541\Debug\test-timer-interrupt.a .\CortexM3\ARM_GCC_541\Debug\Timer_1.o .\CortexM3\ARM_GCC_541\Debug\Timer_1_PM.o .\CortexM3\ARM_GCC_541\Debug\ISR_1m.o .\CortexM3\ARM_GCC_541\Debug\CyDmac.o .\CortexM3\ARM_GCC_541\Debug\CyFlash.o .\CortexM3\ARM_GCC_541\Debug\CyLib.o .\CortexM3\ARM_GCC_541\Debug\cyPm.o .\CortexM3\ARM_GCC_541\Debug\CySpc.o .\CortexM3\ARM_GCC_541\Debug\cyutils.o .\CortexM3\ARM_GCC_541\Debug\cy_em_eeprom.o .\CortexM3\ARM_GCC_541\Debug\LED_OUT.o .\CortexM3\ARM_GCC_541\Debug\CyBootAsmGnu.o
 arm-none-eabi-ar.exe: creating .\CortexM3\ARM_GCC_541\Debug\test-timer-interrupt.a
-arm-none-eabi-gcc.exe -Wl,--start-group -o E:\aquadoc\psoc\psoc\test-timer-interrupt.cydsn\CortexM3\ARM_GCC_541\Debug\test-timer-interrupt.elf .\CortexM3\ARM_GCC_541\Debug\main.o .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o .\CortexM3\ARM_GCC_541\Debug\cymetadata.o .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o .\CortexM3\ARM_GCC_541\Debug\test-timer-interrupt.a "C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_541\Debug\CyComponentLibrary.a" -mcpu=cortex-m3 -mthumb -L Generated_Source\PSoC5 -Wl,-Map,.\CortexM3\ARM_GCC_541\Debug/test-timer-interrupt.map -T Generated_Source\PSoC5\cm3gcc.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects -Wl,--end-group
-.\CortexM3\ARM_GCC_541\Debug\main.o: In function `main':
-E:\aquadoc\psoc\psoc\test-timer-interrupt.cydsn/main.c:25: undefined reference to `LED_OUT_write'
-E:\aquadoc\psoc\psoc\test-timer-interrupt.cydsn/main.c:26: undefined reference to `sleep'
-E:\aquadoc\psoc\psoc\test-timer-interrupt.cydsn/main.c:27: undefined reference to `LED_OUT_write'
-E:\aquadoc\psoc\psoc\test-timer-interrupt.cydsn/main.c:28: undefined reference to `sleep'
-collect2.exe: error: ld returned 1 exit status
-The command 'arm-none-eabi-gcc.exe' failed with exit code '1'.
---------------- Build Failed: 02/18/2019 10:58:19 ---------------
+arm-none-eabi-gcc.exe -Wl,--start-group -o E:\aquadoc\psoc\psoc\test-timer-interrupt.cydsn\CortexM3\ARM_GCC_541\Debug\test-timer-interrupt.elf .\CortexM3\ARM_GCC_541\Debug\main.o .\CortexM3\ARM_GCC_541\Debug\isrsc.o .\CortexM3\ARM_GCC_541\Debug\cyfitter_cfg.o .\CortexM3\ARM_GCC_541\Debug\cymetadata.o .\CortexM3\ARM_GCC_541\Debug\Cm3Start.o .\CortexM3\ARM_GCC_541\Debug\test-timer-interrupt.a "C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_541\Debug\CyComponentLibrary.a" -mcpu=cortex-m3 -mthumb -L Generated_Source\PSoC5 -Wl,-Map,.\CortexM3\ARM_GCC_541\Debug/test-timer-interrupt.map -T Generated_Source\PSoC5\cm3gcc.ld -specs=nano.specs -Wl,--gc-sections -g -ffunction-sections -Og -ffat-lto-objects -Wl,--end-group
+cyelftool.exe -C E:\aquadoc\psoc\psoc\test-timer-interrupt.cydsn\CortexM3\ARM_GCC_541\Debug\test-timer-interrupt.elf --flash_row_size 256 --flash_size 262144 --flash_offset 0x00000000
+No ELF section .cychecksum found, creating one
+Application checksum calculated and stored in ELF section .cychecksum
+Checksum calculated and stored in ELF section .cymeta
+cyelftool.exe -S E:\aquadoc\psoc\psoc\test-timer-interrupt.cydsn\CortexM3\ARM_GCC_541\Debug\test-timer-interrupt.elf
+Flash used: 1606 of 262144 bytes (0.6%).
+SRAM used: 2521 of 65536 bytes (3.8%). Stack: 2048 bytes. Heap: 128 bytes.
+--------------- Build Succeeded: 02/18/2019 12:09:13 ---------------

@@ -37,7 +37,9 @@
       <Folder BuildType="STRICT" Path="E:\aquadoc\psoc\psoc\test-timer-interrupt.cydsn">
         <Files Root="E:\aquadoc\psoc\psoc\test-timer-interrupt.cydsn">
           <File BuildType="BUILD" Toolchain="">main.c</File>
+          <File BuildType="BUILD" Toolchain="">isrsc.c</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
+          <File BuildType="BUILD" Toolchain="">isrs.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="E:\aquadoc\psoc\psoc\test-timer-interrupt.cydsn\Generated_Source\PSoC5">

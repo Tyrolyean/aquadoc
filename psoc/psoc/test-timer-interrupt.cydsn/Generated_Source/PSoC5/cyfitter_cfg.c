@@ -148,7 +148,7 @@ static void CyClockStartupError(uint8 errorCode)
 }
 #endif
 
-#define CY_CFG_BASE_ADDR_COUNT 15u
+#define CY_CFG_BASE_ADDR_COUNT 11u
 CYPACKED typedef struct
 {
 	uint8 offset;
@@ -156,13 +156,13 @@ CYPACKED typedef struct
 } CYPACKED_ATTR cy_cfg_addrvalue_t;
 
 #define cy_cfg_addr_table ((const uint32 CYFAR *)0x48000000u)
-#define cy_cfg_data_table ((const cy_cfg_addrvalue_t CYFAR *)0x4800003Cu)
+#define cy_cfg_data_table ((const cy_cfg_addrvalue_t CYFAR *)0x4800002Cu)
 
 /* IOPINS0_1 Address: CYREG_PRT1_DM0 Size (bytes): 8 */
-#define BS_IOPINS0_1_VAL ((const uint8 CYFAR *)0x48000118u)
+#define BS_IOPINS0_1_VAL ((const uint8 CYFAR *)0x48000138u)
 
 /* IOPINS0_2 Address: CYREG_PRT2_DM0 Size (bytes): 8 */
-#define BS_IOPINS0_2_VAL ((const uint8 CYFAR *)0x48000120u)
+#define BS_IOPINS0_2_VAL ((const uint8 CYFAR *)0x48000140u)
 
 
 /*******************************************************************************
@@ -340,9 +340,6 @@ void cyfitter_cfg(void)
 	/* Disable interrupts by default. Let user enable if/when they want. */
 	CYGlobalIntDisable
 #endif
-
-	/* Enable/Disable Debug functionality based on settings from System DWR */
-	CY_SET_XTND_REG8((void CYFAR *)CYREG_MLOGIC_DEBUG, (CY_GET_XTND_REG8((void CYFAR *)CYREG_MLOGIC_DEBUG) | 0x04u));
 
 	{
 
