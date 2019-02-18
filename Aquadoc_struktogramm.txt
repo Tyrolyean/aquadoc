@@ -1,2 +1,11 @@
 Aquadoc Struktogramm: du Fag
 
+HardwareSetup():
+	1.Uart
+	2.Timer
+
+main():
+	1.Timer interupt alle 60s
+	2.Auslesen der Sensoren und uebertragung an die UART
+	3.
+	
