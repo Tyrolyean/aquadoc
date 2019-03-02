@@ -96,6 +96,7 @@
 <v>psoc\test-timer-interrupt</v>
 <v>psoc\test-timer-interrupt\TopDesign</v>
 <v>psoc\test-timer-interrupt\TopDesign\TopDesign.cysch</v>
+<v>psoc\Ultrasonic_test</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -129,6 +130,8 @@
 <v>psoc\test-timer-interrupt\test-timer-interrupt.gpdsc</v>
 <v>psoc\test-timer-interrupt\test-timer-interrupt.rpt</v>
 <v>psoc\test-timer-interrupt\test-timer-interrupt_timing.html</v>
+<v>psoc\Ultrasonic_test</v>
+<v>psoc\Ultrasonic_test\Ultrasonic_test.gpdsc</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>psoc</v>
@@ -160,6 +163,10 @@
 <v>psoc\test-timer-interrupt\test-timer-interrupt.gpdsc</v>
 <v>psoc\test-timer-interrupt\test-timer-interrupt.rpt</v>
 <v>psoc\test-timer-interrupt\test-timer-interrupt_timing.html</v>
+<v>psoc\Ultrasonic_test</v>
+<v>psoc\Ultrasonic_test\Ultrasonic_test.gpdsc</v>
+<v>psoc\Ultrasonic_test\Ultrasonic_test.rpt</v>
+<v>psoc\Ultrasonic_test\Ultrasonic_test_timing.html</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -180,6 +187,13 @@
 <v>psoc\test-timer-interrupt\cy_pins_v2_20.pdf</v>
 <v>psoc\test-timer-interrupt\Timer_v2_80.pdf</v>
 <v>psoc\test-timer-interrupt\ZeroTerminal.pdf</v>
+<v>psoc\Ultrasonic_test\PSoC 5LP Architecture TRM</v>
+<v>psoc\Ultrasonic_test\CY8C58LP Family Datasheet</v>
+<v>psoc\Ultrasonic_test\System Reference Guides</v>
+<v>psoc\Ultrasonic_test\System Reference Guides\cy_boot_v5_70</v>
+<v>psoc\Ultrasonic_test\cy_pins_v2_20</v>
+<v>psoc\Ultrasonic_test\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>psoc\Ultrasonic_test\UART_v2_50.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>psoc</v>
@@ -193,6 +207,7 @@
 <v>psoc\test-timer-interrupt\cy_pins_v2_20.pdf</v>
 <v>psoc\test-timer-interrupt\Timer_v2_80.pdf</v>
 <v>psoc\test-timer-interrupt\ZeroTerminal.pdf</v>
+<v>psoc\Ultrasonic_test</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>

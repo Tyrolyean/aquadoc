@@ -1,9 +1,14 @@
 \babel@toc {german}{}
-\contentsline {section}{\numberline {1}Aufgabenstelleung}{2}
-\contentsline {subsection}{\numberline {1.1}Aufbau}{2}
-\contentsline {subsection}{\numberline {1.2}Sensoren}{2}
-\contentsline {section}{\numberline {2}Test mittels Aurduino}{3}
-\contentsline {subsection}{\numberline {2.1}HC-SR04}{4}
-\contentsline {subsection}{\numberline {2.2}DS1722}{5}
-\contentsline {section}{\numberline {3}Addendum}{7}
-\contentsline {subsection}{\numberline {3.1}Literaturverzeichnis}{7}
+\contentsline {section}{\numberline {1}Aufgabenstelleung}{2}% 
+\contentsline {subsection}{\numberline {1.1}Aufbau}{2}% 
+\contentsline {subsection}{\numberline {1.2}Sensoren}{2}% 
+\contentsline {section}{\numberline {2}Test mittels Aurduino}{3}% 
+\contentsline {subsection}{\numberline {2.1}HC-SR04}{4}% 
+\contentsline {subsection}{\numberline {2.2}DS1722}{5}% 
+\contentsline {section}{\numberline {3}Addendum}{7}% 
+\contentsline {subsection}{\numberline {3.1}Literaturverzeichnis}{7}% 
+\contentsline {subsection}{\numberline {3.2}Datenblätter}{7}% 
+\contentsline {subsubsection}{\numberline {3.2.1}HC-SR04}{7}% 
+\contentsline {subsubsection}{\numberline {3.2.2}DS1722}{12}% 
+\contentsline {subsubsection}{\numberline {3.2.3}MAX640}{27}% 
+\contentsline {subsubsection}{\numberline {3.2.4}CY8C5888LTI-LP097}{41}% 

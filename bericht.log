@@ -1,14 +1,14 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/Arch Linux) (preloaded format=xelatex 2019.2.11)  18 FEB 2019 10:11
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/Arch Linux) (preloaded format=xelatex 2019.2.19)  19 FEB 2019 15:07
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
 **bericht.tex
 (./bericht.tex
-LaTeX2e <2018-04-01> patch level 5
+LaTeX2e <2018-12-01>
 (/usr/share/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
 (/usr/share/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+File: size12.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 )
 \c@part=\count80
 \c@section=\count81
@@ -23,7 +23,7 @@ File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \bibindent=\dimen102
 )
 (/usr/share/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2018/04/06 v1.3b Input encoding file
+Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
@@ -37,11 +37,11 @@ Package: babel 2018/11/13 3.27 The Babel package
 File: switch.def 2018/11/13 3.27 Babel switching mechanism
 )
 (/usr/share/texmf-dist/tex/generic/babel-german/german.ldf
-Language: german 2018/03/29 v2.10 German support for babel (pre-1996 orthograph
+Language: german 2018/12/08 v2.11 German support for babel (pre-1996 orthograph
 y)
 
 (/usr/share/texmf-dist/tex/generic/babel-german/germanb.ldf
-Language: germanb 2018/03/29 v2.10 German support for babel (pre-1996 orthograp
+Language: germanb 2018/12/08 v2.11 German support for babel (pre-1996 orthograp
 hy)
 
 (/usr/share/texmf-dist/tex/generic/babel/babel.def
@@ -56,10 +56,10 @@ File: babel.def 2018/11/13 3.27 Babel common definitions
 Package babel Info: Making " an active character on input line 135.
 )))
 (/usr/share/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
+Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
 
 (/usr/share/texmf-dist/tex/latex/base/t1enc.def
-File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
+File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 )
 LaTeX Font Info:    Try loading font information for T1+lmr on input line 105.
@@ -68,7 +68,7 @@ LaTeX Font Info:    Try loading font information for T1+lmr on input line 105.
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ))
 (/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2017/09/02 v2.17a AMS math features
+Package: amsmath 2018/12/01 v2.17b AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
@@ -88,20 +88,20 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count90
-LaTeX Info: Redefining \frac on input line 213.
+LaTeX Info: Redefining \frac on input line 223.
 \uproot@=\count91
 \leftroot@=\count92
-LaTeX Info: Redefining \overline on input line 375.
+LaTeX Info: Redefining \overline on input line 385.
 \classnum@=\count93
 \DOTSCASE@=\count94
-LaTeX Info: Redefining \ldots on input line 472.
-LaTeX Info: Redefining \dots on input line 475.
-LaTeX Info: Redefining \cdots on input line 596.
-\Mathstrutbox@=\box26
-\strutbox@=\box27
+LaTeX Info: Redefining \ldots on input line 482.
+LaTeX Info: Redefining \dots on input line 485.
+LaTeX Info: Redefining \cdots on input line 606.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
 \big@size=\dimen106
-LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
 \macc@depth=\count95
 \c@MaxMatrixCols=\count96
 \dotsspace@=\muskip10
@@ -122,8 +122,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \multlinegap=\skip44
 \multlinetaggap=\skip45
 \mathdisplay@stack=\toks20
-LaTeX Info: Redefining \[ on input line 2817.
-LaTeX Info: Redefining \] on input line 2818.
+LaTeX Info: Redefining \[ on input line 2844.
+LaTeX Info: Redefining \] on input line 2845.
 )
 (/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
@@ -149,15 +149,16 @@ Package: circuitikz 2017/05/28{} The CircuiTikz circuit drawing package version
 
 (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex))
 (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box28
+\pgfutil@abb=\box29
 
 (/usr/share/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
 (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
-Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
+(/usr/share/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2019/02/02 v3.1.1 (3.1.1)
 ))
-Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
+Package: pgf 2019/02/02 v3.1.1 (3.1.1)
 
 (/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
 (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
@@ -186,7 +187,7 @@ File: xetex.def 2017/06/24 v5.0h Graphics/color driver for xetex
 )
 (/usr/share/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
 (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
-Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
+Package: pgfsys 2019/02/02 v3.1.1 (3.1.1)
 
 (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks23
@@ -212,30 +213,31 @@ Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 \t@pgf@toka=\toks26
 \t@pgf@tokb=\toks27
 \t@pgf@tokc=\toks28
+\pgf@sys@id@count=\count106
 
 (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
-File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+File: pgf.cfg 2019/02/02 v3.1.1 (3.1.1)
 )
 Driver file for pgf: pgfsys-xetex.def
 
 (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.def
-File: pgfsys-xetex.def 2014/07/09  (rcs-revision 1.11)
+File: pgfsys-xetex.def 2019/02/02 v3.1.1 (3.1.1)
 
 (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx.def
-File: pgfsys-dvipdfmx.def 2014/07/09  (rcs-revision 1.14)
+File: pgfsys-dvipdfmx.def 2019/02/02 v3.1.1 (3.1.1)
 
 (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
-File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
+File: pgfsys-common-pdf.def 2019/02/02 v3.1.1 (3.1.1)
 )
-\pgfsys@objnum=\count106
+\pgfsys@objnum=\count107
 )))
 (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
-File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count107
-\pgfsyssoftpath@bigbuffer@items=\count108
+File: pgfsyssoftpath.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfsyssoftpath@smallbuffer@items=\count108
+\pgfsyssoftpath@bigbuffer@items=\count109
 )
 (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
-File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+File: pgfsysprotocol.code.tex 2019/02/02 v3.1.1 (3.1.1)
 ))
 (/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
@@ -254,15 +256,15 @@ Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
-Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
+Package: pgfcore 2019/02/02 v3.1.1 (3.1.1)
 
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen125
-\pgfmath@count=\count109
-\pgfmath@box=\box29
+\pgfmath@count=\count110
+\pgfmath@box=\box30
 \pgfmath@toks=\toks29
 \pgfmath@stack@operand=\toks30
 \pgfmath@stack@operation=\toks31
@@ -278,9 +280,9 @@ x) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex)
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex)
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics
 .code.tex))) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count110
+\c@pgfmathroundto@lastzeros=\count111
 )) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
-File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
+File: pgfcorepoints.code.tex 2019/02/02 v3.1.1 (3.1.1)
 \pgf@picminx=\dimen126
 \pgf@picmaxx=\dimen127
 \pgf@picminy=\dimen128
@@ -297,78 +299,81 @@ File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
 \pgf@zy=\dimen139
 )
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
-File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
+File: pgfcorepathconstruct.code.tex 2019/02/02 v3.1.1 (3.1.1)
 \pgf@path@lastx=\dimen140
 \pgf@path@lasty=\dimen141
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
-File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
+File: pgfcorepathusage.code.tex 2019/02/02 v3.1.1 (3.1.1)
 \pgf@shorten@end@additional=\dimen142
 \pgf@shorten@start@additional=\dimen143
 )
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
-File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
-\pgfpic=\box30
-\pgf@hbox=\box31
-\pgf@layerbox@main=\box32
-\pgf@picture@serial@count=\count111
+File: pgfcorescopes.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfpic=\box31
+\pgf@hbox=\box32
+\pgf@layerbox@main=\box33
+\pgf@picture@serial@count=\count112
 )
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
-File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
+File: pgfcoregraphicstate.code.tex 2019/02/02 v3.1.1 (3.1.1)
 \pgflinewidth=\dimen144
 )
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.t
 ex
-File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
+File: pgfcoretransformations.code.tex 2019/02/02 v3.1.1 (3.1.1)
 \pgf@pt@x=\dimen145
 \pgf@pt@y=\dimen146
 \pgf@pt@temp=\dimen147
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
-File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+File: pgfcorequick.code.tex 2019/02/02 v3.1.1 (3.1.1)
 )
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
-File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+File: pgfcoreobjects.code.tex 2019/02/02 v3.1.1 (3.1.1)
 )
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.te
 x
-File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+File: pgfcorepathprocessing.code.tex 2019/02/02 v3.1.1 (3.1.1)
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
-File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
+File: pgfcorearrows.code.tex 2019/02/02 v3.1.1 (3.1.1)
 \pgfarrowsep=\dimen148
 )
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
-File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
+File: pgfcoreshade.code.tex 2019/02/02 v3.1.1 (3.1.1)
 \pgf@max=\dimen149
-\pgf@sys@shading@range@num=\count112
+\pgf@sys@shading@range@num=\count113
 )
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
-File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+File: pgfcoreimage.code.tex 2019/02/02 v3.1.1 (3.1.1)
 
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
-File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
-\pgfexternal@startupbox=\box33
+File: pgfcoreexternal.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfexternal@startupbox=\box34
 ))
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
-File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+File: pgfcorelayers.code.tex 2019/02/02 v3.1.1 (3.1.1)
 )
 (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
-File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+File: pgfcoretransparency.code.tex 2019/02/02 v3.1.1 (3.1.1)
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
-File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+File: pgfcorepatterns.code.tex 2019/02/02 v3.1.1 (3.1.1)
+)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2019/02/02 v3.1.1 (3.1.1)
 )))
 (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
-File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
-\pgfnodeparttextbox=\box34
+File: pgfmoduleshapes.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfnodeparttextbox=\box35
 )
 (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
-File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
+File: pgfmoduleplot.code.tex 2019/02/02 v3.1.1 (3.1.1)
 )
 (/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
-Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
+Package: pgfcomp-version-0-65 2019/02/02 v3.1.1 (3.1.1)
 \pgf@nodesepstart=\dimen150
 \pgf@nodesepend=\dimen151
 )
 (/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
-Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
+Package: pgfcomp-version-1-18 2019/02/02 v3.1.1 (3.1.1)
 ))
 (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
 (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
@@ -376,7 +381,7 @@ Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
 (/usr/share/texmf-dist/tex/latex/pgf/math/pgfmath.sty
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
 (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
-Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
+Package: pgffor 2019/02/02 v3.1.1 (3.1.1)
 
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
 \pgffor@iter=\dimen152
@@ -385,12 +390,12 @@ Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 \pgffor@toks=\toks33
 ))
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
-Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
+Package: tikz 2019/02/02 v3.1.1 (3.1.1)
 
 (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.te
 x
-File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count113
+File: pgflibraryplothandlers.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgf@plot@mark@count=\count114
 \pgfplotmarksize=\dimen154
 )
 \tikz@lastx=\dimen155
@@ -399,32 +404,32 @@ File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \tikz@lastysaved=\dimen158
 \tikzleveldistance=\dimen159
 \tikzsiblingdistance=\dimen160
-\tikz@figbox=\box35
-\tikz@figbox@bg=\box36
-\tikz@tempbox=\box37
-\tikz@tempbox@bg=\box38
-\tikztreelevel=\count114
-\tikznumberofchildren=\count115
-\tikznumberofcurrentchild=\count116
-\tikz@fig@count=\count117
+\tikz@figbox=\box36
+\tikz@figbox@bg=\box37
+\tikz@tempbox=\box38
+\tikz@tempbox@bg=\box39
+\tikztreelevel=\count115
+\tikznumberofchildren=\count116
+\tikznumberofcurrentchild=\count117
+\tikz@fig@count=\count118
  (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
-File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count118
-\pgfmatrixcurrentcolumn=\count119
-\pgf@matrix@numberofcolumns=\count120
+File: pgfmodulematrix.code.tex 2019/02/02 v3.1.1 (3.1.1)
+\pgfmatrixcurrentrow=\count119
+\pgfmatrixcurrentcolumn=\count120
+\pgf@matrix@numberofcolumns=\count121
 )
-\tikz@expandcount=\count121
+\tikz@expandcount=\count122
 
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
 topaths.code.tex
-File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
+File: tikzlibrarytopaths.code.tex 2019/02/02 v3.1.1 (3.1.1)
 )))
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
 calc.code.tex
-File: tikzlibrarycalc.code.tex 2013/07/15 v3.0.1a (rcs-revision 1.9)
+File: tikzlibrarycalc.code.tex 2019/02/02 v3.1.1 (3.1.1)
 )
 (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
-File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
+File: pgflibraryarrows.code.tex 2019/02/02 v3.1.1 (3.1.1)
 \arrowsize=\dimen161
 )
 (/usr/share/texmf-dist/tex/generic/circuitikz/pgfcirc.defines.tex
@@ -452,29 +457,164 @@ File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
 (/usr/share/texmf-dist/tex/generic/circuitikz/pgfcircpath.tex)
 (/usr/share/texmf-dist/tex/generic/xstring/xstring.sty
 (/usr/share/texmf-dist/tex/generic/xstring/xstring.tex
-\@xs@message=\write4
-\integerpart=\count122
-\decimalpart=\count123
+\integerpart=\count123
+Invalid UTF-8 byte or sequence at line 35 replaced by U+FFFD.
+\decimalpart=\count124
+Invalid UTF-8 byte or sequence at line 79 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 79 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 83 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 86 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 102 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 114 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 120 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 125 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 147 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 147 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 147 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 182 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 182 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 182 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 183 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 184 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 185 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 185 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 185 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 189 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 189 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 190 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 190 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 193 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 208 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 208 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 208 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 208 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 208 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 208 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 221 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 221 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 241 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 241 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 241 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 241 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 266 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 284 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 295 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 300 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 300 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 301 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 301 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 301 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 302 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 303 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 332 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 332 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 332 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 332 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 333 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 334 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 334 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 334 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 406 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 406 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 409 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 410 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 428 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 434 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 457 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 457 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 464 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 464 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 466 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 466 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 541 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 541 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 541 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 586 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 586 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 588 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 588 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 595 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 597 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 599 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 602 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 605 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 605 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 610 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 615 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 632 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 632 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 633 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 635 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 637 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 647 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 653 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 678 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 700 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 705 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 715 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 715 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 715 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 719 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 732 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 732 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 741 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 741 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 742 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 742 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 762 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 773 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 773 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 774 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 774 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 774 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 797 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 797 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 810 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 824 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 824 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 831 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 838 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 838 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 846 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 846 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 861 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 862 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 864 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 864 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 908 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 909 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 909 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 934 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 934 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 936 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 936 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 940 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 940 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 962 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 962 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 964 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 965 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 1006 replaced by U+FFFD.
 )
-Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
+Package: xstring 2019/02/06 v1.83 String manipulations (CT)
 )
 (/usr/share/texmf-dist/tex/latex/siunitx/siunitx.sty
 (/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2018-11-19 L3 programming layer (loader) 
+Package: expl3 2019-02-15 L3 programming layer (loader) 
 
 (/usr/share/texmf-dist/tex/latex/l3kernel/expl3-code.tex
-Package: expl3 2018-11-19 L3 programming layer (code)
-\c_max_int=\count124
-\l_tmpa_int=\count125
-\l_tmpb_int=\count126
-\g_tmpa_int=\count127
-\g_tmpb_int=\count128
-\g__kernel_prg_map_int=\count129
-\c_log_iow=\count130
-\l_iow_line_count_int=\count131
-\l__iow_line_target_int=\count132
-\l__iow_one_indent_int=\count133
-\l__iow_indent_int=\count134
+Package: expl3 2019-02-15 L3 programming layer (code)
+\c_max_int=\count125
+\l_tmpa_int=\count126
+\l_tmpb_int=\count127
+\g_tmpa_int=\count128
+\g_tmpb_int=\count129
+\g__kernel_prg_map_int=\count130
+\c_log_iow=\count131
+\l_iow_line_count_int=\count132
+\l__iow_line_target_int=\count133
+\l__iow_one_indent_int=\count134
+\l__iow_indent_int=\count135
 \c_zero_dim=\dimen172
 \c_max_dim=\dimen173
 \l_tmpa_dim=\dimen174
@@ -493,80 +633,80 @@ Package: expl3 2018-11-19 L3 programming layer (code)
 \l_tmpb_muskip=\muskip14
 \g_tmpa_muskip=\muskip15
 \g_tmpb_muskip=\muskip16
-\l_keys_choice_int=\count135
-\l__intarray_loop_int=\count136
+\l_keys_choice_int=\count136
+\l__intarray_loop_int=\count137
 \c__intarray_sp_dim=\dimen178
-\g__intarray_font_int=\count137
-\c__fp_leading_shift_int=\count138
-\c__fp_middle_shift_int=\count139
-\c__fp_trailing_shift_int=\count140
-\c__fp_big_leading_shift_int=\count141
-\c__fp_big_middle_shift_int=\count142
-\c__fp_big_trailing_shift_int=\count143
-\c__fp_Bigg_leading_shift_int=\count144
-\c__fp_Bigg_middle_shift_int=\count145
-\c__fp_Bigg_trailing_shift_int=\count146
-\g__fp_array_int=\count147
-\l__fp_array_loop_int=\count148
-\l__sort_length_int=\count149
-\l__sort_min_int=\count150
-\l__sort_top_int=\count151
-\l__sort_max_int=\count152
-\l__sort_true_max_int=\count153
-\l__sort_block_int=\count154
-\l__sort_begin_int=\count155
-\l__sort_end_int=\count156
-\l__sort_A_int=\count157
-\l__sort_B_int=\count158
-\l__sort_C_int=\count159
-\l__tl_analysis_normal_int=\count160
-\l__tl_analysis_index_int=\count161
-\l__tl_analysis_nesting_int=\count162
-\l__tl_analysis_type_int=\count163
-\l__regex_internal_a_int=\count164
-\l__regex_internal_b_int=\count165
-\l__regex_internal_c_int=\count166
-\l__regex_balance_int=\count167
-\l__regex_group_level_int=\count168
-\l__regex_mode_int=\count169
-\c__regex_cs_in_class_mode_int=\count170
-\c__regex_cs_mode_int=\count171
-\l__regex_catcodes_int=\count172
-\l__regex_default_catcodes_int=\count173
-\c__regex_catcode_L_int=\count174
-\c__regex_catcode_O_int=\count175
-\c__regex_catcode_A_int=\count176
-\c__regex_all_catcodes_int=\count177
-\l__regex_show_lines_int=\count178
-\l__regex_min_state_int=\count179
-\l__regex_max_state_int=\count180
-\l__regex_left_state_int=\count181
-\l__regex_right_state_int=\count182
-\l__regex_capturing_group_int=\count183
-\l__regex_min_pos_int=\count184
-\l__regex_max_pos_int=\count185
-\l__regex_curr_pos_int=\count186
-\l__regex_start_pos_int=\count187
-\l__regex_success_pos_int=\count188
-\l__regex_curr_char_int=\count189
-\l__regex_curr_catcode_int=\count190
-\l__regex_last_char_int=\count191
-\l__regex_case_changed_char_int=\count192
-\l__regex_curr_state_int=\count193
-\l__regex_step_int=\count194
-\l__regex_min_active_int=\count195
-\l__regex_max_active_int=\count196
-\l__regex_replacement_csnames_int=\count197
-\l__regex_match_count_int=\count198
-\l__regex_min_submatch_int=\count199
-\l__regex_submatch_int=\count266
-\l__regex_zeroth_submatch_int=\count267
-\g__regex_trace_regex_int=\count268
-\c_empty_box=\box39
-\l_tmpa_box=\box40
-\l_tmpb_box=\box41
-\g_tmpa_box=\box42
-\g_tmpb_box=\box43
+\g__intarray_font_int=\count138
+\c__fp_leading_shift_int=\count139
+\c__fp_middle_shift_int=\count140
+\c__fp_trailing_shift_int=\count141
+\c__fp_big_leading_shift_int=\count142
+\c__fp_big_middle_shift_int=\count143
+\c__fp_big_trailing_shift_int=\count144
+\c__fp_Bigg_leading_shift_int=\count145
+\c__fp_Bigg_middle_shift_int=\count146
+\c__fp_Bigg_trailing_shift_int=\count147
+\g__fp_array_int=\count148
+\l__fp_array_loop_int=\count149
+\l__sort_length_int=\count150
+\l__sort_min_int=\count151
+\l__sort_top_int=\count152
+\l__sort_max_int=\count153
+\l__sort_true_max_int=\count154
+\l__sort_block_int=\count155
+\l__sort_begin_int=\count156
+\l__sort_end_int=\count157
+\l__sort_A_int=\count158
+\l__sort_B_int=\count159
+\l__sort_C_int=\count160
+\l__tl_analysis_normal_int=\count161
+\l__tl_analysis_index_int=\count162
+\l__tl_analysis_nesting_int=\count163
+\l__tl_analysis_type_int=\count164
+\l__regex_internal_a_int=\count165
+\l__regex_internal_b_int=\count166
+\l__regex_internal_c_int=\count167
+\l__regex_balance_int=\count168
+\l__regex_group_level_int=\count169
+\l__regex_mode_int=\count170
+\c__regex_cs_in_class_mode_int=\count171
+\c__regex_cs_mode_int=\count172
+\l__regex_catcodes_int=\count173
+\l__regex_default_catcodes_int=\count174
+\c__regex_catcode_L_int=\count175
+\c__regex_catcode_O_int=\count176
+\c__regex_catcode_A_int=\count177
+\c__regex_all_catcodes_int=\count178
+\l__regex_show_lines_int=\count179
+\l__regex_min_state_int=\count180
+\l__regex_max_state_int=\count181
+\l__regex_left_state_int=\count182
+\l__regex_right_state_int=\count183
+\l__regex_capturing_group_int=\count184
+\l__regex_min_pos_int=\count185
+\l__regex_max_pos_int=\count186
+\l__regex_curr_pos_int=\count187
+\l__regex_start_pos_int=\count188
+\l__regex_success_pos_int=\count189
+\l__regex_curr_char_int=\count190
+\l__regex_curr_catcode_int=\count191
+\l__regex_last_char_int=\count192
+\l__regex_case_changed_char_int=\count193
+\l__regex_curr_state_int=\count194
+\l__regex_step_int=\count195
+\l__regex_min_active_int=\count196
+\l__regex_max_active_int=\count197
+\l__regex_replacement_csnames_int=\count198
+\l__regex_match_count_int=\count199
+\l__regex_min_submatch_int=\count266
+\l__regex_submatch_int=\count267
+\l__regex_zeroth_submatch_int=\count268
+\g__regex_trace_regex_int=\count269
+\c_empty_box=\box40
+\l_tmpa_box=\box41
+\l_tmpb_box=\box42
+\g_tmpa_box=\box43
+\g_tmpb_box=\box44
 \l__box_top_dim=\dimen179
 \l__box_bottom_dim=\dimen180
 \l__box_left_dim=\dimen181
@@ -575,8 +715,8 @@ Package: expl3 2018-11-19 L3 programming layer (code)
 \l__box_bottom_new_dim=\dimen184
 \l__box_left_new_dim=\dimen185
 \l__box_right_new_dim=\dimen186
-\l__box_internal_box=\box44
-\l__coffin_internal_box=\box45
+\l__box_internal_box=\box45
+\l__coffin_internal_box=\box46
 \l__coffin_internal_dim=\dimen187
 \l__coffin_offset_x_dim=\dimen188
 \l__coffin_offset_y_dim=\dimen189
@@ -584,14 +724,17 @@ Package: expl3 2018-11-19 L3 programming layer (code)
 \l__coffin_y_dim=\dimen191
 \l__coffin_x_prime_dim=\dimen192
 \l__coffin_y_prime_dim=\dimen193
-\c_empty_coffin=\box46
-\l__coffin_aligned_coffin=\box47
-\l__coffin_aligned_internal_coffin=\box48
-\l_tmpa_coffin=\box49
-\l_tmpb_coffin=\box50
-\l__coffin_display_coffin=\box51
-\l__coffin_display_coord_coffin=\box52
-\l__coffin_display_pole_coffin=\box53
+\c_empty_coffin=\box47
+\l__coffin_aligned_coffin=\box48
+\l__coffin_aligned_internal_coffin=\box49
+\l_tmpa_coffin=\box50
+\l_tmpb_coffin=\box51
+\g_tmpa_coffin=\box52
+\g_tmpb_coffin=\box53
+\c__coffin_empty_coffin=\box54
+\l__coffin_display_coffin=\box55
+\l__coffin_display_coord_coffin=\box56
+\l__coffin_display_pole_coffin=\box57
 \l__coffin_display_offset_dim=\dimen194
 \l__coffin_display_x_dim=\dimen195
 \l__coffin_display_y_dim=\dimen196
@@ -605,56 +748,56 @@ Package: expl3 2018-11-19 L3 programming layer (code)
 \l__coffin_scaled_width_dim=\dimen259
 )
 (/usr/share/texmf-dist/tex/latex/l3kernel/l3xdvipdfmx.def
-File: l3xdvidpfmx.def 2018-11-19 v L3 Experimental driver: xdvipdfmx
-\g__driver_image_int=\count269
-\g__driver_pdf_object_int=\count270
+File: l3xdvipdfmx.def 2019-02-15 v L3 Experimental driver: xdvipdfmx
+\g__driver_image_int=\count270
+\g__driver_pdf_object_int=\count271
 ))
 (/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2018-10-17 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count271
-\g__xparse_grabber_int=\count272
-\l__xparse_m_args_int=\count273
-\l__xparse_mandatory_args_int=\count274
-\l__xparse_v_nesting_int=\count275
+\l__xparse_current_arg_int=\count272
+\g__xparse_grabber_int=\count273
+\l__xparse_m_args_int=\count274
+\l__xparse_mandatory_args_int=\count275
+\l__xparse_v_nesting_int=\count276
 )
 Package: siunitx 2018/05/17 v2.7s A comprehensive (SI) units package
 
 (/usr/share/texmf-dist/tex/latex/tools/array.sty
-Package: array 2018/04/30 v2.4h Tabular extension package (FMi)
+Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
 \col@sep=\dimen260
-\ar@mcellbox=\box54
+\ar@mcellbox=\box58
 \extrarowheight=\dimen261
 \NC@list=\toks34
 \extratabsurround=\skip52
 \backup@length=\skip53
-\ar@cellbox=\box55
+\ar@cellbox=\box59
 )
 (/usr/share/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 Package: l3keys2e 2018-10-17 LaTeX2e option processing using LaTeX3 keys
 )
-\l__siunitx_tmp_box=\box56
+\l__siunitx_tmp_box=\box60
 \l__siunitx_tmp_dim=\dimen262
-\l__siunitx_tmp_int=\count276
-\l__siunitx_number_mantissa_length_int=\count277
-\l__siunitx_number_uncert_length_int=\count278
-\l__siunitx_round_int=\count279
-\l__siunitx_process_decimal_int=\count280
-\l__siunitx_process_uncertainty_int=\count281
-\l__siunitx_process_fixed_int=\count282
-\l__siunitx_process_integer_min_int=\count283
-\l__siunitx_process_precision_int=\count284
-\l__siunitx_group_min_int=\count285
-\l__siunitx_angle_marker_box=\box57
-\l__siunitx_angle_unit_box=\box58
+\l__siunitx_tmp_int=\count277
+\l__siunitx_number_mantissa_length_int=\count278
+\l__siunitx_number_uncert_length_int=\count279
+\l__siunitx_round_int=\count280
+\l__siunitx_process_decimal_int=\count281
+\l__siunitx_process_uncertainty_int=\count282
+\l__siunitx_process_fixed_int=\count283
+\l__siunitx_process_integer_min_int=\count284
+\l__siunitx_process_precision_int=\count285
+\l__siunitx_group_min_int=\count286
+\l__siunitx_angle_marker_box=\box61
+\l__siunitx_angle_unit_box=\box62
 \l__siunitx_angle_marker_dim=\dimen263
 \l__siunitx_angle_unit_dim=\dimen264
-\l__siunitx_unit_int=\count286
-\l__siunitx_unit_denominator_int=\count287
-\l__siunitx_unit_numerator_int=\count288
-\l__siunitx_unit_prefix_int=\count289
-\l__siunitx_unit_prefix_base_int=\count290
-\l__siunitx_unit_prefix_gram_int=\count291
-\l__siunitx_number_product_int=\count292
+\l__siunitx_unit_int=\count287
+\l__siunitx_unit_denominator_int=\count288
+\l__siunitx_unit_numerator_int=\count289
+\l__siunitx_unit_prefix_int=\count290
+\l__siunitx_unit_prefix_base_int=\count291
+\l__siunitx_unit_prefix_gram_int=\count292
+\l__siunitx_number_product_int=\count293
 \c__siunitx_one_fill_skip=\skip54
 \l__siunitx_table_unit_align_skip=\skip55
 \l__siunitx_table_exponent_dim=\dimen265
@@ -666,10 +809,10 @@ Package: l3keys2e 2018-10-17 LaTeX2e option processing using LaTeX3 keys
 \l__siunitx_table_fill_pre_dim=\dimen271
 \l__siunitx_table_fill_post_dim=\dimen272
 \l__siunitx_table_fill_mid_dim=\dimen273
-\l__siunitx_table_pre_box=\box59
-\l__siunitx_table_post_box=\box60
-\l__siunitx_table_mantissa_box=\box61
-\l__siunitx_table_result_box=\box62
+\l__siunitx_table_pre_box=\box63
+\l__siunitx_table_post_box=\box64
+\l__siunitx_table_mantissa_box=\box65
+\l__siunitx_table_result_box=\box66
 \l__siunitx_table_number_align_skip=\skip56
 \l__siunitx_table_text_align_skip=\skip57
 
@@ -686,8 +829,8 @@ Package: pgfplots 2018/03/28 v1.16 Data Visualization (1.16)
 \t@pgfplots@tokb=\toks36
 \t@pgfplots@tokc=\toks37
 \pgfplots@tmpa=\dimen274
-\c@pgfplots@coordindex=\count293
-\c@pgfplots@scanlineindex=\count294
+\c@pgfplots@coordindex=\count294
+\c@pgfplots@scanlineindex=\count295
 
 (/usr/share/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex))
 (/usr/share/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex)
@@ -700,10 +843,8 @@ Package pgfplots: loading complementary arithmetics for your pgf version...
 gflibraryfpu.code.tex)
 (/usr/share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_p
 gfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count295
-)
-(/usr/share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_l
-eq.code.tex))
+\c@pgfmathroundto@lastzeros=\count296
+))
 (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
 (/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure
 .code.tex)
@@ -711,13 +852,13 @@ eq.code.tex))
 ext.code.tex)
 (/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.te
 x
-\c@pgfplotsarray@tmp=\count296
+\c@pgfplotsarray@tmp=\count297
 )
 (/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.t
 ex)
 (/usr/share/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.t
 ex
-\c@pgfplotstable@counta=\count297
+\c@pgfplotstable@counta=\count298
 \t@pgfplotstable@a=\toks38
 )
 (/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.te
@@ -726,13 +867,13 @@ x) (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex
 (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex)
 (/usr/share/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading
 .code.tex
-\c@pgfplotslibrarysurf@no=\count298
+\c@pgfplotslibrarysurf@no=\count299
 
 (/usr/share/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.
 pgfsys-xetex.def
 (/usr/share/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.
 pgfsys-dvipdfmx.def
-\c@pgfplotslibrarysurf@streamlen=\count299
+\c@pgfplotslibrarysurf@streamlen=\count300
 ))))
 (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex
 (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex))
@@ -754,11 +895,11 @@ decorations.code.tex
 \pgfdecoratedinputsegmentcompleteddistance=\dimen277
 \pgfdecoratedinputsegmentremainingdistance=\dimen278
 \pgf@decorate@distancetomove=\dimen279
-\pgf@decorate@repeatstate=\count300
+\pgf@decorate@repeatstate=\count301
 \pgfdecorationsegmentamplitude=\dimen280
 \pgfdecorationsegmentlength=\dimen281
 )
-\tikz@lib@dec@box=\box63
+\tikz@lib@dec@box=\box67
 )
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
 decorations.pathmorphing.code.tex
@@ -768,7 +909,7 @@ ons.pathmorphing.code.tex))
 decorations.pathreplacing.code.tex
 (/usr/share/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorati
 ons.pathreplacing.code.tex))
-\pgfplots@numplots=\count301
+\pgfplots@numplots=\count302
 \pgfplots@xmin@reg=\dimen282
 \pgfplots@xmax@reg=\dimen283
 \pgfplots@ymin@reg=\dimen284
@@ -778,54 +919,56 @@ ons.pathreplacing.code.tex))
 )
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
 plotmarks.code.tex
-File: tikzlibraryplotmarks.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+File: tikzlibraryplotmarks.code.tex 2019/02/02 v3.1.1 (3.1.1)
 
 (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
-File: pgflibraryplotmarks.code.tex 2015/08/03 v3.0.1a (rcs-revision 1.14)
+File: pgflibraryplotmarks.code.tex 2019/02/02 v3.1.1 (3.1.1)
 ))) (/usr/share/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count302
+\c@float@type=\count303
 \float@exts=\toks39
-\float@box=\box64
+\float@box=\box68
 \@float@everytoks=\toks40
-\@floatcapt=\box65
+\@floatcapt=\box69
 )
 (/usr/share/texmf-dist/tex/latex/fontspec/fontspec.sty
-Package: fontspec 2018/07/30 vv2.6h Font selection for XeLaTeX and LuaLaTeX
+Package: fontspec 2019/02/12 v2.7b Font selection for XeLaTeX and LuaLaTeX
 
 (/usr/share/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
-Package: fontspec-xetex 2018/07/30 vv2.6h Font selection for XeLaTeX and LuaLaT
-eX
-\l__fontspec_script_int=\count303
-\l__fontspec_language_int=\count304
-\l__fontspec_strnum_int=\count305
-\l__fontspec_tmp_int=\count306
-\l__fontspec_em_int=\count307
-\l__fontspec_emdef_int=\count308
-\l__fontspec_strong_int=\count309
-\l__fontspec_strongdef_int=\count310
+Package: fontspec-xetex 2019/02/12 v2.7b Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count304
+\l__fontspec_language_int=\count305
+\l__fontspec_strnum_int=\count306
+\l__fontspec_tmp_int=\count307
+\l__fontspec_tmpa_int=\count308
+\l__fontspec_tmpb_int=\count309
+\l__fontspec_tmpc_int=\count310
+\l__fontspec_em_int=\count311
+\l__fontspec_emdef_int=\count312
+\l__fontspec_strong_int=\count313
+\l__fontspec_strongdef_int=\count314
 \l__fontspec_tmpa_dim=\dimen288
 \l__fontspec_tmpb_dim=\dimen289
 \l__fontspec_tmpc_dim=\dimen290
 
 (/usr/share/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
+Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
 
 (/usr/share/texmf-dist/tex/latex/base/tuenc.def
-File: tuenc.def 2017/04/05 v2.0i Standard LaTeX file
+File: tuenc.def 2018/08/11 v2.0j Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding TU on input line 82.
 ))
 (/usr/share/texmf-dist/tex/latex/fontspec/fontspec.cfg)
-LaTeX Info: Redefining \itshape on input line 3910.
-LaTeX Info: Redefining \slshape on input line 3915.
-LaTeX Info: Redefining \scshape on input line 3920.
-LaTeX Info: Redefining \upshape on input line 3925.
-LaTeX Info: Redefining \em on input line 3955.
-LaTeX Info: Redefining \emph on input line 3980.
-LaTeX Info: Redefining \- on input line 4034.
+LaTeX Info: Redefining \itshape on input line 4044.
+LaTeX Info: Redefining \slshape on input line 4049.
+LaTeX Info: Redefining \scshape on input line 4054.
+LaTeX Info: Redefining \upshape on input line 4059.
+LaTeX Info: Redefining \em on input line 4089.
+LaTeX Info: Redefining \emph on input line 4114.
 ))
 (/usr/share/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
-Package: tcolorbox 2018/07/26 version 4.14 text color boxes
+Package: tcolorbox 2018/12/07 version 4.15 text color boxes
 
 (/usr/share/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
@@ -841,24 +984,24 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
 (/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count311
+\etb@tempcnta=\count315
 )
-\tcb@titlebox=\box66
-\tcb@upperbox=\box67
-\tcb@lowerbox=\box68
-\tcb@phantombox=\box69
-\c@tcbbreakpart=\count312
-\c@tcblayer=\count313
-\tcolorbox@number=\count314
-\tcb@temp=\box70
-\tcb@temp=\box71
-\tcb@temp=\box72
-\tcb@temp=\box73
-\tcb@out=\write5
-\tcb@record@out=\write6
+\tcb@titlebox=\box70
+\tcb@upperbox=\box71
+\tcb@lowerbox=\box72
+\tcb@phantombox=\box73
+\c@tcbbreakpart=\count316
+\c@tcblayer=\count317
+\tcolorbox@number=\count318
+\tcb@temp=\box74
+\tcb@temp=\box75
+\tcb@temp=\box76
+\tcb@temp=\box77
+\tcb@out=\write4
+\tcb@record@out=\write5
 )
 (/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
 s
 \f@nch@headwidth=\skip58
 \f@nch@O@elh=\skip59
@@ -887,10 +1030,10 @@ Package: shellesc 2016/06/07 v0.02a unified shell escape interface for LaTeX
 Package shellesc Info: Unrestricted shell escape enabled on input line 67.
 )
 \csv@file=\read4
-\c@csvinputline=\count315
-\c@csvrow=\count316
-\c@csvcol=\count317
-\csv@out=\write7
+\c@csvinputline=\count319
+\c@csvrow=\count320
+\c@csvcol=\count321
+\csv@out=\write6
 )
 (/usr/share/texmf-dist/tex/latex/filecontents/filecontents.sty
 Package: filecontents 2018/05/30 v1.4 Create an external file from within a LaT
@@ -901,15 +1044,15 @@ Package: pdfpages 2017/10/31 v0.5l Insert pages of external PDF documents (AM)
 
 (/usr/share/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count318
-\calc@Bcount=\count319
+\calc@Acount=\count322
+\calc@Bcount=\count323
 \calc@Adimen=\dimen291
 \calc@Bdimen=\dimen292
 \calc@Askip=\skip70
 \calc@Bskip=\skip71
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count320
+\calc@Ccount=\count324
 \calc@Cskip=\skip72
 )
 (/usr/share/texmf-dist/tex/latex/eso-pic/eso-pic.sty
@@ -933,31 +1076,31 @@ Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
 (/usr/share/texmf-dist/tex/latex/pdfpages/ppxetex.def
 File: ppxetex.def 2017/10/31 v0.5l Pdfpages driver for XeTeX (AM)
 )
-\AM@pagebox=\box74
+\AM@pagebox=\box78
 \AM@global@opts=\toks43
 \AM@toc@title=\toks44
-\c@AM@survey=\count321
-\AM@templatesizebox=\box75
+\c@AM@survey=\count325
+\AM@templatesizebox=\box79
 )
 (/usr/share/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count322
-\lst@gtempboxa=\box76
+\lst@mode=\count326
+\lst@gtempboxa=\box80
 \lst@token=\toks45
-\lst@length=\count323
+\lst@length=\count327
 \lst@currlwidth=\dimen295
-\lst@column=\count324
-\lst@pos=\count325
+\lst@column=\count328
+\lst@pos=\count329
 \lst@lostspace=\dimen296
 \lst@width=\dimen297
-\lst@newlines=\count326
-\lst@lineno=\count327
+\lst@newlines=\count330
+\lst@lineno=\count331
 \lst@maxwidth=\dimen298
 
 (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
-\c@lstnumber=\count328
-\lst@skipnumbers=\count329
-\lst@framebox=\box77
+\c@lstnumber=\count332
+\lst@skipnumbers=\count333
+\lst@framebox=\box81
 )
 (/usr/share/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2018/09/02 1.7 listings configuration
@@ -974,9 +1117,9 @@ Package ifvtex Info: VTeX not detected.
 (/usr/share/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count330
-\Gm@cntv=\count331
-\c@Gm@tempcnt=\count332
+\Gm@cnth=\count334
+\Gm@cntv=\count335
+\c@Gm@tempcnt=\count336
 \Gm@bindingoffset=\dimen299
 \Gm@wd@mp=\dimen300
 \Gm@odd@mp=\dimen301
@@ -987,10 +1130,6 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen306
 \Gm@dimlist=\toks46
 )
-
-Package fontspec Info: Font "Arial" does not contain any OpenType `Script'
-(fontspec)             information.
-
 
 Package fontspec Info: Font family 'Arial(0)' created for font 'Arial' with
 (fontspec)             options [Ligatures=TeX].
@@ -1099,7 +1238,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  OT1/cmss/bx/n --> TU/lmss/bx/n on input line 40.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/lmtt/bx/n on input line 40.
-\AtBeginShipoutBox=\box78
+\AtBeginShipoutBox=\box82
 (/usr/share/texmf-dist/tex/latex/oberdiek/pdflscape.sty
 Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
 
@@ -1109,7 +1248,7 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 99.
 
 )
-\c@lstlisting=\count333
+\c@lstlisting=\count337
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1166,15 +1305,15 @@ Overfull \hbox (13.23703pt too wide) in paragraph at lines 61--73
 [1
 
 ] (./bericht.toc)
-\tf@toc=\write8
-\openout8 = `bericht.toc'.
+\tf@toc=\write7
+\openout7 = `bericht.toc'.
 
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
+Make it at least 14.49998pt.
+We now make it that large for the rest of the document.
+This may cause the page layout to be inconsistent, however.
 
 [1] (./aufbau.pdf_tex
 File: aufbau.pdf Graphic file (type pdf)
@@ -1206,20 +1345,7 @@ Overfull \hbox (1.57489pt too wide) in paragraph at lines 112--115
  Potentiometer mit Schwim-
  []
 
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[2]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[3] (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+[2] [3] (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2018/09/02 1.7 listings language file
 )
 (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -1228,42 +1354,1258 @@ File: lstlang1.sty 2018/09/02 1.7 listings language file
 (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
 )
-(./arduino/HC-SR04/HC-SR04.ino)
+(./arduino/HC-SR04/HC-SR04.ino
+Missing character: There is no ␣ in font Arial/OT:mapping=tex-text;!
+) [4] (./arduino/DS1722/DS1722.ino [5] [6]
+Missing character: There is no ␣ in font Arial/OT:mapping=tex-text;!
+)
+File: ../../../data/datasheets/HCSR04-1022824.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/HCSR04-1022824.pdf>
+File: ../../../data/datasheets/HCSR04-1022824.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/HCSR04-1022824.pdf>
+File: ../../../data/datasheets/HCSR04-1022824.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/HCSR04-1022824.pdf, page 1>
+File: ../../../data/datasheets/HCSR04-1022824.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/HCSR04-1022824.pdf, page 1>
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
+[7]
+File: ../../../data/datasheets/HCSR04-1022824.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/HCSR04-1022824.pdf, page 1>
+File: ../../../data/datasheets/HCSR04-1022824.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/HCSR04-1022824.pdf, page 1>
+File: ../../../data/datasheets/HCSR04-1022824.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/HCSR04-1022824.pdf, page 1>
+ [8]
+File: ../../../data/datasheets/HCSR04-1022824.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/HCSR04-1022824.pdf, page 2>
+File: ../../../data/datasheets/HCSR04-1022824.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/HCSR04-1022824.pdf, page 2>
+File: ../../../data/datasheets/HCSR04-1022824.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/HCSR04-1022824.pdf, page 2>
+ [9]
+File: ../../../data/datasheets/HCSR04-1022824.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/HCSR04-1022824.pdf, page 3>
+File: ../../../data/datasheets/HCSR04-1022824.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/HCSR04-1022824.pdf, page 3>
+File: ../../../data/datasheets/HCSR04-1022824.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/HCSR04-1022824.pdf, page 3>
+ [10]
+File: ../../../data/datasheets/HCSR04-1022824.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/HCSR04-1022824.pdf, page 4>
+File: ../../../data/datasheets/HCSR04-1022824.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/HCSR04-1022824.pdf, page 4>
+File: ../../../data/datasheets/HCSR04-1022824.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/HCSR04-1022824.pdf, page 4>
+ [11]
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf>
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf>
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 1>
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 1>
+ [12]
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 1>
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 1>
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 1>
+ [13]
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 2>
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 2>
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 2>
+ [14]
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 3>
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 3>
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 3>
+ [15]
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 4>
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 4>
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 4>
+ [16]
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 5>
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 5>
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 5>
+ [17]
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 6>
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 6>
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 6>
+ [18]
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 7>
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 7>
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 7>
+ [19]
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 8>
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 8>
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 8>
+ [20]
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 9>
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 9>
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 9>
+ [21]
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 10>
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 10>
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 10>
 
-[4] (./arduino/DS1722/DS1722.ino
+[22]
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 11>
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 11>
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 11>
+ [23]
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 12>
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 12>
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 12>
+ [24]
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 13>
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 13>
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 13>
+ [25]
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 14>
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 14>
+File: ../../../data/datasheets/DS1722.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/DS1722.pdf, page 14>
+ [26]
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf>
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf>
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 1>
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 1>
+ [27]
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 1>
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 1>
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 1>
+ [28]
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 2>
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 2>
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 2>
+ [29]
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 3>
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 3>
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 3>
+ [30]
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 4>
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 4>
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 4>
+ [31]
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 5>
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 5>
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 5>
+ [32]
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 6>
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 6>
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 6>
+ [33]
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 7>
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 7>
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 7>
+ [34]
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 8>
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 8>
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 8>
+ [35]
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 9>
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 9>
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 9>
+ [36]
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 10>
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 10>
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 10>
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
+[37]
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 11>
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 11>
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 11>
+ [38]
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 12>
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 12>
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 12>
+ [39]
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 13>
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 13>
+File: ../../../data/datasheets/MAX639-MAX653.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/MAX639-MAX653.pdf, page 13>
+ [40]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 1>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 1>
+ [41]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 1>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 1>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 1>
+ [42]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 2>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 2>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 2>
+ [43]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 3>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 3>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 3>
+ [44]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 4>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 4>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 4>
+ [45]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 5>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 5>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 5>
+ [46]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 6>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 6>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 6>
+ [47]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 7>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 7>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 7>
+ [48]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 8>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 8>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 8>
+ [49]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 9>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 9>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 9>
+ [50]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 10>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 10>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 10>
+ [51]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 11>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 11>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 11>
 
-[5]
+[52]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 12>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 12>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 12>
+ [53]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 13>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 13>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 13>
+ [54]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 14>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 14>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 14>
+ [55]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 15>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 15>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 15>
+ [56]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 16>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 16>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 16>
+ [57]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 17>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 17>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 17>
+ [58]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 18>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 18>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 18>
+ [59]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 19>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 19>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 19>
+ [60]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 20>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 20>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 20>
+ [61]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 21>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 21>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 21>
+ [62]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 22>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 22>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 22>
+ [63]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 23>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 23>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 23>
+ [64]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 24>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 24>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 24>
+ [65]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 25>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 25>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 25>
+ [66]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 26>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 26>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 26>
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
+[67]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 27>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 27>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 27>
+ [68]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 28>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 28>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 28>
+ [69]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 29>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 29>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 29>
+ [70]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 30>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 30>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 30>
+ [71]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 31>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 31>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 31>
+ [72]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 32>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 32>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 32>
+ [73]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 33>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 33>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 33>
+ [74]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 34>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 34>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 34>
+ [75]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 35>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 35>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 35>
+ [76]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 36>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 36>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 36>
+ [77]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 37>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 37>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 37>
+ [78]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 38>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 38>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 38>
+ [79]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 39>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 39>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 39>
+ [80]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 40>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 40>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 40>
+ [81]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 41>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 41>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 41>
 
-[6])
+[82]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 42>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 42>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 42>
+ [83]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 43>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 43>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 43>
+ [84]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 44>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 44>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 44>
+ [85]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 45>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 45>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 45>
+ [86]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 46>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 46>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 46>
+ [87]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 47>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 47>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 47>
+ [88]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 48>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 48>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 48>
+ [89]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 49>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 49>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 49>
+ [90]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 50>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 50>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 50>
+ [91]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 51>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 51>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 51>
+ [92]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 52>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 52>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 52>
+ [93]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 53>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 53>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 53>
+ [94]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 54>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 54>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 54>
+ [95]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 55>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 55>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 55>
+ [96]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 56>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 56>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 56>
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
+[97]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 57>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 57>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 57>
+ [98]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 58>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 58>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 58>
+ [99]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 59>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 59>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 59>
+ [100]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 60>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 60>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 60>
+ [101]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 61>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 61>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 61>
+ [102]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 62>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 62>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 62>
+ [103]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 63>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 63>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 63>
+ [104]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 64>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 64>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 64>
+ [105]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 65>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 65>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 65>
+ [106]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 66>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 66>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 66>
+ [107]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 67>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 67>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 67>
+ [108]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 68>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 68>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 68>
+ [109]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 69>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 69>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 69>
 
-[7] (./bericht.aux) ) 
+[110]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 70>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 70>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 70>
+ [111]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 71>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 71>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 71>
+ [112]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 72>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 72>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 72>
+ [113]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 73>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 73>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 73>
+ [114]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 74>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 74>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 74>
+ [115]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 75>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 75>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 75>
+ [116]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 76>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 76>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 76>
+ [117]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 77>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 77>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 77>
+ [118]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 78>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 78>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 78>
+ [119]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 79>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 79>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 79>
+ [120]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 80>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 80>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 80>
+ [121]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 81>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 81>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 81>
+
+[122]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 82>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 82>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 82>
+ [123]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 83>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 83>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 83>
+ [124]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 84>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 84>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 84>
+ [125]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 85>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 85>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 85>
+ [126]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 86>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 86>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 86>
+ [127]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 87>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 87>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 87>
+ [128]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 88>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 88>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 88>
+ [129]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 89>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 89>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 89>
+ [130]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 90>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 90>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 90>
+ [131]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 91>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 91>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 91>
+ [132]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 92>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 92>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 92>
+ [133]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 93>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 93>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 93>
+
+[134]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 94>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 94>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 94>
+ [135]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 95>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 95>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 95>
+ [136]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 96>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 96>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 96>
+ [137]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 97>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 97>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 97>
+ [138]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 98>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 98>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 98>
+ [139]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 99>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 99>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 99>
+ [140]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 100>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 100>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 100>
+ [141]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 101>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 101>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 101>
+ [142]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 102>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 102>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 102>
+ [143]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 103>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 103>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 103>
+ [144]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 104>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 104>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 104>
+ [145]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 105>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 105>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 105>
+
+[146]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 106>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 106>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 106>
+ [147]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 107>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 107>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 107>
+ [148]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 108>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 108>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 108>
+ [149]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 109>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 109>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 109>
+ [150]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 110>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 110>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 110>
+ [151]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 111>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 111>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 111>
+ [152]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 112>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 112>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 112>
+ [153]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 113>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 113>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 113>
+ [154]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 114>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 114>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 114>
+ [155]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 115>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 115>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 115>
+ [156]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 116>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 116>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 116>
+ [157]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 117>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 117>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 117>
+
+[158]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 118>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 118>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 118>
+ [159]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 119>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 119>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 119>
+ [160]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 120>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 120>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 120>
+ [161]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 121>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 121>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 121>
+ [162]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 122>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 122>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 122>
+ [163]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 123>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 123>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 123>
+ [164]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 124>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 124>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 124>
+ [165]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 125>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 125>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 125>
+ [166]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 126>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 126>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 126>
+ [167]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 127>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 127>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 127>
+ [168]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 128>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 128>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 128>
+ [169]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 129>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 129>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 129>
+
+[170]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 130>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 130>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 130>
+ [171]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 131>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 131>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 131>
+ [172]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 132>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 132>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 132>
+ [173]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 133>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 133>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 133>
+ [174]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 134>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 134>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 134>
+ [175]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 135>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 135>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 135>
+ [176]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 136>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 136>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 136>
+ [177]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 137>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 137>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 137>
+ [178]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 138>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 138>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 138>
+ [179]
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 139>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 139>
+File: ../../../data/datasheets/CY8C5888LTI-LP097.pdf Graphic file (type pdf)
+<use ../../../data/datasheets/CY8C5888LTI-LP097.pdf, page 139>
+ [180]
+(./bericht.aux) ) 
 Here is how much of TeX's memory you used:
- 48074 strings out of 492956
- 1199916 string characters out of 6139024
- 1727203 words of memory out of 5000000
- 51437 multiletter control sequences out of 15000+600000
- 542861 words of font info for 89 fonts, out of 8000000 for 9000
+ 49120 strings out of 492933
+ 1243885 string characters out of 6138667
+ 1751859 words of memory out of 5000000
+ 52490 multiletter control sequences out of 15000+600000
+ 542893 words of font info for 93 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 62i,13n,96p,831b,1615s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,18n,96p,831b,1614s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on bericht.pdf (8 pages).
+Output written on bericht.pdf (181 pages).

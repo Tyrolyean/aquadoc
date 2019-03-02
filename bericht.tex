@@ -26,7 +26,7 @@
 % #############################################################################
 
 % Include the used datasheets in the document
-\def\datasheets{0}
+\def\datasheets{1}
 
 \def\psocdisasm{0}
 
@@ -80,7 +80,7 @@
 \section{Aufgabenstelleung}
 
 \subsection{Aufbau}
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\def\svgwidth{\columnwidth}
 	\input{aufbau.pdf_tex}
@@ -213,11 +213,11 @@ used to
 
 \end{itemize}
 
-\if\datasheets
+\if\datasheets1
 	Die Angeführten Datenblätter wurden dem Dokument am Ende beigefügt.
 \fi
 
-\if\datasheets
+\if\datasheets1
 	\subsection{Datenblätter}
 
 	\subsubsection{HC-SR04}
