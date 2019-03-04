@@ -15,6 +15,6 @@
 #include <stdbool.h>
     
 extern bool pin_val;
-static inline void isr_timer();
+void isr_timer();
 
 #endif

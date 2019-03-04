@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccE68lZA.s 			page 1
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccx4Qmga.s 			page 1
 
 
    1              		.syntax unified
@@ -44,7 +44,7 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccE68lZA.s 			page 1
   14:isrsc.c       **** /* Initial variable values */
   15:isrsc.c       **** bool pin_val = false;
   16:isrsc.c       **** 
-  17:isrsc.c       **** inline void isr_timer(){
+  17:isrsc.c       **** void isr_timer(){
   28              		.loc 1 17 0
   29              		.cfi_startproc
   30              		@ args = 0, pretend = 0, frame = 0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccE68lZA.s 			page 1
   37 0008 1370     		strb	r3, [r2]
   38 000a 7047     		bx	lr
   39              	.L3:
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccE68lZA.s 			page 2
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccx4Qmga.s 			page 2
 
 
   40              		.align	2
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccE68lZA.s 			page 1
   94 0002 01       		.byte	0x1
   95 0003 25       		.uleb128 0x25
   96 0004 0E       		.uleb128 0xe
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccE68lZA.s 			page 3
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccx4Qmga.s 			page 3
 
 
   97 0005 13       		.uleb128 0x13
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccE68lZA.s 			page 1
  151 003c 00       		.byte	0
  152 003d 0B       		.uleb128 0xb
  153 003e 0B       		.uleb128 0xb
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccE68lZA.s 			page 4
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccx4Qmga.s 			page 4
 
 
  154 003f 3E       		.uleb128 0x3e
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccE68lZA.s 			page 1
  189      6C00
  190              	.LASF1:
  191 009e 69737273 		.ascii	"isrsc.c\000"
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccE68lZA.s 			page 5
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccx4Qmga.s 			page 5
 
 
  191      632E6300 

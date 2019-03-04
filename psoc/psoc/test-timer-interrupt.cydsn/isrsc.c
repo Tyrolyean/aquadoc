@@ -14,6 +14,6 @@
 /* Initial variable values */
 bool pin_val = false;
 
-static inline void isr_timer(){
+void isr_timer(){
     pin_val = !pin_val;
 }

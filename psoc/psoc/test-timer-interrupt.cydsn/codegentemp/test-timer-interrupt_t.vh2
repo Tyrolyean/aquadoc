@@ -1,5 +1,5 @@
 -- Project:   E:\aquadoc\psoc\psoc\test-timer-interrupt.cydsn\test-timer-interrupt.cyprj
--- Generated: 02/18/2019 11:56:02
+-- Generated: 03/03/2019 13:30:28
 -- PSoC Creator  4.2
 
 ENTITY \test-timer-interrupt\ IS

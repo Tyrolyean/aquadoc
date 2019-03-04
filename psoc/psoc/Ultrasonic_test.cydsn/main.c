@@ -13,32 +13,7 @@
 #include <unistd.h>
 #include <stdio.h>
 
-size_t get_hc_sr04(){
-    
-    /* If the timeout is reached, the sensor is 
-     * assumed to have been disconnected
-     */
-    
-    #define ERRROR_CORRECTION 500
-    
-    #define TIMEOUT 50000
-    
-    /* Place your application code here. */
-    Trigger_Impuls_Write(1);
-    CyDelayUs(10);
-    Trigger_Impuls_Write(0);
-    
-    for(int i = 0; i < TIMEOUT && !Echo_Input_Read(); i++){
-        CyDelayUs(1);
-    }
-    
-    //ultimate Baustelle
-    size_t counter;
-    for(counter = 0;Echo_Input_Read() == 1 && counter <= TIMEOUT; counter ++){
-        CyDelayUs(1);
-    }
-    return counter + ERRROR_CORRECTION;
-}
+#include "hcsr04.h"
 
 int main(void)
 {

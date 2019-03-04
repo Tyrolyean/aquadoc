@@ -1,0 +1,2013 @@
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqtcK3d.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"int_1us.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.int_1us_Interrupt,"ax",%progbits
+  20              		.align	2
+  21              		.global	int_1us_Interrupt
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	int_1us_Interrupt, %function
+  25              	int_1us_Interrupt:
+  26              	.LFB3:
+  27              		.file 1 "Generated_Source\\PSoC5\\int_1us.c"
+   1:Generated_Source\PSoC5/int_1us.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/int_1us.c **** * File Name: int_1us.c  
+   3:Generated_Source\PSoC5/int_1us.c **** * Version 1.70
+   4:Generated_Source\PSoC5/int_1us.c **** *
+   5:Generated_Source\PSoC5/int_1us.c **** *  Description:
+   6:Generated_Source\PSoC5/int_1us.c **** *   API for controlling the state of an interrupt.
+   7:Generated_Source\PSoC5/int_1us.c **** *
+   8:Generated_Source\PSoC5/int_1us.c **** *
+   9:Generated_Source\PSoC5/int_1us.c **** *  Note:
+  10:Generated_Source\PSoC5/int_1us.c **** *
+  11:Generated_Source\PSoC5/int_1us.c **** ********************************************************************************
+  12:Generated_Source\PSoC5/int_1us.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  13:Generated_Source\PSoC5/int_1us.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  14:Generated_Source\PSoC5/int_1us.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  15:Generated_Source\PSoC5/int_1us.c **** * the software package with which this file was provided.
+  16:Generated_Source\PSoC5/int_1us.c **** *******************************************************************************/
+  17:Generated_Source\PSoC5/int_1us.c **** 
+  18:Generated_Source\PSoC5/int_1us.c **** 
+  19:Generated_Source\PSoC5/int_1us.c **** #include <cydevice_trm.h>
+  20:Generated_Source\PSoC5/int_1us.c **** #include <CyLib.h>
+  21:Generated_Source\PSoC5/int_1us.c **** #include <int_1us.h>
+  22:Generated_Source\PSoC5/int_1us.c **** #include "cyapicallbacks.h"
+  23:Generated_Source\PSoC5/int_1us.c **** 
+  24:Generated_Source\PSoC5/int_1us.c **** #if !defined(int_1us__REMOVED) /* Check for removal by optimization */
+  25:Generated_Source\PSoC5/int_1us.c **** 
+  26:Generated_Source\PSoC5/int_1us.c **** /*******************************************************************************
+  27:Generated_Source\PSoC5/int_1us.c **** *  Place your includes, defines and code here 
+  28:Generated_Source\PSoC5/int_1us.c **** ********************************************************************************/
+  29:Generated_Source\PSoC5/int_1us.c **** /* `#START int_1us_intc` */
+  30:Generated_Source\PSoC5/int_1us.c **** 
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqtcK3d.s 			page 2
+
+
+  31:Generated_Source\PSoC5/int_1us.c **** /* `#END` */
+  32:Generated_Source\PSoC5/int_1us.c **** 
+  33:Generated_Source\PSoC5/int_1us.c **** #ifndef CYINT_IRQ_BASE
+  34:Generated_Source\PSoC5/int_1us.c **** #define CYINT_IRQ_BASE      16
+  35:Generated_Source\PSoC5/int_1us.c **** #endif /* CYINT_IRQ_BASE */
+  36:Generated_Source\PSoC5/int_1us.c **** #ifndef CYINT_VECT_TABLE
+  37:Generated_Source\PSoC5/int_1us.c **** #define CYINT_VECT_TABLE    ((cyisraddress **) CYREG_NVIC_VECT_OFFSET)
+  38:Generated_Source\PSoC5/int_1us.c **** #endif /* CYINT_VECT_TABLE */
+  39:Generated_Source\PSoC5/int_1us.c **** 
+  40:Generated_Source\PSoC5/int_1us.c **** /* Declared in startup, used to set unused interrupts to. */
+  41:Generated_Source\PSoC5/int_1us.c **** CY_ISR_PROTO(IntDefaultHandler);
+  42:Generated_Source\PSoC5/int_1us.c **** 
+  43:Generated_Source\PSoC5/int_1us.c **** 
+  44:Generated_Source\PSoC5/int_1us.c **** /*******************************************************************************
+  45:Generated_Source\PSoC5/int_1us.c **** * Function Name: int_1us_Start
+  46:Generated_Source\PSoC5/int_1us.c **** ********************************************************************************
+  47:Generated_Source\PSoC5/int_1us.c **** *
+  48:Generated_Source\PSoC5/int_1us.c **** * Summary:
+  49:Generated_Source\PSoC5/int_1us.c **** *  Set up the interrupt and enable it. This function disables the interrupt, 
+  50:Generated_Source\PSoC5/int_1us.c **** *  sets the default interrupt vector, sets the priority from the value in the
+  51:Generated_Source\PSoC5/int_1us.c **** *  Design Wide Resources Interrupt Editor, then enables the interrupt to the 
+  52:Generated_Source\PSoC5/int_1us.c **** *  interrupt controller.
+  53:Generated_Source\PSoC5/int_1us.c **** *
+  54:Generated_Source\PSoC5/int_1us.c **** * Parameters:  
+  55:Generated_Source\PSoC5/int_1us.c **** *   None
+  56:Generated_Source\PSoC5/int_1us.c **** *
+  57:Generated_Source\PSoC5/int_1us.c **** * Return:
+  58:Generated_Source\PSoC5/int_1us.c **** *   None
+  59:Generated_Source\PSoC5/int_1us.c **** *
+  60:Generated_Source\PSoC5/int_1us.c **** *******************************************************************************/
+  61:Generated_Source\PSoC5/int_1us.c **** void int_1us_Start(void)
+  62:Generated_Source\PSoC5/int_1us.c **** {
+  63:Generated_Source\PSoC5/int_1us.c ****     /* For all we know the interrupt is active. */
+  64:Generated_Source\PSoC5/int_1us.c ****     int_1us_Disable();
+  65:Generated_Source\PSoC5/int_1us.c **** 
+  66:Generated_Source\PSoC5/int_1us.c ****     /* Set the ISR to point to the int_1us Interrupt. */
+  67:Generated_Source\PSoC5/int_1us.c ****     int_1us_SetVector(&int_1us_Interrupt);
+  68:Generated_Source\PSoC5/int_1us.c **** 
+  69:Generated_Source\PSoC5/int_1us.c ****     /* Set the priority. */
+  70:Generated_Source\PSoC5/int_1us.c ****     int_1us_SetPriority((uint8)int_1us_INTC_PRIOR_NUMBER);
+  71:Generated_Source\PSoC5/int_1us.c **** 
+  72:Generated_Source\PSoC5/int_1us.c ****     /* Enable it. */
+  73:Generated_Source\PSoC5/int_1us.c ****     int_1us_Enable();
+  74:Generated_Source\PSoC5/int_1us.c **** }
+  75:Generated_Source\PSoC5/int_1us.c **** 
+  76:Generated_Source\PSoC5/int_1us.c **** 
+  77:Generated_Source\PSoC5/int_1us.c **** /*******************************************************************************
+  78:Generated_Source\PSoC5/int_1us.c **** * Function Name: int_1us_StartEx
+  79:Generated_Source\PSoC5/int_1us.c **** ********************************************************************************
+  80:Generated_Source\PSoC5/int_1us.c **** *
+  81:Generated_Source\PSoC5/int_1us.c **** * Summary:
+  82:Generated_Source\PSoC5/int_1us.c **** *  Sets up the interrupt and enables it. This function disables the interrupt,
+  83:Generated_Source\PSoC5/int_1us.c **** *  sets the interrupt vector based on the address passed in, sets the priority 
+  84:Generated_Source\PSoC5/int_1us.c **** *  from the value in the Design Wide Resources Interrupt Editor, then enables 
+  85:Generated_Source\PSoC5/int_1us.c **** *  the interrupt to the interrupt controller.
+  86:Generated_Source\PSoC5/int_1us.c **** *  
+  87:Generated_Source\PSoC5/int_1us.c **** *  When defining ISR functions, the CY_ISR and CY_ISR_PROTO macros should be 
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqtcK3d.s 			page 3
+
+
+  88:Generated_Source\PSoC5/int_1us.c **** *  used to provide consistent definition across compilers:
+  89:Generated_Source\PSoC5/int_1us.c **** *  
+  90:Generated_Source\PSoC5/int_1us.c **** *  Function definition example:
+  91:Generated_Source\PSoC5/int_1us.c **** *   CY_ISR(MyISR)
+  92:Generated_Source\PSoC5/int_1us.c **** *   {
+  93:Generated_Source\PSoC5/int_1us.c **** *   }
+  94:Generated_Source\PSoC5/int_1us.c **** *   Function prototype example:
+  95:Generated_Source\PSoC5/int_1us.c **** *   CY_ISR_PROTO(MyISR);
+  96:Generated_Source\PSoC5/int_1us.c **** *
+  97:Generated_Source\PSoC5/int_1us.c **** * Parameters:  
+  98:Generated_Source\PSoC5/int_1us.c **** *   address: Address of the ISR to set in the interrupt vector table.
+  99:Generated_Source\PSoC5/int_1us.c **** *
+ 100:Generated_Source\PSoC5/int_1us.c **** * Return:
+ 101:Generated_Source\PSoC5/int_1us.c **** *   None
+ 102:Generated_Source\PSoC5/int_1us.c **** *
+ 103:Generated_Source\PSoC5/int_1us.c **** *******************************************************************************/
+ 104:Generated_Source\PSoC5/int_1us.c **** void int_1us_StartEx(cyisraddress address)
+ 105:Generated_Source\PSoC5/int_1us.c **** {
+ 106:Generated_Source\PSoC5/int_1us.c ****     /* For all we know the interrupt is active. */
+ 107:Generated_Source\PSoC5/int_1us.c ****     int_1us_Disable();
+ 108:Generated_Source\PSoC5/int_1us.c **** 
+ 109:Generated_Source\PSoC5/int_1us.c ****     /* Set the ISR to point to the int_1us Interrupt. */
+ 110:Generated_Source\PSoC5/int_1us.c ****     int_1us_SetVector(address);
+ 111:Generated_Source\PSoC5/int_1us.c **** 
+ 112:Generated_Source\PSoC5/int_1us.c ****     /* Set the priority. */
+ 113:Generated_Source\PSoC5/int_1us.c ****     int_1us_SetPriority((uint8)int_1us_INTC_PRIOR_NUMBER);
+ 114:Generated_Source\PSoC5/int_1us.c **** 
+ 115:Generated_Source\PSoC5/int_1us.c ****     /* Enable it. */
+ 116:Generated_Source\PSoC5/int_1us.c ****     int_1us_Enable();
+ 117:Generated_Source\PSoC5/int_1us.c **** }
+ 118:Generated_Source\PSoC5/int_1us.c **** 
+ 119:Generated_Source\PSoC5/int_1us.c **** 
+ 120:Generated_Source\PSoC5/int_1us.c **** /*******************************************************************************
+ 121:Generated_Source\PSoC5/int_1us.c **** * Function Name: int_1us_Stop
+ 122:Generated_Source\PSoC5/int_1us.c **** ********************************************************************************
+ 123:Generated_Source\PSoC5/int_1us.c **** *
+ 124:Generated_Source\PSoC5/int_1us.c **** * Summary:
+ 125:Generated_Source\PSoC5/int_1us.c **** *   Disables and removes the interrupt.
+ 126:Generated_Source\PSoC5/int_1us.c **** *
+ 127:Generated_Source\PSoC5/int_1us.c **** * Parameters:  
+ 128:Generated_Source\PSoC5/int_1us.c **** *   None
+ 129:Generated_Source\PSoC5/int_1us.c **** *
+ 130:Generated_Source\PSoC5/int_1us.c **** * Return:
+ 131:Generated_Source\PSoC5/int_1us.c **** *   None
+ 132:Generated_Source\PSoC5/int_1us.c **** *
+ 133:Generated_Source\PSoC5/int_1us.c **** *******************************************************************************/
+ 134:Generated_Source\PSoC5/int_1us.c **** void int_1us_Stop(void)
+ 135:Generated_Source\PSoC5/int_1us.c **** {
+ 136:Generated_Source\PSoC5/int_1us.c ****     /* Disable this interrupt. */
+ 137:Generated_Source\PSoC5/int_1us.c ****     int_1us_Disable();
+ 138:Generated_Source\PSoC5/int_1us.c **** 
+ 139:Generated_Source\PSoC5/int_1us.c ****     /* Set the ISR to point to the passive one. */
+ 140:Generated_Source\PSoC5/int_1us.c ****     int_1us_SetVector(&IntDefaultHandler);
+ 141:Generated_Source\PSoC5/int_1us.c **** }
+ 142:Generated_Source\PSoC5/int_1us.c **** 
+ 143:Generated_Source\PSoC5/int_1us.c **** 
+ 144:Generated_Source\PSoC5/int_1us.c **** /*******************************************************************************
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqtcK3d.s 			page 4
+
+
+ 145:Generated_Source\PSoC5/int_1us.c **** * Function Name: int_1us_Interrupt
+ 146:Generated_Source\PSoC5/int_1us.c **** ********************************************************************************
+ 147:Generated_Source\PSoC5/int_1us.c **** *
+ 148:Generated_Source\PSoC5/int_1us.c **** * Summary:
+ 149:Generated_Source\PSoC5/int_1us.c **** *   The default Interrupt Service Routine for int_1us.
+ 150:Generated_Source\PSoC5/int_1us.c **** *
+ 151:Generated_Source\PSoC5/int_1us.c **** *   Add custom code between the coments to keep the next version of this file
+ 152:Generated_Source\PSoC5/int_1us.c **** *   from over writting your code.
+ 153:Generated_Source\PSoC5/int_1us.c **** *
+ 154:Generated_Source\PSoC5/int_1us.c **** * Parameters:  
+ 155:Generated_Source\PSoC5/int_1us.c **** *
+ 156:Generated_Source\PSoC5/int_1us.c **** * Return:
+ 157:Generated_Source\PSoC5/int_1us.c **** *   None
+ 158:Generated_Source\PSoC5/int_1us.c **** *
+ 159:Generated_Source\PSoC5/int_1us.c **** *******************************************************************************/
+ 160:Generated_Source\PSoC5/int_1us.c **** CY_ISR(int_1us_Interrupt)
+ 161:Generated_Source\PSoC5/int_1us.c **** {
+  28              		.loc 1 161 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+ 162:Generated_Source\PSoC5/int_1us.c ****     #ifdef int_1us_INTERRUPT_INTERRUPT_CALLBACK
+ 163:Generated_Source\PSoC5/int_1us.c ****         int_1us_Interrupt_InterruptCallback();
+ 164:Generated_Source\PSoC5/int_1us.c ****     #endif /* int_1us_INTERRUPT_INTERRUPT_CALLBACK */ 
+ 165:Generated_Source\PSoC5/int_1us.c **** 
+ 166:Generated_Source\PSoC5/int_1us.c ****     /*  Place your Interrupt code here. */
+ 167:Generated_Source\PSoC5/int_1us.c ****     /* `#START int_1us_Interrupt` */
+ 168:Generated_Source\PSoC5/int_1us.c ****     #include "hcsr04.h"
+ 169:Generated_Source\PSoC5/int_1us.c ****     timer_us_hcsr04++;
+  33              		.loc 1 169 0
+  34 0000 024A     		ldr	r2, .L2
+  35 0002 1368     		ldr	r3, [r2]
+  36 0004 0133     		adds	r3, r3, #1
+  37 0006 1360     		str	r3, [r2]
+  38 0008 7047     		bx	lr
+  39              	.L3:
+  40 000a 00BF     		.align	2
+  41              	.L2:
+  42 000c 00000000 		.word	timer_us_hcsr04
+  43              		.cfi_endproc
+  44              	.LFE3:
+  45              		.size	int_1us_Interrupt, .-int_1us_Interrupt
+  46              		.section	.text.int_1us_SetVector,"ax",%progbits
+  47              		.align	2
+  48              		.global	int_1us_SetVector
+  49              		.thumb
+  50              		.thumb_func
+  51              		.type	int_1us_SetVector, %function
+  52              	int_1us_SetVector:
+  53              	.LFB4:
+ 170:Generated_Source\PSoC5/int_1us.c **** 
+ 171:Generated_Source\PSoC5/int_1us.c ****     /* `#END` */
+ 172:Generated_Source\PSoC5/int_1us.c **** }
+ 173:Generated_Source\PSoC5/int_1us.c **** 
+ 174:Generated_Source\PSoC5/int_1us.c **** 
+ 175:Generated_Source\PSoC5/int_1us.c **** /*******************************************************************************
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqtcK3d.s 			page 5
+
+
+ 176:Generated_Source\PSoC5/int_1us.c **** * Function Name: int_1us_SetVector
+ 177:Generated_Source\PSoC5/int_1us.c **** ********************************************************************************
+ 178:Generated_Source\PSoC5/int_1us.c **** *
+ 179:Generated_Source\PSoC5/int_1us.c **** * Summary:
+ 180:Generated_Source\PSoC5/int_1us.c **** *   Change the ISR vector for the Interrupt. Note calling int_1us_Start
+ 181:Generated_Source\PSoC5/int_1us.c **** *   will override any effect this method would have had. To set the vector 
+ 182:Generated_Source\PSoC5/int_1us.c **** *   before the component has been started use int_1us_StartEx instead.
+ 183:Generated_Source\PSoC5/int_1us.c **** * 
+ 184:Generated_Source\PSoC5/int_1us.c **** *   When defining ISR functions, the CY_ISR and CY_ISR_PROTO macros should be 
+ 185:Generated_Source\PSoC5/int_1us.c **** *   used to provide consistent definition across compilers:
+ 186:Generated_Source\PSoC5/int_1us.c **** *
+ 187:Generated_Source\PSoC5/int_1us.c **** *   Function definition example:
+ 188:Generated_Source\PSoC5/int_1us.c **** *   CY_ISR(MyISR)
+ 189:Generated_Source\PSoC5/int_1us.c **** *   {
+ 190:Generated_Source\PSoC5/int_1us.c **** *   }
+ 191:Generated_Source\PSoC5/int_1us.c **** *
+ 192:Generated_Source\PSoC5/int_1us.c **** *   Function prototype example:
+ 193:Generated_Source\PSoC5/int_1us.c **** *     CY_ISR_PROTO(MyISR);
+ 194:Generated_Source\PSoC5/int_1us.c **** *
+ 195:Generated_Source\PSoC5/int_1us.c **** * Parameters:
+ 196:Generated_Source\PSoC5/int_1us.c **** *   address: Address of the ISR to set in the interrupt vector table.
+ 197:Generated_Source\PSoC5/int_1us.c **** *
+ 198:Generated_Source\PSoC5/int_1us.c **** * Return:
+ 199:Generated_Source\PSoC5/int_1us.c **** *   None
+ 200:Generated_Source\PSoC5/int_1us.c **** *
+ 201:Generated_Source\PSoC5/int_1us.c **** *******************************************************************************/
+ 202:Generated_Source\PSoC5/int_1us.c **** void int_1us_SetVector(cyisraddress address)
+ 203:Generated_Source\PSoC5/int_1us.c **** {
+  54              		.loc 1 203 0
+  55              		.cfi_startproc
+  56              		@ args = 0, pretend = 0, frame = 0
+  57              		@ frame_needed = 0, uses_anonymous_args = 0
+  58              		@ link register save eliminated.
+  59              	.LVL0:
+ 204:Generated_Source\PSoC5/int_1us.c ****     cyisraddress * ramVectorTable;
+ 205:Generated_Source\PSoC5/int_1us.c **** 
+ 206:Generated_Source\PSoC5/int_1us.c ****     ramVectorTable = (cyisraddress *) *CYINT_VECT_TABLE;
+  60              		.loc 1 206 0
+  61 0000 014B     		ldr	r3, .L5
+  62 0002 1B68     		ldr	r3, [r3]
+  63              	.LVL1:
+ 207:Generated_Source\PSoC5/int_1us.c **** 
+ 208:Generated_Source\PSoC5/int_1us.c ****     ramVectorTable[CYINT_IRQ_BASE + (uint32)int_1us__INTC_NUMBER] = address;
+  64              		.loc 1 208 0
+  65 0004 1864     		str	r0, [r3, #64]
+  66 0006 7047     		bx	lr
+  67              	.L6:
+  68              		.align	2
+  69              	.L5:
+  70 0008 08ED00E0 		.word	-536810232
+  71              		.cfi_endproc
+  72              	.LFE4:
+  73              		.size	int_1us_SetVector, .-int_1us_SetVector
+  74              		.section	.text.int_1us_GetVector,"ax",%progbits
+  75              		.align	2
+  76              		.global	int_1us_GetVector
+  77              		.thumb
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqtcK3d.s 			page 6
+
+
+  78              		.thumb_func
+  79              		.type	int_1us_GetVector, %function
+  80              	int_1us_GetVector:
+  81              	.LFB5:
+ 209:Generated_Source\PSoC5/int_1us.c **** }
+ 210:Generated_Source\PSoC5/int_1us.c **** 
+ 211:Generated_Source\PSoC5/int_1us.c **** 
+ 212:Generated_Source\PSoC5/int_1us.c **** /*******************************************************************************
+ 213:Generated_Source\PSoC5/int_1us.c **** * Function Name: int_1us_GetVector
+ 214:Generated_Source\PSoC5/int_1us.c **** ********************************************************************************
+ 215:Generated_Source\PSoC5/int_1us.c **** *
+ 216:Generated_Source\PSoC5/int_1us.c **** * Summary:
+ 217:Generated_Source\PSoC5/int_1us.c **** *   Gets the "address" of the current ISR vector for the Interrupt.
+ 218:Generated_Source\PSoC5/int_1us.c **** *
+ 219:Generated_Source\PSoC5/int_1us.c **** * Parameters:
+ 220:Generated_Source\PSoC5/int_1us.c **** *   None
+ 221:Generated_Source\PSoC5/int_1us.c **** *
+ 222:Generated_Source\PSoC5/int_1us.c **** * Return:
+ 223:Generated_Source\PSoC5/int_1us.c **** *   Address of the ISR in the interrupt vector table.
+ 224:Generated_Source\PSoC5/int_1us.c **** *
+ 225:Generated_Source\PSoC5/int_1us.c **** *******************************************************************************/
+ 226:Generated_Source\PSoC5/int_1us.c **** cyisraddress int_1us_GetVector(void)
+ 227:Generated_Source\PSoC5/int_1us.c **** {
+  82              		.loc 1 227 0
+  83              		.cfi_startproc
+  84              		@ args = 0, pretend = 0, frame = 0
+  85              		@ frame_needed = 0, uses_anonymous_args = 0
+  86              		@ link register save eliminated.
+ 228:Generated_Source\PSoC5/int_1us.c ****     cyisraddress * ramVectorTable;
+ 229:Generated_Source\PSoC5/int_1us.c **** 
+ 230:Generated_Source\PSoC5/int_1us.c ****     ramVectorTable = (cyisraddress *) *CYINT_VECT_TABLE;
+  87              		.loc 1 230 0
+  88 0000 014B     		ldr	r3, .L8
+  89 0002 1B68     		ldr	r3, [r3]
+  90              	.LVL2:
+ 231:Generated_Source\PSoC5/int_1us.c **** 
+ 232:Generated_Source\PSoC5/int_1us.c ****     return ramVectorTable[CYINT_IRQ_BASE + (uint32)int_1us__INTC_NUMBER];
+ 233:Generated_Source\PSoC5/int_1us.c **** }
+  91              		.loc 1 233 0
+  92 0004 186C     		ldr	r0, [r3, #64]
+  93 0006 7047     		bx	lr
+  94              	.L9:
+  95              		.align	2
+  96              	.L8:
+  97 0008 08ED00E0 		.word	-536810232
+  98              		.cfi_endproc
+  99              	.LFE5:
+ 100              		.size	int_1us_GetVector, .-int_1us_GetVector
+ 101              		.section	.text.int_1us_SetPriority,"ax",%progbits
+ 102              		.align	2
+ 103              		.global	int_1us_SetPriority
+ 104              		.thumb
+ 105              		.thumb_func
+ 106              		.type	int_1us_SetPriority, %function
+ 107              	int_1us_SetPriority:
+ 108              	.LFB6:
+ 234:Generated_Source\PSoC5/int_1us.c **** 
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqtcK3d.s 			page 7
+
+
+ 235:Generated_Source\PSoC5/int_1us.c **** 
+ 236:Generated_Source\PSoC5/int_1us.c **** /*******************************************************************************
+ 237:Generated_Source\PSoC5/int_1us.c **** * Function Name: int_1us_SetPriority
+ 238:Generated_Source\PSoC5/int_1us.c **** ********************************************************************************
+ 239:Generated_Source\PSoC5/int_1us.c **** *
+ 240:Generated_Source\PSoC5/int_1us.c **** * Summary:
+ 241:Generated_Source\PSoC5/int_1us.c **** *   Sets the Priority of the Interrupt. 
+ 242:Generated_Source\PSoC5/int_1us.c **** *
+ 243:Generated_Source\PSoC5/int_1us.c **** *   Note calling int_1us_Start or int_1us_StartEx will 
+ 244:Generated_Source\PSoC5/int_1us.c **** *   override any effect this API would have had. This API should only be called
+ 245:Generated_Source\PSoC5/int_1us.c **** *   after int_1us_Start or int_1us_StartEx has been called. 
+ 246:Generated_Source\PSoC5/int_1us.c **** *   To set the initial priority for the component, use the Design-Wide Resources
+ 247:Generated_Source\PSoC5/int_1us.c **** *   Interrupt Editor.
+ 248:Generated_Source\PSoC5/int_1us.c **** *
+ 249:Generated_Source\PSoC5/int_1us.c **** *   Note This API has no effect on Non-maskable interrupt NMI).
+ 250:Generated_Source\PSoC5/int_1us.c **** *
+ 251:Generated_Source\PSoC5/int_1us.c **** * Parameters:
+ 252:Generated_Source\PSoC5/int_1us.c **** *   priority: Priority of the interrupt, 0 being the highest priority
+ 253:Generated_Source\PSoC5/int_1us.c **** *             PSoC 3 and PSoC 5LP: Priority is from 0 to 7.
+ 254:Generated_Source\PSoC5/int_1us.c **** *             PSoC 4: Priority is from 0 to 3.
+ 255:Generated_Source\PSoC5/int_1us.c **** *
+ 256:Generated_Source\PSoC5/int_1us.c **** * Return:
+ 257:Generated_Source\PSoC5/int_1us.c **** *   None
+ 258:Generated_Source\PSoC5/int_1us.c **** *
+ 259:Generated_Source\PSoC5/int_1us.c **** *******************************************************************************/
+ 260:Generated_Source\PSoC5/int_1us.c **** void int_1us_SetPriority(uint8 priority)
+ 261:Generated_Source\PSoC5/int_1us.c **** {
+ 109              		.loc 1 261 0
+ 110              		.cfi_startproc
+ 111              		@ args = 0, pretend = 0, frame = 0
+ 112              		@ frame_needed = 0, uses_anonymous_args = 0
+ 113              		@ link register save eliminated.
+ 114              	.LVL3:
+ 262:Generated_Source\PSoC5/int_1us.c ****     *int_1us_INTC_PRIOR = priority << 5;
+ 115              		.loc 1 262 0
+ 116 0000 4001     		lsls	r0, r0, #5
+ 117              	.LVL4:
+ 118 0002 C0B2     		uxtb	r0, r0
+ 119 0004 014B     		ldr	r3, .L11
+ 120 0006 1870     		strb	r0, [r3]
+ 121 0008 7047     		bx	lr
+ 122              	.L12:
+ 123 000a 00BF     		.align	2
+ 124              	.L11:
+ 125 000c 00E400E0 		.word	-536812544
+ 126              		.cfi_endproc
+ 127              	.LFE6:
+ 128              		.size	int_1us_SetPriority, .-int_1us_SetPriority
+ 129              		.section	.text.int_1us_GetPriority,"ax",%progbits
+ 130              		.align	2
+ 131              		.global	int_1us_GetPriority
+ 132              		.thumb
+ 133              		.thumb_func
+ 134              		.type	int_1us_GetPriority, %function
+ 135              	int_1us_GetPriority:
+ 136              	.LFB7:
+ 263:Generated_Source\PSoC5/int_1us.c **** }
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqtcK3d.s 			page 8
+
+
+ 264:Generated_Source\PSoC5/int_1us.c **** 
+ 265:Generated_Source\PSoC5/int_1us.c **** 
+ 266:Generated_Source\PSoC5/int_1us.c **** /*******************************************************************************
+ 267:Generated_Source\PSoC5/int_1us.c **** * Function Name: int_1us_GetPriority
+ 268:Generated_Source\PSoC5/int_1us.c **** ********************************************************************************
+ 269:Generated_Source\PSoC5/int_1us.c **** *
+ 270:Generated_Source\PSoC5/int_1us.c **** * Summary:
+ 271:Generated_Source\PSoC5/int_1us.c **** *   Gets the Priority of the Interrupt.
+ 272:Generated_Source\PSoC5/int_1us.c **** *
+ 273:Generated_Source\PSoC5/int_1us.c **** * Parameters:
+ 274:Generated_Source\PSoC5/int_1us.c **** *   None
+ 275:Generated_Source\PSoC5/int_1us.c **** *
+ 276:Generated_Source\PSoC5/int_1us.c **** * Return:
+ 277:Generated_Source\PSoC5/int_1us.c **** *   Priority of the interrupt, 0 being the highest priority
+ 278:Generated_Source\PSoC5/int_1us.c **** *    PSoC 3 and PSoC 5LP: Priority is from 0 to 7.
+ 279:Generated_Source\PSoC5/int_1us.c **** *    PSoC 4: Priority is from 0 to 3.
+ 280:Generated_Source\PSoC5/int_1us.c **** *
+ 281:Generated_Source\PSoC5/int_1us.c **** *******************************************************************************/
+ 282:Generated_Source\PSoC5/int_1us.c **** uint8 int_1us_GetPriority(void)
+ 283:Generated_Source\PSoC5/int_1us.c **** {
+ 137              		.loc 1 283 0
+ 138              		.cfi_startproc
+ 139              		@ args = 0, pretend = 0, frame = 0
+ 140              		@ frame_needed = 0, uses_anonymous_args = 0
+ 141              		@ link register save eliminated.
+ 284:Generated_Source\PSoC5/int_1us.c ****     uint8 priority;
+ 285:Generated_Source\PSoC5/int_1us.c **** 
+ 286:Generated_Source\PSoC5/int_1us.c **** 
+ 287:Generated_Source\PSoC5/int_1us.c ****     priority = *int_1us_INTC_PRIOR >> 5;
+ 142              		.loc 1 287 0
+ 143 0000 014B     		ldr	r3, .L14
+ 144 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 145              	.LVL5:
+ 288:Generated_Source\PSoC5/int_1us.c **** 
+ 289:Generated_Source\PSoC5/int_1us.c ****     return priority;
+ 290:Generated_Source\PSoC5/int_1us.c **** }
+ 146              		.loc 1 290 0
+ 147 0004 4009     		lsrs	r0, r0, #5
+ 148              	.LVL6:
+ 149 0006 7047     		bx	lr
+ 150              	.L15:
+ 151              		.align	2
+ 152              	.L14:
+ 153 0008 00E400E0 		.word	-536812544
+ 154              		.cfi_endproc
+ 155              	.LFE7:
+ 156              		.size	int_1us_GetPriority, .-int_1us_GetPriority
+ 157              		.section	.text.int_1us_Enable,"ax",%progbits
+ 158              		.align	2
+ 159              		.global	int_1us_Enable
+ 160              		.thumb
+ 161              		.thumb_func
+ 162              		.type	int_1us_Enable, %function
+ 163              	int_1us_Enable:
+ 164              	.LFB8:
+ 291:Generated_Source\PSoC5/int_1us.c **** 
+ 292:Generated_Source\PSoC5/int_1us.c **** 
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqtcK3d.s 			page 9
+
+
+ 293:Generated_Source\PSoC5/int_1us.c **** /*******************************************************************************
+ 294:Generated_Source\PSoC5/int_1us.c **** * Function Name: int_1us_Enable
+ 295:Generated_Source\PSoC5/int_1us.c **** ********************************************************************************
+ 296:Generated_Source\PSoC5/int_1us.c **** *
+ 297:Generated_Source\PSoC5/int_1us.c **** * Summary:
+ 298:Generated_Source\PSoC5/int_1us.c **** *   Enables the interrupt to the interrupt controller. Do not call this function
+ 299:Generated_Source\PSoC5/int_1us.c **** *   unless ISR_Start() has been called or the functionality of the ISR_Start() 
+ 300:Generated_Source\PSoC5/int_1us.c **** *   function, which sets the vector and the priority, has been called.
+ 301:Generated_Source\PSoC5/int_1us.c **** *
+ 302:Generated_Source\PSoC5/int_1us.c **** * Parameters:
+ 303:Generated_Source\PSoC5/int_1us.c **** *   None
+ 304:Generated_Source\PSoC5/int_1us.c **** *
+ 305:Generated_Source\PSoC5/int_1us.c **** * Return:
+ 306:Generated_Source\PSoC5/int_1us.c **** *   None
+ 307:Generated_Source\PSoC5/int_1us.c **** *
+ 308:Generated_Source\PSoC5/int_1us.c **** *******************************************************************************/
+ 309:Generated_Source\PSoC5/int_1us.c **** void int_1us_Enable(void)
+ 310:Generated_Source\PSoC5/int_1us.c **** {
+ 165              		.loc 1 310 0
+ 166              		.cfi_startproc
+ 167              		@ args = 0, pretend = 0, frame = 0
+ 168              		@ frame_needed = 0, uses_anonymous_args = 0
+ 169              		@ link register save eliminated.
+ 311:Generated_Source\PSoC5/int_1us.c ****     /* Enable the general interrupt. */
+ 312:Generated_Source\PSoC5/int_1us.c ****     *int_1us_INTC_SET_EN = int_1us__INTC_MASK;
+ 170              		.loc 1 312 0
+ 171 0000 0122     		movs	r2, #1
+ 172 0002 014B     		ldr	r3, .L17
+ 173 0004 1A60     		str	r2, [r3]
+ 174 0006 7047     		bx	lr
+ 175              	.L18:
+ 176              		.align	2
+ 177              	.L17:
+ 178 0008 00E100E0 		.word	-536813312
+ 179              		.cfi_endproc
+ 180              	.LFE8:
+ 181              		.size	int_1us_Enable, .-int_1us_Enable
+ 182              		.section	.text.int_1us_GetState,"ax",%progbits
+ 183              		.align	2
+ 184              		.global	int_1us_GetState
+ 185              		.thumb
+ 186              		.thumb_func
+ 187              		.type	int_1us_GetState, %function
+ 188              	int_1us_GetState:
+ 189              	.LFB9:
+ 313:Generated_Source\PSoC5/int_1us.c **** }
+ 314:Generated_Source\PSoC5/int_1us.c **** 
+ 315:Generated_Source\PSoC5/int_1us.c **** 
+ 316:Generated_Source\PSoC5/int_1us.c **** /*******************************************************************************
+ 317:Generated_Source\PSoC5/int_1us.c **** * Function Name: int_1us_GetState
+ 318:Generated_Source\PSoC5/int_1us.c **** ********************************************************************************
+ 319:Generated_Source\PSoC5/int_1us.c **** *
+ 320:Generated_Source\PSoC5/int_1us.c **** * Summary:
+ 321:Generated_Source\PSoC5/int_1us.c **** *   Gets the state (enabled, disabled) of the Interrupt.
+ 322:Generated_Source\PSoC5/int_1us.c **** *
+ 323:Generated_Source\PSoC5/int_1us.c **** * Parameters:
+ 324:Generated_Source\PSoC5/int_1us.c **** *   None
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqtcK3d.s 			page 10
+
+
+ 325:Generated_Source\PSoC5/int_1us.c **** *
+ 326:Generated_Source\PSoC5/int_1us.c **** * Return:
+ 327:Generated_Source\PSoC5/int_1us.c **** *   1 if enabled, 0 if disabled.
+ 328:Generated_Source\PSoC5/int_1us.c **** *
+ 329:Generated_Source\PSoC5/int_1us.c **** *******************************************************************************/
+ 330:Generated_Source\PSoC5/int_1us.c **** uint8 int_1us_GetState(void)
+ 331:Generated_Source\PSoC5/int_1us.c **** {
+ 190              		.loc 1 331 0
+ 191              		.cfi_startproc
+ 192              		@ args = 0, pretend = 0, frame = 0
+ 193              		@ frame_needed = 0, uses_anonymous_args = 0
+ 194              		@ link register save eliminated.
+ 332:Generated_Source\PSoC5/int_1us.c ****     /* Get the state of the general interrupt. */
+ 333:Generated_Source\PSoC5/int_1us.c ****     return ((*int_1us_INTC_SET_EN & (uint32)int_1us__INTC_MASK) != 0u) ? 1u:0u;
+ 195              		.loc 1 333 0
+ 196 0000 024B     		ldr	r3, .L20
+ 197 0002 1868     		ldr	r0, [r3]
+ 334:Generated_Source\PSoC5/int_1us.c **** }
+ 198              		.loc 1 334 0
+ 199 0004 00F00100 		and	r0, r0, #1
+ 200 0008 7047     		bx	lr
+ 201              	.L21:
+ 202 000a 00BF     		.align	2
+ 203              	.L20:
+ 204 000c 00E100E0 		.word	-536813312
+ 205              		.cfi_endproc
+ 206              	.LFE9:
+ 207              		.size	int_1us_GetState, .-int_1us_GetState
+ 208              		.section	.text.int_1us_Disable,"ax",%progbits
+ 209              		.align	2
+ 210              		.global	int_1us_Disable
+ 211              		.thumb
+ 212              		.thumb_func
+ 213              		.type	int_1us_Disable, %function
+ 214              	int_1us_Disable:
+ 215              	.LFB10:
+ 335:Generated_Source\PSoC5/int_1us.c **** 
+ 336:Generated_Source\PSoC5/int_1us.c **** 
+ 337:Generated_Source\PSoC5/int_1us.c **** /*******************************************************************************
+ 338:Generated_Source\PSoC5/int_1us.c **** * Function Name: int_1us_Disable
+ 339:Generated_Source\PSoC5/int_1us.c **** ********************************************************************************
+ 340:Generated_Source\PSoC5/int_1us.c **** *
+ 341:Generated_Source\PSoC5/int_1us.c **** * Summary:
+ 342:Generated_Source\PSoC5/int_1us.c **** *   Disables the Interrupt in the interrupt controller.
+ 343:Generated_Source\PSoC5/int_1us.c **** *
+ 344:Generated_Source\PSoC5/int_1us.c **** * Parameters:
+ 345:Generated_Source\PSoC5/int_1us.c **** *   None
+ 346:Generated_Source\PSoC5/int_1us.c **** *
+ 347:Generated_Source\PSoC5/int_1us.c **** * Return:
+ 348:Generated_Source\PSoC5/int_1us.c **** *   None
+ 349:Generated_Source\PSoC5/int_1us.c **** *
+ 350:Generated_Source\PSoC5/int_1us.c **** *******************************************************************************/
+ 351:Generated_Source\PSoC5/int_1us.c **** void int_1us_Disable(void)
+ 352:Generated_Source\PSoC5/int_1us.c **** {
+ 216              		.loc 1 352 0
+ 217              		.cfi_startproc
+ 218              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqtcK3d.s 			page 11
+
+
+ 219              		@ frame_needed = 0, uses_anonymous_args = 0
+ 220              		@ link register save eliminated.
+ 353:Generated_Source\PSoC5/int_1us.c ****     /* Disable the general interrupt. */
+ 354:Generated_Source\PSoC5/int_1us.c ****     *int_1us_INTC_CLR_EN = int_1us__INTC_MASK;
+ 221              		.loc 1 354 0
+ 222 0000 0122     		movs	r2, #1
+ 223 0002 014B     		ldr	r3, .L23
+ 224 0004 1A60     		str	r2, [r3]
+ 225 0006 7047     		bx	lr
+ 226              	.L24:
+ 227              		.align	2
+ 228              	.L23:
+ 229 0008 80E100E0 		.word	-536813184
+ 230              		.cfi_endproc
+ 231              	.LFE10:
+ 232              		.size	int_1us_Disable, .-int_1us_Disable
+ 233              		.section	.text.int_1us_Start,"ax",%progbits
+ 234              		.align	2
+ 235              		.global	int_1us_Start
+ 236              		.thumb
+ 237              		.thumb_func
+ 238              		.type	int_1us_Start, %function
+ 239              	int_1us_Start:
+ 240              	.LFB0:
+  62:Generated_Source\PSoC5/int_1us.c ****     /* For all we know the interrupt is active. */
+ 241              		.loc 1 62 0
+ 242              		.cfi_startproc
+ 243              		@ args = 0, pretend = 0, frame = 0
+ 244              		@ frame_needed = 0, uses_anonymous_args = 0
+ 245 0000 08B5     		push	{r3, lr}
+ 246              		.cfi_def_cfa_offset 8
+ 247              		.cfi_offset 3, -8
+ 248              		.cfi_offset 14, -4
+  64:Generated_Source\PSoC5/int_1us.c **** 
+ 249              		.loc 1 64 0
+ 250 0002 FFF7FEFF 		bl	int_1us_Disable
+ 251              	.LVL7:
+  67:Generated_Source\PSoC5/int_1us.c **** 
+ 252              		.loc 1 67 0
+ 253 0006 0448     		ldr	r0, .L27
+ 254 0008 FFF7FEFF 		bl	int_1us_SetVector
+ 255              	.LVL8:
+  70:Generated_Source\PSoC5/int_1us.c **** 
+ 256              		.loc 1 70 0
+ 257 000c 0720     		movs	r0, #7
+ 258 000e FFF7FEFF 		bl	int_1us_SetPriority
+ 259              	.LVL9:
+  73:Generated_Source\PSoC5/int_1us.c **** }
+ 260              		.loc 1 73 0
+ 261 0012 FFF7FEFF 		bl	int_1us_Enable
+ 262              	.LVL10:
+ 263 0016 08BD     		pop	{r3, pc}
+ 264              	.L28:
+ 265              		.align	2
+ 266              	.L27:
+ 267 0018 00000000 		.word	int_1us_Interrupt
+ 268              		.cfi_endproc
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqtcK3d.s 			page 12
+
+
+ 269              	.LFE0:
+ 270              		.size	int_1us_Start, .-int_1us_Start
+ 271              		.section	.text.int_1us_StartEx,"ax",%progbits
+ 272              		.align	2
+ 273              		.global	int_1us_StartEx
+ 274              		.thumb
+ 275              		.thumb_func
+ 276              		.type	int_1us_StartEx, %function
+ 277              	int_1us_StartEx:
+ 278              	.LFB1:
+ 105:Generated_Source\PSoC5/int_1us.c ****     /* For all we know the interrupt is active. */
+ 279              		.loc 1 105 0
+ 280              		.cfi_startproc
+ 281              		@ args = 0, pretend = 0, frame = 0
+ 282              		@ frame_needed = 0, uses_anonymous_args = 0
+ 283              	.LVL11:
+ 284 0000 10B5     		push	{r4, lr}
+ 285              		.cfi_def_cfa_offset 8
+ 286              		.cfi_offset 4, -8
+ 287              		.cfi_offset 14, -4
+ 288 0002 0446     		mov	r4, r0
+ 107:Generated_Source\PSoC5/int_1us.c **** 
+ 289              		.loc 1 107 0
+ 290 0004 FFF7FEFF 		bl	int_1us_Disable
+ 291              	.LVL12:
+ 110:Generated_Source\PSoC5/int_1us.c **** 
+ 292              		.loc 1 110 0
+ 293 0008 2046     		mov	r0, r4
+ 294 000a FFF7FEFF 		bl	int_1us_SetVector
+ 295              	.LVL13:
+ 113:Generated_Source\PSoC5/int_1us.c **** 
+ 296              		.loc 1 113 0
+ 297 000e 0720     		movs	r0, #7
+ 298 0010 FFF7FEFF 		bl	int_1us_SetPriority
+ 299              	.LVL14:
+ 116:Generated_Source\PSoC5/int_1us.c **** }
+ 300              		.loc 1 116 0
+ 301 0014 FFF7FEFF 		bl	int_1us_Enable
+ 302              	.LVL15:
+ 303 0018 10BD     		pop	{r4, pc}
+ 304              		.cfi_endproc
+ 305              	.LFE1:
+ 306              		.size	int_1us_StartEx, .-int_1us_StartEx
+ 307 001a 00BF     		.section	.text.int_1us_Stop,"ax",%progbits
+ 308              		.align	2
+ 309              		.global	int_1us_Stop
+ 310              		.thumb
+ 311              		.thumb_func
+ 312              		.type	int_1us_Stop, %function
+ 313              	int_1us_Stop:
+ 314              	.LFB2:
+ 135:Generated_Source\PSoC5/int_1us.c ****     /* Disable this interrupt. */
+ 315              		.loc 1 135 0
+ 316              		.cfi_startproc
+ 317              		@ args = 0, pretend = 0, frame = 0
+ 318              		@ frame_needed = 0, uses_anonymous_args = 0
+ 319 0000 08B5     		push	{r3, lr}
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqtcK3d.s 			page 13
+
+
+ 320              		.cfi_def_cfa_offset 8
+ 321              		.cfi_offset 3, -8
+ 322              		.cfi_offset 14, -4
+ 137:Generated_Source\PSoC5/int_1us.c **** 
+ 323              		.loc 1 137 0
+ 324 0002 FFF7FEFF 		bl	int_1us_Disable
+ 325              	.LVL16:
+ 140:Generated_Source\PSoC5/int_1us.c **** }
+ 326              		.loc 1 140 0
+ 327 0006 0248     		ldr	r0, .L33
+ 328 0008 FFF7FEFF 		bl	int_1us_SetVector
+ 329              	.LVL17:
+ 330 000c 08BD     		pop	{r3, pc}
+ 331              	.L34:
+ 332 000e 00BF     		.align	2
+ 333              	.L33:
+ 334 0010 00000000 		.word	IntDefaultHandler
+ 335              		.cfi_endproc
+ 336              	.LFE2:
+ 337              		.size	int_1us_Stop, .-int_1us_Stop
+ 338              		.section	.text.int_1us_SetPending,"ax",%progbits
+ 339              		.align	2
+ 340              		.global	int_1us_SetPending
+ 341              		.thumb
+ 342              		.thumb_func
+ 343              		.type	int_1us_SetPending, %function
+ 344              	int_1us_SetPending:
+ 345              	.LFB11:
+ 355:Generated_Source\PSoC5/int_1us.c **** }
+ 356:Generated_Source\PSoC5/int_1us.c **** 
+ 357:Generated_Source\PSoC5/int_1us.c **** 
+ 358:Generated_Source\PSoC5/int_1us.c **** /*******************************************************************************
+ 359:Generated_Source\PSoC5/int_1us.c **** * Function Name: int_1us_SetPending
+ 360:Generated_Source\PSoC5/int_1us.c **** ********************************************************************************
+ 361:Generated_Source\PSoC5/int_1us.c **** *
+ 362:Generated_Source\PSoC5/int_1us.c **** * Summary:
+ 363:Generated_Source\PSoC5/int_1us.c **** *   Causes the Interrupt to enter the pending state, a software method of
+ 364:Generated_Source\PSoC5/int_1us.c **** *   generating the interrupt.
+ 365:Generated_Source\PSoC5/int_1us.c **** *
+ 366:Generated_Source\PSoC5/int_1us.c **** * Parameters:
+ 367:Generated_Source\PSoC5/int_1us.c **** *   None
+ 368:Generated_Source\PSoC5/int_1us.c **** *
+ 369:Generated_Source\PSoC5/int_1us.c **** * Return:
+ 370:Generated_Source\PSoC5/int_1us.c **** *   None
+ 371:Generated_Source\PSoC5/int_1us.c **** *
+ 372:Generated_Source\PSoC5/int_1us.c **** * Side Effects:
+ 373:Generated_Source\PSoC5/int_1us.c **** *   If interrupts are enabled and the interrupt is set up properly, the ISR is
+ 374:Generated_Source\PSoC5/int_1us.c **** *   entered (depending on the priority of this interrupt and other pending 
+ 375:Generated_Source\PSoC5/int_1us.c **** *   interrupts).
+ 376:Generated_Source\PSoC5/int_1us.c **** *
+ 377:Generated_Source\PSoC5/int_1us.c **** *******************************************************************************/
+ 378:Generated_Source\PSoC5/int_1us.c **** void int_1us_SetPending(void)
+ 379:Generated_Source\PSoC5/int_1us.c **** {
+ 346              		.loc 1 379 0
+ 347              		.cfi_startproc
+ 348              		@ args = 0, pretend = 0, frame = 0
+ 349              		@ frame_needed = 0, uses_anonymous_args = 0
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqtcK3d.s 			page 14
+
+
+ 350              		@ link register save eliminated.
+ 380:Generated_Source\PSoC5/int_1us.c ****     *int_1us_INTC_SET_PD = int_1us__INTC_MASK;
+ 351              		.loc 1 380 0
+ 352 0000 0122     		movs	r2, #1
+ 353 0002 014B     		ldr	r3, .L36
+ 354 0004 1A60     		str	r2, [r3]
+ 355 0006 7047     		bx	lr
+ 356              	.L37:
+ 357              		.align	2
+ 358              	.L36:
+ 359 0008 00E200E0 		.word	-536813056
+ 360              		.cfi_endproc
+ 361              	.LFE11:
+ 362              		.size	int_1us_SetPending, .-int_1us_SetPending
+ 363              		.section	.text.int_1us_ClearPending,"ax",%progbits
+ 364              		.align	2
+ 365              		.global	int_1us_ClearPending
+ 366              		.thumb
+ 367              		.thumb_func
+ 368              		.type	int_1us_ClearPending, %function
+ 369              	int_1us_ClearPending:
+ 370              	.LFB12:
+ 381:Generated_Source\PSoC5/int_1us.c **** }
+ 382:Generated_Source\PSoC5/int_1us.c **** 
+ 383:Generated_Source\PSoC5/int_1us.c **** 
+ 384:Generated_Source\PSoC5/int_1us.c **** /*******************************************************************************
+ 385:Generated_Source\PSoC5/int_1us.c **** * Function Name: int_1us_ClearPending
+ 386:Generated_Source\PSoC5/int_1us.c **** ********************************************************************************
+ 387:Generated_Source\PSoC5/int_1us.c **** *
+ 388:Generated_Source\PSoC5/int_1us.c **** * Summary:
+ 389:Generated_Source\PSoC5/int_1us.c **** *   Clears a pending interrupt in the interrupt controller.
+ 390:Generated_Source\PSoC5/int_1us.c **** *
+ 391:Generated_Source\PSoC5/int_1us.c **** *   Note Some interrupt sources are clear-on-read and require the block 
+ 392:Generated_Source\PSoC5/int_1us.c **** *   interrupt/status register to be read/cleared with the appropriate block API 
+ 393:Generated_Source\PSoC5/int_1us.c **** *   (GPIO, UART, and so on). Otherwise the ISR will continue to remain in 
+ 394:Generated_Source\PSoC5/int_1us.c **** *   pending state even though the interrupt itself is cleared using this API.
+ 395:Generated_Source\PSoC5/int_1us.c **** *
+ 396:Generated_Source\PSoC5/int_1us.c **** * Parameters:
+ 397:Generated_Source\PSoC5/int_1us.c **** *   None
+ 398:Generated_Source\PSoC5/int_1us.c **** *
+ 399:Generated_Source\PSoC5/int_1us.c **** * Return:
+ 400:Generated_Source\PSoC5/int_1us.c **** *   None
+ 401:Generated_Source\PSoC5/int_1us.c **** *
+ 402:Generated_Source\PSoC5/int_1us.c **** *******************************************************************************/
+ 403:Generated_Source\PSoC5/int_1us.c **** void int_1us_ClearPending(void)
+ 404:Generated_Source\PSoC5/int_1us.c **** {
+ 371              		.loc 1 404 0
+ 372              		.cfi_startproc
+ 373              		@ args = 0, pretend = 0, frame = 0
+ 374              		@ frame_needed = 0, uses_anonymous_args = 0
+ 375              		@ link register save eliminated.
+ 405:Generated_Source\PSoC5/int_1us.c ****     *int_1us_INTC_CLR_PD = int_1us__INTC_MASK;
+ 376              		.loc 1 405 0
+ 377 0000 0122     		movs	r2, #1
+ 378 0002 014B     		ldr	r3, .L39
+ 379 0004 1A60     		str	r2, [r3]
+ 380 0006 7047     		bx	lr
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqtcK3d.s 			page 15
+
+
+ 381              	.L40:
+ 382              		.align	2
+ 383              	.L39:
+ 384 0008 80E200E0 		.word	-536812928
+ 385              		.cfi_endproc
+ 386              	.LFE12:
+ 387              		.size	int_1us_ClearPending, .-int_1us_ClearPending
+ 388              		.text
+ 389              	.Letext0:
+ 390              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 391              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 392              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 393              		.file 5 "./hcsr04.h"
+ 394              		.section	.debug_info,"",%progbits
+ 395              	.Ldebug_info0:
+ 396 0000 1D030000 		.4byte	0x31d
+ 397 0004 0400     		.2byte	0x4
+ 398 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 399 000a 04       		.byte	0x4
+ 400 000b 01       		.uleb128 0x1
+ 401 000c AA000000 		.4byte	.LASF37
+ 402 0010 0C       		.byte	0xc
+ 403 0011 5D010000 		.4byte	.LASF38
+ 404 0015 EF010000 		.4byte	.LASF39
+ 405 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 406 001d 00000000 		.4byte	0
+ 407 0021 00000000 		.4byte	.Ldebug_line0
+ 408 0025 02       		.uleb128 0x2
+ 409 0026 04       		.byte	0x4
+ 410 0027 05       		.byte	0x5
+ 411 0028 696E7400 		.ascii	"int\000"
+ 412 002c 03       		.uleb128 0x3
+ 413 002d 04       		.byte	0x4
+ 414 002e 07       		.byte	0x7
+ 415 002f E2010000 		.4byte	.LASF0
+ 416 0033 03       		.uleb128 0x3
+ 417 0034 08       		.byte	0x8
+ 418 0035 05       		.byte	0x5
+ 419 0036 57020000 		.4byte	.LASF1
+ 420 003a 03       		.uleb128 0x3
+ 421 003b 08       		.byte	0x8
+ 422 003c 04       		.byte	0x4
+ 423 003d BC020000 		.4byte	.LASF2
+ 424 0041 03       		.uleb128 0x3
+ 425 0042 01       		.byte	0x1
+ 426 0043 06       		.byte	0x6
+ 427 0044 C8020000 		.4byte	.LASF3
+ 428 0048 03       		.uleb128 0x3
+ 429 0049 01       		.byte	0x1
+ 430 004a 08       		.byte	0x8
+ 431 004b 9C000000 		.4byte	.LASF4
+ 432 004f 03       		.uleb128 0x3
+ 433 0050 02       		.byte	0x2
+ 434 0051 05       		.byte	0x5
+ 435 0052 6E000000 		.4byte	.LASF5
+ 436 0056 03       		.uleb128 0x3
+ 437 0057 02       		.byte	0x2
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqtcK3d.s 			page 16
+
+
+ 438 0058 07       		.byte	0x7
+ 439 0059 49000000 		.4byte	.LASF6
+ 440 005d 03       		.uleb128 0x3
+ 441 005e 04       		.byte	0x4
+ 442 005f 05       		.byte	0x5
+ 443 0060 B3020000 		.4byte	.LASF7
+ 444 0064 04       		.uleb128 0x4
+ 445 0065 D0010000 		.4byte	.LASF12
+ 446 0069 02       		.byte	0x2
+ 447 006a 41       		.byte	0x41
+ 448 006b 6F000000 		.4byte	0x6f
+ 449 006f 03       		.uleb128 0x3
+ 450 0070 04       		.byte	0x4
+ 451 0071 07       		.byte	0x7
+ 452 0072 45010000 		.4byte	.LASF8
+ 453 0076 03       		.uleb128 0x3
+ 454 0077 08       		.byte	0x8
+ 455 0078 07       		.byte	0x7
+ 456 0079 1A020000 		.4byte	.LASF9
+ 457 007d 03       		.uleb128 0x3
+ 458 007e 04       		.byte	0x4
+ 459 007f 07       		.byte	0x7
+ 460 0080 4E020000 		.4byte	.LASF10
+ 461 0084 03       		.uleb128 0x3
+ 462 0085 01       		.byte	0x1
+ 463 0086 08       		.byte	0x8
+ 464 0087 65020000 		.4byte	.LASF11
+ 465 008b 05       		.uleb128 0x5
+ 466 008c 04       		.byte	0x4
+ 467 008d 91000000 		.4byte	0x91
+ 468 0091 06       		.uleb128 0x6
+ 469 0092 04       		.uleb128 0x4
+ 470 0093 AA020000 		.4byte	.LASF13
+ 471 0097 03       		.byte	0x3
+ 472 0098 30       		.byte	0x30
+ 473 0099 64000000 		.4byte	0x64
+ 474 009d 07       		.uleb128 0x7
+ 475 009e 57010000 		.4byte	.LASF14
+ 476 00a2 04       		.byte	0x4
+ 477 00a3 E401     		.2byte	0x1e4
+ 478 00a5 48000000 		.4byte	0x48
+ 479 00a9 07       		.uleb128 0x7
+ 480 00aa DB010000 		.4byte	.LASF15
+ 481 00ae 04       		.byte	0x4
+ 482 00af E601     		.2byte	0x1e6
+ 483 00b1 6F000000 		.4byte	0x6f
+ 484 00b5 03       		.uleb128 0x3
+ 485 00b6 04       		.byte	0x4
+ 486 00b7 04       		.byte	0x4
+ 487 00b8 86000000 		.4byte	.LASF16
+ 488 00bc 03       		.uleb128 0x3
+ 489 00bd 08       		.byte	0x8
+ 490 00be 04       		.byte	0x4
+ 491 00bf A3010000 		.4byte	.LASF17
+ 492 00c3 07       		.uleb128 0x7
+ 493 00c4 38010000 		.4byte	.LASF18
+ 494 00c8 04       		.byte	0x4
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqtcK3d.s 			page 17
+
+
+ 495 00c9 8E02     		.2byte	0x28e
+ 496 00cb CF000000 		.4byte	0xcf
+ 497 00cf 08       		.uleb128 0x8
+ 498 00d0 9D000000 		.4byte	0x9d
+ 499 00d4 07       		.uleb128 0x7
+ 500 00d5 00000000 		.4byte	.LASF19
+ 501 00d9 04       		.byte	0x4
+ 502 00da 9002     		.2byte	0x290
+ 503 00dc E0000000 		.4byte	0xe0
+ 504 00e0 08       		.uleb128 0x8
+ 505 00e1 A9000000 		.4byte	0xa9
+ 506 00e5 07       		.uleb128 0x7
+ 507 00e6 41020000 		.4byte	.LASF20
+ 508 00ea 04       		.byte	0x4
+ 509 00eb A002     		.2byte	0x2a0
+ 510 00ed 8B000000 		.4byte	0x8b
+ 511 00f1 09       		.uleb128 0x9
+ 512 00f2 BE010000 		.4byte	.LASF21
+ 513 00f6 01       		.byte	0x1
+ 514 00f7 A0       		.byte	0xa0
+ 515 00f8 00000000 		.4byte	.LFB3
+ 516 00fc 10000000 		.4byte	.LFE3-.LFB3
+ 517 0100 01       		.uleb128 0x1
+ 518 0101 9C       		.byte	0x9c
+ 519 0102 30010000 		.4byte	0x130
+ 520 0106 0A       		.uleb128 0xa
+ 521 0107 7E010000 		.4byte	.LASF36
+ 522 010b 05       		.byte	0x5
+ 523 010c 08       		.byte	0x8
+ 524 010d 92000000 		.4byte	0x92
+ 525 0111 0B       		.uleb128 0xb
+ 526 0112 8D020000 		.4byte	.LASF40
+ 527 0116 05       		.byte	0x5
+ 528 0117 0A       		.byte	0xa
+ 529 0118 92000000 		.4byte	0x92
+ 530 011c 22010000 		.4byte	0x122
+ 531 0120 0C       		.uleb128 0xc
+ 532 0121 00       		.byte	0
+ 533 0122 0D       		.uleb128 0xd
+ 534 0123 97010000 		.4byte	.LASF41
+ 535 0127 05       		.byte	0x5
+ 536 0128 0B       		.byte	0xb
+ 537 0129 25000000 		.4byte	0x25
+ 538 012d 0C       		.uleb128 0xc
+ 539 012e 00       		.byte	0
+ 540 012f 00       		.byte	0
+ 541 0130 09       		.uleb128 0x9
+ 542 0131 28000000 		.4byte	.LASF22
+ 543 0135 01       		.byte	0x1
+ 544 0136 CA       		.byte	0xca
+ 545 0137 00000000 		.4byte	.LFB4
+ 546 013b 0C000000 		.4byte	.LFE4-.LFB4
+ 547 013f 01       		.uleb128 0x1
+ 548 0140 9C       		.byte	0x9c
+ 549 0141 60010000 		.4byte	0x160
+ 550 0145 0E       		.uleb128 0xe
+ 551 0146 3D010000 		.4byte	.LASF25
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqtcK3d.s 			page 18
+
+
+ 552 014a 01       		.byte	0x1
+ 553 014b CA       		.byte	0xca
+ 554 014c E5000000 		.4byte	0xe5
+ 555 0150 01       		.uleb128 0x1
+ 556 0151 50       		.byte	0x50
+ 557 0152 0F       		.uleb128 0xf
+ 558 0153 6A020000 		.4byte	.LASF23
+ 559 0157 01       		.byte	0x1
+ 560 0158 CC       		.byte	0xcc
+ 561 0159 60010000 		.4byte	0x160
+ 562 015d 01       		.uleb128 0x1
+ 563 015e 53       		.byte	0x53
+ 564 015f 00       		.byte	0
+ 565 0160 05       		.uleb128 0x5
+ 566 0161 04       		.byte	0x4
+ 567 0162 E5000000 		.4byte	0xe5
+ 568 0166 10       		.uleb128 0x10
+ 569 0167 5C000000 		.4byte	.LASF27
+ 570 016b 01       		.byte	0x1
+ 571 016c E2       		.byte	0xe2
+ 572 016d E5000000 		.4byte	0xe5
+ 573 0171 00000000 		.4byte	.LFB5
+ 574 0175 0C000000 		.4byte	.LFE5-.LFB5
+ 575 0179 01       		.uleb128 0x1
+ 576 017a 9C       		.byte	0x9c
+ 577 017b 8D010000 		.4byte	0x18d
+ 578 017f 0F       		.uleb128 0xf
+ 579 0180 6A020000 		.4byte	.LASF23
+ 580 0184 01       		.byte	0x1
+ 581 0185 E4       		.byte	0xe4
+ 582 0186 60010000 		.4byte	0x160
+ 583 018a 01       		.uleb128 0x1
+ 584 018b 53       		.byte	0x53
+ 585 018c 00       		.byte	0
+ 586 018d 11       		.uleb128 0x11
+ 587 018e 79020000 		.4byte	.LASF24
+ 588 0192 01       		.byte	0x1
+ 589 0193 0401     		.2byte	0x104
+ 590 0195 00000000 		.4byte	.LFB6
+ 591 0199 10000000 		.4byte	.LFE6-.LFB6
+ 592 019d 01       		.uleb128 0x1
+ 593 019e 9C       		.byte	0x9c
+ 594 019f B4010000 		.4byte	0x1b4
+ 595 01a3 12       		.uleb128 0x12
+ 596 01a4 8E010000 		.4byte	.LASF26
+ 597 01a8 01       		.byte	0x1
+ 598 01a9 0401     		.2byte	0x104
+ 599 01ab 9D000000 		.4byte	0x9d
+ 600 01af 00000000 		.4byte	.LLST0
+ 601 01b3 00       		.byte	0
+ 602 01b4 13       		.uleb128 0x13
+ 603 01b5 AA010000 		.4byte	.LASF28
+ 604 01b9 01       		.byte	0x1
+ 605 01ba 1A01     		.2byte	0x11a
+ 606 01bc 9D000000 		.4byte	0x9d
+ 607 01c0 00000000 		.4byte	.LFB7
+ 608 01c4 0C000000 		.4byte	.LFE7-.LFB7
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqtcK3d.s 			page 19
+
+
+ 609 01c8 01       		.uleb128 0x1
+ 610 01c9 9C       		.byte	0x9c
+ 611 01ca DF010000 		.4byte	0x1df
+ 612 01ce 14       		.uleb128 0x14
+ 613 01cf 8E010000 		.4byte	.LASF26
+ 614 01d3 01       		.byte	0x1
+ 615 01d4 1C01     		.2byte	0x11c
+ 616 01d6 9D000000 		.4byte	0x9d
+ 617 01da 21000000 		.4byte	.LLST1
+ 618 01de 00       		.byte	0
+ 619 01df 15       		.uleb128 0x15
+ 620 01e0 3A000000 		.4byte	.LASF29
+ 621 01e4 01       		.byte	0x1
+ 622 01e5 3501     		.2byte	0x135
+ 623 01e7 00000000 		.4byte	.LFB8
+ 624 01eb 0C000000 		.4byte	.LFE8-.LFB8
+ 625 01ef 01       		.uleb128 0x1
+ 626 01f0 9C       		.byte	0x9c
+ 627 01f1 16       		.uleb128 0x16
+ 628 01f2 99020000 		.4byte	.LASF42
+ 629 01f6 01       		.byte	0x1
+ 630 01f7 4A01     		.2byte	0x14a
+ 631 01f9 9D000000 		.4byte	0x9d
+ 632 01fd 00000000 		.4byte	.LFB9
+ 633 0201 10000000 		.4byte	.LFE9-.LFB9
+ 634 0205 01       		.uleb128 0x1
+ 635 0206 9C       		.byte	0x9c
+ 636 0207 15       		.uleb128 0x15
+ 637 0208 31020000 		.4byte	.LASF30
+ 638 020c 01       		.byte	0x1
+ 639 020d 5F01     		.2byte	0x15f
+ 640 020f 00000000 		.4byte	.LFB10
+ 641 0213 0C000000 		.4byte	.LFE10-.LFB10
+ 642 0217 01       		.uleb128 0x1
+ 643 0218 9C       		.byte	0x9c
+ 644 0219 09       		.uleb128 0x9
+ 645 021a 78000000 		.4byte	.LASF31
+ 646 021e 01       		.byte	0x1
+ 647 021f 3D       		.byte	0x3d
+ 648 0220 00000000 		.4byte	.LFB0
+ 649 0224 1C000000 		.4byte	.LFE0-.LFB0
+ 650 0228 01       		.uleb128 0x1
+ 651 0229 9C       		.byte	0x9c
+ 652 022a 6B020000 		.4byte	0x26b
+ 653 022e 17       		.uleb128 0x17
+ 654 022f 06000000 		.4byte	.LVL7
+ 655 0233 07020000 		.4byte	0x207
+ 656 0237 18       		.uleb128 0x18
+ 657 0238 0C000000 		.4byte	.LVL8
+ 658 023c 30010000 		.4byte	0x130
+ 659 0240 4E020000 		.4byte	0x24e
+ 660 0244 19       		.uleb128 0x19
+ 661 0245 01       		.uleb128 0x1
+ 662 0246 50       		.byte	0x50
+ 663 0247 05       		.uleb128 0x5
+ 664 0248 03       		.byte	0x3
+ 665 0249 00000000 		.4byte	int_1us_Interrupt
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqtcK3d.s 			page 20
+
+
+ 666 024d 00       		.byte	0
+ 667 024e 18       		.uleb128 0x18
+ 668 024f 12000000 		.4byte	.LVL9
+ 669 0253 8D010000 		.4byte	0x18d
+ 670 0257 61020000 		.4byte	0x261
+ 671 025b 19       		.uleb128 0x19
+ 672 025c 01       		.uleb128 0x1
+ 673 025d 50       		.byte	0x50
+ 674 025e 01       		.uleb128 0x1
+ 675 025f 37       		.byte	0x37
+ 676 0260 00       		.byte	0
+ 677 0261 17       		.uleb128 0x17
+ 678 0262 16000000 		.4byte	.LVL10
+ 679 0266 DF010000 		.4byte	0x1df
+ 680 026a 00       		.byte	0
+ 681 026b 09       		.uleb128 0x9
+ 682 026c 8C000000 		.4byte	.LASF32
+ 683 0270 01       		.byte	0x1
+ 684 0271 68       		.byte	0x68
+ 685 0272 00000000 		.4byte	.LFB1
+ 686 0276 1A000000 		.4byte	.LFE1-.LFB1
+ 687 027a 01       		.uleb128 0x1
+ 688 027b 9C       		.byte	0x9c
+ 689 027c C9020000 		.4byte	0x2c9
+ 690 0280 1A       		.uleb128 0x1a
+ 691 0281 3D010000 		.4byte	.LASF25
+ 692 0285 01       		.byte	0x1
+ 693 0286 68       		.byte	0x68
+ 694 0287 E5000000 		.4byte	0xe5
+ 695 028b 38000000 		.4byte	.LLST2
+ 696 028f 17       		.uleb128 0x17
+ 697 0290 08000000 		.4byte	.LVL12
+ 698 0294 07020000 		.4byte	0x207
+ 699 0298 18       		.uleb128 0x18
+ 700 0299 0E000000 		.4byte	.LVL13
+ 701 029d 30010000 		.4byte	0x130
+ 702 02a1 AC020000 		.4byte	0x2ac
+ 703 02a5 19       		.uleb128 0x19
+ 704 02a6 01       		.uleb128 0x1
+ 705 02a7 50       		.byte	0x50
+ 706 02a8 02       		.uleb128 0x2
+ 707 02a9 74       		.byte	0x74
+ 708 02aa 00       		.sleb128 0
+ 709 02ab 00       		.byte	0
+ 710 02ac 18       		.uleb128 0x18
+ 711 02ad 14000000 		.4byte	.LVL14
+ 712 02b1 8D010000 		.4byte	0x18d
+ 713 02b5 BF020000 		.4byte	0x2bf
+ 714 02b9 19       		.uleb128 0x19
+ 715 02ba 01       		.uleb128 0x1
+ 716 02bb 50       		.byte	0x50
+ 717 02bc 01       		.uleb128 0x1
+ 718 02bd 37       		.byte	0x37
+ 719 02be 00       		.byte	0
+ 720 02bf 17       		.uleb128 0x17
+ 721 02c0 18000000 		.4byte	.LVL15
+ 722 02c4 DF010000 		.4byte	0x1df
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqtcK3d.s 			page 21
+
+
+ 723 02c8 00       		.byte	0
+ 724 02c9 09       		.uleb128 0x9
+ 725 02ca 06000000 		.4byte	.LASF33
+ 726 02ce 01       		.byte	0x1
+ 727 02cf 86       		.byte	0x86
+ 728 02d0 00000000 		.4byte	.LFB2
+ 729 02d4 14000000 		.4byte	.LFE2-.LFB2
+ 730 02d8 01       		.uleb128 0x1
+ 731 02d9 9C       		.byte	0x9c
+ 732 02da F1020000 		.4byte	0x2f1
+ 733 02de 17       		.uleb128 0x17
+ 734 02df 06000000 		.4byte	.LVL16
+ 735 02e3 07020000 		.4byte	0x207
+ 736 02e7 17       		.uleb128 0x17
+ 737 02e8 0C000000 		.4byte	.LVL17
+ 738 02ec 30010000 		.4byte	0x130
+ 739 02f0 00       		.byte	0
+ 740 02f1 15       		.uleb128 0x15
+ 741 02f2 D4020000 		.4byte	.LASF34
+ 742 02f6 01       		.byte	0x1
+ 743 02f7 7A01     		.2byte	0x17a
+ 744 02f9 00000000 		.4byte	.LFB11
+ 745 02fd 0C000000 		.4byte	.LFE11-.LFB11
+ 746 0301 01       		.uleb128 0x1
+ 747 0302 9C       		.byte	0x9c
+ 748 0303 15       		.uleb128 0x15
+ 749 0304 13000000 		.4byte	.LASF35
+ 750 0308 01       		.byte	0x1
+ 751 0309 9301     		.2byte	0x193
+ 752 030b 00000000 		.4byte	.LFB12
+ 753 030f 0C000000 		.4byte	.LFE12-.LFB12
+ 754 0313 01       		.uleb128 0x1
+ 755 0314 9C       		.byte	0x9c
+ 756 0315 0A       		.uleb128 0xa
+ 757 0316 7E010000 		.4byte	.LASF36
+ 758 031a 05       		.byte	0x5
+ 759 031b 08       		.byte	0x8
+ 760 031c 92000000 		.4byte	0x92
+ 761 0320 00       		.byte	0
+ 762              		.section	.debug_abbrev,"",%progbits
+ 763              	.Ldebug_abbrev0:
+ 764 0000 01       		.uleb128 0x1
+ 765 0001 11       		.uleb128 0x11
+ 766 0002 01       		.byte	0x1
+ 767 0003 25       		.uleb128 0x25
+ 768 0004 0E       		.uleb128 0xe
+ 769 0005 13       		.uleb128 0x13
+ 770 0006 0B       		.uleb128 0xb
+ 771 0007 03       		.uleb128 0x3
+ 772 0008 0E       		.uleb128 0xe
+ 773 0009 1B       		.uleb128 0x1b
+ 774 000a 0E       		.uleb128 0xe
+ 775 000b 55       		.uleb128 0x55
+ 776 000c 17       		.uleb128 0x17
+ 777 000d 11       		.uleb128 0x11
+ 778 000e 01       		.uleb128 0x1
+ 779 000f 10       		.uleb128 0x10
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqtcK3d.s 			page 22
+
+
+ 780 0010 17       		.uleb128 0x17
+ 781 0011 00       		.byte	0
+ 782 0012 00       		.byte	0
+ 783 0013 02       		.uleb128 0x2
+ 784 0014 24       		.uleb128 0x24
+ 785 0015 00       		.byte	0
+ 786 0016 0B       		.uleb128 0xb
+ 787 0017 0B       		.uleb128 0xb
+ 788 0018 3E       		.uleb128 0x3e
+ 789 0019 0B       		.uleb128 0xb
+ 790 001a 03       		.uleb128 0x3
+ 791 001b 08       		.uleb128 0x8
+ 792 001c 00       		.byte	0
+ 793 001d 00       		.byte	0
+ 794 001e 03       		.uleb128 0x3
+ 795 001f 24       		.uleb128 0x24
+ 796 0020 00       		.byte	0
+ 797 0021 0B       		.uleb128 0xb
+ 798 0022 0B       		.uleb128 0xb
+ 799 0023 3E       		.uleb128 0x3e
+ 800 0024 0B       		.uleb128 0xb
+ 801 0025 03       		.uleb128 0x3
+ 802 0026 0E       		.uleb128 0xe
+ 803 0027 00       		.byte	0
+ 804 0028 00       		.byte	0
+ 805 0029 04       		.uleb128 0x4
+ 806 002a 16       		.uleb128 0x16
+ 807 002b 00       		.byte	0
+ 808 002c 03       		.uleb128 0x3
+ 809 002d 0E       		.uleb128 0xe
+ 810 002e 3A       		.uleb128 0x3a
+ 811 002f 0B       		.uleb128 0xb
+ 812 0030 3B       		.uleb128 0x3b
+ 813 0031 0B       		.uleb128 0xb
+ 814 0032 49       		.uleb128 0x49
+ 815 0033 13       		.uleb128 0x13
+ 816 0034 00       		.byte	0
+ 817 0035 00       		.byte	0
+ 818 0036 05       		.uleb128 0x5
+ 819 0037 0F       		.uleb128 0xf
+ 820 0038 00       		.byte	0
+ 821 0039 0B       		.uleb128 0xb
+ 822 003a 0B       		.uleb128 0xb
+ 823 003b 49       		.uleb128 0x49
+ 824 003c 13       		.uleb128 0x13
+ 825 003d 00       		.byte	0
+ 826 003e 00       		.byte	0
+ 827 003f 06       		.uleb128 0x6
+ 828 0040 15       		.uleb128 0x15
+ 829 0041 00       		.byte	0
+ 830 0042 27       		.uleb128 0x27
+ 831 0043 19       		.uleb128 0x19
+ 832 0044 00       		.byte	0
+ 833 0045 00       		.byte	0
+ 834 0046 07       		.uleb128 0x7
+ 835 0047 16       		.uleb128 0x16
+ 836 0048 00       		.byte	0
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqtcK3d.s 			page 23
+
+
+ 837 0049 03       		.uleb128 0x3
+ 838 004a 0E       		.uleb128 0xe
+ 839 004b 3A       		.uleb128 0x3a
+ 840 004c 0B       		.uleb128 0xb
+ 841 004d 3B       		.uleb128 0x3b
+ 842 004e 05       		.uleb128 0x5
+ 843 004f 49       		.uleb128 0x49
+ 844 0050 13       		.uleb128 0x13
+ 845 0051 00       		.byte	0
+ 846 0052 00       		.byte	0
+ 847 0053 08       		.uleb128 0x8
+ 848 0054 35       		.uleb128 0x35
+ 849 0055 00       		.byte	0
+ 850 0056 49       		.uleb128 0x49
+ 851 0057 13       		.uleb128 0x13
+ 852 0058 00       		.byte	0
+ 853 0059 00       		.byte	0
+ 854 005a 09       		.uleb128 0x9
+ 855 005b 2E       		.uleb128 0x2e
+ 856 005c 01       		.byte	0x1
+ 857 005d 3F       		.uleb128 0x3f
+ 858 005e 19       		.uleb128 0x19
+ 859 005f 03       		.uleb128 0x3
+ 860 0060 0E       		.uleb128 0xe
+ 861 0061 3A       		.uleb128 0x3a
+ 862 0062 0B       		.uleb128 0xb
+ 863 0063 3B       		.uleb128 0x3b
+ 864 0064 0B       		.uleb128 0xb
+ 865 0065 27       		.uleb128 0x27
+ 866 0066 19       		.uleb128 0x19
+ 867 0067 11       		.uleb128 0x11
+ 868 0068 01       		.uleb128 0x1
+ 869 0069 12       		.uleb128 0x12
+ 870 006a 06       		.uleb128 0x6
+ 871 006b 40       		.uleb128 0x40
+ 872 006c 18       		.uleb128 0x18
+ 873 006d 9742     		.uleb128 0x2117
+ 874 006f 19       		.uleb128 0x19
+ 875 0070 01       		.uleb128 0x1
+ 876 0071 13       		.uleb128 0x13
+ 877 0072 00       		.byte	0
+ 878 0073 00       		.byte	0
+ 879 0074 0A       		.uleb128 0xa
+ 880 0075 34       		.uleb128 0x34
+ 881 0076 00       		.byte	0
+ 882 0077 03       		.uleb128 0x3
+ 883 0078 0E       		.uleb128 0xe
+ 884 0079 3A       		.uleb128 0x3a
+ 885 007a 0B       		.uleb128 0xb
+ 886 007b 3B       		.uleb128 0x3b
+ 887 007c 0B       		.uleb128 0xb
+ 888 007d 49       		.uleb128 0x49
+ 889 007e 13       		.uleb128 0x13
+ 890 007f 3F       		.uleb128 0x3f
+ 891 0080 19       		.uleb128 0x19
+ 892 0081 3C       		.uleb128 0x3c
+ 893 0082 19       		.uleb128 0x19
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqtcK3d.s 			page 24
+
+
+ 894 0083 00       		.byte	0
+ 895 0084 00       		.byte	0
+ 896 0085 0B       		.uleb128 0xb
+ 897 0086 2E       		.uleb128 0x2e
+ 898 0087 01       		.byte	0x1
+ 899 0088 3F       		.uleb128 0x3f
+ 900 0089 19       		.uleb128 0x19
+ 901 008a 03       		.uleb128 0x3
+ 902 008b 0E       		.uleb128 0xe
+ 903 008c 3A       		.uleb128 0x3a
+ 904 008d 0B       		.uleb128 0xb
+ 905 008e 3B       		.uleb128 0x3b
+ 906 008f 0B       		.uleb128 0xb
+ 907 0090 49       		.uleb128 0x49
+ 908 0091 13       		.uleb128 0x13
+ 909 0092 3C       		.uleb128 0x3c
+ 910 0093 19       		.uleb128 0x19
+ 911 0094 01       		.uleb128 0x1
+ 912 0095 13       		.uleb128 0x13
+ 913 0096 00       		.byte	0
+ 914 0097 00       		.byte	0
+ 915 0098 0C       		.uleb128 0xc
+ 916 0099 18       		.uleb128 0x18
+ 917 009a 00       		.byte	0
+ 918 009b 00       		.byte	0
+ 919 009c 00       		.byte	0
+ 920 009d 0D       		.uleb128 0xd
+ 921 009e 2E       		.uleb128 0x2e
+ 922 009f 01       		.byte	0x1
+ 923 00a0 3F       		.uleb128 0x3f
+ 924 00a1 19       		.uleb128 0x19
+ 925 00a2 03       		.uleb128 0x3
+ 926 00a3 0E       		.uleb128 0xe
+ 927 00a4 3A       		.uleb128 0x3a
+ 928 00a5 0B       		.uleb128 0xb
+ 929 00a6 3B       		.uleb128 0x3b
+ 930 00a7 0B       		.uleb128 0xb
+ 931 00a8 49       		.uleb128 0x49
+ 932 00a9 13       		.uleb128 0x13
+ 933 00aa 3C       		.uleb128 0x3c
+ 934 00ab 19       		.uleb128 0x19
+ 935 00ac 00       		.byte	0
+ 936 00ad 00       		.byte	0
+ 937 00ae 0E       		.uleb128 0xe
+ 938 00af 05       		.uleb128 0x5
+ 939 00b0 00       		.byte	0
+ 940 00b1 03       		.uleb128 0x3
+ 941 00b2 0E       		.uleb128 0xe
+ 942 00b3 3A       		.uleb128 0x3a
+ 943 00b4 0B       		.uleb128 0xb
+ 944 00b5 3B       		.uleb128 0x3b
+ 945 00b6 0B       		.uleb128 0xb
+ 946 00b7 49       		.uleb128 0x49
+ 947 00b8 13       		.uleb128 0x13
+ 948 00b9 02       		.uleb128 0x2
+ 949 00ba 18       		.uleb128 0x18
+ 950 00bb 00       		.byte	0
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqtcK3d.s 			page 25
+
+
+ 951 00bc 00       		.byte	0
+ 952 00bd 0F       		.uleb128 0xf
+ 953 00be 34       		.uleb128 0x34
+ 954 00bf 00       		.byte	0
+ 955 00c0 03       		.uleb128 0x3
+ 956 00c1 0E       		.uleb128 0xe
+ 957 00c2 3A       		.uleb128 0x3a
+ 958 00c3 0B       		.uleb128 0xb
+ 959 00c4 3B       		.uleb128 0x3b
+ 960 00c5 0B       		.uleb128 0xb
+ 961 00c6 49       		.uleb128 0x49
+ 962 00c7 13       		.uleb128 0x13
+ 963 00c8 02       		.uleb128 0x2
+ 964 00c9 18       		.uleb128 0x18
+ 965 00ca 00       		.byte	0
+ 966 00cb 00       		.byte	0
+ 967 00cc 10       		.uleb128 0x10
+ 968 00cd 2E       		.uleb128 0x2e
+ 969 00ce 01       		.byte	0x1
+ 970 00cf 3F       		.uleb128 0x3f
+ 971 00d0 19       		.uleb128 0x19
+ 972 00d1 03       		.uleb128 0x3
+ 973 00d2 0E       		.uleb128 0xe
+ 974 00d3 3A       		.uleb128 0x3a
+ 975 00d4 0B       		.uleb128 0xb
+ 976 00d5 3B       		.uleb128 0x3b
+ 977 00d6 0B       		.uleb128 0xb
+ 978 00d7 27       		.uleb128 0x27
+ 979 00d8 19       		.uleb128 0x19
+ 980 00d9 49       		.uleb128 0x49
+ 981 00da 13       		.uleb128 0x13
+ 982 00db 11       		.uleb128 0x11
+ 983 00dc 01       		.uleb128 0x1
+ 984 00dd 12       		.uleb128 0x12
+ 985 00de 06       		.uleb128 0x6
+ 986 00df 40       		.uleb128 0x40
+ 987 00e0 18       		.uleb128 0x18
+ 988 00e1 9742     		.uleb128 0x2117
+ 989 00e3 19       		.uleb128 0x19
+ 990 00e4 01       		.uleb128 0x1
+ 991 00e5 13       		.uleb128 0x13
+ 992 00e6 00       		.byte	0
+ 993 00e7 00       		.byte	0
+ 994 00e8 11       		.uleb128 0x11
+ 995 00e9 2E       		.uleb128 0x2e
+ 996 00ea 01       		.byte	0x1
+ 997 00eb 3F       		.uleb128 0x3f
+ 998 00ec 19       		.uleb128 0x19
+ 999 00ed 03       		.uleb128 0x3
+ 1000 00ee 0E       		.uleb128 0xe
+ 1001 00ef 3A       		.uleb128 0x3a
+ 1002 00f0 0B       		.uleb128 0xb
+ 1003 00f1 3B       		.uleb128 0x3b
+ 1004 00f2 05       		.uleb128 0x5
+ 1005 00f3 27       		.uleb128 0x27
+ 1006 00f4 19       		.uleb128 0x19
+ 1007 00f5 11       		.uleb128 0x11
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqtcK3d.s 			page 26
+
+
+ 1008 00f6 01       		.uleb128 0x1
+ 1009 00f7 12       		.uleb128 0x12
+ 1010 00f8 06       		.uleb128 0x6
+ 1011 00f9 40       		.uleb128 0x40
+ 1012 00fa 18       		.uleb128 0x18
+ 1013 00fb 9742     		.uleb128 0x2117
+ 1014 00fd 19       		.uleb128 0x19
+ 1015 00fe 01       		.uleb128 0x1
+ 1016 00ff 13       		.uleb128 0x13
+ 1017 0100 00       		.byte	0
+ 1018 0101 00       		.byte	0
+ 1019 0102 12       		.uleb128 0x12
+ 1020 0103 05       		.uleb128 0x5
+ 1021 0104 00       		.byte	0
+ 1022 0105 03       		.uleb128 0x3
+ 1023 0106 0E       		.uleb128 0xe
+ 1024 0107 3A       		.uleb128 0x3a
+ 1025 0108 0B       		.uleb128 0xb
+ 1026 0109 3B       		.uleb128 0x3b
+ 1027 010a 05       		.uleb128 0x5
+ 1028 010b 49       		.uleb128 0x49
+ 1029 010c 13       		.uleb128 0x13
+ 1030 010d 02       		.uleb128 0x2
+ 1031 010e 17       		.uleb128 0x17
+ 1032 010f 00       		.byte	0
+ 1033 0110 00       		.byte	0
+ 1034 0111 13       		.uleb128 0x13
+ 1035 0112 2E       		.uleb128 0x2e
+ 1036 0113 01       		.byte	0x1
+ 1037 0114 3F       		.uleb128 0x3f
+ 1038 0115 19       		.uleb128 0x19
+ 1039 0116 03       		.uleb128 0x3
+ 1040 0117 0E       		.uleb128 0xe
+ 1041 0118 3A       		.uleb128 0x3a
+ 1042 0119 0B       		.uleb128 0xb
+ 1043 011a 3B       		.uleb128 0x3b
+ 1044 011b 05       		.uleb128 0x5
+ 1045 011c 27       		.uleb128 0x27
+ 1046 011d 19       		.uleb128 0x19
+ 1047 011e 49       		.uleb128 0x49
+ 1048 011f 13       		.uleb128 0x13
+ 1049 0120 11       		.uleb128 0x11
+ 1050 0121 01       		.uleb128 0x1
+ 1051 0122 12       		.uleb128 0x12
+ 1052 0123 06       		.uleb128 0x6
+ 1053 0124 40       		.uleb128 0x40
+ 1054 0125 18       		.uleb128 0x18
+ 1055 0126 9742     		.uleb128 0x2117
+ 1056 0128 19       		.uleb128 0x19
+ 1057 0129 01       		.uleb128 0x1
+ 1058 012a 13       		.uleb128 0x13
+ 1059 012b 00       		.byte	0
+ 1060 012c 00       		.byte	0
+ 1061 012d 14       		.uleb128 0x14
+ 1062 012e 34       		.uleb128 0x34
+ 1063 012f 00       		.byte	0
+ 1064 0130 03       		.uleb128 0x3
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqtcK3d.s 			page 27
+
+
+ 1065 0131 0E       		.uleb128 0xe
+ 1066 0132 3A       		.uleb128 0x3a
+ 1067 0133 0B       		.uleb128 0xb
+ 1068 0134 3B       		.uleb128 0x3b
+ 1069 0135 05       		.uleb128 0x5
+ 1070 0136 49       		.uleb128 0x49
+ 1071 0137 13       		.uleb128 0x13
+ 1072 0138 02       		.uleb128 0x2
+ 1073 0139 17       		.uleb128 0x17
+ 1074 013a 00       		.byte	0
+ 1075 013b 00       		.byte	0
+ 1076 013c 15       		.uleb128 0x15
+ 1077 013d 2E       		.uleb128 0x2e
+ 1078 013e 00       		.byte	0
+ 1079 013f 3F       		.uleb128 0x3f
+ 1080 0140 19       		.uleb128 0x19
+ 1081 0141 03       		.uleb128 0x3
+ 1082 0142 0E       		.uleb128 0xe
+ 1083 0143 3A       		.uleb128 0x3a
+ 1084 0144 0B       		.uleb128 0xb
+ 1085 0145 3B       		.uleb128 0x3b
+ 1086 0146 05       		.uleb128 0x5
+ 1087 0147 27       		.uleb128 0x27
+ 1088 0148 19       		.uleb128 0x19
+ 1089 0149 11       		.uleb128 0x11
+ 1090 014a 01       		.uleb128 0x1
+ 1091 014b 12       		.uleb128 0x12
+ 1092 014c 06       		.uleb128 0x6
+ 1093 014d 40       		.uleb128 0x40
+ 1094 014e 18       		.uleb128 0x18
+ 1095 014f 9742     		.uleb128 0x2117
+ 1096 0151 19       		.uleb128 0x19
+ 1097 0152 00       		.byte	0
+ 1098 0153 00       		.byte	0
+ 1099 0154 16       		.uleb128 0x16
+ 1100 0155 2E       		.uleb128 0x2e
+ 1101 0156 00       		.byte	0
+ 1102 0157 3F       		.uleb128 0x3f
+ 1103 0158 19       		.uleb128 0x19
+ 1104 0159 03       		.uleb128 0x3
+ 1105 015a 0E       		.uleb128 0xe
+ 1106 015b 3A       		.uleb128 0x3a
+ 1107 015c 0B       		.uleb128 0xb
+ 1108 015d 3B       		.uleb128 0x3b
+ 1109 015e 05       		.uleb128 0x5
+ 1110 015f 27       		.uleb128 0x27
+ 1111 0160 19       		.uleb128 0x19
+ 1112 0161 49       		.uleb128 0x49
+ 1113 0162 13       		.uleb128 0x13
+ 1114 0163 11       		.uleb128 0x11
+ 1115 0164 01       		.uleb128 0x1
+ 1116 0165 12       		.uleb128 0x12
+ 1117 0166 06       		.uleb128 0x6
+ 1118 0167 40       		.uleb128 0x40
+ 1119 0168 18       		.uleb128 0x18
+ 1120 0169 9742     		.uleb128 0x2117
+ 1121 016b 19       		.uleb128 0x19
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqtcK3d.s 			page 28
+
+
+ 1122 016c 00       		.byte	0
+ 1123 016d 00       		.byte	0
+ 1124 016e 17       		.uleb128 0x17
+ 1125 016f 898201   		.uleb128 0x4109
+ 1126 0172 00       		.byte	0
+ 1127 0173 11       		.uleb128 0x11
+ 1128 0174 01       		.uleb128 0x1
+ 1129 0175 31       		.uleb128 0x31
+ 1130 0176 13       		.uleb128 0x13
+ 1131 0177 00       		.byte	0
+ 1132 0178 00       		.byte	0
+ 1133 0179 18       		.uleb128 0x18
+ 1134 017a 898201   		.uleb128 0x4109
+ 1135 017d 01       		.byte	0x1
+ 1136 017e 11       		.uleb128 0x11
+ 1137 017f 01       		.uleb128 0x1
+ 1138 0180 31       		.uleb128 0x31
+ 1139 0181 13       		.uleb128 0x13
+ 1140 0182 01       		.uleb128 0x1
+ 1141 0183 13       		.uleb128 0x13
+ 1142 0184 00       		.byte	0
+ 1143 0185 00       		.byte	0
+ 1144 0186 19       		.uleb128 0x19
+ 1145 0187 8A8201   		.uleb128 0x410a
+ 1146 018a 00       		.byte	0
+ 1147 018b 02       		.uleb128 0x2
+ 1148 018c 18       		.uleb128 0x18
+ 1149 018d 9142     		.uleb128 0x2111
+ 1150 018f 18       		.uleb128 0x18
+ 1151 0190 00       		.byte	0
+ 1152 0191 00       		.byte	0
+ 1153 0192 1A       		.uleb128 0x1a
+ 1154 0193 05       		.uleb128 0x5
+ 1155 0194 00       		.byte	0
+ 1156 0195 03       		.uleb128 0x3
+ 1157 0196 0E       		.uleb128 0xe
+ 1158 0197 3A       		.uleb128 0x3a
+ 1159 0198 0B       		.uleb128 0xb
+ 1160 0199 3B       		.uleb128 0x3b
+ 1161 019a 0B       		.uleb128 0xb
+ 1162 019b 49       		.uleb128 0x49
+ 1163 019c 13       		.uleb128 0x13
+ 1164 019d 02       		.uleb128 0x2
+ 1165 019e 17       		.uleb128 0x17
+ 1166 019f 00       		.byte	0
+ 1167 01a0 00       		.byte	0
+ 1168 01a1 00       		.byte	0
+ 1169              		.section	.debug_loc,"",%progbits
+ 1170              	.Ldebug_loc0:
+ 1171              	.LLST0:
+ 1172 0000 00000000 		.4byte	.LVL3
+ 1173 0004 02000000 		.4byte	.LVL4
+ 1174 0008 0100     		.2byte	0x1
+ 1175 000a 50       		.byte	0x50
+ 1176 000b 02000000 		.4byte	.LVL4
+ 1177 000f 10000000 		.4byte	.LFE6
+ 1178 0013 0400     		.2byte	0x4
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqtcK3d.s 			page 29
+
+
+ 1179 0015 F3       		.byte	0xf3
+ 1180 0016 01       		.uleb128 0x1
+ 1181 0017 50       		.byte	0x50
+ 1182 0018 9F       		.byte	0x9f
+ 1183 0019 00000000 		.4byte	0
+ 1184 001d 00000000 		.4byte	0
+ 1185              	.LLST1:
+ 1186 0021 04000000 		.4byte	.LVL5
+ 1187 0025 06000000 		.4byte	.LVL6
+ 1188 0029 0500     		.2byte	0x5
+ 1189 002b 70       		.byte	0x70
+ 1190 002c 00       		.sleb128 0
+ 1191 002d 35       		.byte	0x35
+ 1192 002e 25       		.byte	0x25
+ 1193 002f 9F       		.byte	0x9f
+ 1194 0030 00000000 		.4byte	0
+ 1195 0034 00000000 		.4byte	0
+ 1196              	.LLST2:
+ 1197 0038 00000000 		.4byte	.LVL11
+ 1198 003c 07000000 		.4byte	.LVL12-1
+ 1199 0040 0100     		.2byte	0x1
+ 1200 0042 50       		.byte	0x50
+ 1201 0043 07000000 		.4byte	.LVL12-1
+ 1202 0047 1A000000 		.4byte	.LFE1
+ 1203 004b 0100     		.2byte	0x1
+ 1204 004d 54       		.byte	0x54
+ 1205 004e 00000000 		.4byte	0
+ 1206 0052 00000000 		.4byte	0
+ 1207              		.section	.debug_aranges,"",%progbits
+ 1208 0000 7C000000 		.4byte	0x7c
+ 1209 0004 0200     		.2byte	0x2
+ 1210 0006 00000000 		.4byte	.Ldebug_info0
+ 1211 000a 04       		.byte	0x4
+ 1212 000b 00       		.byte	0
+ 1213 000c 0000     		.2byte	0
+ 1214 000e 0000     		.2byte	0
+ 1215 0010 00000000 		.4byte	.LFB3
+ 1216 0014 10000000 		.4byte	.LFE3-.LFB3
+ 1217 0018 00000000 		.4byte	.LFB4
+ 1218 001c 0C000000 		.4byte	.LFE4-.LFB4
+ 1219 0020 00000000 		.4byte	.LFB5
+ 1220 0024 0C000000 		.4byte	.LFE5-.LFB5
+ 1221 0028 00000000 		.4byte	.LFB6
+ 1222 002c 10000000 		.4byte	.LFE6-.LFB6
+ 1223 0030 00000000 		.4byte	.LFB7
+ 1224 0034 0C000000 		.4byte	.LFE7-.LFB7
+ 1225 0038 00000000 		.4byte	.LFB8
+ 1226 003c 0C000000 		.4byte	.LFE8-.LFB8
+ 1227 0040 00000000 		.4byte	.LFB9
+ 1228 0044 10000000 		.4byte	.LFE9-.LFB9
+ 1229 0048 00000000 		.4byte	.LFB10
+ 1230 004c 0C000000 		.4byte	.LFE10-.LFB10
+ 1231 0050 00000000 		.4byte	.LFB0
+ 1232 0054 1C000000 		.4byte	.LFE0-.LFB0
+ 1233 0058 00000000 		.4byte	.LFB1
+ 1234 005c 1A000000 		.4byte	.LFE1-.LFB1
+ 1235 0060 00000000 		.4byte	.LFB2
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqtcK3d.s 			page 30
+
+
+ 1236 0064 14000000 		.4byte	.LFE2-.LFB2
+ 1237 0068 00000000 		.4byte	.LFB11
+ 1238 006c 0C000000 		.4byte	.LFE11-.LFB11
+ 1239 0070 00000000 		.4byte	.LFB12
+ 1240 0074 0C000000 		.4byte	.LFE12-.LFB12
+ 1241 0078 00000000 		.4byte	0
+ 1242 007c 00000000 		.4byte	0
+ 1243              		.section	.debug_ranges,"",%progbits
+ 1244              	.Ldebug_ranges0:
+ 1245 0000 00000000 		.4byte	.LFB3
+ 1246 0004 10000000 		.4byte	.LFE3
+ 1247 0008 00000000 		.4byte	.LFB4
+ 1248 000c 0C000000 		.4byte	.LFE4
+ 1249 0010 00000000 		.4byte	.LFB5
+ 1250 0014 0C000000 		.4byte	.LFE5
+ 1251 0018 00000000 		.4byte	.LFB6
+ 1252 001c 10000000 		.4byte	.LFE6
+ 1253 0020 00000000 		.4byte	.LFB7
+ 1254 0024 0C000000 		.4byte	.LFE7
+ 1255 0028 00000000 		.4byte	.LFB8
+ 1256 002c 0C000000 		.4byte	.LFE8
+ 1257 0030 00000000 		.4byte	.LFB9
+ 1258 0034 10000000 		.4byte	.LFE9
+ 1259 0038 00000000 		.4byte	.LFB10
+ 1260 003c 0C000000 		.4byte	.LFE10
+ 1261 0040 00000000 		.4byte	.LFB0
+ 1262 0044 1C000000 		.4byte	.LFE0
+ 1263 0048 00000000 		.4byte	.LFB1
+ 1264 004c 1A000000 		.4byte	.LFE1
+ 1265 0050 00000000 		.4byte	.LFB2
+ 1266 0054 14000000 		.4byte	.LFE2
+ 1267 0058 00000000 		.4byte	.LFB11
+ 1268 005c 0C000000 		.4byte	.LFE11
+ 1269 0060 00000000 		.4byte	.LFB12
+ 1270 0064 0C000000 		.4byte	.LFE12
+ 1271 0068 00000000 		.4byte	0
+ 1272 006c 00000000 		.4byte	0
+ 1273              		.section	.debug_line,"",%progbits
+ 1274              	.Ldebug_line0:
+ 1275 0000 3C020000 		.section	.debug_str,"MS",%progbits,1
+ 1275      02004F01 
+ 1275      00000201 
+ 1275      FB0E0D00 
+ 1275      01010101 
+ 1276              	.LASF19:
+ 1277 0000 72656733 		.ascii	"reg32\000"
+ 1277      3200
+ 1278              	.LASF33:
+ 1279 0006 696E745F 		.ascii	"int_1us_Stop\000"
+ 1279      3175735F 
+ 1279      53746F70 
+ 1279      00
+ 1280              	.LASF35:
+ 1281 0013 696E745F 		.ascii	"int_1us_ClearPending\000"
+ 1281      3175735F 
+ 1281      436C6561 
+ 1281      7250656E 
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqtcK3d.s 			page 31
+
+
+ 1281      64696E67 
+ 1282              	.LASF22:
+ 1283 0028 696E745F 		.ascii	"int_1us_SetVector\000"
+ 1283      3175735F 
+ 1283      53657456 
+ 1283      6563746F 
+ 1283      7200
+ 1284              	.LASF29:
+ 1285 003a 696E745F 		.ascii	"int_1us_Enable\000"
+ 1285      3175735F 
+ 1285      456E6162 
+ 1285      6C6500
+ 1286              	.LASF6:
+ 1287 0049 73686F72 		.ascii	"short unsigned int\000"
+ 1287      7420756E 
+ 1287      7369676E 
+ 1287      65642069 
+ 1287      6E7400
+ 1288              	.LASF27:
+ 1289 005c 696E745F 		.ascii	"int_1us_GetVector\000"
+ 1289      3175735F 
+ 1289      47657456 
+ 1289      6563746F 
+ 1289      7200
+ 1290              	.LASF5:
+ 1291 006e 73686F72 		.ascii	"short int\000"
+ 1291      7420696E 
+ 1291      7400
+ 1292              	.LASF31:
+ 1293 0078 696E745F 		.ascii	"int_1us_Start\000"
+ 1293      3175735F 
+ 1293      53746172 
+ 1293      7400
+ 1294              	.LASF16:
+ 1295 0086 666C6F61 		.ascii	"float\000"
+ 1295      7400
+ 1296              	.LASF32:
+ 1297 008c 696E745F 		.ascii	"int_1us_StartEx\000"
+ 1297      3175735F 
+ 1297      53746172 
+ 1297      74457800 
+ 1298              	.LASF4:
+ 1299 009c 756E7369 		.ascii	"unsigned char\000"
+ 1299      676E6564 
+ 1299      20636861 
+ 1299      7200
+ 1300              	.LASF37:
+ 1301 00aa 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1301      43313120 
+ 1301      352E342E 
+ 1301      31203230 
+ 1301      31363036 
+ 1302 00dd 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1302      20726576 
+ 1302      6973696F 
+ 1302      6E203233 
+ 1302      37373135 
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqtcK3d.s 			page 32
+
+
+ 1303 0110 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1303      66756E63 
+ 1303      74696F6E 
+ 1303      2D736563 
+ 1303      74696F6E 
+ 1304              	.LASF18:
+ 1305 0138 72656738 		.ascii	"reg8\000"
+ 1305      00
+ 1306              	.LASF25:
+ 1307 013d 61646472 		.ascii	"address\000"
+ 1307      65737300 
+ 1308              	.LASF8:
+ 1309 0145 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1309      20756E73 
+ 1309      69676E65 
+ 1309      6420696E 
+ 1309      7400
+ 1310              	.LASF14:
+ 1311 0157 75696E74 		.ascii	"uint8\000"
+ 1311      3800
+ 1312              	.LASF38:
+ 1313 015d 47656E65 		.ascii	"Generated_Source\\PSoC5\\int_1us.c\000"
+ 1313      72617465 
+ 1313      645F536F 
+ 1313      75726365 
+ 1313      5C50536F 
+ 1314              	.LASF36:
+ 1315 017e 74696D65 		.ascii	"timer_us_hcsr04\000"
+ 1315      725F7573 
+ 1315      5F686373 
+ 1315      72303400 
+ 1316              	.LASF26:
+ 1317 018e 7072696F 		.ascii	"priority\000"
+ 1317      72697479 
+ 1317      00
+ 1318              	.LASF41:
+ 1319 0197 696E6974 		.ascii	"init_hcsr04\000"
+ 1319      5F686373 
+ 1319      72303400 
+ 1320              	.LASF17:
+ 1321 01a3 646F7562 		.ascii	"double\000"
+ 1321      6C6500
+ 1322              	.LASF28:
+ 1323 01aa 696E745F 		.ascii	"int_1us_GetPriority\000"
+ 1323      3175735F 
+ 1323      47657450 
+ 1323      72696F72 
+ 1323      69747900 
+ 1324              	.LASF21:
+ 1325 01be 696E745F 		.ascii	"int_1us_Interrupt\000"
+ 1325      3175735F 
+ 1325      496E7465 
+ 1325      72727570 
+ 1325      7400
+ 1326              	.LASF12:
+ 1327 01d0 5F5F7569 		.ascii	"__uint32_t\000"
+ 1327      6E743332 
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqtcK3d.s 			page 33
+
+
+ 1327      5F7400
+ 1328              	.LASF15:
+ 1329 01db 75696E74 		.ascii	"uint32\000"
+ 1329      333200
+ 1330              	.LASF0:
+ 1331 01e2 756E7369 		.ascii	"unsigned int\000"
+ 1331      676E6564 
+ 1331      20696E74 
+ 1331      00
+ 1332              	.LASF39:
+ 1333 01ef 453A5C61 		.ascii	"E:\\aquadoc\\psoc\\psoc\\Ultrasonic_test.cydsn\000"
+ 1333      71756164 
+ 1333      6F635C70 
+ 1333      736F635C 
+ 1333      70736F63 
+ 1334              	.LASF9:
+ 1335 021a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1335      206C6F6E 
+ 1335      6720756E 
+ 1335      7369676E 
+ 1335      65642069 
+ 1336              	.LASF30:
+ 1337 0231 696E745F 		.ascii	"int_1us_Disable\000"
+ 1337      3175735F 
+ 1337      44697361 
+ 1337      626C6500 
+ 1338              	.LASF20:
+ 1339 0241 63796973 		.ascii	"cyisraddress\000"
+ 1339      72616464 
+ 1339      72657373 
+ 1339      00
+ 1340              	.LASF10:
+ 1341 024e 73697A65 		.ascii	"sizetype\000"
+ 1341      74797065 
+ 1341      00
+ 1342              	.LASF1:
+ 1343 0257 6C6F6E67 		.ascii	"long long int\000"
+ 1343      206C6F6E 
+ 1343      6720696E 
+ 1343      7400
+ 1344              	.LASF11:
+ 1345 0265 63686172 		.ascii	"char\000"
+ 1345      00
+ 1346              	.LASF23:
+ 1347 026a 72616D56 		.ascii	"ramVectorTable\000"
+ 1347      6563746F 
+ 1347      72546162 
+ 1347      6C6500
+ 1348              	.LASF24:
+ 1349 0279 696E745F 		.ascii	"int_1us_SetPriority\000"
+ 1349      3175735F 
+ 1349      53657450 
+ 1349      72696F72 
+ 1349      69747900 
+ 1350              	.LASF40:
+ 1351 028d 6765745F 		.ascii	"get_hc_sr04\000"
+ 1351      68635F73 
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccqtcK3d.s 			page 34
+
+
+ 1351      72303400 
+ 1352              	.LASF42:
+ 1353 0299 696E745F 		.ascii	"int_1us_GetState\000"
+ 1353      3175735F 
+ 1353      47657453 
+ 1353      74617465 
+ 1353      00
+ 1354              	.LASF13:
+ 1355 02aa 75696E74 		.ascii	"uint32_t\000"
+ 1355      33325F74 
+ 1355      00
+ 1356              	.LASF7:
+ 1357 02b3 6C6F6E67 		.ascii	"long int\000"
+ 1357      20696E74 
+ 1357      00
+ 1358              	.LASF2:
+ 1359 02bc 6C6F6E67 		.ascii	"long double\000"
+ 1359      20646F75 
+ 1359      626C6500 
+ 1360              	.LASF3:
+ 1361 02c8 7369676E 		.ascii	"signed char\000"
+ 1361      65642063 
+ 1361      68617200 
+ 1362              	.LASF34:
+ 1363 02d4 696E745F 		.ascii	"int_1us_SetPending\000"
+ 1363      3175735F 
+ 1363      53657450 
+ 1363      656E6469 
+ 1363      6E6700
+ 1364              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
