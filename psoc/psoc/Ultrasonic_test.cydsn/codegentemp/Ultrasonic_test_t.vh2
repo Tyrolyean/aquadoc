@@ -1,5 +1,5 @@
 -- Project:   E:\aquadoc\psoc\psoc\Ultrasonic_test.cydsn\Ultrasonic_test.cyprj
--- Generated: 03/04/2019 10:33:44
+-- Generated: 03/10/2019 17:33:47
 -- PSoC Creator  4.2
 
 ENTITY Ultrasonic_test IS
@@ -70,11 +70,11 @@ ARCHITECTURE __DEFAULT__ OF Ultrasonic_test IS
     ATTRIBUTE GROUND OF zero : SIGNAL IS true;
     ATTRIBUTE Location OF ClockBlock : LABEL IS "F(Clock,0)";
     ATTRIBUTE lib_model OF Trigger_Impuls(0) : LABEL IS "iocell1";
-    ATTRIBUTE Location OF Trigger_Impuls(0) : LABEL IS "P0[1]";
+    ATTRIBUTE Location OF Trigger_Impuls(0) : LABEL IS "P0[6]";
     ATTRIBUTE lib_model OF Tx_1(0) : LABEL IS "iocell2";
     ATTRIBUTE Location OF Tx_1(0) : LABEL IS "P12[7]";
     ATTRIBUTE lib_model OF Echo_Input(0) : LABEL IS "iocell3";
-    ATTRIBUTE Location OF Echo_Input(0) : LABEL IS "P0[3]";
+    ATTRIBUTE Location OF Echo_Input(0) : LABEL IS "P0[7]";
     ATTRIBUTE lib_model OF Net_2 : LABEL IS "macrocell1";
     ATTRIBUTE Location OF Net_2 : LABEL IS "U(1,0)";
     ATTRIBUTE lib_model OF \UART_1:BUART:counter_load_not\ : LABEL IS "macrocell2";

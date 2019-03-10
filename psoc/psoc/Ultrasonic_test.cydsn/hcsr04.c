@@ -8,10 +8,20 @@ uint32_t get_hc_sr04(){
      * assumed to have been disconnected
      */
     
-    #define ERRROR_CORRECTION 0
-    #define CORRECTION_FACTOR ((double)2.7)
+    
+    /* We assumed that a linear function correcting the
+     * measurements would be enough. We took measurements at 1m and 2m and got as
+     * results the values .36m and .72m respectively. We then perceeded to
+     * put a linear function through the points (.36, 100) and (.72, 100)
+     * which resulted in a slope of 2.77777 or 25/9 and an offset of 0.
+     * Therefore we assumed an only linear distortion. We took further measurements
+     * and got errors in the range of 1-3% of the real distances, which was deemed enough.
+     */
+    #define CORRECTION_FACTOR ((double)25.0/9.0)
     
     #define TIMEOUT 50000
+    
+    /* Avoid further distortion through triggered interrupts. */
     CyGlobalIntDisable;
     
     /* Place your application code here. */
@@ -24,14 +34,18 @@ uint32_t get_hc_sr04(){
         CyDelayUs(1);
     }
     
-    //ultimate Baustelle
     uint32_t counter;
     
     for(counter = 0;Echo_Input_Read() == 1 && counter <= TIMEOUT; counter ++){
         CyDelayUs(1);
     }
     CyGlobalIntEnable;
-    return (counter * CORRECTION_FACTOR) + ERRROR_CORRECTION;
+    
+    /* This statement performes an integer to float converstion and an
+     * float to integer conversion. The calculation itself happens as
+     * (double precision) float.
+     */
+    return (counter * CORRECTION_FACTOR);
 }
 
 uint32_t timer_us_hcsr04 = 0;

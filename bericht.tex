@@ -17,6 +17,12 @@
 \usepackage{pdfpages}
 \usepackage{listings}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+\usepackage[pdfauthor={tyrolyean},
+            pdftitle={AQUADOC},
+            pdfproducer={4BHN},
+            pdfcreator={xelatex}]{hyperref}
+
 \author{Manuel Ljubic, Jack Neuner, Daniel Plank}
 \title{AquadDoc}
 \setmainfont{Arial}
@@ -26,7 +32,7 @@
 % #############################################################################
 
 % Include the used datasheets in the document
-\def\datasheets{1}
+\def\datasheets{0}
 
 \def\psocdisasm{0}
 
@@ -65,9 +71,10 @@
 \framebox{
 	\parbox{\textwidth}{
 		\textbf{\maketitle}
-		\break Dokumentation des Wasserhaushalts einer 
-	Wasserversorgungsanlage für Kleinsiedlungsgebiete
-		
+		\centering
+		\textbf{Dokumentation des Wasserhaushalts einer 
+	Wasserversorgungsanlage für Kleinsiedlungsgebiete}
+		\vspace{1cm}
 	}
 }
 
@@ -152,14 +159,16 @@ Versorgungsspannung wird geachtet.
 
 \lstinputlisting[language=C++, numbers=left, frame=trBL, breaklines=true,
  breakautoindent=true, formfeed=\newpage, label={lst:ardu_hc-sr04},
- caption={Arduino Programm für HC-SR04}]{arduino/HC-SR04/HC-SR04.ino}
+ caption={Arduino Programm für HC-SR04}, columns=flexible]
+ {./arduino/HC-SR04/HC-SR04.ino}
 
 \newpage
 \subsection{DS1722}
 
 \lstinputlisting[language=C++, numbers=left, frame=trBL, breaklines=true,
  breakautoindent=true, formfeed=\newpage, label={lst:ardu_ds1722},
- caption={Arduino Programm für DS1722}]{arduino/DS1722/DS1722.ino}
+ caption={Arduino Programm für DS1722}, columns=flexible]
+ {./arduino/DS1722/DS1722.ino}
 
 \if\psocdisasm
 
@@ -200,16 +209,128 @@ used to
 
 \fi
 
-\section{Addendum}
+\section{Durchführung Mittels PSoC}
+
+	Die realisierung des Projektes mittels des PSoC Microcontrollers wurde
+	vom Lehrer vorgegeben. Dafür wurden zuerst einzelprogramme erstellt,
+	um die gewünschten Funktionalitäten einzeln zu testen. Die
+	Einzelprogramme sollten dann zu einem Gesamtprogramm zusammengeführt
+	werden, welches volle Funktionalität bietet.
+
+\subsection{HC-SR04}
+
+\subsubsection{Bauteilerklärung}
+	
+	Der HC-SR04 ist ein IC-Baustein, der Entfernung mittels Ultraschall
+	misst. Dafür wird nach anlegen eines min. 10µs Pulses
+	\footnote{Seite 2 HC-SR04 Datenblatt}
+	am TRIG Pin
+	eine Ultraschall Welle losgeschickt. Der Baustein rechnet sich dann aus
+	der Laufzeit der Welle bis zu ihrer Rückkehr die Entfernung aus. Manche
+	Module scheinen dabei einen Defekt zu haben oder schlichtweg billiger
+	gebaut zu sein, da man bei diesen klar eine Kondensatorladekurve
+	erkennen kann. Die Messergebnisse stimmen jedoch mit denen eines
+	Funktionstüchtigen HC-SR04 überein, wenn man von CMOS Logikpegeln
+	ausgeht, also 3.5V und höher 
+	\footnote{Halbleiter-Schaltungstechnik Seite 639} als 
+	WAHR annimmt. Das HC-SR04 Datenblatt behaupt hierbei jedoch, dass die
+	Logikpegel TTL-Pegel seien, was einen kleinen Offset in diesem Falle
+	zur Folge hätte. Dieser konnte jedoch bei uns nicht gemessen werden.
+	
+
+	\begin{figure}[H]
+		
+		\centering
+		\begin{tikzpicture}
+		\begin{axis}[
+			ylabel=$ Spannung $,
+			xlabel=$ Zeit $,
+			grid=both,
+			minor tick num=5,
+			width=\textwidth,
+			height=0.5\textwidth,
+			ymin = -0.1,
+			ymax = 5.1,
+			% If you want to make the lines thick
+			%every axis plot/.append style={ultra thick},
+			xmin = -0.00014,
+			xmax = 0.0027
+		]
+		
+		\addplot table [x=time, y=echo, col sep=comma, mark=none, 
+			color=green] {measurements/hc-sr04_should.csv};
+		\addplot table [x=time, y=trig, col sep=comma, mark=none, 
+			color=red] {measurements/hc-sr04_should.csv};
+		
+		\end{axis}
+		\end{tikzpicture}
+		\label{fig:hc-sr04_working}
+
+		\caption{Messung mit einem funktionstüchtigen HC-SR04}
+	\end{figure}
+	
+	\begin{figure}[H]
+		
+		\centering
+		\begin{tikzpicture}
+		\begin{axis}[
+			ylabel=$ Spannung $,
+			xlabel=$ Zeit $,
+			grid=both,
+			minor tick num=5,
+			width=\textwidth,
+			height=0.5\textwidth,
+			ymin = -0.1,
+			ymax = 5.1,
+			% If you want to make the lines thick
+			%every axis plot/.append style={ultra thick},
+			xmin = -0.00014,
+			xmax = 0.0027
+		]
+		
+		\addplot table [x=time, y=echo, col sep=comma, mark=none, 
+			color=green] {measurements/hc-sr04_should.csv};
+		\addplot table [x=time, y=trig, col sep=comma, mark=none, 
+			color=red] {measurements/hc-sr04_should.csv};
+		
+		\end{axis}
+		\end{tikzpicture}
+		\label{fig:hc-sr04_broken}
+
+		\caption{Messung mit einem sich nicht normal verhaltenden 
+			HC-SR04}
+	\end{figure}
+
+	Die gemessene Pulslänge in ms soll durch 57 dividiert werden um den
+	Abstand in cm zu erhalten.
+
+	\subsubsection{C-Code}
+
+	\lstinputlisting[language=C, numbers=left, frame=trBL, breaklines=true,
+	breakautoindent=true, formfeed=\newpage, label={lst:psoc_hc-sr04},
+	caption={PSoC funktionen für HC-SR04}, columns=flexible]
+	{psoc/psoc/Ultrasonic_test.cydsn/hcsr04.c}
+
+	
+	
+
+\section{Anhang}
 
 \subsection{Literaturverzeichnis}
 
 \begin{itemize}
 	
-	\item{HC-SR04 Datenblatt}
-	\item{DS1722 Datenblatt}
-	\item{MAX640 Datenblatt}
-	\item{CY8C5888LTI-LP097 Datenblatt}
+	\item{\textbf{HC-SR04 Datenblatt}}\\
+		Erhalten von mouser.com am 2019-03-10.
+	\item{\textbf{DS1722 Datenblatt}}\\
+		Erhalten von maximintegrated.com am 2019-03-10.
+	\item{\textbf{MAX640 Datenblatt}}\\
+		Erhalten von maximintegrated.com am 2019-03-10.
+	\item{\textbf{CY8C5888LTI-LP097 Datenblatt}}\\
+		Erhalten von cypress.com am 2019-03-10.
+	\item{\textbf{Ulrich Tietze Christoph Schenk 
+		Halbleiter-Schaltungstechnik}}\\
+		Vorliegend in 12. Auflage Springer-Verlag Berlin Heidelberg 2002
 
 \end{itemize}
 
@@ -221,16 +342,16 @@ used to
 	\subsection{Datenblätter}
 
 	\subsubsection{HC-SR04}
-	\includepdf[pages={1-}]{../../../data/datasheets/HCSR04-1022824.pdf}
+	\includepdf[pages={1-}]{./datasheets/HCSR04-1022824.pdf}
 
 	\subsubsection{DS1722}
-	\includepdf[pages={1-}]{../../../data/datasheets/DS1722.pdf}
+	\includepdf[pages={1-}]{./datasheets/DS1722.pdf}
 
 	\subsubsection{MAX640}
-	\includepdf[pages={1-}]{../../../data/datasheets/MAX639-MAX653.pdf}
+	\includepdf[pages={1-}]{./datasheets/MAX639-MAX653.pdf}
 
 	\subsubsection{CY8C5888LTI-LP097}
-	\includepdf[pages={1-}]{../../../data/datasheets/CY8C5888LTI-LP097.pdf}
+	\includepdf[pages={1-}]{./datasheets/CY8C5888LTI-LP097.pdf}
 
 \fi % End of datasheet section
 \end{document}

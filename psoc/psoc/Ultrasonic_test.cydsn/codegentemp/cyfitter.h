@@ -103,11 +103,11 @@
 #define UART_1_IntClock__PM_STBY_MSK 0x01u
 
 /* Echo_Input */
-#define Echo_Input__0__INTTYPE CYREG_PICU0_INTTYPE3
-#define Echo_Input__0__MASK 0x08u
-#define Echo_Input__0__PC CYREG_PRT0_PC3
+#define Echo_Input__0__INTTYPE CYREG_PICU0_INTTYPE7
+#define Echo_Input__0__MASK 0x80u
+#define Echo_Input__0__PC CYREG_PRT0_PC7
 #define Echo_Input__0__PORT 0u
-#define Echo_Input__0__SHIFT 3u
+#define Echo_Input__0__SHIFT 7u
 #define Echo_Input__AG CYREG_PRT0_AG
 #define Echo_Input__AMUX CYREG_PRT0_AMUX
 #define Echo_Input__BIE CYREG_PRT0_BIE
@@ -122,7 +122,7 @@
 #define Echo_Input__INTTYPE_BASE CYDEV_PICU_INTTYPE_PICU0_BASE
 #define Echo_Input__LCD_COM_SEG CYREG_PRT0_LCD_COM_SEG
 #define Echo_Input__LCD_EN CYREG_PRT0_LCD_EN
-#define Echo_Input__MASK 0x08u
+#define Echo_Input__MASK 0x80u
 #define Echo_Input__PORT 0u
 #define Echo_Input__PRT CYREG_PRT0_PRT
 #define Echo_Input__PRTDSI__CAPS_SEL CYREG_PRT0_CAPS_SEL
@@ -133,15 +133,15 @@
 #define Echo_Input__PRTDSI__OUT_SEL1 CYREG_PRT0_OUT_SEL1
 #define Echo_Input__PRTDSI__SYNC_OUT CYREG_PRT0_SYNC_OUT
 #define Echo_Input__PS CYREG_PRT0_PS
-#define Echo_Input__SHIFT 3u
+#define Echo_Input__SHIFT 7u
 #define Echo_Input__SLW CYREG_PRT0_SLW
 
 /* Trigger_Impuls */
-#define Trigger_Impuls__0__INTTYPE CYREG_PICU0_INTTYPE1
-#define Trigger_Impuls__0__MASK 0x02u
-#define Trigger_Impuls__0__PC CYREG_PRT0_PC1
+#define Trigger_Impuls__0__INTTYPE CYREG_PICU0_INTTYPE6
+#define Trigger_Impuls__0__MASK 0x40u
+#define Trigger_Impuls__0__PC CYREG_PRT0_PC6
 #define Trigger_Impuls__0__PORT 0u
-#define Trigger_Impuls__0__SHIFT 1u
+#define Trigger_Impuls__0__SHIFT 6u
 #define Trigger_Impuls__AG CYREG_PRT0_AG
 #define Trigger_Impuls__AMUX CYREG_PRT0_AMUX
 #define Trigger_Impuls__BIE CYREG_PRT0_BIE
@@ -156,7 +156,7 @@
 #define Trigger_Impuls__INTTYPE_BASE CYDEV_PICU_INTTYPE_PICU0_BASE
 #define Trigger_Impuls__LCD_COM_SEG CYREG_PRT0_LCD_COM_SEG
 #define Trigger_Impuls__LCD_EN CYREG_PRT0_LCD_EN
-#define Trigger_Impuls__MASK 0x02u
+#define Trigger_Impuls__MASK 0x40u
 #define Trigger_Impuls__PORT 0u
 #define Trigger_Impuls__PRT CYREG_PRT0_PRT
 #define Trigger_Impuls__PRTDSI__CAPS_SEL CYREG_PRT0_CAPS_SEL
@@ -167,7 +167,7 @@
 #define Trigger_Impuls__PRTDSI__OUT_SEL1 CYREG_PRT0_OUT_SEL1
 #define Trigger_Impuls__PRTDSI__SYNC_OUT CYREG_PRT0_SYNC_OUT
 #define Trigger_Impuls__PS CYREG_PRT0_PS
-#define Trigger_Impuls__SHIFT 1u
+#define Trigger_Impuls__SHIFT 6u
 #define Trigger_Impuls__SLW CYREG_PRT0_SLW
 
 /* Miscellaneous */

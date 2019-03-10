@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 1
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccmNG78I.s 			page 1
 
 
    1              		.syntax unified
@@ -51,116 +51,124 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 1
    9:hcsr04.c      ****      */
   10:hcsr04.c      ****     
   11:hcsr04.c      ****     #define ERRROR_CORRECTION 0
-  12:hcsr04.c      ****     #define CORRECTION_FACTOR ((double)2.7)
-  13:hcsr04.c      ****     
-  14:hcsr04.c      ****     #define TIMEOUT 50000
-  15:hcsr04.c      ****     CyGlobalIntDisable;
-  40              		.loc 1 15 0
+  12:hcsr04.c      ****     
+  13:hcsr04.c      ****     /* We assumed that a linear function correcting the
+  14:hcsr04.c      ****      * measurements would be enough. We took measurements at 1m and 2m and got as
+  15:hcsr04.c      ****      * results the values .36m and .72m respectively. We then perceeded to
+  16:hcsr04.c      ****      * put a linear function through the points (.36, 100) and (.72, 100)
+  17:hcsr04.c      ****      * which resulted in a slope of 2.77777 or 25/9 and an offset of 0.
+  18:hcsr04.c      ****      * Therefore we assumed an only linear distortion.
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccmNG78I.s 			page 2
+
+
+  19:hcsr04.c      ****      */
+  20:hcsr04.c      ****     #define CORRECTION_FACTOR ((double)25.0/9.0)
+  21:hcsr04.c      ****     
+  22:hcsr04.c      ****     #define TIMEOUT 50000
+  23:hcsr04.c      ****     CyGlobalIntDisable;
+  40              		.loc 1 23 0
   41              		.syntax unified
-  42              	@ 15 "hcsr04.c" 1
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 2
-
-
+  42              	@ 23 "hcsr04.c" 1
   43 0002 72B6     		CPSID   i
   44              	@ 0 "" 2
-  16:hcsr04.c      ****     
-  17:hcsr04.c      ****     /* Place your application code here. */
-  18:hcsr04.c      ****     Trigger_Impuls_Write(1);
-  45              		.loc 1 18 0
+  24:hcsr04.c      ****     
+  25:hcsr04.c      ****     /* Place your application code here. */
+  26:hcsr04.c      ****     Trigger_Impuls_Write(1);
+  45              		.loc 1 26 0
   46              		.thumb
   47              		.syntax unified
   48 0004 0120     		movs	r0, #1
   49 0006 FFF7FEFF 		bl	Trigger_Impuls_Write
   50              	.LVL0:
-  19:hcsr04.c      ****     CyDelayUs(10);
-  51              		.loc 1 19 0
+  27:hcsr04.c      ****     CyDelayUs(10);
+  51              		.loc 1 27 0
   52 000a 0A20     		movs	r0, #10
   53 000c FFF7FEFF 		bl	CyDelayUs
   54              	.LVL1:
-  20:hcsr04.c      ****     Trigger_Impuls_Write(0);
-  55              		.loc 1 20 0
+  28:hcsr04.c      ****     Trigger_Impuls_Write(0);
+  55              		.loc 1 28 0
   56 0010 0020     		movs	r0, #0
   57 0012 FFF7FEFF 		bl	Trigger_Impuls_Write
   58              	.LVL2:
   59              	.LBB2:
-  21:hcsr04.c      ****     
-  22:hcsr04.c      ****     
-  23:hcsr04.c      ****     for(int i = 0; i < TIMEOUT && !Echo_Input_Read(); i++){
-  60              		.loc 1 23 0
+  29:hcsr04.c      ****     
+  30:hcsr04.c      ****     
+  31:hcsr04.c      ****     for(int i = 0; i < TIMEOUT && !Echo_Input_Read(); i++){
+  60              		.loc 1 31 0
   61 0016 0024     		movs	r4, #0
   62 0018 03E0     		b	.L2
   63              	.LVL3:
   64              	.L4:
-  24:hcsr04.c      ****         CyDelayUs(1);
-  65              		.loc 1 24 0 discriminator 4
+  32:hcsr04.c      ****         CyDelayUs(1);
+  65              		.loc 1 32 0 discriminator 4
   66 001a 0120     		movs	r0, #1
   67 001c FFF7FEFF 		bl	CyDelayUs
   68              	.LVL4:
-  23:hcsr04.c      ****         CyDelayUs(1);
-  69              		.loc 1 23 0 discriminator 4
+  31:hcsr04.c      ****         CyDelayUs(1);
+  69              		.loc 1 31 0 discriminator 4
   70 0020 0134     		adds	r4, r4, #1
   71              	.LVL5:
   72              	.L2:
-  23:hcsr04.c      ****         CyDelayUs(1);
-  73              		.loc 1 23 0 is_stmt 0 discriminator 1
+  31:hcsr04.c      ****         CyDelayUs(1);
+  73              		.loc 1 31 0 is_stmt 0 discriminator 1
   74 0022 4CF24F33 		movw	r3, #49999
   75 0026 9C42     		cmp	r4, r3
   76 0028 03DC     		bgt	.L3
-  23:hcsr04.c      ****         CyDelayUs(1);
-  77              		.loc 1 23 0 discriminator 3
+  31:hcsr04.c      ****         CyDelayUs(1);
+  77              		.loc 1 31 0 discriminator 3
   78 002a FFF7FEFF 		bl	Echo_Input_Read
   79              	.LVL6:
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccmNG78I.s 			page 3
+
+
   80 002e 0028     		cmp	r0, #0
   81 0030 F3D0     		beq	.L4
   82              	.L3:
-  23:hcsr04.c      ****         CyDelayUs(1);
-  83              		.loc 1 23 0 discriminator 1
+  31:hcsr04.c      ****         CyDelayUs(1);
+  83              		.loc 1 31 0 discriminator 1
   84 0032 0024     		movs	r4, #0
   85              	.LVL7:
   86 0034 03E0     		b	.L5
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 3
-
-
   87              	.LVL8:
   88              	.L7:
   89              	.LBE2:
-  25:hcsr04.c      ****     }
-  26:hcsr04.c      ****     
-  27:hcsr04.c      ****     //ultimate Baustelle
-  28:hcsr04.c      ****     uint32_t counter;
-  29:hcsr04.c      ****     
-  30:hcsr04.c      ****     for(counter = 0;Echo_Input_Read() == 1 && counter <= TIMEOUT; counter ++){
-  31:hcsr04.c      ****         CyDelayUs(1);
-  90              		.loc 1 31 0 is_stmt 1 discriminator 4
+  33:hcsr04.c      ****     }
+  34:hcsr04.c      ****     
+  35:hcsr04.c      ****     //ultimate Baustelle
+  36:hcsr04.c      ****     uint32_t counter;
+  37:hcsr04.c      ****     
+  38:hcsr04.c      ****     for(counter = 0;Echo_Input_Read() == 1 && counter <= TIMEOUT; counter ++){
+  39:hcsr04.c      ****         CyDelayUs(1);
+  90              		.loc 1 39 0 is_stmt 1 discriminator 4
   91 0036 0120     		movs	r0, #1
   92 0038 FFF7FEFF 		bl	CyDelayUs
   93              	.LVL9:
-  30:hcsr04.c      ****         CyDelayUs(1);
-  94              		.loc 1 30 0 discriminator 4
+  38:hcsr04.c      ****         CyDelayUs(1);
+  94              		.loc 1 38 0 discriminator 4
   95 003c 0134     		adds	r4, r4, #1
   96              	.LVL10:
   97              	.L5:
-  30:hcsr04.c      ****         CyDelayUs(1);
-  98              		.loc 1 30 0 is_stmt 0 discriminator 1
+  38:hcsr04.c      ****         CyDelayUs(1);
+  98              		.loc 1 38 0 is_stmt 0 discriminator 1
   99 003e FFF7FEFF 		bl	Echo_Input_Read
  100              	.LVL11:
  101 0042 0128     		cmp	r0, #1
  102 0044 03D1     		bne	.L6
-  30:hcsr04.c      ****         CyDelayUs(1);
- 103              		.loc 1 30 0 discriminator 3
+  38:hcsr04.c      ****         CyDelayUs(1);
+ 103              		.loc 1 38 0 discriminator 3
  104 0046 4CF25033 		movw	r3, #50000
  105 004a 9C42     		cmp	r4, r3
  106 004c F3D9     		bls	.L7
  107              	.L6:
-  32:hcsr04.c      ****     }
-  33:hcsr04.c      ****     CyGlobalIntEnable;
- 108              		.loc 1 33 0 is_stmt 1
+  40:hcsr04.c      ****     }
+  41:hcsr04.c      ****     CyGlobalIntEnable;
+ 108              		.loc 1 41 0 is_stmt 1
  109              		.syntax unified
- 110              	@ 33 "hcsr04.c" 1
+ 110              	@ 41 "hcsr04.c" 1
  111 004e 62B6     		CPSIE   i
  112              	@ 0 "" 2
-  34:hcsr04.c      ****     return (counter * CORRECTION_FACTOR) + ERRROR_CORRECTION;
- 113              		.loc 1 34 0
+  42:hcsr04.c      ****     return (counter * CORRECTION_FACTOR) + ERRROR_CORRECTION;
+ 113              		.loc 1 42 0
  114              		.thumb
  115              		.syntax unified
  116 0050 2046     		mov	r0, r4
@@ -170,24 +178,24 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 1
  120 0058 D3E90023 		ldrd	r2, [r3]
  121 005c FFF7FEFF 		bl	__aeabi_dmul
  122              	.LVL13:
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccmNG78I.s 			page 4
+
+
  123 0060 0022     		movs	r2, #0
  124 0062 0023     		movs	r3, #0
  125 0064 FFF7FEFF 		bl	__aeabi_dadd
  126              	.LVL14:
  127 0068 FFF7FEFF 		bl	__aeabi_d2uiz
  128              	.LVL15:
-  35:hcsr04.c      **** }
- 129              		.loc 1 35 0
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 4
-
-
+  43:hcsr04.c      **** }
+ 129              		.loc 1 43 0
  130 006c 10BD     		pop	{r4, pc}
  131              	.LVL16:
  132              	.L10:
  133 006e 00BF     		.align	3
  134              	.L9:
- 135 0070 9A999999 		.word	-1717986918
- 136 0074 99990540 		.word	1074108825
+ 135 0070 8EE3388E 		.word	-1908874354
+ 136 0074 E3380640 		.word	1074149603
  137              		.cfi_endproc
  138              	.LFE63:
  139              		.size	get_hc_sr04, .-get_hc_sr04
@@ -199,19 +207,19 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 1
  145              		.type	init_hcsr04, %function
  146              	init_hcsr04:
  147              	.LFB64:
-  36:hcsr04.c      **** 
-  37:hcsr04.c      **** uint32_t timer_us_hcsr04 = 0;
-  38:hcsr04.c      **** 
-  39:hcsr04.c      **** int init_hcsr04(){
- 148              		.loc 1 39 0
+  44:hcsr04.c      **** 
+  45:hcsr04.c      **** uint32_t timer_us_hcsr04 = 0;
+  46:hcsr04.c      **** 
+  47:hcsr04.c      **** int init_hcsr04(){
+ 148              		.loc 1 47 0
  149              		.cfi_startproc
  150              		@ args = 0, pretend = 0, frame = 0
  151              		@ frame_needed = 0, uses_anonymous_args = 0
  152              		@ link register save eliminated.
-  40:hcsr04.c      ****     
-  41:hcsr04.c      ****     return 0;
-  42:hcsr04.c      **** }...
- 153              		.loc 1 42 0
+  48:hcsr04.c      ****     
+  49:hcsr04.c      ****     return 0;
+  50:hcsr04.c      **** }...
+ 153              		.loc 1 50 0
  154 0000 0020     		movs	r0, #0
  155 0002 7047     		bx	lr
  156              		.cfi_endproc
@@ -230,6 +238,9 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 1
  169              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
  170              		.file 4 "Generated_Source\\PSoC5/core_cm3.h"
  171              		.file 5 "Generated_Source\\PSoC5/CyLib.h"
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccmNG78I.s 			page 5
+
+
  172              		.file 6 "Generated_Source\\PSoC5/Echo_Input.h"
  173              		.file 7 "Generated_Source\\PSoC5/Trigger_Impuls.h"
  174              		.section	.debug_info,"",%progbits
@@ -238,9 +249,6 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 1
  177 0004 0400     		.2byte	0x4
  178 0006 00000000 		.4byte	.Ldebug_abbrev0
  179 000a 04       		.byte	0x4
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 5
-
-
  180 000b 01       		.uleb128 0x1
  181 000c 3F000000 		.4byte	.LASF24
  182 0010 0C       		.byte	0xc
@@ -290,6 +298,9 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 1
  226 006c 02       		.uleb128 0x2
  227 006d 08       		.byte	0x8
  228 006e 07       		.byte	0x7
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccmNG78I.s 			page 6
+
+
  229 006f 79010000 		.4byte	.LASF9
  230 0073 04       		.uleb128 0x4
  231 0074 04       		.byte	0x4
@@ -298,9 +309,6 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 1
  234 007a 02       		.uleb128 0x2
  235 007b 04       		.byte	0x4
  236 007c 07       		.byte	0x7
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 6
-
-
  237 007d 41010000 		.4byte	.LASF10
  238 0081 03       		.uleb128 0x3
  239 0082 90010000 		.4byte	.LASF11
@@ -345,22 +353,22 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 1
  278 00d3 06       		.uleb128 0x6
  279 00d4 29000000 		.4byte	.LASF18
  280 00d8 01       		.byte	0x1
- 281 00d9 1C       		.byte	0x1c
+ 281 00d9 24       		.byte	0x24
  282 00da 8C000000 		.4byte	0x8c
  283 00de 00000000 		.4byte	.LLST0
  284 00e2 07       		.uleb128 0x7
  285 00e3 16000000 		.4byte	.LBB2
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccmNG78I.s 			page 7
+
+
  286 00e7 20000000 		.4byte	.LBE2-.LBB2
  287 00eb 19010000 		.4byte	0x119
  288 00ef 08       		.uleb128 0x8
  289 00f0 6900     		.ascii	"i\000"
  290 00f2 01       		.byte	0x1
- 291 00f3 17       		.byte	0x17
+ 291 00f3 1F       		.byte	0x1f
  292 00f4 73000000 		.4byte	0x73
  293 00f8 13000000 		.4byte	.LLST1
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 7
-
-
  294 00fc 09       		.uleb128 0x9
  295 00fd 20000000 		.4byte	.LVL4
  296 0101 A6010000 		.4byte	0x1a6
@@ -410,6 +418,9 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 1
  340 0157 A6010000 		.4byte	0x1a6
  341 015b 65010000 		.4byte	0x165
  342 015f 0A       		.uleb128 0xa
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccmNG78I.s 			page 8
+
+
  343 0160 01       		.uleb128 0x1
  344 0161 50       		.byte	0x50
  345 0162 01       		.uleb128 0x1
@@ -418,14 +429,11 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 1
  348 0165 0B       		.uleb128 0xb
  349 0166 42000000 		.4byte	.LVL11
  350 016a B1010000 		.4byte	0x1b1
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 8
-
-
  351 016e 00       		.byte	0
  352 016f 0C       		.uleb128 0xc
  353 0170 1A010000 		.4byte	.LASF28
  354 0174 01       		.byte	0x1
- 355 0175 27       		.byte	0x27
+ 355 0175 2F       		.byte	0x2f
  356 0176 73000000 		.4byte	0x73
  357 017a 00000000 		.4byte	.LFB64
  358 017e 04000000 		.4byte	.LFE64-.LFB64
@@ -441,7 +449,7 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 1
  368 0195 0F       		.uleb128 0xf
  369 0196 FD000000 		.4byte	.LASF20
  370 019a 01       		.byte	0x1
- 371 019b 25       		.byte	0x25
+ 371 019b 2D       		.byte	0x2d
  372 019c 8C000000 		.4byte	0x8c
  373 01a0 05       		.uleb128 0x5
  374 01a1 03       		.byte	0x3
@@ -470,6 +478,9 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 1
  397 0003 25       		.uleb128 0x25
  398 0004 0E       		.uleb128 0xe
  399 0005 13       		.uleb128 0x13
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccmNG78I.s 			page 9
+
+
  400 0006 0B       		.uleb128 0xb
  401 0007 03       		.uleb128 0x3
  402 0008 0E       		.uleb128 0xe
@@ -478,9 +489,6 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 1
  405 000b 55       		.uleb128 0x55
  406 000c 17       		.uleb128 0x17
  407 000d 11       		.uleb128 0x11
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 9
-
-
  408 000e 01       		.uleb128 0x1
  409 000f 10       		.uleb128 0x10
  410 0010 17       		.uleb128 0x17
@@ -530,6 +538,9 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 1
  454 003c 0E       		.uleb128 0xe
  455 003d 3A       		.uleb128 0x3a
  456 003e 0B       		.uleb128 0xb
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccmNG78I.s 			page 10
+
+
  457 003f 3B       		.uleb128 0x3b
  458 0040 0B       		.uleb128 0xb
  459 0041 49       		.uleb128 0x49
@@ -538,9 +549,6 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 1
  462 0044 01       		.uleb128 0x1
  463 0045 12       		.uleb128 0x12
  464 0046 06       		.uleb128 0x6
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 10
-
-
  465 0047 40       		.uleb128 0x40
  466 0048 18       		.uleb128 0x18
  467 0049 9642     		.uleb128 0x2116
@@ -590,6 +598,9 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 1
  511 0076 17       		.uleb128 0x17
  512 0077 00       		.byte	0
  513 0078 00       		.byte	0
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccmNG78I.s 			page 11
+
+
  514 0079 09       		.uleb128 0x9
  515 007a 898201   		.uleb128 0x4109
  516 007d 01       		.byte	0x1
@@ -598,9 +609,6 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 1
  519 0080 31       		.uleb128 0x31
  520 0081 13       		.uleb128 0x13
  521 0082 01       		.uleb128 0x1
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 11
-
-
  522 0083 13       		.uleb128 0x13
  523 0084 00       		.byte	0
  524 0085 00       		.byte	0
@@ -650,6 +658,9 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 1
  568 00b7 00       		.byte	0
  569 00b8 03       		.uleb128 0x3
  570 00b9 0E       		.uleb128 0xe
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccmNG78I.s 			page 12
+
+
  571 00ba 3A       		.uleb128 0x3a
  572 00bb 0B       		.uleb128 0xb
  573 00bc 3B       		.uleb128 0x3b
@@ -658,9 +669,6 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 1
  576 00bf 13       		.uleb128 0x13
  577 00c0 3F       		.uleb128 0x3f
  578 00c1 19       		.uleb128 0x19
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 12
-
-
  579 00c2 3C       		.uleb128 0x3c
  580 00c3 19       		.uleb128 0x19
  581 00c4 00       		.byte	0
@@ -710,6 +718,9 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 1
  625              		.section	.debug_loc,"",%progbits
  626              	.Ldebug_loc0:
  627              	.LLST0:
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccmNG78I.s 			page 13
+
+
  628 0000 36000000 		.4byte	.LVL8
  629 0004 6E000000 		.4byte	.LVL16
  630 0008 0100     		.2byte	0x1
@@ -718,9 +729,6 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 1
  633 000f 00000000 		.4byte	0
  634              	.LLST1:
  635 0013 16000000 		.4byte	.LVL2
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 13
-
-
  636 0017 1A000000 		.4byte	.LVL3
  637 001b 0200     		.2byte	0x2
  638 001d 30       		.byte	0x30
@@ -770,6 +778,9 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 1
  674      7400
  675              	.LASF22:
  676 0013 4563686F 		.ascii	"Echo_Input_Read\000"
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccmNG78I.s 			page 14
+
+
  676      5F496E70 
  676      75745F52 
  676      65616400 
@@ -778,9 +789,6 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 1
  678      7400
  679              	.LASF18:
  680 0029 636F756E 		.ascii	"counter\000"
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 14
-
-
  680      74657200 
  681              	.LASF1:
  682 0031 756E7369 		.ascii	"unsigned char\000"
@@ -830,6 +838,9 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 1
  696      66666572 
  696      00
  697              	.LASF28:
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccmNG78I.s 			page 15
+
+
  698 011a 696E6974 		.ascii	"init_hcsr04\000"
  698      5F686373 
  698      72303400 
@@ -838,9 +849,6 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 1
  700      6C6500
  701              	.LASF2:
  702 012d 73686F72 		.ascii	"short int\000"
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 15
-
-
  702      7420696E 
  702      7400
  703              	.LASF21:
@@ -890,6 +898,9 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 1
  722      68635F73 
  722      72303400 
  723              	.LASF12:
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccmNG78I.s 			page 16
+
+
  724 01d5 75696E74 		.ascii	"uint32_t\000"
  724      33325F74 
  724      00
@@ -898,9 +909,6 @@ ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 1
  726      20696E74 
  726      00
  727              	.LASF16:
-ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccbFHXEx.s 			page 16
-
-
  728 01e7 6C6F6E67 		.ascii	"long double\000"
  728      20646F75 
  728      626C6500 

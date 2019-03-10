@@ -103,11 +103,11 @@
 .set UART_1_IntClock__PM_STBY_MSK, 0x01
 
 /* Echo_Input */
-.set Echo_Input__0__INTTYPE, CYREG_PICU0_INTTYPE3
-.set Echo_Input__0__MASK, 0x08
-.set Echo_Input__0__PC, CYREG_PRT0_PC3
+.set Echo_Input__0__INTTYPE, CYREG_PICU0_INTTYPE7
+.set Echo_Input__0__MASK, 0x80
+.set Echo_Input__0__PC, CYREG_PRT0_PC7
 .set Echo_Input__0__PORT, 0
-.set Echo_Input__0__SHIFT, 3
+.set Echo_Input__0__SHIFT, 7
 .set Echo_Input__AG, CYREG_PRT0_AG
 .set Echo_Input__AMUX, CYREG_PRT0_AMUX
 .set Echo_Input__BIE, CYREG_PRT0_BIE
@@ -122,7 +122,7 @@
 .set Echo_Input__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU0_BASE
 .set Echo_Input__LCD_COM_SEG, CYREG_PRT0_LCD_COM_SEG
 .set Echo_Input__LCD_EN, CYREG_PRT0_LCD_EN
-.set Echo_Input__MASK, 0x08
+.set Echo_Input__MASK, 0x80
 .set Echo_Input__PORT, 0
 .set Echo_Input__PRT, CYREG_PRT0_PRT
 .set Echo_Input__PRTDSI__CAPS_SEL, CYREG_PRT0_CAPS_SEL
@@ -133,15 +133,15 @@
 .set Echo_Input__PRTDSI__OUT_SEL1, CYREG_PRT0_OUT_SEL1
 .set Echo_Input__PRTDSI__SYNC_OUT, CYREG_PRT0_SYNC_OUT
 .set Echo_Input__PS, CYREG_PRT0_PS
-.set Echo_Input__SHIFT, 3
+.set Echo_Input__SHIFT, 7
 .set Echo_Input__SLW, CYREG_PRT0_SLW
 
 /* Trigger_Impuls */
-.set Trigger_Impuls__0__INTTYPE, CYREG_PICU0_INTTYPE1
-.set Trigger_Impuls__0__MASK, 0x02
-.set Trigger_Impuls__0__PC, CYREG_PRT0_PC1
+.set Trigger_Impuls__0__INTTYPE, CYREG_PICU0_INTTYPE6
+.set Trigger_Impuls__0__MASK, 0x40
+.set Trigger_Impuls__0__PC, CYREG_PRT0_PC6
 .set Trigger_Impuls__0__PORT, 0
-.set Trigger_Impuls__0__SHIFT, 1
+.set Trigger_Impuls__0__SHIFT, 6
 .set Trigger_Impuls__AG, CYREG_PRT0_AG
 .set Trigger_Impuls__AMUX, CYREG_PRT0_AMUX
 .set Trigger_Impuls__BIE, CYREG_PRT0_BIE
@@ -156,7 +156,7 @@
 .set Trigger_Impuls__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU0_BASE
 .set Trigger_Impuls__LCD_COM_SEG, CYREG_PRT0_LCD_COM_SEG
 .set Trigger_Impuls__LCD_EN, CYREG_PRT0_LCD_EN
-.set Trigger_Impuls__MASK, 0x02
+.set Trigger_Impuls__MASK, 0x40
 .set Trigger_Impuls__PORT, 0
 .set Trigger_Impuls__PRT, CYREG_PRT0_PRT
 .set Trigger_Impuls__PRTDSI__CAPS_SEL, CYREG_PRT0_CAPS_SEL
@@ -167,7 +167,7 @@
 .set Trigger_Impuls__PRTDSI__OUT_SEL1, CYREG_PRT0_OUT_SEL1
 .set Trigger_Impuls__PRTDSI__SYNC_OUT, CYREG_PRT0_SYNC_OUT
 .set Trigger_Impuls__PS, CYREG_PRT0_PS
-.set Trigger_Impuls__SHIFT, 1
+.set Trigger_Impuls__SHIFT, 6
 .set Trigger_Impuls__SLW, CYREG_PRT0_SLW
 
 /* Miscellaneous */

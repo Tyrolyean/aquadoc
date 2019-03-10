@@ -11406,11 +11406,11 @@ ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
  103              	.set UART_1_IntClock__PM_STBY_MSK, 0x01
  104              	
  105              	/* Echo_Input */
- 106              	.set Echo_Input__0__INTTYPE, CYREG_PICU0_INTTYPE3
- 107              	.set Echo_Input__0__MASK, 0x08
- 108              	.set Echo_Input__0__PC, CYREG_PRT0_PC3
+ 106              	.set Echo_Input__0__INTTYPE, CYREG_PICU0_INTTYPE7
+ 107              	.set Echo_Input__0__MASK, 0x80
+ 108              	.set Echo_Input__0__PC, CYREG_PRT0_PC7
  109              	.set Echo_Input__0__PORT, 0
- 110              	.set Echo_Input__0__SHIFT, 3
+ 110              	.set Echo_Input__0__SHIFT, 7
  111              	.set Echo_Input__AG, CYREG_PRT0_AG
  112              	.set Echo_Input__AMUX, CYREG_PRT0_AMUX
  113              	.set Echo_Input__BIE, CYREG_PRT0_BIE
@@ -11425,7 +11425,7 @@ ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
  122              	.set Echo_Input__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU0_BASE
  123              	.set Echo_Input__LCD_COM_SEG, CYREG_PRT0_LCD_COM_SEG
  124              	.set Echo_Input__LCD_EN, CYREG_PRT0_LCD_EN
- 125              	.set Echo_Input__MASK, 0x08
+ 125              	.set Echo_Input__MASK, 0x80
  126              	.set Echo_Input__PORT, 0
  127              	.set Echo_Input__PRT, CYREG_PRT0_PRT
  128              	.set Echo_Input__PRTDSI__CAPS_SEL, CYREG_PRT0_CAPS_SEL
@@ -11436,15 +11436,15 @@ ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
  133              	.set Echo_Input__PRTDSI__OUT_SEL1, CYREG_PRT0_OUT_SEL1
  134              	.set Echo_Input__PRTDSI__SYNC_OUT, CYREG_PRT0_SYNC_OUT
  135              	.set Echo_Input__PS, CYREG_PRT0_PS
- 136              	.set Echo_Input__SHIFT, 3
+ 136              	.set Echo_Input__SHIFT, 7
  137              	.set Echo_Input__SLW, CYREG_PRT0_SLW
  138              	
  139              	/* Trigger_Impuls */
- 140              	.set Trigger_Impuls__0__INTTYPE, CYREG_PICU0_INTTYPE1
- 141              	.set Trigger_Impuls__0__MASK, 0x02
- 142              	.set Trigger_Impuls__0__PC, CYREG_PRT0_PC1
+ 140              	.set Trigger_Impuls__0__INTTYPE, CYREG_PICU0_INTTYPE6
+ 141              	.set Trigger_Impuls__0__MASK, 0x40
+ 142              	.set Trigger_Impuls__0__PC, CYREG_PRT0_PC6
  143              	.set Trigger_Impuls__0__PORT, 0
- 144              	.set Trigger_Impuls__0__SHIFT, 1
+ 144              	.set Trigger_Impuls__0__SHIFT, 6
  145              	.set Trigger_Impuls__AG, CYREG_PRT0_AG
  146              	.set Trigger_Impuls__AMUX, CYREG_PRT0_AMUX
  147              	.set Trigger_Impuls__BIE, CYREG_PRT0_BIE
@@ -11462,7 +11462,7 @@ ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
 
 
  158              	.set Trigger_Impuls__LCD_EN, CYREG_PRT0_LCD_EN
- 159              	.set Trigger_Impuls__MASK, 0x02
+ 159              	.set Trigger_Impuls__MASK, 0x40
  160              	.set Trigger_Impuls__PORT, 0
  161              	.set Trigger_Impuls__PRT, CYREG_PRT0_PRT
  162              	.set Trigger_Impuls__PRTDSI__CAPS_SEL, CYREG_PRT0_CAPS_SEL
@@ -11473,7 +11473,7 @@ ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
  167              	.set Trigger_Impuls__PRTDSI__OUT_SEL1, CYREG_PRT0_OUT_SEL1
  168              	.set Trigger_Impuls__PRTDSI__SYNC_OUT, CYREG_PRT0_SYNC_OUT
  169              	.set Trigger_Impuls__PS, CYREG_PRT0_PS
- 170              	.set Trigger_Impuls__SHIFT, 1
+ 170              	.set Trigger_Impuls__SHIFT, 6
  171              	.set Trigger_Impuls__SLW, CYREG_PRT0_SLW
  172              	
  173              	/* Miscellaneous */
