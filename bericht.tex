@@ -43,6 +43,30 @@
 \cfoot{Seite \thepage}
 \rfoot{Ljubic, Plank, Neuner}
 
+\lstdefinestyle{customc}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=L,
+  xleftmargin=\parindent,
+  language=C,
+  showstringspaces=false,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+}
+
+\lstdefinestyle{customasm}{
+  belowcaptionskip=1\baselineskip,
+  frame=L,
+  xleftmargin=\parindent,
+  language=[x86masm]Assembler,
+  basicstyle=\footnotesize\ttfamily,
+  commentstyle=\itshape\color{purple!40!black},
+}
+
+\lstset{escapechar=@,style=customc}
+
 \begin{document}
 \begin{titlepage}
 \begin{center}
@@ -285,13 +309,12 @@ used to
 			% If you want to make the lines thick
 			%every axis plot/.append style={ultra thick},
 			xmin = -0.00014,
-			xmax = 0.0027
 		]
 		
 		\addplot table [x=time, y=echo, col sep=comma, mark=none, 
-			color=green] {measurements/hc-sr04_should.csv};
+			color=green] {measurements/hc-sr04_fail.csv};
 		\addplot table [x=time, y=trig, col sep=comma, mark=none, 
-			color=red] {measurements/hc-sr04_should.csv};
+			color=red] {measurements/hc-sr04_fail.csv};
 		
 		\end{axis}
 		\end{tikzpicture}
