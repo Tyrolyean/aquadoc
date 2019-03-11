@@ -32,7 +32,7 @@
 % #############################################################################
 
 % Include the used datasheets in the document
-\def\datasheets{0}
+\def\datasheets{1}
 
 \def\psocdisasm{0}
 
@@ -43,6 +43,7 @@
 \cfoot{Seite \thepage}
 \rfoot{Ljubic, Plank, Neuner}
 
+% Define lst listing styles
 \lstdefinestyle{customc}{
   belowcaptionskip=1\baselineskip,
   breaklines=true,
@@ -255,7 +256,7 @@ used to
 	gebaut zu sein, da man bei diesen klar eine Kondensatorladekurve
 	erkennen kann. Die Messergebnisse stimmen jedoch mit denen eines
 	Funktionstüchtigen HC-SR04 überein, wenn man von CMOS Logikpegeln
-	ausgeht, also 3.5V und höher 
+	ausgeht, also 3.5V und höher
 	\footnote{Halbleiter-Schaltungstechnik Seite 639} als 
 	WAHR annimmt. Das HC-SR04 Datenblatt behaupt hierbei jedoch, dass die
 	Logikpegel TTL-Pegel seien, was einen kleinen Offset in diesem Falle

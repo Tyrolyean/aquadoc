@@ -18,6 +18,25 @@
   <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\cyfitteriar.inc" value="HEADER;;;;;" />
   <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\cyfitter.h" value="HEADER;;;;;" />
   <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\cydisabledsheets.h" value="HEADER;;;;;" />
+  <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\SPI.c" value="SOURCE_C;CortexM3;;;;SPI" />
+  <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\SPI.h" value="HEADER;;;;;SPI" />
+  <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\SPI_PM.c" value="SOURCE_C;CortexM3;;;;SPI" />
+  <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\SPI_INT.c" value="SOURCE_C;CortexM3;;;;SPI" />
+  <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\SPI_PVT.h" value="HEADER;;;;;SPI" />
+  <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\SCLK_aliases.h" value="HEADER;;;;;SCLK" />
+  <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\SCLK.c" value="SOURCE_C;CortexM3;;;;SCLK" />
+  <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\SCLK.h" value="HEADER;;;;;SCLK" />
+  <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\MOSI_aliases.h" value="HEADER;;;;;MOSI" />
+  <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\MOSI.c" value="SOURCE_C;CortexM3;;;;MOSI" />
+  <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\MOSI.h" value="HEADER;;;;;MOSI" />
+  <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\MISO_aliases.h" value="HEADER;;;;;MISO" />
+  <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\MISO.c" value="SOURCE_C;CortexM3;;;;MISO" />
+  <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\MISO.h" value="HEADER;;;;;MISO" />
+  <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\CS_aliases.h" value="HEADER;;;;;CS" />
+  <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\CS.c" value="SOURCE_C;CortexM3;;;;CS" />
+  <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\CS.h" value="HEADER;;;;;CS" />
+  <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\SPI_IntClock.c" value="SOURCE_C;CortexM3;;;;SPI_IntClock" />
+  <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\SPI_IntClock.h" value="HEADER;;;;;SPI_IntClock" />
   <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\cm3gcc.ld" value="LINKER_SCRIPT;;;b98f980c-3bd1-4fc7-a887-c56a20a46fdd;;cy_boot" />
   <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\Cm3RealView.scat" value="LINKER_SCRIPT;;;fdb8e1ae-f83a-46cf-9446-1d703716f38a;;cy_boot" />
   <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\Cm3Start.c" value="SOURCE_C;CortexM3;;;;cy_boot" />
