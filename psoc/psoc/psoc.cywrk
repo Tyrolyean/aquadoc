@@ -3,13 +3,14 @@
 <!--This file is machine generated and read. It is not intended to be edited by hand.-->
 <!--Due to this, there is no schema for this file.-->
 <CyGuid_2867d519-54d2-4c01-9830-c51cb08bc3dd type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWorkspaceSerialize" version="5" xml_contents_version="3" name="psoc" persistent="psoc.cywrk" platform="NOT_USED">
-<current_project name=".\ds1722_test.cydsn\ds1722_test.cyprj" />
+<current_project name=".\BatteryAlarm.cydsn\BatteryAlarm.cyprj" />
 <wrkspc_folders />
 <files />
 <projects>
 <v>.\test-timer-interrupt.cydsn\test-timer-interrupt.cyprj</v>
 <v>.\Ultrasonic_test.cydsn\Ultrasonic_test.cyprj</v>
 <v>.\ds1722_test.cydsn\ds1722_test.cyprj</v>
+<v>.\BatteryAlarm.cydsn\BatteryAlarm.cyprj</v>
 </projects>
 <workspace_id v="69847ed0-6c41-41be-9da8-91fe88d88600" />
 <WriteAppVersionLastSavedWith v="4.2.0.641" />

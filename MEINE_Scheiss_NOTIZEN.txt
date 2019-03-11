@@ -1,0 +1,6 @@
+MAX639:
+
+
+12V Battery, +2 diodes 			because reasons(11.5V max)
+
+send low battery alert when <=7V
