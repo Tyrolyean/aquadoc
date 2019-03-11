@@ -23,7 +23,7 @@ int main(void)
         
         if(BatteryAlarm == 0){
         
-        
+            //Does what needs to be done
         
         }
         
