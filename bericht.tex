@@ -17,6 +17,8 @@
 \usepackage{pdfpages}
 \usepackage{listings}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{titlesec}
+\usepackage{lastpage}
 
 \usepackage[pdfauthor={tyrolyean},
             pdftitle={AQUADOC},
@@ -32,7 +34,7 @@
 % #############################################################################
 
 % Include the used datasheets in the document
-\def\datasheets{1}
+\def\datasheets{0}
 
 \def\psocdisasm{0}
 
@@ -40,8 +42,13 @@
 \fancyhf{}
 \rhead{\thetitle}
 \lhead{HN4-FTKL}
-\cfoot{Seite \thepage}
+\cfoot{Seite \thepage von \pageref{LastPage}}
 \rfoot{Ljubic, Plank, Neuner}
+\lfoot{}
+
+\renewcommand{\headrulewidth}{.4mm}
+\renewcommand{\footrulewidth}{.4mm}
+
 
 % Define lst listing styles
 \lstdefinestyle{customc}{
@@ -71,7 +78,7 @@
 \begin{document}
 \begin{titlepage}
 \begin{center}
-\setlength{\fboxrule}{.5mm}
+\setlength{\fboxrule}{1mm}
 \framebox{
 
 	\parbox{\textwidth}{
@@ -109,7 +116,7 @@
 \tableofcontents
 \newpage
 
-\section{Aufgabenstelleung}
+\section{Aufgabenstellung}
 
 \subsection{Aufbau}
 \begin{figure}[H]
@@ -251,7 +258,8 @@ used to
 	\footnote{Seite 2 HC-SR04 Datenblatt}
 	am TRIG Pin
 	eine Ultraschall Welle losgeschickt. Der Baustein rechnet sich dann aus
-	der Laufzeit der Welle bis zu ihrer Rückkehr die Entfernung aus. Manche
+	der Laufzeit der Welle bis zu ihrer Rückkehr die Entfernung aus, und
+	gibt diese dann als PWM Signal am echo pin aus. Manche
 	Module scheinen dabei einen Defekt zu haben oder schlichtweg billiger
 	gebaut zu sein, da man bei diesen klar eine Kondensatorladekurve
 	erkennen kann. Die Messergebnisse stimmen jedoch mit denen eines
@@ -301,8 +309,6 @@ used to
 		\begin{axis}[
 			ylabel=$ Spannung $,
 			xlabel=$ Zeit $,
-			grid=both,
-			minor tick num=5,
 			width=\textwidth,
 			height=0.5\textwidth,
 			ymin = -0.1,

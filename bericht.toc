@@ -1,5 +1,5 @@
 \babel@toc {german}{}
-\contentsline {section}{\numberline {1}Aufgabenstelleung}{2}{section.1}% 
+\contentsline {section}{\numberline {1}Aufgabenstellung}{2}{section.1}% 
 \contentsline {subsection}{\numberline {1.1}Aufbau}{2}{subsection.1.1}% 
 \contentsline {subsection}{\numberline {1.2}Sensoren}{2}{subsection.1.2}% 
 \contentsline {section}{\numberline {2}Test mittels Aurduino}{3}{section.2}% 
@@ -11,8 +11,3 @@
 \contentsline {subsubsection}{\numberline {3.1.2}C-Code}{9}{subsubsection.3.1.2}% 
 \contentsline {section}{\numberline {4}Anhang}{10}{section.4}% 
 \contentsline {subsection}{\numberline {4.1}Literaturverzeichnis}{10}{subsection.4.1}% 
-\contentsline {subsection}{\numberline {4.2}Datenblätter}{10}{subsection.4.2}% 
-\contentsline {subsubsection}{\numberline {4.2.1}HC-SR04}{10}{subsubsection.4.2.1}% 
-\contentsline {subsubsection}{\numberline {4.2.2}DS1722}{15}{subsubsection.4.2.2}% 
-\contentsline {subsubsection}{\numberline {4.2.3}MAX640}{30}{subsubsection.4.2.3}% 
-\contentsline {subsubsection}{\numberline {4.2.4}CY8C5888LTI-LP097}{44}{subsubsection.4.2.4}% 
