@@ -29,12 +29,12 @@ int main(void)
         if(BatteryAlarm_Read() == 0){
         
             //Does what needs to be done
-            UART_PutString("Da Akku is laar, du HUND!\r\n");
+            UART_PutString("Reactor 4 is reachig critical temperature, cyka!\r\n");
             
         }
             
         else if(BatteryAlarm_Read() == 1){
-            UART_PutString("Reaktor 4 up and running, blyat!\r\n");
+            UART_PutString("Reactor 4 up and running, blyat!\r\n");
         }
         
         
