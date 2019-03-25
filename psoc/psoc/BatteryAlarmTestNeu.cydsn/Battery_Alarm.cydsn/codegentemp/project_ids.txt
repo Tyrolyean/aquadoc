@@ -1,0 +1,7 @@
+D:\PSoC creator\PSoC_Creator\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|b965eb98-6095-41f6-8960-78026ef5810b
+C:\Users\Jack Neuner\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|136fa444-a0c6-461f-a35d-5a4860c6bc3a
+D:\PSoC creator\PSoC_Creator\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|0dd67d83-c659-487e-9bfe-7e17da70af3c
+D:\PSoC creator\PSoC_Creator\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|96cc86bc-a9e0-4947-8b6c-a7c44971490b
+D:\PSoC creator\PSoC_Creator\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|54938bd9-93f7-4306-bb31-628a6393c98d
+C:\Users\Jack Neuner\aquadoc\psoc\psoc\BatteryAlarmTestNeu.cydsn\Battery_Alarm.cydsn\Battery_Alarm.cyprj|e5c65c83-da42-43ee-9e93-340340f84680
+C:\Users\Jack Neuner\aquadoc\psoc\psoc\BatteryAlarmTest.cydsn\BatteryAlarmTest.cyprj|b5702699-4c6f-45da-99c8-b6614ea4171b

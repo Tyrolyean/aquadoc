@@ -1,0 +1,651 @@
+ARM GAS  C:\Users\JACKNE~1\AppData\Local\Temp\ccGX6Y4o.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.main,"ax",%progbits
+  20              		.align	2
+  21              		.global	main
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	main, %function
+  25              	main:
+  26              	.LFB63:
+  27              		.file 1 "main.c"
+   1:main.c        **** /* ========================================
+   2:main.c        ****  *
+   3:main.c        ****  * Copyright YOUR COMPANY, THE YEAR
+   4:main.c        ****  * All Rights Reserved
+   5:main.c        ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:main.c        ****  *
+   7:main.c        ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:main.c        ****  * WHICH IS THE PROPERTY OF your company.
+   9:main.c        ****  *
+  10:main.c        ****  * ========================================
+  11:main.c        **** */
+  12:main.c        **** #include "project.h"
+  13:main.c        **** 
+  14:main.c        **** int main(void)
+  15:main.c        **** {
+  28              		.loc 1 15 0
+  29              		.cfi_startproc
+  30              		@ Volatile: function does not return.
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33 0000 08B5     		push	{r3, lr}
+  34              		.cfi_def_cfa_offset 8
+  35              		.cfi_offset 3, -8
+  36              		.cfi_offset 14, -4
+  16:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+  37              		.loc 1 16 0
+  38              		.syntax unified
+  39              	@ 16 "main.c" 1
+  40 0002 62B6     		CPSIE   i
+  41              	@ 0 "" 2
+ARM GAS  C:\Users\JACKNE~1\AppData\Local\Temp\ccGX6Y4o.s 			page 2
+
+
+  17:main.c        **** 
+  18:main.c        ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
+  19:main.c        ****     
+  20:main.c        ****     UART_Start();
+  42              		.loc 1 20 0
+  43              		.thumb
+  44              		.syntax unified
+  45 0004 FFF7FEFF 		bl	UART_Start
+  46              	.LVL0:
+  47              	.L2:
+  21:main.c        **** 
+  22:main.c        ****     for(;;)
+  23:main.c        ****     {
+  24:main.c        ****         /* Place your application code here. */
+  25:main.c        ****         
+  26:main.c        ****         CyDelay(1000);
+  48              		.loc 1 26 0
+  49 0008 4FF47A70 		mov	r0, #1000
+  50 000c FFF7FEFF 		bl	CyDelay
+  51              	.LVL1:
+  27:main.c        ****         //UART_PutString("A\r\n");
+  28:main.c        ****         
+  29:main.c        ****         if(BatteryAlarm_Read() == 0){
+  52              		.loc 1 29 0
+  53 0010 FFF7FEFF 		bl	BatteryAlarm_Read
+  54              	.LVL2:
+  55 0014 18B9     		cbnz	r0, .L3
+  30:main.c        ****         
+  31:main.c        ****             //Does what needs to be done
+  32:main.c        ****             UART_PutString("Da Akku is laar, du HUND!\r\n");
+  56              		.loc 1 32 0
+  57 0016 0648     		ldr	r0, .L6
+  58 0018 FFF7FEFF 		bl	UART_PutString
+  59              	.LVL3:
+  60 001c F4E7     		b	.L2
+  61              	.L3:
+  33:main.c        ****             
+  34:main.c        ****         }
+  35:main.c        ****             
+  36:main.c        ****         else if(BatteryAlarm_Read() == 1){
+  62              		.loc 1 36 0
+  63 001e FFF7FEFF 		bl	BatteryAlarm_Read
+  64              	.LVL4:
+  65 0022 0128     		cmp	r0, #1
+  66 0024 F0D1     		bne	.L2
+  37:main.c        ****             UART_PutString("Reaktor 4 up and running, blyat!\r\n");
+  67              		.loc 1 37 0
+  68 0026 0348     		ldr	r0, .L6+4
+  69 0028 FFF7FEFF 		bl	UART_PutString
+  70              	.LVL5:
+  71 002c ECE7     		b	.L2
+  72              	.L7:
+  73 002e 00BF     		.align	2
+  74              	.L6:
+  75 0030 00000000 		.word	.LC0
+  76 0034 1C000000 		.word	.LC1
+  77              		.cfi_endproc
+ARM GAS  C:\Users\JACKNE~1\AppData\Local\Temp\ccGX6Y4o.s 			page 3
+
+
+  78              	.LFE63:
+  79              		.size	main, .-main
+  80              		.section	.rodata.str1.4,"aMS",%progbits,1
+  81              		.align	2
+  82              	.LC0:
+  83 0000 44612041 		.ascii	"Da Akku is laar, du HUND!\015\012\000"
+  83      6B6B7520 
+  83      6973206C 
+  83      6161722C 
+  83      20647520 
+  84              	.LC1:
+  85 001c 5265616B 		.ascii	"Reaktor 4 up and running, blyat!\015\012\000"
+  85      746F7220 
+  85      34207570 
+  85      20616E64 
+  85      2072756E 
+  86              		.text
+  87              	.Letext0:
+  88              		.file 2 "d:\\psoc creator\\psoc_creator\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.1\
+  89              		.file 3 "d:\\psoc creator\\psoc_creator\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.1\
+  90              		.file 4 "Generated_Source\\PSoC5/UART.h"
+  91              		.file 5 "Generated_Source\\PSoC5/CyLib.h"
+  92              		.file 6 "Generated_Source\\PSoC5/BatteryAlarm.h"
+  93              		.file 7 "Generated_Source\\PSoC5/core_cm3.h"
+  94              		.section	.debug_info,"",%progbits
+  95              	.Ldebug_info0:
+  96 0000 52010000 		.4byte	0x152
+  97 0004 0400     		.2byte	0x4
+  98 0006 00000000 		.4byte	.Ldebug_abbrev0
+  99 000a 04       		.byte	0x4
+ 100 000b 01       		.uleb128 0x1
+ 101 000c 3A000000 		.4byte	.LASF20
+ 102 0010 0C       		.byte	0xc
+ 103 0011 2E000000 		.4byte	.LASF21
+ 104 0015 F9000000 		.4byte	.LASF22
+ 105 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 106 001d 00000000 		.4byte	0
+ 107 0021 00000000 		.4byte	.Ldebug_line0
+ 108 0025 02       		.uleb128 0x2
+ 109 0026 01       		.byte	0x1
+ 110 0027 06       		.byte	0x6
+ 111 0028 AA010000 		.4byte	.LASF0
+ 112 002c 02       		.uleb128 0x2
+ 113 002d 01       		.byte	0x1
+ 114 002e 08       		.byte	0x8
+ 115 002f 6B010000 		.4byte	.LASF1
+ 116 0033 02       		.uleb128 0x2
+ 117 0034 02       		.byte	0x2
+ 118 0035 05       		.byte	0x5
+ 119 0036 D2010000 		.4byte	.LASF2
+ 120 003a 02       		.uleb128 0x2
+ 121 003b 02       		.byte	0x2
+ 122 003c 07       		.byte	0x7
+ 123 003d 0E000000 		.4byte	.LASF3
+ 124 0041 03       		.uleb128 0x3
+ 125 0042 C2010000 		.4byte	.LASF9
+ 126 0046 02       		.byte	0x2
+ARM GAS  C:\Users\JACKNE~1\AppData\Local\Temp\ccGX6Y4o.s 			page 4
+
+
+ 127 0047 3F       		.byte	0x3f
+ 128 0048 4C000000 		.4byte	0x4c
+ 129 004c 02       		.uleb128 0x2
+ 130 004d 04       		.byte	0x4
+ 131 004e 05       		.byte	0x5
+ 132 004f 7E010000 		.4byte	.LASF4
+ 133 0053 02       		.uleb128 0x2
+ 134 0054 04       		.byte	0x4
+ 135 0055 07       		.byte	0x7
+ 136 0056 D0000000 		.4byte	.LASF5
+ 137 005a 02       		.uleb128 0x2
+ 138 005b 08       		.byte	0x8
+ 139 005c 05       		.byte	0x5
+ 140 005d 00000000 		.4byte	.LASF6
+ 141 0061 02       		.uleb128 0x2
+ 142 0062 08       		.byte	0x8
+ 143 0063 07       		.byte	0x7
+ 144 0064 E2000000 		.4byte	.LASF7
+ 145 0068 04       		.uleb128 0x4
+ 146 0069 04       		.byte	0x4
+ 147 006a 05       		.byte	0x5
+ 148 006b 696E7400 		.ascii	"int\000"
+ 149 006f 02       		.uleb128 0x2
+ 150 0070 04       		.byte	0x4
+ 151 0071 07       		.byte	0x7
+ 152 0072 21000000 		.4byte	.LASF8
+ 153 0076 03       		.uleb128 0x3
+ 154 0077 DC010000 		.4byte	.LASF10
+ 155 007b 03       		.byte	0x3
+ 156 007c 2C       		.byte	0x2c
+ 157 007d 41000000 		.4byte	0x41
+ 158 0081 02       		.uleb128 0x2
+ 159 0082 04       		.byte	0x4
+ 160 0083 04       		.byte	0x4
+ 161 0084 CC010000 		.4byte	.LASF11
+ 162 0088 02       		.uleb128 0x2
+ 163 0089 08       		.byte	0x8
+ 164 008a 04       		.byte	0x4
+ 165 008b 87010000 		.4byte	.LASF12
+ 166 008f 02       		.uleb128 0x2
+ 167 0090 01       		.byte	0x1
+ 168 0091 08       		.byte	0x8
+ 169 0092 79010000 		.4byte	.LASF13
+ 170 0096 02       		.uleb128 0x2
+ 171 0097 08       		.byte	0x8
+ 172 0098 04       		.byte	0x4
+ 173 0099 B6010000 		.4byte	.LASF14
+ 174 009d 02       		.uleb128 0x2
+ 175 009e 04       		.byte	0x4
+ 176 009f 07       		.byte	0x7
+ 177 00a0 E4010000 		.4byte	.LASF15
+ 178 00a4 05       		.uleb128 0x5
+ 179 00a5 35000000 		.4byte	.LASF23
+ 180 00a9 01       		.byte	0x1
+ 181 00aa 0E       		.byte	0xe
+ 182 00ab 68000000 		.4byte	0x68
+ 183 00af 00000000 		.4byte	.LFB63
+ARM GAS  C:\Users\JACKNE~1\AppData\Local\Temp\ccGX6Y4o.s 			page 5
+
+
+ 184 00b3 38000000 		.4byte	.LFE63-.LFB63
+ 185 00b7 01       		.uleb128 0x1
+ 186 00b8 9C       		.byte	0x9c
+ 187 00b9 18010000 		.4byte	0x118
+ 188 00bd 06       		.uleb128 0x6
+ 189 00be 08000000 		.4byte	.LVL0
+ 190 00c2 29010000 		.4byte	0x129
+ 191 00c6 07       		.uleb128 0x7
+ 192 00c7 10000000 		.4byte	.LVL1
+ 193 00cb 34010000 		.4byte	0x134
+ 194 00cf DB000000 		.4byte	0xdb
+ 195 00d3 08       		.uleb128 0x8
+ 196 00d4 01       		.uleb128 0x1
+ 197 00d5 50       		.byte	0x50
+ 198 00d6 03       		.uleb128 0x3
+ 199 00d7 0A       		.byte	0xa
+ 200 00d8 E803     		.2byte	0x3e8
+ 201 00da 00       		.byte	0
+ 202 00db 06       		.uleb128 0x6
+ 203 00dc 14000000 		.4byte	.LVL2
+ 204 00e0 3F010000 		.4byte	0x13f
+ 205 00e4 07       		.uleb128 0x7
+ 206 00e5 1C000000 		.4byte	.LVL3
+ 207 00e9 4A010000 		.4byte	0x14a
+ 208 00ed FB000000 		.4byte	0xfb
+ 209 00f1 08       		.uleb128 0x8
+ 210 00f2 01       		.uleb128 0x1
+ 211 00f3 50       		.byte	0x50
+ 212 00f4 05       		.uleb128 0x5
+ 213 00f5 03       		.byte	0x3
+ 214 00f6 00000000 		.4byte	.LC0
+ 215 00fa 00       		.byte	0
+ 216 00fb 06       		.uleb128 0x6
+ 217 00fc 22000000 		.4byte	.LVL4
+ 218 0100 3F010000 		.4byte	0x13f
+ 219 0104 09       		.uleb128 0x9
+ 220 0105 2C000000 		.4byte	.LVL5
+ 221 0109 4A010000 		.4byte	0x14a
+ 222 010d 08       		.uleb128 0x8
+ 223 010e 01       		.uleb128 0x1
+ 224 010f 50       		.byte	0x50
+ 225 0110 05       		.uleb128 0x5
+ 226 0111 03       		.byte	0x3
+ 227 0112 1C000000 		.4byte	.LC1
+ 228 0116 00       		.byte	0
+ 229 0117 00       		.byte	0
+ 230 0118 0A       		.uleb128 0xa
+ 231 0119 9D010000 		.4byte	.LASF24
+ 232 011d 07       		.byte	0x7
+ 233 011e 1207     		.2byte	0x712
+ 234 0120 24010000 		.4byte	0x124
+ 235 0124 0B       		.uleb128 0xb
+ 236 0125 76000000 		.4byte	0x76
+ 237 0129 0C       		.uleb128 0xc
+ 238 012a 4E010000 		.4byte	.LASF16
+ 239 012e 4E010000 		.4byte	.LASF16
+ 240 0132 04       		.byte	0x4
+ARM GAS  C:\Users\JACKNE~1\AppData\Local\Temp\ccGX6Y4o.s 			page 6
+
+
+ 241 0133 54       		.byte	0x54
+ 242 0134 0C       		.uleb128 0xc
+ 243 0135 C8000000 		.4byte	.LASF17
+ 244 0139 C8000000 		.4byte	.LASF17
+ 245 013d 05       		.byte	0x5
+ 246 013e 76       		.byte	0x76
+ 247 013f 0C       		.uleb128 0xc
+ 248 0140 59010000 		.4byte	.LASF18
+ 249 0144 59010000 		.4byte	.LASF18
+ 250 0148 06       		.byte	0x6
+ 251 0149 29       		.byte	0x29
+ 252 014a 0C       		.uleb128 0xc
+ 253 014b 8E010000 		.4byte	.LASF19
+ 254 014f 8E010000 		.4byte	.LASF19
+ 255 0153 04       		.byte	0x4
+ 256 0154 8B       		.byte	0x8b
+ 257 0155 00       		.byte	0
+ 258              		.section	.debug_abbrev,"",%progbits
+ 259              	.Ldebug_abbrev0:
+ 260 0000 01       		.uleb128 0x1
+ 261 0001 11       		.uleb128 0x11
+ 262 0002 01       		.byte	0x1
+ 263 0003 25       		.uleb128 0x25
+ 264 0004 0E       		.uleb128 0xe
+ 265 0005 13       		.uleb128 0x13
+ 266 0006 0B       		.uleb128 0xb
+ 267 0007 03       		.uleb128 0x3
+ 268 0008 0E       		.uleb128 0xe
+ 269 0009 1B       		.uleb128 0x1b
+ 270 000a 0E       		.uleb128 0xe
+ 271 000b 55       		.uleb128 0x55
+ 272 000c 17       		.uleb128 0x17
+ 273 000d 11       		.uleb128 0x11
+ 274 000e 01       		.uleb128 0x1
+ 275 000f 10       		.uleb128 0x10
+ 276 0010 17       		.uleb128 0x17
+ 277 0011 00       		.byte	0
+ 278 0012 00       		.byte	0
+ 279 0013 02       		.uleb128 0x2
+ 280 0014 24       		.uleb128 0x24
+ 281 0015 00       		.byte	0
+ 282 0016 0B       		.uleb128 0xb
+ 283 0017 0B       		.uleb128 0xb
+ 284 0018 3E       		.uleb128 0x3e
+ 285 0019 0B       		.uleb128 0xb
+ 286 001a 03       		.uleb128 0x3
+ 287 001b 0E       		.uleb128 0xe
+ 288 001c 00       		.byte	0
+ 289 001d 00       		.byte	0
+ 290 001e 03       		.uleb128 0x3
+ 291 001f 16       		.uleb128 0x16
+ 292 0020 00       		.byte	0
+ 293 0021 03       		.uleb128 0x3
+ 294 0022 0E       		.uleb128 0xe
+ 295 0023 3A       		.uleb128 0x3a
+ 296 0024 0B       		.uleb128 0xb
+ 297 0025 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\JACKNE~1\AppData\Local\Temp\ccGX6Y4o.s 			page 7
+
+
+ 298 0026 0B       		.uleb128 0xb
+ 299 0027 49       		.uleb128 0x49
+ 300 0028 13       		.uleb128 0x13
+ 301 0029 00       		.byte	0
+ 302 002a 00       		.byte	0
+ 303 002b 04       		.uleb128 0x4
+ 304 002c 24       		.uleb128 0x24
+ 305 002d 00       		.byte	0
+ 306 002e 0B       		.uleb128 0xb
+ 307 002f 0B       		.uleb128 0xb
+ 308 0030 3E       		.uleb128 0x3e
+ 309 0031 0B       		.uleb128 0xb
+ 310 0032 03       		.uleb128 0x3
+ 311 0033 08       		.uleb128 0x8
+ 312 0034 00       		.byte	0
+ 313 0035 00       		.byte	0
+ 314 0036 05       		.uleb128 0x5
+ 315 0037 2E       		.uleb128 0x2e
+ 316 0038 01       		.byte	0x1
+ 317 0039 3F       		.uleb128 0x3f
+ 318 003a 19       		.uleb128 0x19
+ 319 003b 03       		.uleb128 0x3
+ 320 003c 0E       		.uleb128 0xe
+ 321 003d 3A       		.uleb128 0x3a
+ 322 003e 0B       		.uleb128 0xb
+ 323 003f 3B       		.uleb128 0x3b
+ 324 0040 0B       		.uleb128 0xb
+ 325 0041 27       		.uleb128 0x27
+ 326 0042 19       		.uleb128 0x19
+ 327 0043 49       		.uleb128 0x49
+ 328 0044 13       		.uleb128 0x13
+ 329 0045 8701     		.uleb128 0x87
+ 330 0047 19       		.uleb128 0x19
+ 331 0048 11       		.uleb128 0x11
+ 332 0049 01       		.uleb128 0x1
+ 333 004a 12       		.uleb128 0x12
+ 334 004b 06       		.uleb128 0x6
+ 335 004c 40       		.uleb128 0x40
+ 336 004d 18       		.uleb128 0x18
+ 337 004e 9742     		.uleb128 0x2117
+ 338 0050 19       		.uleb128 0x19
+ 339 0051 01       		.uleb128 0x1
+ 340 0052 13       		.uleb128 0x13
+ 341 0053 00       		.byte	0
+ 342 0054 00       		.byte	0
+ 343 0055 06       		.uleb128 0x6
+ 344 0056 898201   		.uleb128 0x4109
+ 345 0059 00       		.byte	0
+ 346 005a 11       		.uleb128 0x11
+ 347 005b 01       		.uleb128 0x1
+ 348 005c 31       		.uleb128 0x31
+ 349 005d 13       		.uleb128 0x13
+ 350 005e 00       		.byte	0
+ 351 005f 00       		.byte	0
+ 352 0060 07       		.uleb128 0x7
+ 353 0061 898201   		.uleb128 0x4109
+ 354 0064 01       		.byte	0x1
+ARM GAS  C:\Users\JACKNE~1\AppData\Local\Temp\ccGX6Y4o.s 			page 8
+
+
+ 355 0065 11       		.uleb128 0x11
+ 356 0066 01       		.uleb128 0x1
+ 357 0067 31       		.uleb128 0x31
+ 358 0068 13       		.uleb128 0x13
+ 359 0069 01       		.uleb128 0x1
+ 360 006a 13       		.uleb128 0x13
+ 361 006b 00       		.byte	0
+ 362 006c 00       		.byte	0
+ 363 006d 08       		.uleb128 0x8
+ 364 006e 8A8201   		.uleb128 0x410a
+ 365 0071 00       		.byte	0
+ 366 0072 02       		.uleb128 0x2
+ 367 0073 18       		.uleb128 0x18
+ 368 0074 9142     		.uleb128 0x2111
+ 369 0076 18       		.uleb128 0x18
+ 370 0077 00       		.byte	0
+ 371 0078 00       		.byte	0
+ 372 0079 09       		.uleb128 0x9
+ 373 007a 898201   		.uleb128 0x4109
+ 374 007d 01       		.byte	0x1
+ 375 007e 11       		.uleb128 0x11
+ 376 007f 01       		.uleb128 0x1
+ 377 0080 31       		.uleb128 0x31
+ 378 0081 13       		.uleb128 0x13
+ 379 0082 00       		.byte	0
+ 380 0083 00       		.byte	0
+ 381 0084 0A       		.uleb128 0xa
+ 382 0085 34       		.uleb128 0x34
+ 383 0086 00       		.byte	0
+ 384 0087 03       		.uleb128 0x3
+ 385 0088 0E       		.uleb128 0xe
+ 386 0089 3A       		.uleb128 0x3a
+ 387 008a 0B       		.uleb128 0xb
+ 388 008b 3B       		.uleb128 0x3b
+ 389 008c 05       		.uleb128 0x5
+ 390 008d 49       		.uleb128 0x49
+ 391 008e 13       		.uleb128 0x13
+ 392 008f 3F       		.uleb128 0x3f
+ 393 0090 19       		.uleb128 0x19
+ 394 0091 3C       		.uleb128 0x3c
+ 395 0092 19       		.uleb128 0x19
+ 396 0093 00       		.byte	0
+ 397 0094 00       		.byte	0
+ 398 0095 0B       		.uleb128 0xb
+ 399 0096 35       		.uleb128 0x35
+ 400 0097 00       		.byte	0
+ 401 0098 49       		.uleb128 0x49
+ 402 0099 13       		.uleb128 0x13
+ 403 009a 00       		.byte	0
+ 404 009b 00       		.byte	0
+ 405 009c 0C       		.uleb128 0xc
+ 406 009d 2E       		.uleb128 0x2e
+ 407 009e 00       		.byte	0
+ 408 009f 3F       		.uleb128 0x3f
+ 409 00a0 19       		.uleb128 0x19
+ 410 00a1 3C       		.uleb128 0x3c
+ 411 00a2 19       		.uleb128 0x19
+ARM GAS  C:\Users\JACKNE~1\AppData\Local\Temp\ccGX6Y4o.s 			page 9
+
+
+ 412 00a3 6E       		.uleb128 0x6e
+ 413 00a4 0E       		.uleb128 0xe
+ 414 00a5 03       		.uleb128 0x3
+ 415 00a6 0E       		.uleb128 0xe
+ 416 00a7 3A       		.uleb128 0x3a
+ 417 00a8 0B       		.uleb128 0xb
+ 418 00a9 3B       		.uleb128 0x3b
+ 419 00aa 0B       		.uleb128 0xb
+ 420 00ab 00       		.byte	0
+ 421 00ac 00       		.byte	0
+ 422 00ad 00       		.byte	0
+ 423              		.section	.debug_aranges,"",%progbits
+ 424 0000 1C000000 		.4byte	0x1c
+ 425 0004 0200     		.2byte	0x2
+ 426 0006 00000000 		.4byte	.Ldebug_info0
+ 427 000a 04       		.byte	0x4
+ 428 000b 00       		.byte	0
+ 429 000c 0000     		.2byte	0
+ 430 000e 0000     		.2byte	0
+ 431 0010 00000000 		.4byte	.LFB63
+ 432 0014 38000000 		.4byte	.LFE63-.LFB63
+ 433 0018 00000000 		.4byte	0
+ 434 001c 00000000 		.4byte	0
+ 435              		.section	.debug_ranges,"",%progbits
+ 436              	.Ldebug_ranges0:
+ 437 0000 00000000 		.4byte	.LFB63
+ 438 0004 38000000 		.4byte	.LFE63
+ 439 0008 00000000 		.4byte	0
+ 440 000c 00000000 		.4byte	0
+ 441              		.section	.debug_line,"",%progbits
+ 442              	.Ldebug_line0:
+ 443 0000 7E010000 		.section	.debug_str,"MS",%progbits,1
+ 443      02006201 
+ 443      00000201 
+ 443      FB0E0D00 
+ 443      01010101 
+ 444              	.LASF6:
+ 445 0000 6C6F6E67 		.ascii	"long long int\000"
+ 445      206C6F6E 
+ 445      6720696E 
+ 445      7400
+ 446              	.LASF3:
+ 447 000e 73686F72 		.ascii	"short unsigned int\000"
+ 447      7420756E 
+ 447      7369676E 
+ 447      65642069 
+ 447      6E7400
+ 448              	.LASF8:
+ 449 0021 756E7369 		.ascii	"unsigned int\000"
+ 449      676E6564 
+ 449      20696E74 
+ 449      00
+ 450              	.LASF21:
+ 451 002e 6D61696E 		.ascii	"main.c\000"
+ 451      2E6300
+ 452              	.LASF23:
+ 453 0035 6D61696E 		.ascii	"main\000"
+ARM GAS  C:\Users\JACKNE~1\AppData\Local\Temp\ccGX6Y4o.s 			page 10
+
+
+ 453      00
+ 454              	.LASF20:
+ 455 003a 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 455      43313120 
+ 455      352E342E 
+ 455      31203230 
+ 455      31363036 
+ 456 006d 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 456      20726576 
+ 456      6973696F 
+ 456      6E203233 
+ 456      37373135 
+ 457 00a0 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 457      66756E63 
+ 457      74696F6E 
+ 457      2D736563 
+ 457      74696F6E 
+ 458              	.LASF17:
+ 459 00c8 43794465 		.ascii	"CyDelay\000"
+ 459      6C617900 
+ 460              	.LASF5:
+ 461 00d0 6C6F6E67 		.ascii	"long unsigned int\000"
+ 461      20756E73 
+ 461      69676E65 
+ 461      6420696E 
+ 461      7400
+ 462              	.LASF7:
+ 463 00e2 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 463      206C6F6E 
+ 463      6720756E 
+ 463      7369676E 
+ 463      65642069 
+ 464              	.LASF22:
+ 465 00f9 433A5C55 		.ascii	"C:\\Users\\Jack Neuner\\aquadoc\\psoc\\psoc\\Batter"
+ 465      73657273 
+ 465      5C4A6163 
+ 465      6B204E65 
+ 465      756E6572 
+ 466 0126 79416C61 		.ascii	"yAlarmTestNeu.cydsn\\Battery_Alarm.cydsn\000"
+ 466      726D5465 
+ 466      73744E65 
+ 466      752E6379 
+ 466      64736E5C 
+ 467              	.LASF16:
+ 468 014e 55415254 		.ascii	"UART_Start\000"
+ 468      5F537461 
+ 468      727400
+ 469              	.LASF18:
+ 470 0159 42617474 		.ascii	"BatteryAlarm_Read\000"
+ 470      65727941 
+ 470      6C61726D 
+ 470      5F526561 
+ 470      6400
+ 471              	.LASF1:
+ 472 016b 756E7369 		.ascii	"unsigned char\000"
+ 472      676E6564 
+ 472      20636861 
+ARM GAS  C:\Users\JACKNE~1\AppData\Local\Temp\ccGX6Y4o.s 			page 11
+
+
+ 472      7200
+ 473              	.LASF13:
+ 474 0179 63686172 		.ascii	"char\000"
+ 474      00
+ 475              	.LASF4:
+ 476 017e 6C6F6E67 		.ascii	"long int\000"
+ 476      20696E74 
+ 476      00
+ 477              	.LASF12:
+ 478 0187 646F7562 		.ascii	"double\000"
+ 478      6C6500
+ 479              	.LASF19:
+ 480 018e 55415254 		.ascii	"UART_PutString\000"
+ 480      5F507574 
+ 480      53747269 
+ 480      6E6700
+ 481              	.LASF24:
+ 482 019d 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 482      52784275 
+ 482      66666572 
+ 482      00
+ 483              	.LASF0:
+ 484 01aa 7369676E 		.ascii	"signed char\000"
+ 484      65642063 
+ 484      68617200 
+ 485              	.LASF14:
+ 486 01b6 6C6F6E67 		.ascii	"long double\000"
+ 486      20646F75 
+ 486      626C6500 
+ 487              	.LASF9:
+ 488 01c2 5F5F696E 		.ascii	"__int32_t\000"
+ 488      7433325F 
+ 488      7400
+ 489              	.LASF11:
+ 490 01cc 666C6F61 		.ascii	"float\000"
+ 490      7400
+ 491              	.LASF2:
+ 492 01d2 73686F72 		.ascii	"short int\000"
+ 492      7420696E 
+ 492      7400
+ 493              	.LASF10:
+ 494 01dc 696E7433 		.ascii	"int32_t\000"
+ 494      325F7400 
+ 495              	.LASF15:
+ 496 01e4 73697A65 		.ascii	"sizetype\000"
+ 496      74797065 
+ 496      00
+ 497              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
