@@ -9,5 +9,6 @@
 \contentsline {subsection}{\numberline {3.1}HC-SR04}{7}{subsection.3.1}% 
 \contentsline {subsubsection}{\numberline {3.1.1}Bauteilerklärung}{7}{subsubsection.3.1.1}% 
 \contentsline {subsubsection}{\numberline {3.1.2}C-Code}{9}{subsubsection.3.1.2}% 
-\contentsline {section}{\numberline {4}Anhang}{10}{section.4}% 
-\contentsline {subsection}{\numberline {4.1}Literaturverzeichnis}{10}{subsection.4.1}% 
+\contentsline {subsection}{\numberline {3.2}DS1722}{10}{subsection.3.2}% 
+\contentsline {section}{\numberline {4}Anhang}{11}{section.4}% 
+\contentsline {subsection}{\numberline {4.1}Literaturverzeichnis}{11}{subsection.4.1}% 

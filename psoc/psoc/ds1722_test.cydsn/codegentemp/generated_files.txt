@@ -35,8 +35,19 @@
   <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\CS_aliases.h" value="HEADER;;;;;CS" />
   <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\CS.c" value="SOURCE_C;CortexM3;;;;CS" />
   <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\CS.h" value="HEADER;;;;;CS" />
+  <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\rx_isr_spi.c" value="SOURCE_C;CortexM3;;;;rx_isr_spi" />
+  <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\rx_isr_spi.h" value="HEADER;;;;;rx_isr_spi" />
+  <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\tx_isr_spi.c" value="SOURCE_C;CortexM3;;;;tx_isr_spi" />
+  <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\tx_isr_spi.h" value="HEADER;;;;;tx_isr_spi" />
+  <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\UART.c" value="SOURCE_C;CortexM3;;;;UART" />
+  <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\UART.h" value="HEADER;;;;;UART" />
+  <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\UART_PM.c" value="SOURCE_C;CortexM3;;;;UART" />
+  <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\UART_INT.c" value="SOURCE_C;CortexM3;;;;UART" />
+  <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\UART_BOOT.c" value="SOURCE_C;CortexM3;;;;UART" />
   <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\SPI_IntClock.c" value="SOURCE_C;CortexM3;;;;SPI_IntClock" />
   <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\SPI_IntClock.h" value="HEADER;;;;;SPI_IntClock" />
+  <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\UART_IntClock.c" value="SOURCE_C;CortexM3;;;;UART_IntClock" />
+  <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\UART_IntClock.h" value="HEADER;;;;;UART_IntClock" />
   <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\cm3gcc.ld" value="LINKER_SCRIPT;;;b98f980c-3bd1-4fc7-a887-c56a20a46fdd;;cy_boot" />
   <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\Cm3RealView.scat" value="LINKER_SCRIPT;;;fdb8e1ae-f83a-46cf-9446-1d703716f38a;;cy_boot" />
   <file name="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\codegentemp\Cm3Start.c" value="SOURCE_C;CortexM3;;;;cy_boot" />

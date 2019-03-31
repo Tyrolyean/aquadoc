@@ -112,6 +112,17 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\CS_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\CS.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\CS.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\rx_isr_spi.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\rx_isr_spi.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\tx_isr_spi.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\tx_isr_spi.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\UART.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\UART.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\UART_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\UART_INT.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\UART_BOOT.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\UART_IntClock.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\UART_IntClock.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\Export\ARM_GCC_Generic">

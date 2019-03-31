@@ -255,6 +255,7 @@
       <Data key="8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba" value="MISO" />
       <Data key="74716c5b-f7c2-4823-8190-f8525cc1eb2b" value="CS" />
       <Data key="e851a3b9-efb8-48be-bbb8-b303b216c393" value="MOSI" />
+      <Data key="ed092b9b-d398-4703-be89-cebf998501f6" value="Tx" />
     </Group>
   </Group>
   <Group key="EEPROM">
@@ -3343,12 +3344,12 @@
   <Group key="Pin2">
     <Group key="6dd70a3c-c39c-4ad3-8f9f-c3e340867b59">
       <Group key="0">
-        <Data key="Port Format" value="0,7" />
+        <Data key="Port Format" value="0,5" />
       </Group>
     </Group>
     <Group key="8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba">
       <Group key="0">
-        <Data key="Port Format" value="0,5" />
+        <Data key="Port Format" value="0,7" />
       </Group>
     </Group>
     <Group key="74716c5b-f7c2-4823-8190-f8525cc1eb2b">
@@ -3361,6 +3362,12 @@
         <Data key="Port Format" value="0,6" />
       </Group>
     </Group>
+    <Group key="ed092b9b-d398-4703-be89-cebf998501f6">
+      <Group key="0">
+        <Data key="Port Format" value="12,7" />
+      </Group>
+    </Group>
+    <Group key="UnAssigned Pins" />
   </Group>
   <Group key="PlaceDir">
     <Data key="count" value="0" />

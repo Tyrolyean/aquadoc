@@ -11,4 +11,3 @@ inline uint8_t get_ds1722_address(bool read, uint8_t address){
         return (1 << 8) | address;
     }
 }
-

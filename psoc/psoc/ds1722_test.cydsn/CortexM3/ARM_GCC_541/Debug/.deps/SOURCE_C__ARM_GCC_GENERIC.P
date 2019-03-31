@@ -1,24 +1,8 @@
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/CortexM3/ARM_GCC_541/Debug/CS.o : E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CS.c E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CS.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CS_aliases.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice_trm.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyfitter.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cypins.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cytypes.h 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CS.c : 
+E:/aquadoc/psoc/psoc/ds1722_test.cydsn/CortexM3/ARM_GCC_541/Debug/main.o : E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CS.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CS_aliases.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyDmac.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyFlash.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyLib.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CySpc.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/MISO.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/MISO_aliases.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/MOSI.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/MOSI_aliases.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SCLK.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SCLK_aliases.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SPI.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SPI_IntClock.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SPI_PVT.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/UART.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/UART_IntClock.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cmsis_armcc.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cmsis_compiler.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cmsis_gcc.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/core_cm3.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyPm.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cy_em_eeprom.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice_trm.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydisabledsheets.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyfitter.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cypins.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cytypes.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/project.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/rx_isr_spi.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/tx_isr_spi.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/main.c 
 
 E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CS.h : 
 
 E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CS_aliases.h : 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice.h : 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice_trm.h : 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyfitter.h : 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cypins.h : 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cytypes.h : 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/CortexM3/ARM_GCC_541/Debug/Cm3Start.o : E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/Cm3Start.c E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyDmac.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyFlash.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyLib.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CySpc.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyPm.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice_trm.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyfitter.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cytypes.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/cyapicallbacks.h 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/Cm3Start.c : 
 
 E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyDmac.h : 
 
@@ -28,55 +12,17 @@ E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyLib.h :
 
 E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CySpc.h : 
 
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyPm.h : 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h : 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/cyapicallbacks.h : 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/CortexM3/ARM_GCC_541/Debug/CyDmac.o : E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyDmac.c E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyDmac.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyFlash.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyLib.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CySpc.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyPm.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice_trm.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyfitter.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cytypes.h 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyDmac.c : 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/CortexM3/ARM_GCC_541/Debug/CyFlash.o : E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyFlash.c E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyFlash.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyLib.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CySpc.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyPm.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice_trm.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyfitter.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cytypes.h 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyFlash.c : 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/CortexM3/ARM_GCC_541/Debug/CyLib.o : E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyFlash.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyLib.c E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyLib.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CySpc.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyPm.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice_trm.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyfitter.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cytypes.h 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyLib.c : 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/CortexM3/ARM_GCC_541/Debug/CySpc.o : E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyFlash.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyLib.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CySpc.c E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CySpc.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyPm.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice_trm.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyfitter.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cytypes.h 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CySpc.c : 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/CortexM3/ARM_GCC_541/Debug/MISO.o : E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/MISO.c E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/MISO.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/MISO_aliases.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice_trm.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyfitter.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cypins.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cytypes.h 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/MISO.c : 
-
 E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/MISO.h : 
 
 E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/MISO_aliases.h : 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/CortexM3/ARM_GCC_541/Debug/MOSI.o : E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/MOSI.c E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/MOSI.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/MOSI_aliases.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice_trm.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyfitter.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cypins.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cytypes.h 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/MOSI.c : 
 
 E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/MOSI.h : 
 
 E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/MOSI_aliases.h : 
 
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/CortexM3/ARM_GCC_541/Debug/SCLK.o : E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SCLK.c E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SCLK.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SCLK_aliases.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice_trm.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyfitter.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cypins.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cytypes.h 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SCLK.c : 
-
 E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SCLK.h : 
 
 E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SCLK_aliases.h : 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/CortexM3/ARM_GCC_541/Debug/SPI.o : E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyFlash.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyLib.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CySpc.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SPI.c E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SPI.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SPI_IntClock.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SPI_PVT.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyPm.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice_trm.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyfitter.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cytypes.h 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SPI.c : 
 
 E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SPI.h : 
 
@@ -84,47 +30,9 @@ E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SPI_IntClock.h :
 
 E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SPI_PVT.h : 
 
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/CortexM3/ARM_GCC_541/Debug/SPI_INT.o : E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyFlash.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyLib.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CySpc.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SPI.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SPI_INT.c E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SPI_IntClock.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SPI_PVT.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyPm.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice_trm.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyfitter.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cytypes.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/cyapicallbacks.h 
+E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/UART.h : 
 
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SPI_INT.c : 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/CortexM3/ARM_GCC_541/Debug/SPI_IntClock.o : E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SPI_IntClock.c E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SPI_IntClock.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice_trm.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyfitter.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cytypes.h 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SPI_IntClock.c : 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/CortexM3/ARM_GCC_541/Debug/SPI_PM.o : E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyFlash.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyLib.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CySpc.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SPI.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SPI_IntClock.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SPI_PM.c E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SPI_PVT.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyPm.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice_trm.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyfitter.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cytypes.h 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SPI_PM.c : 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/CortexM3/ARM_GCC_541/Debug/cyPm.o : E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyFlash.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyLib.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CySpc.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyPm.c E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyPm.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice_trm.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyfitter.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cytypes.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/cyapicallbacks.h 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyPm.c : 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/CortexM3/ARM_GCC_541/Debug/cy_em_eeprom.o : E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyFlash.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyLib.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CySpc.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyPm.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cy_em_eeprom.c E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cy_em_eeprom.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice_trm.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyfitter.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cytypes.h 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cy_em_eeprom.c : 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cy_em_eeprom.h : 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/CortexM3/ARM_GCC_541/Debug/cyfitter_cfg.o : E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyFlash.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyLib.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CySpc.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyPm.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice_trm.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyfitter.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyfitter_cfg.c E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cytypes.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/cyapicallbacks.h 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyfitter_cfg.c : 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/CortexM3/ARM_GCC_541/Debug/cymetadata.o : E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cymetadata.c 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cymetadata.c : 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/CortexM3/ARM_GCC_541/Debug/cyutils.o : E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice_trm.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyfitter.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cytypes.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyutils.c 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyutils.c : 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/CortexM3/ARM_GCC_541/Debug/ds1722.o : E:/aquadoc/psoc/psoc/ds1722_test.cydsn/ds1722.c E:/aquadoc/psoc/psoc/ds1722_test.cydsn/ds1722.h 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/ds1722.c : 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/ds1722.h : 
-
-E:/aquadoc/psoc/psoc/ds1722_test.cydsn/CortexM3/ARM_GCC_541/Debug/main.o : E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cmsis_armcc.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cmsis_compiler.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cmsis_gcc.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/core_cm3.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydisabledsheets.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/project.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CS.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CS_aliases.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyDmac.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyFlash.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CyLib.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/CySpc.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/MISO.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/MISO_aliases.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/MOSI.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/MOSI_aliases.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SCLK.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SCLK_aliases.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SPI.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SPI_IntClock.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/SPI_PVT.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyPm.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cy_em_eeprom.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice_trm.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyfitter.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cypins.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cytypes.h E:/aquadoc/psoc/psoc/ds1722_test.cydsn/main.c 
+E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/UART_IntClock.h : 
 
 E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cmsis_armcc.h : 
 
@@ -136,9 +44,29 @@ E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/core_cm3.h :
 
 E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h : 
 
+E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyPm.h : 
+
+E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cy_em_eeprom.h : 
+
+E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice.h : 
+
+E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydevice_trm.h : 
+
 E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cydisabledsheets.h : 
 
+E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyfitter.h : 
+
+E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h : 
+
+E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cypins.h : 
+
+E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/cytypes.h : 
+
 E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/project.h : 
+
+E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/rx_isr_spi.h : 
+
+E:/aquadoc/psoc/psoc/ds1722_test.cydsn/Generated_Source/PSoC5/tx_isr_spi.h : 
 
 E:/aquadoc/psoc/psoc/ds1722_test.cydsn/main.c : 
 

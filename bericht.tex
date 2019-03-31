@@ -1,3 +1,4 @@
+
 \documentclass[12pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[german]{babel}
@@ -343,6 +344,39 @@ used to
 
 	
 	
+\subsection{DS1722}
+
+	Der DS1722 ist ein Digitaler Temeperatur-Mess-IC von MAXIM Integrated.
+	Er hat einen Messbereich von -55°C bis +120°C welchen er wahlweise mit
+	8, 9, 10, 11 oder 12 bit auflösen kann. Als Schnittstellen hat er
+	wahlweise 3-Wire oder SPI
+	\footnote{Serial Peripherial Interface, Standart von Motorola}. Welches
+	Protokoll verwendet wird ist abhängig vom Spannungspegel am SERMODE
+	Pin. Wenn am SERMODE Pin 5V anliegen, wird SPI verwendet, wenn 0V
+	anliegen wird 3-Wire verwendet, den Pin nicht zu verbinden führt zu
+	undefiniertem verhalten.
+
+	Im SPI-Modus werden die Pins SDI (Serial Data In) zu MOSI 
+	(Master Output Slave Input) und SDO (Serial Data Out) zu MISO
+	(Master Input Slave output). Der Chip-Enable Eingang
+	\footnote{Der CE-Pin wird manchmal auch SS (Slave Slect) bezeichnet}
+	ist HIGH-Aktiv, was im PSoC ein vorschalten eines Inverters vor den 
+	CE-Pin erforderlich macht.
+
+	Aufgrund anfänglicher Probleme mit dem PSoC wurde die Machbarkeit
+	mittels ATMega nochmals in überprüft. Dafür wurde eine ATMega2560
+	als SPI Master verwendet, auf welchem die SPI-Pins in der GPIO-Bank B
+	sind. Abbildung \ref{fig:spi_frame_atmega} zeigt einen mittels ATMega
+	2560 erzeugten Datenverkehr mit dem DS1722.
+	
+	 
+	 \begin{figure}[H]
+		\centering
+		\includegraphics[width=1\textwidth]
+			{measurements/spi_frame_recv_atmega}
+		\label{fig:spi_frame_atmega}
+		\caption{Erzielltes Ergebnis mit ATMega 2560}
+	\end{figure}
 
 \section{Anhang}
 
@@ -369,7 +403,7 @@ used to
 \fi
 
 \if\datasheets1
-	\subsection{Datenblätter}
+\subsection{Datenblätter}
 
 	\subsubsection{HC-SR04}
 	\includepdf[pages={1-}]{./datasheets/HCSR04-1022824.pdf}
@@ -385,4 +419,3 @@ used to
 
 \fi % End of datasheet section
 \end{document}
-
