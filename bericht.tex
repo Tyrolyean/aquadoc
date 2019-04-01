@@ -132,6 +132,15 @@
 
 Ein Hochbehälter hat ein Fassungsvermögen um 1 Tag Wasser speichern zu können
 und ein Feuer zu löschen.
+\section{Aufgabenverteilung}
+\begin{itemize}
+  \item{Plank: Programmentwicklung, testen der Sensoren und Anfang der Dokumentation}
+
+  \item{Neuner: Programmentwicklung und erstellen des Top Design}
+
+  \item{Ljubic: Dokumentation}
+\end{itemize}
+
 
 \subsection{Sensoren}
 
@@ -183,9 +192,8 @@ Gefundene Bauteile auf neuhold-elektronik.at:
 \section{Test mittels Aurduino}
 
 Es wird ein Arduino verwendet um die gegebenen Sensoren DS1722 bzw. HC-SR04 zu 
-testen. Die SPI anschlüsse des Arduinos werden mit den Anschlüssen der
-jeweiligen Sensoren verbunden und auf die Verwendung der richtigen 
-Versorgungsspannung wird geachtet.
+testen. Die SPI-Anschlüsse des Arduinos werden mit den Anschlüssen der
+jeweiligen Sensoren verbunden ebenfalls wird auf die Verwendung der richtigen Versorgungsspannung geachtet.
 
 \newpage
 \subsection{HC-SR04}
@@ -244,8 +252,8 @@ used to
 
 \section{Durchführung Mittels PSoC}
 
-	Die realisierung des Projektes mittels des PSoC Microcontrollers wurde
-	vom Lehrer vorgegeben. Dafür wurden zuerst einzelprogramme erstellt,
+	Die Realisierung des Projektes mittels des PSoC Microcontrollers wurde
+	vom Lehrer vorgegeben. Dafür wurden zuerst Einzelprogramme erstellt,
 	um die gewünschten Funktionalitäten einzeln zu testen. Die
 	Einzelprogramme sollten dann zu einem Gesamtprogramm zusammengeführt
 	werden, welches volle Funktionalität bietet.
@@ -258,8 +266,8 @@ used to
 	misst. Dafür wird nach anlegen eines min. 10µs Pulses
 	\footnote{Seite 2 HC-SR04 Datenblatt}
 	am TRIG Pin
-	eine Ultraschall Welle losgeschickt. Der Baustein rechnet sich dann aus
-	der Laufzeit der Welle bis zu ihrer Rückkehr die Entfernung aus, und
+	ein Ultraschallimpuls losgeschickt. Der Baustein rechnet sich dann aus
+	der Laufzeit des Impuls bis zu desen Rückkehr die Entfernung aus und
 	gibt diese dann als PWM Signal am echo pin aus. Manche
 	Module scheinen dabei einen Defekt zu haben oder schlichtweg billiger
 	gebaut zu sein, da man bei diesen klar eine Kondensatorladekurve
@@ -336,6 +344,9 @@ used to
 	Abstand in cm zu erhalten.
 
 	\subsubsection{C-Code}
+	
+	Programm für den Ultraschallsensor zur Messung des Wasserstands im 
+	Hochbehälter
 
 	\lstinputlisting[language=C, numbers=left, frame=trBL, breaklines=true,
 	breakautoindent=true, formfeed=\newpage, label={lst:psoc_hc-sr04},
@@ -346,15 +357,15 @@ used to
 	
 \subsection{DS1722}
 
-	Der DS1722 ist ein Digitaler Temeperatur-Mess-IC von MAXIM Integrated.
+	Der DS1722 ist ein digitaler Temeperatur-Mess-IC von MAXIM Integrated.
 	Er hat einen Messbereich von -55°C bis +120°C welchen er wahlweise mit
 	8, 9, 10, 11 oder 12 bit auflösen kann. Als Schnittstellen hat er
 	wahlweise 3-Wire oder SPI
 	\footnote{Serial Peripherial Interface, Standart von Motorola}. Welches
 	Protokoll verwendet wird ist abhängig vom Spannungspegel am SERMODE
 	Pin. Wenn am SERMODE Pin 5V anliegen, wird SPI verwendet, wenn 0V
-	anliegen wird 3-Wire verwendet, den Pin nicht zu verbinden führt zu
-	undefiniertem verhalten.
+	anliegen wird 3-Wire verwendet, den Pin nicht zu verbinden führt zu einem
+	undefiniertem Verhalten.
 
 	Im SPI-Modus werden die Pins SDI (Serial Data In) zu MOSI 
 	(Master Output Slave Input) und SDO (Serial Data Out) zu MISO
@@ -364,7 +375,7 @@ used to
 	CE-Pin erforderlich macht.
 
 	Aufgrund anfänglicher Probleme mit dem PSoC wurde die Machbarkeit
-	mittels ATMega nochmals in überprüft. Dafür wurde eine ATMega2560
+	mittels ATMega nochmals überprüft. Dafür wurde eine ATMega2560
 	als SPI Master verwendet, auf welchem die SPI-Pins in der GPIO-Bank B
 	sind. Abbildung \ref{fig:spi_frame_atmega} zeigt einen mittels ATMega
 	2560 erzeugten Datenverkehr mit dem DS1722.
