@@ -42,8 +42,8 @@
 /* Internal interrupt handling */
 #define SPI_TX_BUFFER_SIZE             (4u)
 #define SPI_RX_BUFFER_SIZE             (4u)
-#define SPI_INTERNAL_TX_INT_ENABLED    (1u)
-#define SPI_INTERNAL_RX_INT_ENABLED    (1u)
+#define SPI_INTERNAL_TX_INT_ENABLED    (0u)
+#define SPI_INTERNAL_RX_INT_ENABLED    (0u)
 
 #define SPI_SINGLE_REG_SIZE            (8u)
 #define SPI_USE_SECOND_DATAPATH        (SPI_DATA_WIDTH > SPI_SINGLE_REG_SIZE)
@@ -134,8 +134,8 @@ extern uint8 SPI_initVar;
 *    Initial Parameter Constants
 ***************************************/
 
-#define SPI_INT_ON_SPI_DONE    ((uint8) (1u   << SPI_STS_SPI_DONE_SHIFT))
-#define SPI_INT_ON_TX_EMPTY    ((uint8) (1u   << SPI_STS_TX_FIFO_EMPTY_SHIFT))
+#define SPI_INT_ON_SPI_DONE    ((uint8) (0u   << SPI_STS_SPI_DONE_SHIFT))
+#define SPI_INT_ON_TX_EMPTY    ((uint8) (0u   << SPI_STS_TX_FIFO_EMPTY_SHIFT))
 #define SPI_INT_ON_TX_NOT_FULL ((uint8) (0u << \
                                                                            SPI_STS_TX_FIFO_NOT_FULL_SHIFT))
 #define SPI_INT_ON_BYTE_COMP   ((uint8) (0u  << SPI_STS_BYTE_COMPLETE_SHIFT))

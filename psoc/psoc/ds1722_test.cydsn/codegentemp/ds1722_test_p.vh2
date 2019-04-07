@@ -1,5 +1,5 @@
 -- Project:   ds1722_test
--- Generated: 03/31/2019 16:38:00
+-- Generated: 04/01/2019 11:20:20
 -- PSoC Creator  4.2
 
 ENTITY ds1722_test IS
@@ -97,13 +97,13 @@ ARCHITECTURE __DEFAULT__ OF ds1722_test IS
     SIGNAL zero : bit;
     ATTRIBUTE GROUND OF zero : SIGNAL IS true;
     ATTRIBUTE lib_model OF SCLK(0) : LABEL IS "iocell1";
-    ATTRIBUTE Location OF SCLK(0) : LABEL IS "P0[5]";
+    ATTRIBUTE Location OF SCLK(0) : LABEL IS "P15[1]";
     ATTRIBUTE lib_model OF MOSI(0) : LABEL IS "iocell2";
-    ATTRIBUTE Location OF MOSI(0) : LABEL IS "P0[6]";
+    ATTRIBUTE Location OF MOSI(0) : LABEL IS "P15[0]";
     ATTRIBUTE lib_model OF MISO(0) : LABEL IS "iocell3";
-    ATTRIBUTE Location OF MISO(0) : LABEL IS "P0[7]";
+    ATTRIBUTE Location OF MISO(0) : LABEL IS "P3[2]";
     ATTRIBUTE lib_model OF CS(0) : LABEL IS "iocell4";
-    ATTRIBUTE Location OF CS(0) : LABEL IS "P0[4]";
+    ATTRIBUTE Location OF CS(0) : LABEL IS "P15[2]";
     ATTRIBUTE lib_model OF Tx(0) : LABEL IS "iocell5";
     ATTRIBUTE Location OF Tx(0) : LABEL IS "P12[7]";
     ATTRIBUTE lib_model OF \SPI:BSPIM:load_rx_data\ : LABEL IS "macrocell1";
@@ -1022,14 +1022,6 @@ BEGIN
             q => \UART:BUART:tx_status_2\,
             main_0 => \UART:BUART:tx_fifo_notfull\);
 
-    \SPI:RxInternalInterrupt\:interrupt
-        GENERIC MAP(
-            int_type => "10",
-            is_nmi => 0)
-        PORT MAP(
-            interrupt => Net_22,
-            clock => ClockBlock_BUS_CLK);
-
     \SPI:BSPIM:BitCounter\:count7cell
         GENERIC MAP(
             cy_alt_mode => 0,
@@ -1128,14 +1120,6 @@ BEGIN
             f1_bus_stat_comb => \SPI:BSPIM:rx_status_5\,
             f1_blk_stat_comb => \SPI:BSPIM:rx_status_4\,
             busclk => ClockBlock_BUS_CLK);
-
-    \SPI:TxInternalInterrupt\:interrupt
-        GENERIC MAP(
-            int_type => "10",
-            is_nmi => 0)
-        PORT MAP(
-            interrupt => Net_9,
-            clock => ClockBlock_BUS_CLK);
 
     rx_isr_spi:interrupt
         GENERIC MAP(
