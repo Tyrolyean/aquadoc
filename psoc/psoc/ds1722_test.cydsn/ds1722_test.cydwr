@@ -3344,22 +3344,22 @@
   <Group key="Pin2">
     <Group key="6dd70a3c-c39c-4ad3-8f9f-c3e340867b59">
       <Group key="0">
-        <Data key="Port Format" value="0,5" />
+        <Data key="Port Format" value="15,1" />
       </Group>
     </Group>
     <Group key="8d318d8b-cf7b-4b6b-b02c-ab1c5c49d0ba">
       <Group key="0">
-        <Data key="Port Format" value="0,7" />
+        <Data key="Port Format" value="3,2" />
       </Group>
     </Group>
     <Group key="74716c5b-f7c2-4823-8190-f8525cc1eb2b">
       <Group key="0">
-        <Data key="Port Format" value="0,4" />
+        <Data key="Port Format" value="15,2" />
       </Group>
     </Group>
     <Group key="e851a3b9-efb8-48be-bbb8-b303b216c393">
       <Group key="0">
-        <Data key="Port Format" value="0,6" />
+        <Data key="Port Format" value="15,0" />
       </Group>
     </Group>
     <Group key="ed092b9b-d398-4703-be89-cebf998501f6">

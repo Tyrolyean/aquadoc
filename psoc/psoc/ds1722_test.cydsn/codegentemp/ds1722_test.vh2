@@ -2,7 +2,7 @@
 --	Conversion of ds1722_test.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Sun Mar 31 16:37:57 2019
+--	Mon Apr 01 11:20:14 2019
 --
 
 USE cypress.cypress.all;
@@ -14,7 +14,6 @@ END top_RTL;
 ARCHITECTURE R_T_L OF top_RTL IS
 SIGNAL \SPI:Net_276\ : bit;
 SIGNAL \SPI:Net_288\ : bit;
-SIGNAL Net_22 : bit;
 SIGNAL one : bit;
 SIGNAL \SPI:BSPIM:clk_fin\ : bit;
 SIGNAL \SPI:BSPIM:load_rx_data\ : bit;
@@ -83,6 +82,7 @@ SIGNAL \SPI:BSPIM:count_6\ : bit;
 SIGNAL \SPI:BSPIM:count_5\ : bit;
 SIGNAL \SPI:BSPIM:cnt_tc\ : bit;
 SIGNAL Net_9 : bit;
+SIGNAL Net_22 : bit;
 SIGNAL \SPI:BSPIM:sR8:Dp:ce0\ : bit;
 ATTRIBUTE port_state_att of \SPI:BSPIM:sR8:Dp:ce0\:SIGNAL IS 2;
 SIGNAL \SPI:BSPIM:sR8:Dp:cl0\ : bit;
@@ -415,10 +415,6 @@ Net_25 <= (not \UART:BUART:txn\);
 		is_digital=>'1')
 	PORT MAP(clock_out=>\SPI:Net_276\,
 		dig_domain_out=>open);
-\SPI:RxInternalInterrupt\:cy_isr_v1_0
-	GENERIC MAP(int_type=>"10",
-		is_nmi=>'0')
-	PORT MAP(int_signal=>Net_22);
 \SPI:BSPIM:ClkEn\:cy_psoc3_udb_clock_enable_v1_0
 	GENERIC MAP(sync_mode=>'1')
 	PORT MAP(clock_in=>\SPI:Net_276\,
@@ -541,10 +537,6 @@ Net_25 <= (not \UART:BUART:txn\);
 		pi=>(zero, zero, zero, zero,
 			zero, zero, zero, zero),
 		po=>open);
-\SPI:TxInternalInterrupt\:cy_isr_v1_0
-	GENERIC MAP(int_type=>"10",
-		is_nmi=>'0')
-	PORT MAP(int_signal=>Net_9);
 SCLK:cy_psoc3_pins_v1_10
 	GENERIC MAP(id=>"6dd70a3c-c39c-4ad3-8f9f-c3e340867b59",
 		drive_mode=>"110",

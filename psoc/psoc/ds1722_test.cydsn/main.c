@@ -10,10 +10,20 @@ int main(){
     UART_Start();
 	CyGlobalIntEnable;
     
+    SPI_WriteTxData(0x80);
+    SPI_WriteTxData(0xE9);
+    CyDelay(10);
+    while(SPI_GetRxBufferSize() == 0){}
+	SPI_ReadRxData();
+    while(SPI_GetRxBufferSize() == 0){}
+	SPI_ReadRxData();
+    
     UART_PutString("INIT\r\n");
 	
 	for(;;){
 	    SPI_WriteTxData(00);
+        SPI_WriteTxData(00);
+        SPI_WriteTxData(00);
         SPI_WriteTxData(00);
         while(SPI_GetRxBufferSize() == 0){}
         uint8_t recv1 = SPI_ReadRxData();
