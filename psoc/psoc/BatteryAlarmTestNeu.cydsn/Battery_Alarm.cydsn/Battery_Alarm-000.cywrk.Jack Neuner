@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="5f2be1a5-0687-4501-bb8c-cf21cb8211bf">
+<CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf type_name="CyDesigner.Common.ProjMgmt.GUI.CyBookmarkData" version="1">
+<indicators />
+</CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf>
+</dataGuid>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Battery_Alarm-000\Battery_Alarm\TopDesign">
+<ExpandedNodeIds>
+<v>Battery_Alarm-000</v>
+<v>Battery_Alarm-000\Battery_Alarm</v>
+<v>Battery_Alarm-000\Battery_Alarm\TopDesign</v>
+<v>Battery_Alarm-000\Battery_Alarm\Battery_Alarm.cydwr</v>
+<v>Battery_Alarm-000\Battery_Alarm\Battery_Alarm.cydwr\Pins</v>
+<v>Battery_Alarm-000\Battery_Alarm\Battery_Alarm.cydwr\Analog</v>
+<v>Battery_Alarm-000\Battery_Alarm\Battery_Alarm.cydwr\Clocks</v>
+<v>Battery_Alarm-000\Battery_Alarm\Battery_Alarm.cydwr\Interrupts</v>
+<v>Battery_Alarm-000\Battery_Alarm\Battery_Alarm.cydwr\DMA</v>
+<v>Battery_Alarm-000\Battery_Alarm\Battery_Alarm.cydwr\System</v>
+<v>Battery_Alarm-000\Battery_Alarm\Battery_Alarm.cydwr\Directives</v>
+<v>Battery_Alarm-000\Battery_Alarm\Battery_Alarm.cydwr\Flash Security</v>
+<v>Battery_Alarm-000\Battery_Alarm\Battery_Alarm.cydwr\EEPROM</v>
+<v>Battery_Alarm-000\Battery_Alarm\Header Files</v>
+<v>Battery_Alarm-000\Battery_Alarm\Header Files\cyapicallbacks.h</v>
+<v>Battery_Alarm-000\Battery_Alarm\Source Files</v>
+<v>Battery_Alarm-000\Battery_Alarm\Source Files\main.c</v>
+<v>Battery_Alarm-000\Battery_Alarm\Generated_Source</v>
+<v>Battery_Alarm-000\Battery_Alarm\Generated_Source\PSoC5</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Battery_Alarm-000</v>
+<v>Battery_Alarm-000\Battery_Alarm</v>
+<v>Battery_Alarm-000\Battery_Alarm\TopDesign</v>
+<v>Battery_Alarm-000\Battery_Alarm\Battery_Alarm.cydwr</v>
+<v>Battery_Alarm-000\Battery_Alarm\Battery_Alarm.cydwr\Pins</v>
+<v>Battery_Alarm-000\Battery_Alarm\Battery_Alarm.cydwr\Analog</v>
+<v>Battery_Alarm-000\Battery_Alarm\Battery_Alarm.cydwr\Clocks</v>
+<v>Battery_Alarm-000\Battery_Alarm\Battery_Alarm.cydwr\Interrupts</v>
+<v>Battery_Alarm-000\Battery_Alarm\Battery_Alarm.cydwr\DMA</v>
+<v>Battery_Alarm-000\Battery_Alarm\Battery_Alarm.cydwr\System</v>
+<v>Battery_Alarm-000\Battery_Alarm\Battery_Alarm.cydwr\Directives</v>
+<v>Battery_Alarm-000\Battery_Alarm\Battery_Alarm.cydwr\Flash Security</v>
+<v>Battery_Alarm-000\Battery_Alarm\Battery_Alarm.cydwr\EEPROM</v>
+<v>Battery_Alarm-000\Battery_Alarm\Header Files</v>
+<v>Battery_Alarm-000\Battery_Alarm\Header Files\cyapicallbacks.h</v>
+<v>Battery_Alarm-000\Battery_Alarm\Source Files</v>
+<v>Battery_Alarm-000\Battery_Alarm\Source Files\main.c</v>
+<v>Battery_Alarm-000\Battery_Alarm\Generated_Source</v>
+<v>Battery_Alarm-000\Battery_Alarm\Generated_Source\PSoC5</v>
+<v>Battery_Alarm-000\Battery_Alarm\Generated_Source\PSoC5\BatteryAlarm</v>
+<v>Battery_Alarm-000\Battery_Alarm\Generated_Source\PSoC5\cy_boot</v>
+<v>Battery_Alarm-000\Battery_Alarm\Generated_Source\PSoC5\Em_EEPROM_Dynamic</v>
+<v>Battery_Alarm-000\Battery_Alarm\Generated_Source\PSoC5\Rx_1</v>
+<v>Battery_Alarm-000\Battery_Alarm\Generated_Source\PSoC5\UART</v>
+<v>Battery_Alarm-000\Battery_Alarm\Generated_Source\PSoC5\UART_IntClock</v>
+<v>Battery_Alarm-000\Battery_Alarm\Generated_Source\PSoC5\cycodeshareexport.ld</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Battery_Alarm-000</v>
+<v>Battery_Alarm-000\Battery_Alarm</v>
+<v>Battery_Alarm-000\Battery_Alarm\TopDesign</v>
+<v>Battery_Alarm-000\Battery_Alarm\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Battery_Alarm-000</v>
+<v>Battery_Alarm-000\Battery_Alarm</v>
+<v>Battery_Alarm-000\Battery_Alarm\TopDesign</v>
+<v>Battery_Alarm-000\Battery_Alarm\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Battery_Alarm-000</v>
+<v>Battery_Alarm-000\Battery_Alarm</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\BatteryAlarm.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\Rx_1.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\UART.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_BOOT.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_INT.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_IntClock.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_PM.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Battery_Alarm.elf</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Battery_Alarm.hex</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Battery_Alarm.map</v>
+<v>Battery_Alarm-000\Battery_Alarm\Battery_Alarm.gpdsc</v>
+<v>Battery_Alarm-000\Battery_Alarm\Battery_Alarm.rpt</v>
+<v>Battery_Alarm-000\Battery_Alarm\Battery_Alarm_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Battery_Alarm-000</v>
+<v>Battery_Alarm-000\Battery_Alarm</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\BatteryAlarm.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\Rx_1.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\UART.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_BOOT.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_INT.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_IntClock.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_PM.lst</v>
+<v>Battery_Alarm-000\Battery_Alarm\CortexM3\ARM_GCC_541\Debug\Battery_Alarm.elf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Battery_Alarm-000</v>
+<v>Battery_Alarm-000\Battery_Alarm</v>
+<v>Battery_Alarm-000\Battery_Alarm\PSoC 5LP Architecture TRM</v>
+<v>Battery_Alarm-000\Battery_Alarm\CY8C58LP Family Datasheet</v>
+<v>Battery_Alarm-000\Battery_Alarm\System Reference Guides</v>
+<v>Battery_Alarm-000\Battery_Alarm\System Reference Guides\cy_boot_v5_70</v>
+<v>Battery_Alarm-000\Battery_Alarm\cy_pins_v2_20</v>
+<v>Battery_Alarm-000\Battery_Alarm\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Battery_Alarm-000\Battery_Alarm\Diode_v1_0</v>
+<v>Battery_Alarm-000\Battery_Alarm\Diode_v1_0\Diode_v1_0.pdf</v>
+<v>Battery_Alarm-000\Battery_Alarm\Gnd_v1_0.pdf</v>
+<v>Battery_Alarm-000\Battery_Alarm\Resistor_v1_0</v>
+<v>Battery_Alarm-000\Battery_Alarm\Resistor_v1_0\Resistor_v1_0.pdf</v>
+<v>Battery_Alarm-000\Battery_Alarm\UART_v2_50.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Battery_Alarm-000</v>
+<v>Battery_Alarm-000\Battery_Alarm</v>
+<v>Battery_Alarm-000\Battery_Alarm\PSoC 5LP Architecture TRM</v>
+<v>Battery_Alarm-000\Battery_Alarm\CY8C58LP Family Datasheet</v>
+<v>Battery_Alarm-000\Battery_Alarm\System Reference Guides</v>
+<v>Battery_Alarm-000\Battery_Alarm\System Reference Guides\cy_boot_v5_70</v>
+<v>Battery_Alarm-000\Battery_Alarm\cy_pins_v2_20</v>
+<v>Battery_Alarm-000\Battery_Alarm\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Battery_Alarm-000\Battery_Alarm\Diode_v1_0</v>
+<v>Battery_Alarm-000\Battery_Alarm\Diode_v1_0\Diode_v1_0.pdf</v>
+<v>Battery_Alarm-000\Battery_Alarm\Gnd_v1_0.pdf</v>
+<v>Battery_Alarm-000\Battery_Alarm\Resistor_v1_0</v>
+<v>Battery_Alarm-000\Battery_Alarm\Resistor_v1_0\Resistor_v1_0.pdf</v>
+<v>Battery_Alarm-000\Battery_Alarm\UART_v2_50.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\main.c" />
+<name v=".\TopDesign\TopDesign.cysch" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1263, 533" SelectedTabbedMdiWindow="16b792ca-750c-4f1a-a363-7da2fa106d1f"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="af66dd3e-e9ae-40ab-8d60-b702a3de3ef0" /><DocumentWindow Key="C:\Users\Jack Neuner\aquadoc\psoc\psoc\BatteryAlarmTestNeu.cydsn\Battery_Alarm.cydsn\main.c" Guid="16b792ca-750c-4f1a-a363-7da2fa106d1f" /><DocumentWindow Key="C:\Users\Jack Neuner\aquadoc\psoc\psoc\BatteryAlarmTestNeu.cydsn\Battery_Alarm.cydsn\TopDesign\TopDesign.cysch" Guid="ee4ad3b2-bb2c-456e-9588-40d69791ec33" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>
