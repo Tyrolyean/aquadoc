@@ -1,0 +1,6 @@
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|5364fac8-6947-4e0e-99a8-c0878a4f05e2
+C:\Users\johan\OneDrive\Dokumente\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|aa19e78e-6bf7-427d-b2cc-621cd84be977
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|62ff8e78-fe23-4c3b-82cb-d0fc2a25e282
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|fa1a5e5e-b38c-4bee-a672-61245ecc773b
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|28a9a47f-f631-4705-9d53-4c09a14b8d98
+E:\HTL\4_Klasse\FTKL\2) AquaDoc\AQUADOC\AQUADOC.cydsn\AQUADOC.cyprj|a3cc1324-5a2f-439a-9638-4a535442e76e

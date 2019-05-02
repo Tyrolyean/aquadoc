@@ -11,6 +11,7 @@
 <v>.\Ultrasonic_test.cydsn\Ultrasonic_test.cyprj</v>
 <v>.\ds1722_test.cydsn\ds1722_test.cyprj</v>
 <v>.\BMP180-TEST.cydsn\BMP180-TEST.cyprj</v>
+<v>.\onewire_temp_sensor.cydsn\onewire_temp_sensor.cyprj</v>
 </projects>
 <workspace_id v="69847ed0-6c41-41be-9da8-91fe88d88600" />
 <WriteAppVersionLastSavedWith v="4.2.0.641" />

@@ -9,7 +9,11 @@
 <projects>
 <v>.\Battery_Alarm.cyprj</v>
 </projects>
+<<<<<<< HEAD
+<workspace_id v="b190d0d7-514c-42e0-a805-1922c7a13de9" />
+=======
 <workspace_id v="a99cfdbc-9ac8-4e64-af4c-e7cfc43e009e" />
+>>>>>>> 9f2a063c30551b983b1ea43eb3a529fc7f164dff
 <WriteAppVersionLastSavedWith v="4.2.0.641" />
 <WriteAppMarketingVersionLastSavedWith v="4.2" />
 <CyGuid_dcbd9771-0334-43dc-9cc3-fe99dc3c5316 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWorkspaceSerialize+CyPrjDependencyList" version="4">

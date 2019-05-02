@@ -1,0 +1,10 @@
+# onewire_temp_sensor
+# 2019-04-29 09:51:36Z
+
+# IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
+dont_use_io iocell 1 0
+# IO_1@[IOP=(1)][IoId=(1)] is reserved: SWDDebugEnabled
+dont_use_io iocell 1 1
+set_io "Pin_Sensor(0)" iocell 0 1
+set_io "Rx_temp(0)" iocell 12 6
+set_io "Tx_temp(0)" iocell 12 7
