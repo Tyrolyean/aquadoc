@@ -16,7 +16,25 @@
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
 <v>psoc</v>
-<v>psoc\ds1722_test</v>
+<v>psoc\BMP180-TEST</v>
+<v>psoc\BMP180-TEST\TopDesign</v>
+<v>psoc\BMP180-TEST\BMP180-TEST.cydwr</v>
+<v>psoc\BMP180-TEST\BMP180-TEST.cydwr\Pins</v>
+<v>psoc\BMP180-TEST\BMP180-TEST.cydwr\Analog</v>
+<v>psoc\BMP180-TEST\BMP180-TEST.cydwr\Clocks</v>
+<v>psoc\BMP180-TEST\BMP180-TEST.cydwr\Interrupts</v>
+<v>psoc\BMP180-TEST\BMP180-TEST.cydwr\DMA</v>
+<v>psoc\BMP180-TEST\BMP180-TEST.cydwr\System</v>
+<v>psoc\BMP180-TEST\BMP180-TEST.cydwr\Directives</v>
+<v>psoc\BMP180-TEST\BMP180-TEST.cydwr\Flash Security</v>
+<v>psoc\BMP180-TEST\BMP180-TEST.cydwr\EEPROM</v>
+<v>psoc\BMP180-TEST\Header Files</v>
+<v>psoc\BMP180-TEST\Header Files\cyapicallbacks.h</v>
+<v>psoc\BMP180-TEST\Source Files</v>
+<v>psoc\BMP180-TEST\Source Files\main.c</v>
+<v>psoc\BMP180-TEST\Generated_Source</v>
+<v>psoc\BMP180-TEST\Generated_Source\PSoC5</v>
+<v>psoc\BMP180-TEST\Generated_Source\PSoC5\I2C</v>
 <v>psoc\ds1722_test\TopDesign</v>
 <v>psoc\ds1722_test\ds1722_test.cydwr</v>
 <v>psoc\ds1722_test\ds1722_test.cydwr\Pins</v>
@@ -69,53 +87,56 @@
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>psoc</v>
-<v>psoc\ds1722_test</v>
-<v>psoc\ds1722_test\TopDesign</v>
-<v>psoc\ds1722_test\ds1722_test.cydwr</v>
-<v>psoc\ds1722_test\ds1722_test.cydwr\Pins</v>
-<v>psoc\ds1722_test\ds1722_test.cydwr\Analog</v>
-<v>psoc\ds1722_test\ds1722_test.cydwr\Clocks</v>
-<v>psoc\ds1722_test\ds1722_test.cydwr\Interrupts</v>
-<v>psoc\ds1722_test\ds1722_test.cydwr\DMA</v>
-<v>psoc\ds1722_test\ds1722_test.cydwr\System</v>
-<v>psoc\ds1722_test\ds1722_test.cydwr\Directives</v>
-<v>psoc\ds1722_test\ds1722_test.cydwr\Flash Security</v>
-<v>psoc\ds1722_test\ds1722_test.cydwr\EEPROM</v>
-<v>psoc\ds1722_test\Header Files</v>
-<v>psoc\ds1722_test\Header Files\cyapicallbacks.h</v>
-<v>psoc\ds1722_test\Header Files\ds1722.h</v>
-<v>psoc\ds1722_test\Source Files</v>
-<v>psoc\ds1722_test\Source Files\ds1722.c</v>
-<v>psoc\ds1722_test\Source Files\main.c</v>
-<v>psoc\ds1722_test\Generated_Source</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\CS</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\cy_boot</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\Em_EEPROM_Dynamic</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\MISO</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\MOSI</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\rx_isr_spi</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\rx_isr_spi\rx_isr_spi.c</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\rx_isr_spi\rx_isr_spi.h</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\SCLK</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\SPI</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\SPI_IntClock</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\tx_isr_spi</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\tx_isr_spi\tx_isr_spi.c</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\tx_isr_spi\tx_isr_spi.h</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\UART</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\UART_IntClock</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\cycodeshareexport.ld</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\cycodeshareimport.ld</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\cycodeshareimport.scat</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\cydevice.h</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\cydevice_trm.h</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>psoc\BMP180-TEST</v>
+<v>psoc\BMP180-TEST\TopDesign</v>
+<v>psoc\BMP180-TEST\BMP180-TEST.cydwr</v>
+<v>psoc\BMP180-TEST\BMP180-TEST.cydwr\Pins</v>
+<v>psoc\BMP180-TEST\BMP180-TEST.cydwr\Analog</v>
+<v>psoc\BMP180-TEST\BMP180-TEST.cydwr\Clocks</v>
+<v>psoc\BMP180-TEST\BMP180-TEST.cydwr\Interrupts</v>
+<v>psoc\BMP180-TEST\BMP180-TEST.cydwr\DMA</v>
+<v>psoc\BMP180-TEST\BMP180-TEST.cydwr\System</v>
+<v>psoc\BMP180-TEST\BMP180-TEST.cydwr\Directives</v>
+<v>psoc\BMP180-TEST\BMP180-TEST.cydwr\Flash Security</v>
+<v>psoc\BMP180-TEST\BMP180-TEST.cydwr\EEPROM</v>
+<v>psoc\BMP180-TEST\Header Files</v>
+<v>psoc\BMP180-TEST\Header Files\cyapicallbacks.h</v>
+<v>psoc\BMP180-TEST\Source Files</v>
+<v>psoc\BMP180-TEST\Source Files\main.c</v>
+<v>psoc\BMP180-TEST\Generated_Source</v>
+<v>psoc\BMP180-TEST\Generated_Source\PSoC5</v>
+<v>psoc\BMP180-TEST\Generated_Source\PSoC5\cy_boot</v>
+<v>psoc\BMP180-TEST\Generated_Source\PSoC5\Em_EEPROM_Dynamic</v>
+<v>psoc\BMP180-TEST\Generated_Source\PSoC5\I2C</v>
+<v>psoc\BMP180-TEST\Generated_Source\PSoC5\I2C\I2C.c</v>
+<v>psoc\BMP180-TEST\Generated_Source\PSoC5\I2C\I2C.h</v>
+<v>psoc\BMP180-TEST\Generated_Source\PSoC5\I2C\I2C_BOOT.c</v>
+<v>psoc\BMP180-TEST\Generated_Source\PSoC5\I2C\I2C_INT.c</v>
+<v>psoc\BMP180-TEST\Generated_Source\PSoC5\I2C\I2C_MASTER.c</v>
+<v>psoc\BMP180-TEST\Generated_Source\PSoC5\I2C\I2C_PM.c</v>
+<v>psoc\BMP180-TEST\Generated_Source\PSoC5\I2C\I2C_PVT.h</v>
+<v>psoc\BMP180-TEST\Generated_Source\PSoC5\I2C\I2C_SLAVE.c</v>
+<v>psoc\BMP180-TEST\Generated_Source\PSoC5\SCL</v>
+<v>psoc\BMP180-TEST\Generated_Source\PSoC5\SDA</v>
+<v>psoc\BMP180-TEST\Generated_Source\PSoC5\UART</v>
+<v>psoc\BMP180-TEST\Generated_Source\PSoC5\UART_IntClock</v>
+<v>psoc\BMP180-TEST\Generated_Source\PSoC5\cycodeshareexport.ld</v>
+<v>psoc\BMP180-TEST\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>psoc\BMP180-TEST\Generated_Source\PSoC5\cycodeshareimport.scat</v>
+<v>psoc\BMP180-TEST\Generated_Source\PSoC5\cydevice.h</v>
+<v>psoc\BMP180-TEST\Generated_Source\PSoC5\cydevice_trm.h</v>
+<v>psoc\BMP180-TEST\Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>psoc\BMP180-TEST\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
+<v>psoc\BMP180-TEST\Generated_Source\PSoC5\cydeviceiar.inc</v>
+<v>psoc\BMP180-TEST\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
 <v>psoc</v>
+<v>psoc\BMP180-TEST</v>
+<v>psoc\BMP180-TEST\TopDesign</v>
+<v>psoc\BMP180-TEST\TopDesign\TopDesign.cysch</v>
 <v>psoc\ds1722_test</v>
 <v>psoc\ds1722_test\TopDesign</v>
 <v>psoc\ds1722_test\TopDesign\TopDesign.cysch</v>
@@ -125,6 +146,9 @@
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>psoc</v>
+<v>psoc\BMP180-TEST</v>
+<v>psoc\BMP180-TEST\TopDesign</v>
+<v>psoc\BMP180-TEST\TopDesign\TopDesign.cysch</v>
 <v>psoc\ds1722_test</v>
 <v>psoc\ds1722_test\TopDesign</v>
 <v>psoc\ds1722_test\TopDesign\TopDesign.cysch</v>
@@ -137,6 +161,42 @@
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
 <v>psoc</v>
+<v>psoc\BMP180-TEST</v>
+<v>psoc\BMP180-TEST\CortexM3</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_BOOT.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_INT.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_MASTER.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_PM.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_SLAVE.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\SCL.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\SDA.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\UART.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_BOOT.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_INT.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_IntClock.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_PM.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\BMP180-TEST.elf</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\BMP180-TEST.hex</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\BMP180-TEST.map</v>
+<v>psoc\BMP180-TEST\BMP180-TEST.gpdsc</v>
+<v>psoc\BMP180-TEST\BMP180-TEST.rpt</v>
+<v>psoc\BMP180-TEST\BMP180-TEST_timing.html</v>
 <v>psoc\ds1722_test</v>
 <v>psoc\ds1722_test\CortexM3</v>
 <v>psoc\ds1722_test\CortexM3\ARM_GCC_541</v>
@@ -236,48 +296,48 @@
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>psoc</v>
+<v>psoc\BMP180-TEST</v>
+<v>psoc\BMP180-TEST\CortexM3</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_BOOT.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_INT.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_MASTER.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_PM.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\I2C_SLAVE.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\SCL.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\SDA.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\UART.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_BOOT.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_INT.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_IntClock.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_PM.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\BMP180-TEST.elf</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\BMP180-TEST.hex</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\BMP180-TEST.map</v>
+<v>psoc\BMP180-TEST\BMP180-TEST.gpdsc</v>
+<v>psoc\BMP180-TEST\BMP180-TEST.rpt</v>
+<v>psoc\BMP180-TEST\BMP180-TEST_timing.html</v>
 <v>psoc\ds1722_test</v>
 <v>psoc\ds1722_test\CortexM3</v>
 <v>psoc\ds1722_test\CortexM3\ARM_GCC_541</v>
 <v>psoc\ds1722_test\CortexM3\ARM_GCC_541\Debug</v>
 <v>psoc\ds1722_test\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
 <v>psoc\ds1722_test\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
-<v>psoc\ds1722_test\CortexM3\ARM_GCC_541\Debug\Listing Files\CS.lst</v>
-<v>psoc\ds1722_test\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
-<v>psoc\ds1722_test\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>psoc\ds1722_test\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
-<v>psoc\ds1722_test\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>psoc\ds1722_test\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
-<v>psoc\ds1722_test\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
-<v>psoc\ds1722_test\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
-<v>psoc\ds1722_test\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
-<v>psoc\ds1722_test\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
-<v>psoc\ds1722_test\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
-<v>psoc\ds1722_test\CortexM3\ARM_GCC_541\Debug\Listing Files\ds1722.lst</v>
-<v>psoc\ds1722_test\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
-<v>psoc\ds1722_test\CortexM3\ARM_GCC_541\Debug\Listing Files\MISO.lst</v>
-<v>psoc\ds1722_test\CortexM3\ARM_GCC_541\Debug\Listing Files\MOSI.lst</v>
-<v>psoc\ds1722_test\CortexM3\ARM_GCC_541\Debug\Listing Files\rx_isr_spi.lst</v>
-<v>psoc\ds1722_test\CortexM3\ARM_GCC_541\Debug\Listing Files\SCLK.lst</v>
-<v>psoc\ds1722_test\CortexM3\ARM_GCC_541\Debug\Listing Files\SPI.lst</v>
-<v>psoc\ds1722_test\CortexM3\ARM_GCC_541\Debug\Listing Files\SPI_INT.lst</v>
-<v>psoc\ds1722_test\CortexM3\ARM_GCC_541\Debug\Listing Files\SPI_IntClock.lst</v>
-<v>psoc\ds1722_test\CortexM3\ARM_GCC_541\Debug\Listing Files\SPI_PM.lst</v>
-<v>psoc\ds1722_test\CortexM3\ARM_GCC_541\Debug\Listing Files\tx_isr_spi.lst</v>
-<v>psoc\ds1722_test\CortexM3\ARM_GCC_541\Debug\Listing Files\UART.lst</v>
-<v>psoc\ds1722_test\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_BOOT.lst</v>
-<v>psoc\ds1722_test\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_INT.lst</v>
-<v>psoc\ds1722_test\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_IntClock.lst</v>
-<v>psoc\ds1722_test\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_PM.lst</v>
-<v>psoc\ds1722_test\CortexM3\ARM_GCC_541\Debug\ds1722_test.elf</v>
-<v>psoc\ds1722_test\CortexM3\ARM_GCC_541\Debug\ds1722_test.hex</v>
-<v>psoc\ds1722_test\CortexM3\ARM_GCC_541\Debug\ds1722_test.map</v>
-<v>psoc\ds1722_test\ds1722_test.gpdsc</v>
-<v>psoc\ds1722_test\ds1722_test.rpt</v>
-<v>psoc\ds1722_test\ds1722_test_timing.html</v>
-<v>psoc\test-timer-interrupt</v>
-<v>psoc\test-timer-interrupt\CortexM3</v>
-<v>psoc\test-timer-interrupt\CortexM3\ARM_GCC_541</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -288,6 +348,15 @@
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
 <v>psoc</v>
+<v>psoc\BMP180-TEST</v>
+<v>psoc\BMP180-TEST\PSoC 5LP Architecture TRM</v>
+<v>psoc\BMP180-TEST\CY8C58LP Family Datasheet</v>
+<v>psoc\BMP180-TEST\System Reference Guides</v>
+<v>psoc\BMP180-TEST\System Reference Guides\cy_boot_v5_70</v>
+<v>psoc\BMP180-TEST\cy_pins_v2_20</v>
+<v>psoc\BMP180-TEST\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>psoc\BMP180-TEST\I2C_v3_50.pdf</v>
+<v>psoc\BMP180-TEST\UART_v2_50.pdf</v>
 <v>psoc\ds1722_test</v>
 <v>psoc\ds1722_test\PSoC 5LP Architecture TRM</v>
 <v>psoc\ds1722_test\CY8C58LP Family Datasheet</v>
@@ -320,6 +389,15 @@
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>psoc</v>
+<v>psoc\BMP180-TEST</v>
+<v>psoc\BMP180-TEST\PSoC 5LP Architecture TRM</v>
+<v>psoc\BMP180-TEST\CY8C58LP Family Datasheet</v>
+<v>psoc\BMP180-TEST\System Reference Guides</v>
+<v>psoc\BMP180-TEST\System Reference Guides\cy_boot_v5_70</v>
+<v>psoc\BMP180-TEST\cy_pins_v2_20</v>
+<v>psoc\BMP180-TEST\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>psoc\BMP180-TEST\I2C_v3_50.pdf</v>
+<v>psoc\BMP180-TEST\UART_v2_50.pdf</v>
 <v>psoc\ds1722_test</v>
 <v>psoc\ds1722_test\PSoC 5LP Architecture TRM</v>
 <v>psoc\ds1722_test\CY8C58LP Family Datasheet</v>
@@ -357,12 +435,8 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v=".\ds1722_test.cydsn\ds1722.c" />
-<name v=".\ds1722_test.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\ds1722_test.cydsn\ds1722.h" />
-<name v=".\ds1722_test.cydsn\ds1722_test.cydwr" />
-<name v=".\ds1722_test.cydsn\main.c" />
-<name v=".\ds1722_test.cydsn\Generated_Source\PSoC5\rx_isr_spi.c" />
+<name v=".\BMP180-TEST.cydsn\main.c" />
+<name v=".\BMP180-TEST.cydsn\BMP180-TEST.cydwr" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -370,7 +444,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1336, 565" SelectedTabbedMdiWindow="69eede8a-7209-4807-b4c8-27c76063a642"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="6756dd68-6c3e-4e5e-923e-1d7875cbcc88" /><DocumentWindow Key="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\ds1722.c" Guid="18fd60cc-f8e0-474b-89ca-ee6bc30adb49" /><DocumentWindow Key="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\TopDesign\TopDesign.cysch" Guid="a8f24fde-0933-467a-811a-aceadc1b979a" /><DocumentWindow Key="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\ds1722.h" Guid="e09bb17e-1f82-4038-8882-abac431c2a71" /><DocumentWindow Key="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\ds1722_test.cydwr" Guid="2df1d85c-10c0-4895-a022-415e3e490609" /><DocumentWindow Key="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\main.c" Guid="69eede8a-7209-4807-b4c8-27c76063a642" /><DocumentWindow Key="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\Generated_Source\PSoC5\rx_isr_spi.c" Guid="28855fbd-cd21-4332-a57b-3b354e83c344" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1336, 565" SelectedTabbedMdiWindow="16e52b99-809e-4ffd-833a-06f9a09c054d"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="6756dd68-6c3e-4e5e-923e-1d7875cbcc88" /><DocumentWindow Key="E:\aquadoc\psoc\psoc\BMP180-TEST.cydsn\main.c" Guid="16e52b99-809e-4ffd-833a-06f9a09c054d" /><DocumentWindow Key="E:\aquadoc\psoc\psoc\BMP180-TEST.cydsn\BMP180-TEST.cydwr" Guid="413c0b3a-c4e3-41a5-8504-5539226670e9" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

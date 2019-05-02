@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/Arch Linux) (preloaded format=xelatex 2019.3.27)  31 MAR 2019 17:37
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/Arch Linux) (preloaded format=xelatex 2019.3.27)  7 APR 2019 19:44
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1524,27 +1524,33 @@ PGFPlots: reading {measurements/hc-sr04_should.csv}
 PGFPlots: reading {measurements/hc-sr04_fail.csv}
 PGFPlots: reading {measurements/hc-sr04_fail.csv}
  [8] (./psoc/psoc/Ultrasonic_test.cydsn/hcsr04.c [9])
+PGFPlots: reading {measurements/Reeeeeed_Schalter.csv}
+
+Overfull \hbox (18.37637pt too wide) in paragraph at lines 378--380
+ [][] 
+ []
+
+[10]
 File: measurements/spi_frame_recv_atmega.png Graphic file (type bmp)
 <measurements/spi_frame_recv_atmega.png>
- [10]
-
+ [11] 
 AED: lastpage setting LastPage
-[11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 421.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 421.
+[12]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 460.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 460.
  (./bericht.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 421.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 421.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 460.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 460.
 Package rerunfilecheck Info: File `bericht.out' has not changed.
-(rerunfilecheck)             Checksum: 30BD4B79424DBB579953C27E43C39C46.
+(rerunfilecheck)             Checksum: 6C598074C201096B530E6849C14F91E1.
  ) 
 Here is how much of TeX's memory you used:
- 56370 strings out of 492933
- 1337066 string characters out of 6138667
- 2578176 words of memory out of 5000000
- 59671 multiletter control sequences out of 15000+600000
+ 56388 strings out of 492933
+ 1337476 string characters out of 6138667
+ 3718241 words of memory out of 5000000
+ 59687 multiletter control sequences out of 15000+600000
  543922 words of font info for 100 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  62i,13n,103p,831b,2190s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on bericht.pdf (12 pages).
+Output written on bericht.pdf (13 pages).

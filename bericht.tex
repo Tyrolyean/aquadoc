@@ -343,6 +343,45 @@ used to
 	{psoc/psoc/Ultrasonic_test.cydsn/hcsr04.c}
 
 	
+\subsection{Durchflussmessung}
+
+\subsubsection{Bauteilerklärung}
+
+Die Messung des Wasserdurchflusses wird mittels eines Standard Wasserzählers
+durchgeführt. In diesem befindet sich ein Reed-Schalter welcher bei jeder vollen
+Umdrehung des sich im Zählerbefindenden Schaufelrades einman betätigt wird. Dies
+entspricht einem dem Datenblatt entnehmbaren Volumen an Wasser.
+
+\subsubsection{Prellen des REED-Kontaktes}
+
+Da der Reed-Schalter ein Phsischer Schalter ist, welcher ein zwei Metallische
+Oberflächen aufeinander aufschlagen lässt entsteht ein Schalter-Prellen.
+\begin{figure}[H]
+	
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+		ylabel=$ Spannung $,
+		xlabel=$ Zeit $,
+		width=\textwidth,
+		height=0.5\textwidth,
+		xmin=-0.17,
+		xmax=-0.14
+		% If you want to make the lines thick
+		%every axis plot/.append style={ultra thick},
+	]
+	
+	\addplot table [x=t, y=u, col sep=comma, mark=none, 
+		color=blue] {measurements/Reeeeeed_Schalter.csv};
+	
+	\end{axis}
+	\end{tikzpicture}
+	\label{fig:prellen}
+
+	\caption{Messung des Schalterprellens mithilfe des Analog-Discovery}
+\end{figure}
+
+
 	
 \subsection{DS1722}
 

@@ -1,0 +1,9 @@
+E:\aquadoc\psoc\psoc\test-timer-interrupt.cydsn\test-timer-interrupt.cyprj|7f4223c0-7995-414f-bcb9-7179123b62a2
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|63226bbf-c7d2-474b-badd-9327cc095e3e
+C:\Users\Tyrolyean\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|2a6580b3-45d3-4fd9-aa03-902a49979bf8
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|09e8abc3-75ff-42ac-b720-c0d5618febcf
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|b0488e49-42a3-4b1a-b69a-b1c4f450e21c
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|28404473-6fae-4412-928d-f943fa2ed77e
+E:\aquadoc\psoc\psoc\Ultrasonic_test.cydsn\Ultrasonic_test.cyprj|0cc3ec87-552a-416e-986e-51310c85b076
+E:\aquadoc\psoc\psoc\ds1722_test.cydsn\ds1722_test.cyprj|27016b54-f0a0-44fc-9aad-179fd499d8ec
+E:\aquadoc\psoc\psoc\BMP180-TEST.cydsn\BMP180-TEST.cyprj|b3c4c843-eabe-4f46-a2d6-9dd50ce3a820
