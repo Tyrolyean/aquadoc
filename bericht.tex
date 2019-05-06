@@ -158,6 +158,8 @@ Datum & Beschreibung & Stunden \\ \hline
 25.03.19 & Batteriestandmessung + DS1722 Temperatursensor programmieren & 3h \\ \hline
 01.04.19 & DS1722 Temperatursensor programmieren& 3h \\ \hline
 08.04.19 & BMP180 Temperatursensor programmieren & 3h \\ \hline
+29.04.19 & BMP180 Temperatursensor programmieren & 3h \\ \hline
+06.05.19 & BMP180 Temperatursensor programmieren & 3h \\ \hline
 \end{tabular}
 \end{table}
 
@@ -177,6 +179,8 @@ Datum & Beschreibung & Stunden \\ \hline
 25.03.19 & DS1722 Temperatursensor programmieren & 3h \\ \hline
 01.04.19 & DS1722 Temperatursensor programmieren& 3h \\ \hline
 08.04.19 & BMP180 Temperatursensor programmieren & 3h \\ \hline
+29.04.19 & BMP180 Temperatursensor programmieren & 3h \\ \hline
+06.05.19 & BMP180 Temperatursensor programmieren & 3h \\ \hline
 \end{tabular}
 \end{table}
 
@@ -196,6 +200,8 @@ Datum & Beschreibung & Stunden \\ \hline
 25.03.19 & Dokumentation + DS1722 Temperatursensor programmieren & 3h \\ \hline
 01.04.19 & Dokumentation & 3h \\ \hline
 08.04.19 & Dokumentation & 3h \\ \hline
+29.04.19 & Dokumentation + Nachholen des Zeitplans & 3h \\ \hline
+06.05.19 & Dokumentation + Einfügen der C-Codes in Dokumentation  & 3h \\ \hline
 \end{tabular}
 \end{table}
 
@@ -236,6 +242,9 @@ Gefundene Bauteile auf neuhold-elektronik.at:
 \begin{itemize}
 	\item{DS1722}: \\
 	SPI Digital Thermometer. 8-12 bit Auflösung.
+	
+	Wird nicht mehr verwendet, da über die SPI keine Ausgabe erfolgt
+	\item{BMP180}: \\
 
 	\item{HC - SR04}: \\
 	PWM Ultraschall Messmodul. 2mA standby strom.
@@ -261,7 +270,7 @@ jeweiligen Sensoren verbunden ebenfalls wird auf die Verwendung der richtigen Ve
  {./arduino/HC-SR04/HC-SR04.ino}
 
 \newpage
-\subsection{DS1722}
+\subsection{BMP180}
 
 \lstinputlisting[language=C++, numbers=left, frame=trBL, breaklines=true,
  breakautoindent=true, formfeed=\newpage, label={lst:ardu_ds1722},
@@ -306,7 +315,7 @@ used to
 
 
 \fi
-
+\newpage
 \section{Durchführung Mittels PSoC}
 
 	Die Realisierung des Projektes mittels des PSoC Microcontrollers wurde
@@ -314,6 +323,23 @@ used to
 	um die gewünschten Funktionalitäten einzeln zu testen. Die
 	Einzelprogramme sollten dann zu einem Gesamtprogramm zusammengeführt
 	werden, welches volle Funktionalität bietet.
+\subsection{Timer-Interrupt}
+
+\subsubsection{C-Code}
+
+\lstinputlisting[language=C, numbers=left, frame=trBL, breaklines=true,
+	breakautoindent=true, formfeed=\newpage, label={lst:psoc_hc-sr04},
+	caption={Timer-Interrupt Programm}, columns=flexible]
+	{psoc/psoc/test-timer-interrupt.cydsn/main.c}
+	
+\subsection{Battery-Alarm}
+
+\subsubsection{C-Code}
+
+\lstinputlisting[language=C, numbers=left, frame=trBL, breaklines=true,
+	breakautoindent=true, formfeed=\newpage, label={lst:psoc_hc-sr04},
+	caption={Batteriestandmessung}, columns=flexible]
+	{psoc/psoc/BatteryAlarmTestNeu.cydsn/Battery_Alarm.cydsn/main.c}
 
 \subsection{HC-SR04}
 
@@ -399,7 +425,7 @@ used to
 
 	Die gemessene Pulslänge in ms soll durch 57 dividiert werden um den
 	Abstand in cm zu erhalten.
-
+	
 	\subsubsection{C-Code}
 	
 	Programm für den Ultraschallsensor zur Messung des Wasserstands im 
@@ -450,13 +476,13 @@ Oberflächen aufeinander aufschlagen lässt entsteht ein Schalter-Prellen.
 \end{figure}
 
 
-	
+\newpage
 \subsection{DS1722}
 
 	Der DS1722 ist ein digitaler Temeperatur-Mess-IC von MAXIM Integrated.
-	Er hat einen Messbereich von -55°C bis +120°C welchen er wahlweise mit
+	Er hat einen Messbereich von -60°C bis +120°C welchen er wahlweise mit
 	8, 9, 10, 11 oder 12 bit auflösen kann. Als Schnittstellen hat er
-	wahlweise 3-Wire oder SPI
+	wahlweise 3-Wire oder SPI.
 	\footnote{Serial Peripherial Interface, Standart von Motorola}. Welches
 	Protokoll verwendet wird ist abhängig vom Spannungspegel am SERMODE
 	Pin. Wenn am SERMODE Pin 5V anliegen, wird SPI verwendet, wenn 0V
@@ -483,8 +509,24 @@ Oberflächen aufeinander aufschlagen lässt entsteht ein Schalter-Prellen.
 			{measurements/spi_frame_recv_atmega}
 		\label{fig:spi_frame_atmega}
 		\caption{Erzielltes Ergebnis mit ATMega 2560}
-	\end{figure}
+	\end{figure}	
+\newpage
+\subsubsection{C-Code für DS1722}
 
+\lstinputlisting[language=C, numbers=left, frame=trBL, breaklines=true,
+	breakautoindent=true, formfeed=\newpage, label={lst:psoc_hc-sr04},
+	caption={Fehlerhaftiges Temperaturmessungsprogramm mit Ds1722}, columns=flexible]
+	{psoc/psoc/TemperaturSensor_Manuel/main.c}
+	
+\subsection{BMP180}
+	
+\subsubsection{C-Code für BMP180}
+
+\lstinputlisting[language=C, numbers=left, frame=trBL, breaklines=true,
+	breakautoindent=true, formfeed=\newpage, label={lst:psoc_hc-sr04},
+	caption={Nicht vollständiges Temperaturmessungsprogramm mit BMP180}, columns=flexible]
+	{psoc/psoc/BMP180-TEST.cydsn/main.c}	
+	
 \section{Anhang}
 
 \subsection{Literaturverzeichnis}
