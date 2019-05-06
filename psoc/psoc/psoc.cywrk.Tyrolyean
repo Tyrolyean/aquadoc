@@ -13,10 +13,9 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="psoc\water_flow\TopDesign">
 <ExpandedNodeIds>
 <v>psoc</v>
-<v>psoc\BMP180-TEST</v>
 <v>psoc\BMP180-TEST\TopDesign</v>
 <v>psoc\BMP180-TEST\BMP180-TEST.cydwr</v>
 <v>psoc\BMP180-TEST\BMP180-TEST.cydwr\Pins</v>
@@ -56,6 +55,7 @@
 <v>psoc\ds1722_test\Generated_Source\PSoC5</v>
 <v>psoc\ds1722_test\Generated_Source\PSoC5\rx_isr_spi</v>
 <v>psoc\ds1722_test\Generated_Source\PSoC5\tx_isr_spi</v>
+<v>psoc\onewire_temp_sensor\TopDesign</v>
 <v>psoc\test-timer-interrupt\TopDesign</v>
 <v>psoc\test-timer-interrupt\test-timer-interrupt.cydwr</v>
 <v>psoc\test-timer-interrupt\test-timer-interrupt.cydwr\Pins</v>
@@ -84,51 +84,69 @@
 <v>psoc\Ultrasonic_test\Source Files\hcsr04.c</v>
 <v>psoc\Ultrasonic_test\Generated_Source</v>
 <v>psoc\Ultrasonic_test\Generated_Source\PSoC5</v>
+<v>psoc\water_flow</v>
+<v>psoc\water_flow\TopDesign</v>
+<v>psoc\water_flow\water_flow.cydwr</v>
+<v>psoc\water_flow\water_flow.cydwr\Pins</v>
+<v>psoc\water_flow\water_flow.cydwr\Analog</v>
+<v>psoc\water_flow\water_flow.cydwr\Clocks</v>
+<v>psoc\water_flow\water_flow.cydwr\Interrupts</v>
+<v>psoc\water_flow\water_flow.cydwr\DMA</v>
+<v>psoc\water_flow\water_flow.cydwr\System</v>
+<v>psoc\water_flow\water_flow.cydwr\Directives</v>
+<v>psoc\water_flow\water_flow.cydwr\Flash Security</v>
+<v>psoc\water_flow\water_flow.cydwr\EEPROM</v>
+<v>psoc\water_flow\Header Files</v>
+<v>psoc\water_flow\Header Files\cyapicallbacks.h</v>
+<v>psoc\water_flow\Source Files</v>
+<v>psoc\water_flow\Source Files\main.c</v>
+<v>psoc\water_flow\Generated_Source</v>
+<v>psoc\water_flow\Generated_Source\PSoC5</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>psoc</v>
 <v>psoc\BMP180-TEST</v>
-<v>psoc\BMP180-TEST\TopDesign</v>
-<v>psoc\BMP180-TEST\BMP180-TEST.cydwr</v>
-<v>psoc\BMP180-TEST\BMP180-TEST.cydwr\Pins</v>
-<v>psoc\BMP180-TEST\BMP180-TEST.cydwr\Analog</v>
-<v>psoc\BMP180-TEST\BMP180-TEST.cydwr\Clocks</v>
-<v>psoc\BMP180-TEST\BMP180-TEST.cydwr\Interrupts</v>
-<v>psoc\BMP180-TEST\BMP180-TEST.cydwr\DMA</v>
-<v>psoc\BMP180-TEST\BMP180-TEST.cydwr\System</v>
-<v>psoc\BMP180-TEST\BMP180-TEST.cydwr\Directives</v>
-<v>psoc\BMP180-TEST\BMP180-TEST.cydwr\Flash Security</v>
-<v>psoc\BMP180-TEST\BMP180-TEST.cydwr\EEPROM</v>
-<v>psoc\BMP180-TEST\Header Files</v>
-<v>psoc\BMP180-TEST\Header Files\cyapicallbacks.h</v>
-<v>psoc\BMP180-TEST\Source Files</v>
-<v>psoc\BMP180-TEST\Source Files\main.c</v>
-<v>psoc\BMP180-TEST\Generated_Source</v>
-<v>psoc\BMP180-TEST\Generated_Source\PSoC5</v>
-<v>psoc\BMP180-TEST\Generated_Source\PSoC5\cy_boot</v>
-<v>psoc\BMP180-TEST\Generated_Source\PSoC5\Em_EEPROM_Dynamic</v>
-<v>psoc\BMP180-TEST\Generated_Source\PSoC5\I2C</v>
-<v>psoc\BMP180-TEST\Generated_Source\PSoC5\I2C\I2C.c</v>
-<v>psoc\BMP180-TEST\Generated_Source\PSoC5\I2C\I2C.h</v>
-<v>psoc\BMP180-TEST\Generated_Source\PSoC5\I2C\I2C_BOOT.c</v>
-<v>psoc\BMP180-TEST\Generated_Source\PSoC5\I2C\I2C_INT.c</v>
-<v>psoc\BMP180-TEST\Generated_Source\PSoC5\I2C\I2C_MASTER.c</v>
-<v>psoc\BMP180-TEST\Generated_Source\PSoC5\I2C\I2C_PM.c</v>
-<v>psoc\BMP180-TEST\Generated_Source\PSoC5\I2C\I2C_PVT.h</v>
-<v>psoc\BMP180-TEST\Generated_Source\PSoC5\I2C\I2C_SLAVE.c</v>
-<v>psoc\BMP180-TEST\Generated_Source\PSoC5\SCL</v>
-<v>psoc\BMP180-TEST\Generated_Source\PSoC5\SDA</v>
-<v>psoc\BMP180-TEST\Generated_Source\PSoC5\UART</v>
-<v>psoc\BMP180-TEST\Generated_Source\PSoC5\UART_IntClock</v>
-<v>psoc\BMP180-TEST\Generated_Source\PSoC5\cycodeshareexport.ld</v>
-<v>psoc\BMP180-TEST\Generated_Source\PSoC5\cycodeshareimport.ld</v>
-<v>psoc\BMP180-TEST\Generated_Source\PSoC5\cycodeshareimport.scat</v>
-<v>psoc\BMP180-TEST\Generated_Source\PSoC5\cydevice.h</v>
-<v>psoc\BMP180-TEST\Generated_Source\PSoC5\cydevice_trm.h</v>
-<v>psoc\BMP180-TEST\Generated_Source\PSoC5\cydevicegnu.inc</v>
-<v>psoc\BMP180-TEST\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
-<v>psoc\BMP180-TEST\Generated_Source\PSoC5\cydeviceiar.inc</v>
-<v>psoc\BMP180-TEST\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
+<v>psoc\ds1722_test</v>
+<v>psoc\onewire_temp_sensor</v>
+<v>psoc\test-timer-interrupt</v>
+<v>psoc\Ultrasonic_test</v>
+<v>psoc\water_flow</v>
+<v>psoc\water_flow\TopDesign</v>
+<v>psoc\water_flow\water_flow.cydwr</v>
+<v>psoc\water_flow\water_flow.cydwr\Pins</v>
+<v>psoc\water_flow\water_flow.cydwr\Analog</v>
+<v>psoc\water_flow\water_flow.cydwr\Clocks</v>
+<v>psoc\water_flow\water_flow.cydwr\Interrupts</v>
+<v>psoc\water_flow\water_flow.cydwr\DMA</v>
+<v>psoc\water_flow\water_flow.cydwr\System</v>
+<v>psoc\water_flow\water_flow.cydwr\Directives</v>
+<v>psoc\water_flow\water_flow.cydwr\Flash Security</v>
+<v>psoc\water_flow\water_flow.cydwr\EEPROM</v>
+<v>psoc\water_flow\Header Files</v>
+<v>psoc\water_flow\Header Files\cyapicallbacks.h</v>
+<v>psoc\water_flow\Source Files</v>
+<v>psoc\water_flow\Source Files\main.c</v>
+<v>psoc\water_flow\Generated_Source</v>
+<v>psoc\water_flow\Generated_Source\PSoC5</v>
+<v>psoc\water_flow\Generated_Source\PSoC5\Counter</v>
+<v>psoc\water_flow\Generated_Source\PSoC5\cy_boot</v>
+<v>psoc\water_flow\Generated_Source\PSoC5\Em_EEPROM_Dynamic</v>
+<v>psoc\water_flow\Generated_Source\PSoC5\UART</v>
+<v>psoc\water_flow\Generated_Source\PSoC5\UART_IntClock</v>
+<v>psoc\water_flow\Generated_Source\PSoC5\water_counter</v>
+<v>psoc\water_flow\Generated_Source\PSoC5\cycodeshareexport.ld</v>
+<v>psoc\water_flow\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>psoc\water_flow\Generated_Source\PSoC5\cycodeshareimport.scat</v>
+<v>psoc\water_flow\Generated_Source\PSoC5\cydevice.h</v>
+<v>psoc\water_flow\Generated_Source\PSoC5\cydevice_trm.h</v>
+<v>psoc\water_flow\Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>psoc\water_flow\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
+<v>psoc\water_flow\Generated_Source\PSoC5\cydeviceiar.inc</v>
+<v>psoc\water_flow\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
+<v>psoc\water_flow\Generated_Source\PSoC5\cydevicerv.inc</v>
+<v>psoc\water_flow\Generated_Source\PSoC5\cydevicerv_trm.inc</v>
+<v>psoc\water_flow\Generated_Source\PSoC5\cydisabledsheets.h</v>
+<v>psoc\water_flow\Generated_Source\PSoC5\cyfitter.h</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -143,6 +161,9 @@
 <v>psoc\test-timer-interrupt</v>
 <v>psoc\test-timer-interrupt\TopDesign</v>
 <v>psoc\test-timer-interrupt\TopDesign\TopDesign.cysch</v>
+<v>psoc\water_flow</v>
+<v>psoc\water_flow\TopDesign</v>
+<v>psoc\water_flow\TopDesign\TopDesign.cysch</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>psoc</v>
@@ -152,10 +173,14 @@
 <v>psoc\ds1722_test</v>
 <v>psoc\ds1722_test\TopDesign</v>
 <v>psoc\ds1722_test\TopDesign\TopDesign.cysch</v>
+<v>psoc\onewire_temp_sensor</v>
 <v>psoc\test-timer-interrupt</v>
 <v>psoc\test-timer-interrupt\TopDesign</v>
 <v>psoc\test-timer-interrupt\TopDesign\TopDesign.cysch</v>
 <v>psoc\Ultrasonic_test</v>
+<v>psoc\water_flow</v>
+<v>psoc\water_flow\TopDesign</v>
+<v>psoc\water_flow\TopDesign\TopDesign.cysch</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -236,6 +261,34 @@
 <v>psoc\ds1722_test\ds1722_test.gpdsc</v>
 <v>psoc\ds1722_test\ds1722_test.rpt</v>
 <v>psoc\ds1722_test\ds1722_test_timing.html</v>
+<v>psoc\onewire_temp_sensor</v>
+<v>psoc\onewire_temp_sensor\CortexM3</v>
+<v>psoc\onewire_temp_sensor\CortexM3\ARM_GCC_541</v>
+<v>psoc\onewire_temp_sensor\CortexM3\ARM_GCC_541\Debug</v>
+<v>psoc\onewire_temp_sensor\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>psoc\onewire_temp_sensor\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>psoc\onewire_temp_sensor\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>psoc\onewire_temp_sensor\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>psoc\onewire_temp_sensor\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>psoc\onewire_temp_sensor\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>psoc\onewire_temp_sensor\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>psoc\onewire_temp_sensor\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>psoc\onewire_temp_sensor\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>psoc\onewire_temp_sensor\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>psoc\onewire_temp_sensor\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>psoc\onewire_temp_sensor\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>psoc\onewire_temp_sensor\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>psoc\onewire_temp_sensor\CortexM3\ARM_GCC_541\Debug\Listing Files\OneWire.lst</v>
+<v>psoc\onewire_temp_sensor\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_Sensor.lst</v>
+<v>psoc\onewire_temp_sensor\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_temp.lst</v>
+<v>psoc\onewire_temp_sensor\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_temp_BOOT.lst</v>
+<v>psoc\onewire_temp_sensor\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_temp_INT.lst</v>
+<v>psoc\onewire_temp_sensor\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_temp_IntClock.lst</v>
+<v>psoc\onewire_temp_sensor\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_temp_PM.lst</v>
+<v>psoc\onewire_temp_sensor\CortexM3\ARM_GCC_541\Debug\onewire_temp_sensor.elf</v>
+<v>psoc\onewire_temp_sensor\CortexM3\ARM_GCC_541\Debug\onewire_temp_sensor.hex</v>
+<v>psoc\onewire_temp_sensor\CortexM3\ARM_GCC_541\Debug\onewire_temp_sensor.map</v>
+<v>psoc\onewire_temp_sensor\onewire_temp_sensor.gpdsc</v>
 <v>psoc\test-timer-interrupt</v>
 <v>psoc\test-timer-interrupt\CortexM3</v>
 <v>psoc\test-timer-interrupt\CortexM3\ARM_GCC_541</v>
@@ -293,6 +346,37 @@
 <v>psoc\Ultrasonic_test\CortexM3\ARM_GCC_541\Debug\Ultrasonic_test.hex</v>
 <v>psoc\Ultrasonic_test\CortexM3\ARM_GCC_541\Debug\Ultrasonic_test.map</v>
 <v>psoc\Ultrasonic_test\Ultrasonic_test.gpdsc</v>
+<v>psoc\water_flow</v>
+<v>psoc\water_flow\CortexM3</v>
+<v>psoc\water_flow\CortexM3\ARM_GCC_541</v>
+<v>psoc\water_flow\CortexM3\ARM_GCC_541\Debug</v>
+<v>psoc\water_flow\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>psoc\water_flow\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>psoc\water_flow\CortexM3\ARM_GCC_541\Debug\Listing Files\Counter.lst</v>
+<v>psoc\water_flow\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>psoc\water_flow\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>psoc\water_flow\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>psoc\water_flow\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>psoc\water_flow\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>psoc\water_flow\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>psoc\water_flow\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>psoc\water_flow\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>psoc\water_flow\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>psoc\water_flow\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>psoc\water_flow\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>psoc\water_flow\CortexM3\ARM_GCC_541\Debug\Listing Files\UART.lst</v>
+<v>psoc\water_flow\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_BOOT.lst</v>
+<v>psoc\water_flow\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_INT.lst</v>
+<v>psoc\water_flow\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_IntClock.lst</v>
+<v>psoc\water_flow\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_PM.lst</v>
+<v>psoc\water_flow\CortexM3\ARM_GCC_541\Debug\Listing Files\water_counter.lst</v>
+<v>psoc\water_flow\CortexM3\ARM_GCC_541\Debug\Listing Files\water_counter_PM.lst</v>
+<v>psoc\water_flow\CortexM3\ARM_GCC_541\Debug\water_flow.elf</v>
+<v>psoc\water_flow\CortexM3\ARM_GCC_541\Debug\water_flow.hex</v>
+<v>psoc\water_flow\CortexM3\ARM_GCC_541\Debug\water_flow.map</v>
+<v>psoc\water_flow\water_flow.gpdsc</v>
+<v>psoc\water_flow\water_flow.rpt</v>
+<v>psoc\water_flow\water_flow_timing.html</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>psoc</v>
@@ -369,6 +453,13 @@
 <v>psoc\ds1722_test\not_v1_0.pdf</v>
 <v>psoc\ds1722_test\SPI_Master_v2_50.pdf</v>
 <v>psoc\ds1722_test\UART_v2_50.pdf</v>
+<v>psoc\onewire_temp_sensor\PSoC 5LP Architecture TRM</v>
+<v>psoc\onewire_temp_sensor\CY8C58LP Family Datasheet</v>
+<v>psoc\onewire_temp_sensor\System Reference Guides</v>
+<v>psoc\onewire_temp_sensor\System Reference Guides\cy_boot_v5_70</v>
+<v>psoc\onewire_temp_sensor\cy_pins_v2_20</v>
+<v>psoc\onewire_temp_sensor\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>psoc\onewire_temp_sensor\UART_v2_50.pdf</v>
 <v>psoc\test-timer-interrupt</v>
 <v>psoc\test-timer-interrupt\PSoC 5LP Architecture TRM</v>
 <v>psoc\test-timer-interrupt\CY8C58LP Family Datasheet</v>
@@ -386,6 +477,21 @@
 <v>psoc\Ultrasonic_test\cy_pins_v2_20</v>
 <v>psoc\Ultrasonic_test\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
 <v>psoc\Ultrasonic_test\UART_v2_50.pdf</v>
+<v>psoc\water_flow</v>
+<v>psoc\water_flow\PSoC 5LP Architecture TRM</v>
+<v>psoc\water_flow\CY8C58LP Family Datasheet</v>
+<v>psoc\water_flow\System Reference Guides</v>
+<v>psoc\water_flow\System Reference Guides\cy_boot_v5_70</v>
+<v>psoc\water_flow\Counter_v3_0.pdf</v>
+<v>psoc\water_flow\cy_clock_v2_20.pdf</v>
+<v>psoc\water_flow\cy_constant_v1_0.pdf</v>
+<v>psoc\water_flow\cy_pins_v2_20</v>
+<v>psoc\water_flow\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>psoc\water_flow\Gnd_v1_0.pdf</v>
+<v>psoc\water_flow\Power_v1_0.pdf</v>
+<v>psoc\water_flow\Resistor_v1_0.pdf</v>
+<v>psoc\water_flow\SwitchSPST_v1_0.pdf</v>
+<v>psoc\water_flow\UART_v2_50.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>psoc</v>
@@ -410,6 +516,7 @@
 <v>psoc\ds1722_test\not_v1_0.pdf</v>
 <v>psoc\ds1722_test\SPI_Master_v2_50.pdf</v>
 <v>psoc\ds1722_test\UART_v2_50.pdf</v>
+<v>psoc\onewire_temp_sensor</v>
 <v>psoc\test-timer-interrupt</v>
 <v>psoc\test-timer-interrupt\PSoC 5LP Architecture TRM</v>
 <v>psoc\test-timer-interrupt\CY8C58LP Family Datasheet</v>
@@ -421,6 +528,15 @@
 <v>psoc\test-timer-interrupt\Timer_v2_80.pdf</v>
 <v>psoc\test-timer-interrupt\ZeroTerminal.pdf</v>
 <v>psoc\Ultrasonic_test</v>
+<v>psoc\water_flow</v>
+<v>psoc\water_flow\PSoC 5LP Architecture TRM</v>
+<v>psoc\water_flow\CY8C58LP Family Datasheet</v>
+<v>psoc\water_flow\System Reference Guides</v>
+<v>psoc\water_flow\System Reference Guides\cy_boot_v5_70</v>
+<v>psoc\water_flow\Counter_v3_0.pdf</v>
+<v>psoc\water_flow\cy_clock_v2_20.pdf</v>
+<v>psoc\water_flow\cy_constant_v1_0.pdf</v>
+<v>psoc\water_flow\cy_pins_v2_20</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -434,17 +550,14 @@
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
-<OpenDocs>
-<name v=".\BMP180-TEST.cydsn\main.c" />
-<name v=".\BMP180-TEST.cydsn\BMP180-TEST.cydwr" />
-</OpenDocs>
+<OpenDocs />
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
   Actipro Docking/MDI for WinForms
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1336, 565" SelectedTabbedMdiWindow="16e52b99-809e-4ffd-833a-06f9a09c054d"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="6756dd68-6c3e-4e5e-923e-1d7875cbcc88" /><DocumentWindow Key="E:\aquadoc\psoc\psoc\BMP180-TEST.cydsn\main.c" Guid="16e52b99-809e-4ffd-833a-06f9a09c054d" /><DocumentWindow Key="E:\aquadoc\psoc\psoc\BMP180-TEST.cydsn\BMP180-TEST.cydwr" Guid="413c0b3a-c4e3-41a5-8504-5539226670e9" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer /><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

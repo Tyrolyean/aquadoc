@@ -1,0 +1,11 @@
+E:\aquadoc\psoc\psoc\test-timer-interrupt.cydsn\test-timer-interrupt.cyprj|18b2775d-501b-40a7-a9b8-cc01d01df2df
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|f435a4cb-e356-41e1-a060-747a0fb938a6
+C:\Users\Tyrolyean\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|0f47b543-da39-4f15-8f75-82288def432b
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|539a2446-472d-48e3-96d0-fae53f487c1b
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|33225ada-e9e4-4e00-8621-159c2a49f5fb
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|9ff51387-e003-4d09-8d90-70d94c240b72
+E:\aquadoc\psoc\psoc\Ultrasonic_test.cydsn\Ultrasonic_test.cyprj|3631415f-58ca-45cc-bcdb-faf15b8562d3
+E:\aquadoc\psoc\psoc\ds1722_test.cydsn\ds1722_test.cyprj|d227b9ac-918a-4321-94d4-0e9b2e87c3be
+E:\aquadoc\psoc\psoc\BMP180-TEST.cydsn\BMP180-TEST.cyprj|8f57ece9-0c1d-4ad2-83e5-03e8fe65d5e1
+E:\aquadoc\psoc\psoc\onewire_temp_sensor.cydsn\onewire_temp_sensor.cyprj|775be4e4-4efa-4045-b925-17d967baf992
+E:\aquadoc\psoc\psoc\water_flow.cydsn\water_flow.cyprj|cba754b7-5104-42d5-b926-2a26dd1e061c

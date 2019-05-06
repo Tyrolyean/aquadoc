@@ -1,0 +1,2198 @@
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"water_counter.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.water_counter_Enable,"ax",%progbits
+  20              		.align	2
+  21              		.global	water_counter_Enable
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	water_counter_Enable, %function
+  25              	water_counter_Enable:
+  26              	.LFB1:
+  27              		.file 1 "Generated_Source\\PSoC5\\water_counter.c"
+   1:Generated_Source\PSoC5/water_counter.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/water_counter.c **** * File Name: water_counter.c  
+   3:Generated_Source\PSoC5/water_counter.c **** * Version 3.0
+   4:Generated_Source\PSoC5/water_counter.c **** *
+   5:Generated_Source\PSoC5/water_counter.c **** *  Description:
+   6:Generated_Source\PSoC5/water_counter.c **** *     The Counter component consists of a 8, 16, 24 or 32-bit counter with
+   7:Generated_Source\PSoC5/water_counter.c **** *     a selectable period between 2 and 2^Width - 1.  
+   8:Generated_Source\PSoC5/water_counter.c **** *
+   9:Generated_Source\PSoC5/water_counter.c **** *   Note:
+  10:Generated_Source\PSoC5/water_counter.c **** *     None
+  11:Generated_Source\PSoC5/water_counter.c **** *
+  12:Generated_Source\PSoC5/water_counter.c **** ********************************************************************************
+  13:Generated_Source\PSoC5/water_counter.c **** * Copyright 2008-2012, Cypress Semiconductor Corporation.  All rights reserved.
+  14:Generated_Source\PSoC5/water_counter.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  15:Generated_Source\PSoC5/water_counter.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  16:Generated_Source\PSoC5/water_counter.c **** * the software package with which this file was provided.
+  17:Generated_Source\PSoC5/water_counter.c **** *******************************************************************************/
+  18:Generated_Source\PSoC5/water_counter.c **** 
+  19:Generated_Source\PSoC5/water_counter.c **** #include "water_counter.h"
+  20:Generated_Source\PSoC5/water_counter.c **** 
+  21:Generated_Source\PSoC5/water_counter.c **** uint8 water_counter_initVar = 0u;
+  22:Generated_Source\PSoC5/water_counter.c **** 
+  23:Generated_Source\PSoC5/water_counter.c **** 
+  24:Generated_Source\PSoC5/water_counter.c **** /*******************************************************************************
+  25:Generated_Source\PSoC5/water_counter.c **** * Function Name: water_counter_Init
+  26:Generated_Source\PSoC5/water_counter.c **** ********************************************************************************
+  27:Generated_Source\PSoC5/water_counter.c **** * Summary:
+  28:Generated_Source\PSoC5/water_counter.c **** *     Initialize to the schematic state
+  29:Generated_Source\PSoC5/water_counter.c **** * 
+  30:Generated_Source\PSoC5/water_counter.c **** * Parameters:  
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 2
+
+
+  31:Generated_Source\PSoC5/water_counter.c **** *  void  
+  32:Generated_Source\PSoC5/water_counter.c **** *
+  33:Generated_Source\PSoC5/water_counter.c **** * Return: 
+  34:Generated_Source\PSoC5/water_counter.c **** *  void
+  35:Generated_Source\PSoC5/water_counter.c **** *
+  36:Generated_Source\PSoC5/water_counter.c **** *******************************************************************************/
+  37:Generated_Source\PSoC5/water_counter.c **** void water_counter_Init(void) 
+  38:Generated_Source\PSoC5/water_counter.c **** {
+  39:Generated_Source\PSoC5/water_counter.c ****         #if (!water_counter_UsingFixedFunction && !water_counter_ControlRegRemoved)
+  40:Generated_Source\PSoC5/water_counter.c ****             uint8 ctrl;
+  41:Generated_Source\PSoC5/water_counter.c ****         #endif /* (!water_counter_UsingFixedFunction && !water_counter_ControlRegRemoved) */
+  42:Generated_Source\PSoC5/water_counter.c ****         
+  43:Generated_Source\PSoC5/water_counter.c ****         #if(!water_counter_UsingFixedFunction) 
+  44:Generated_Source\PSoC5/water_counter.c ****             /* Interrupt State Backup for Critical Region*/
+  45:Generated_Source\PSoC5/water_counter.c ****             uint8 water_counter_interruptState;
+  46:Generated_Source\PSoC5/water_counter.c ****         #endif /* (!water_counter_UsingFixedFunction) */
+  47:Generated_Source\PSoC5/water_counter.c ****         
+  48:Generated_Source\PSoC5/water_counter.c ****         #if (water_counter_UsingFixedFunction)
+  49:Generated_Source\PSoC5/water_counter.c ****             /* Clear all bits but the enable bit (if it's already set for Timer operation */
+  50:Generated_Source\PSoC5/water_counter.c ****             water_counter_CONTROL &= water_counter_CTRL_ENABLE;
+  51:Generated_Source\PSoC5/water_counter.c ****             
+  52:Generated_Source\PSoC5/water_counter.c ****             /* Clear the mode bits for continuous run mode */
+  53:Generated_Source\PSoC5/water_counter.c ****             #if (CY_PSOC5A)
+  54:Generated_Source\PSoC5/water_counter.c ****                 water_counter_CONTROL2 &= ((uint8)(~water_counter_CTRL_MODE_MASK));
+  55:Generated_Source\PSoC5/water_counter.c ****             #endif /* (CY_PSOC5A) */
+  56:Generated_Source\PSoC5/water_counter.c ****             #if (CY_PSOC3 || CY_PSOC5LP)
+  57:Generated_Source\PSoC5/water_counter.c ****                 water_counter_CONTROL3 &= ((uint8)(~water_counter_CTRL_MODE_MASK));                
+  58:Generated_Source\PSoC5/water_counter.c ****             #endif /* (CY_PSOC3 || CY_PSOC5LP) */
+  59:Generated_Source\PSoC5/water_counter.c ****             /* Check if One Shot mode is enabled i.e. RunMode !=0*/
+  60:Generated_Source\PSoC5/water_counter.c ****             #if (water_counter_RunModeUsed != 0x0u)
+  61:Generated_Source\PSoC5/water_counter.c ****                 /* Set 3rd bit of Control register to enable one shot mode */
+  62:Generated_Source\PSoC5/water_counter.c ****                 water_counter_CONTROL |= water_counter_ONESHOT;
+  63:Generated_Source\PSoC5/water_counter.c ****             #endif /* (water_counter_RunModeUsed != 0x0u) */
+  64:Generated_Source\PSoC5/water_counter.c ****             
+  65:Generated_Source\PSoC5/water_counter.c ****             /* Set the IRQ to use the status register interrupts */
+  66:Generated_Source\PSoC5/water_counter.c ****             water_counter_CONTROL2 |= water_counter_CTRL2_IRQ_SEL;
+  67:Generated_Source\PSoC5/water_counter.c ****             
+  68:Generated_Source\PSoC5/water_counter.c ****             /* Clear and Set SYNCTC and SYNCCMP bits of RT1 register */
+  69:Generated_Source\PSoC5/water_counter.c ****             water_counter_RT1 &= ((uint8)(~water_counter_RT1_MASK));
+  70:Generated_Source\PSoC5/water_counter.c ****             water_counter_RT1 |= water_counter_SYNC;     
+  71:Generated_Source\PSoC5/water_counter.c ****                     
+  72:Generated_Source\PSoC5/water_counter.c ****             /*Enable DSI Sync all all inputs of the Timer*/
+  73:Generated_Source\PSoC5/water_counter.c ****             water_counter_RT1 &= ((uint8)(~water_counter_SYNCDSI_MASK));
+  74:Generated_Source\PSoC5/water_counter.c ****             water_counter_RT1 |= water_counter_SYNCDSI_EN;
+  75:Generated_Source\PSoC5/water_counter.c **** 
+  76:Generated_Source\PSoC5/water_counter.c ****         #else
+  77:Generated_Source\PSoC5/water_counter.c ****             #if(!water_counter_ControlRegRemoved)
+  78:Generated_Source\PSoC5/water_counter.c ****             /* Set the default compare mode defined in the parameter */
+  79:Generated_Source\PSoC5/water_counter.c ****             ctrl = water_counter_CONTROL & ((uint8)(~water_counter_CTRL_CMPMODE_MASK));
+  80:Generated_Source\PSoC5/water_counter.c ****             water_counter_CONTROL = ctrl | water_counter_DEFAULT_COMPARE_MODE;
+  81:Generated_Source\PSoC5/water_counter.c ****             
+  82:Generated_Source\PSoC5/water_counter.c ****             /* Set the default capture mode defined in the parameter */
+  83:Generated_Source\PSoC5/water_counter.c ****             ctrl = water_counter_CONTROL & ((uint8)(~water_counter_CTRL_CAPMODE_MASK));
+  84:Generated_Source\PSoC5/water_counter.c ****             
+  85:Generated_Source\PSoC5/water_counter.c ****             #if( 0 != water_counter_CAPTURE_MODE_CONF)
+  86:Generated_Source\PSoC5/water_counter.c ****                 water_counter_CONTROL = ctrl | water_counter_DEFAULT_CAPTURE_MODE;
+  87:Generated_Source\PSoC5/water_counter.c ****             #else
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 3
+
+
+  88:Generated_Source\PSoC5/water_counter.c ****                 water_counter_CONTROL = ctrl;
+  89:Generated_Source\PSoC5/water_counter.c ****             #endif /* 0 != water_counter_CAPTURE_MODE */ 
+  90:Generated_Source\PSoC5/water_counter.c ****             
+  91:Generated_Source\PSoC5/water_counter.c ****             #endif /* (!water_counter_ControlRegRemoved) */
+  92:Generated_Source\PSoC5/water_counter.c ****         #endif /* (water_counter_UsingFixedFunction) */
+  93:Generated_Source\PSoC5/water_counter.c ****         
+  94:Generated_Source\PSoC5/water_counter.c ****         /* Clear all data in the FIFO's */
+  95:Generated_Source\PSoC5/water_counter.c ****         #if (!water_counter_UsingFixedFunction)
+  96:Generated_Source\PSoC5/water_counter.c ****             water_counter_ClearFIFO();
+  97:Generated_Source\PSoC5/water_counter.c ****         #endif /* (!water_counter_UsingFixedFunction) */
+  98:Generated_Source\PSoC5/water_counter.c ****         
+  99:Generated_Source\PSoC5/water_counter.c ****         /* Set Initial values from Configuration */
+ 100:Generated_Source\PSoC5/water_counter.c ****         water_counter_WritePeriod(water_counter_INIT_PERIOD_VALUE);
+ 101:Generated_Source\PSoC5/water_counter.c ****         #if (!(water_counter_UsingFixedFunction && (CY_PSOC5A)))
+ 102:Generated_Source\PSoC5/water_counter.c ****             water_counter_WriteCounter(water_counter_INIT_COUNTER_VALUE);
+ 103:Generated_Source\PSoC5/water_counter.c ****         #endif /* (!(water_counter_UsingFixedFunction && (CY_PSOC5A))) */
+ 104:Generated_Source\PSoC5/water_counter.c ****         water_counter_SetInterruptMode(water_counter_INIT_INTERRUPTS_MASK);
+ 105:Generated_Source\PSoC5/water_counter.c ****         
+ 106:Generated_Source\PSoC5/water_counter.c ****         #if (!water_counter_UsingFixedFunction)
+ 107:Generated_Source\PSoC5/water_counter.c ****             /* Read the status register to clear the unwanted interrupts */
+ 108:Generated_Source\PSoC5/water_counter.c ****             (void)water_counter_ReadStatusRegister();
+ 109:Generated_Source\PSoC5/water_counter.c ****             /* Set the compare value (only available to non-fixed function implementation */
+ 110:Generated_Source\PSoC5/water_counter.c ****             water_counter_WriteCompare(water_counter_INIT_COMPARE_VALUE);
+ 111:Generated_Source\PSoC5/water_counter.c ****             /* Use the interrupt output of the status register for IRQ output */
+ 112:Generated_Source\PSoC5/water_counter.c ****             
+ 113:Generated_Source\PSoC5/water_counter.c ****             /* CyEnterCriticalRegion and CyExitCriticalRegion are used to mark following region cri
+ 114:Generated_Source\PSoC5/water_counter.c ****             /* Enter Critical Region*/
+ 115:Generated_Source\PSoC5/water_counter.c ****             water_counter_interruptState = CyEnterCriticalSection();
+ 116:Generated_Source\PSoC5/water_counter.c ****             
+ 117:Generated_Source\PSoC5/water_counter.c ****             water_counter_STATUS_AUX_CTRL |= water_counter_STATUS_ACTL_INT_EN_MASK;
+ 118:Generated_Source\PSoC5/water_counter.c ****             
+ 119:Generated_Source\PSoC5/water_counter.c ****             /* Exit Critical Region*/
+ 120:Generated_Source\PSoC5/water_counter.c ****             CyExitCriticalSection(water_counter_interruptState);
+ 121:Generated_Source\PSoC5/water_counter.c ****             
+ 122:Generated_Source\PSoC5/water_counter.c ****         #endif /* (!water_counter_UsingFixedFunction) */
+ 123:Generated_Source\PSoC5/water_counter.c **** }
+ 124:Generated_Source\PSoC5/water_counter.c **** 
+ 125:Generated_Source\PSoC5/water_counter.c **** 
+ 126:Generated_Source\PSoC5/water_counter.c **** /*******************************************************************************
+ 127:Generated_Source\PSoC5/water_counter.c **** * Function Name: water_counter_Enable
+ 128:Generated_Source\PSoC5/water_counter.c **** ********************************************************************************
+ 129:Generated_Source\PSoC5/water_counter.c **** * Summary:
+ 130:Generated_Source\PSoC5/water_counter.c **** *     Enable the Counter
+ 131:Generated_Source\PSoC5/water_counter.c **** * 
+ 132:Generated_Source\PSoC5/water_counter.c **** * Parameters:  
+ 133:Generated_Source\PSoC5/water_counter.c **** *  void  
+ 134:Generated_Source\PSoC5/water_counter.c **** *
+ 135:Generated_Source\PSoC5/water_counter.c **** * Return: 
+ 136:Generated_Source\PSoC5/water_counter.c **** *  void
+ 137:Generated_Source\PSoC5/water_counter.c **** *
+ 138:Generated_Source\PSoC5/water_counter.c **** * Side Effects: 
+ 139:Generated_Source\PSoC5/water_counter.c **** *   If the Enable mode is set to Hardware only then this function has no effect 
+ 140:Generated_Source\PSoC5/water_counter.c **** *   on the operation of the counter.
+ 141:Generated_Source\PSoC5/water_counter.c **** *
+ 142:Generated_Source\PSoC5/water_counter.c **** *******************************************************************************/
+ 143:Generated_Source\PSoC5/water_counter.c **** void water_counter_Enable(void) 
+ 144:Generated_Source\PSoC5/water_counter.c **** {
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 4
+
+
+  28              		.loc 1 144 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  33 0000 7047     		bx	lr
+  34              		.cfi_endproc
+  35              	.LFE1:
+  36              		.size	water_counter_Enable, .-water_counter_Enable
+  37 0002 00BF     		.section	.text.water_counter_Stop,"ax",%progbits
+  38              		.align	2
+  39              		.global	water_counter_Stop
+  40              		.thumb
+  41              		.thumb_func
+  42              		.type	water_counter_Stop, %function
+  43              	water_counter_Stop:
+  44              	.LFB3:
+ 145:Generated_Source\PSoC5/water_counter.c ****     /* Globally Enable the Fixed Function Block chosen */
+ 146:Generated_Source\PSoC5/water_counter.c ****     #if (water_counter_UsingFixedFunction)
+ 147:Generated_Source\PSoC5/water_counter.c ****         water_counter_GLOBAL_ENABLE |= water_counter_BLOCK_EN_MASK;
+ 148:Generated_Source\PSoC5/water_counter.c ****         water_counter_GLOBAL_STBY_ENABLE |= water_counter_BLOCK_STBY_EN_MASK;
+ 149:Generated_Source\PSoC5/water_counter.c ****     #endif /* (water_counter_UsingFixedFunction) */  
+ 150:Generated_Source\PSoC5/water_counter.c ****         
+ 151:Generated_Source\PSoC5/water_counter.c ****     /* Enable the counter from the control register  */
+ 152:Generated_Source\PSoC5/water_counter.c ****     /* If Fixed Function then make sure Mode is set correctly */
+ 153:Generated_Source\PSoC5/water_counter.c ****     /* else make sure reset is clear */
+ 154:Generated_Source\PSoC5/water_counter.c ****     #if(!water_counter_ControlRegRemoved || water_counter_UsingFixedFunction)
+ 155:Generated_Source\PSoC5/water_counter.c ****         water_counter_CONTROL |= water_counter_CTRL_ENABLE;                
+ 156:Generated_Source\PSoC5/water_counter.c ****     #endif /* (!water_counter_ControlRegRemoved || water_counter_UsingFixedFunction) */
+ 157:Generated_Source\PSoC5/water_counter.c ****     
+ 158:Generated_Source\PSoC5/water_counter.c **** }
+ 159:Generated_Source\PSoC5/water_counter.c **** 
+ 160:Generated_Source\PSoC5/water_counter.c **** 
+ 161:Generated_Source\PSoC5/water_counter.c **** /*******************************************************************************
+ 162:Generated_Source\PSoC5/water_counter.c **** * Function Name: water_counter_Start
+ 163:Generated_Source\PSoC5/water_counter.c **** ********************************************************************************
+ 164:Generated_Source\PSoC5/water_counter.c **** * Summary:
+ 165:Generated_Source\PSoC5/water_counter.c **** *  Enables the counter for operation 
+ 166:Generated_Source\PSoC5/water_counter.c **** *
+ 167:Generated_Source\PSoC5/water_counter.c **** * Parameters:  
+ 168:Generated_Source\PSoC5/water_counter.c **** *  void  
+ 169:Generated_Source\PSoC5/water_counter.c **** *
+ 170:Generated_Source\PSoC5/water_counter.c **** * Return: 
+ 171:Generated_Source\PSoC5/water_counter.c **** *  void
+ 172:Generated_Source\PSoC5/water_counter.c **** *
+ 173:Generated_Source\PSoC5/water_counter.c **** * Global variables:
+ 174:Generated_Source\PSoC5/water_counter.c **** *  water_counter_initVar: Is modified when this function is called for the  
+ 175:Generated_Source\PSoC5/water_counter.c **** *   first time. Is used to ensure that initialization happens only once.
+ 176:Generated_Source\PSoC5/water_counter.c **** *
+ 177:Generated_Source\PSoC5/water_counter.c **** *******************************************************************************/
+ 178:Generated_Source\PSoC5/water_counter.c **** void water_counter_Start(void) 
+ 179:Generated_Source\PSoC5/water_counter.c **** {
+ 180:Generated_Source\PSoC5/water_counter.c ****     if(water_counter_initVar == 0u)
+ 181:Generated_Source\PSoC5/water_counter.c ****     {
+ 182:Generated_Source\PSoC5/water_counter.c ****         water_counter_Init();
+ 183:Generated_Source\PSoC5/water_counter.c ****         
+ 184:Generated_Source\PSoC5/water_counter.c ****         water_counter_initVar = 1u; /* Clear this bit for Initialization */        
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 5
+
+
+ 185:Generated_Source\PSoC5/water_counter.c ****     }
+ 186:Generated_Source\PSoC5/water_counter.c ****     
+ 187:Generated_Source\PSoC5/water_counter.c ****     /* Enable the Counter */
+ 188:Generated_Source\PSoC5/water_counter.c ****     water_counter_Enable();        
+ 189:Generated_Source\PSoC5/water_counter.c **** }
+ 190:Generated_Source\PSoC5/water_counter.c **** 
+ 191:Generated_Source\PSoC5/water_counter.c **** 
+ 192:Generated_Source\PSoC5/water_counter.c **** /*******************************************************************************
+ 193:Generated_Source\PSoC5/water_counter.c **** * Function Name: water_counter_Stop
+ 194:Generated_Source\PSoC5/water_counter.c **** ********************************************************************************
+ 195:Generated_Source\PSoC5/water_counter.c **** * Summary:
+ 196:Generated_Source\PSoC5/water_counter.c **** * Halts the counter, but does not change any modes or disable interrupts.
+ 197:Generated_Source\PSoC5/water_counter.c **** *
+ 198:Generated_Source\PSoC5/water_counter.c **** * Parameters:  
+ 199:Generated_Source\PSoC5/water_counter.c **** *  void  
+ 200:Generated_Source\PSoC5/water_counter.c **** *
+ 201:Generated_Source\PSoC5/water_counter.c **** * Return: 
+ 202:Generated_Source\PSoC5/water_counter.c **** *  void
+ 203:Generated_Source\PSoC5/water_counter.c **** *
+ 204:Generated_Source\PSoC5/water_counter.c **** * Side Effects: If the Enable mode is set to Hardware only then this function
+ 205:Generated_Source\PSoC5/water_counter.c **** *               has no effect on the operation of the counter.
+ 206:Generated_Source\PSoC5/water_counter.c **** *
+ 207:Generated_Source\PSoC5/water_counter.c **** *******************************************************************************/
+ 208:Generated_Source\PSoC5/water_counter.c **** void water_counter_Stop(void) 
+ 209:Generated_Source\PSoC5/water_counter.c **** {
+  45              		.loc 1 209 0
+  46              		.cfi_startproc
+  47              		@ args = 0, pretend = 0, frame = 0
+  48              		@ frame_needed = 0, uses_anonymous_args = 0
+  49              		@ link register save eliminated.
+  50 0000 7047     		bx	lr
+  51              		.cfi_endproc
+  52              	.LFE3:
+  53              		.size	water_counter_Stop, .-water_counter_Stop
+  54 0002 00BF     		.section	.text.water_counter_SetInterruptMode,"ax",%progbits
+  55              		.align	2
+  56              		.global	water_counter_SetInterruptMode
+  57              		.thumb
+  58              		.thumb_func
+  59              		.type	water_counter_SetInterruptMode, %function
+  60              	water_counter_SetInterruptMode:
+  61              	.LFB4:
+ 210:Generated_Source\PSoC5/water_counter.c ****     /* Disable Counter */
+ 211:Generated_Source\PSoC5/water_counter.c ****     #if(!water_counter_ControlRegRemoved || water_counter_UsingFixedFunction)
+ 212:Generated_Source\PSoC5/water_counter.c ****         water_counter_CONTROL &= ((uint8)(~water_counter_CTRL_ENABLE));        
+ 213:Generated_Source\PSoC5/water_counter.c ****     #endif /* (!water_counter_ControlRegRemoved || water_counter_UsingFixedFunction) */
+ 214:Generated_Source\PSoC5/water_counter.c ****     
+ 215:Generated_Source\PSoC5/water_counter.c ****     /* Globally disable the Fixed Function Block chosen */
+ 216:Generated_Source\PSoC5/water_counter.c ****     #if (water_counter_UsingFixedFunction)
+ 217:Generated_Source\PSoC5/water_counter.c ****         water_counter_GLOBAL_ENABLE &= ((uint8)(~water_counter_BLOCK_EN_MASK));
+ 218:Generated_Source\PSoC5/water_counter.c ****         water_counter_GLOBAL_STBY_ENABLE &= ((uint8)(~water_counter_BLOCK_STBY_EN_MASK));
+ 219:Generated_Source\PSoC5/water_counter.c ****     #endif /* (water_counter_UsingFixedFunction) */
+ 220:Generated_Source\PSoC5/water_counter.c **** }
+ 221:Generated_Source\PSoC5/water_counter.c **** 
+ 222:Generated_Source\PSoC5/water_counter.c **** 
+ 223:Generated_Source\PSoC5/water_counter.c **** /*******************************************************************************
+ 224:Generated_Source\PSoC5/water_counter.c **** * Function Name: water_counter_SetInterruptMode
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 6
+
+
+ 225:Generated_Source\PSoC5/water_counter.c **** ********************************************************************************
+ 226:Generated_Source\PSoC5/water_counter.c **** * Summary:
+ 227:Generated_Source\PSoC5/water_counter.c **** * Configures which interrupt sources are enabled to generate the final interrupt
+ 228:Generated_Source\PSoC5/water_counter.c **** *
+ 229:Generated_Source\PSoC5/water_counter.c **** * Parameters:  
+ 230:Generated_Source\PSoC5/water_counter.c **** *  InterruptsMask: This parameter is an or'd collection of the status bits
+ 231:Generated_Source\PSoC5/water_counter.c **** *                   which will be allowed to generate the counters interrupt.   
+ 232:Generated_Source\PSoC5/water_counter.c **** *
+ 233:Generated_Source\PSoC5/water_counter.c **** * Return: 
+ 234:Generated_Source\PSoC5/water_counter.c **** *  void
+ 235:Generated_Source\PSoC5/water_counter.c **** *
+ 236:Generated_Source\PSoC5/water_counter.c **** *******************************************************************************/
+ 237:Generated_Source\PSoC5/water_counter.c **** void water_counter_SetInterruptMode(uint8 interruptsMask) 
+ 238:Generated_Source\PSoC5/water_counter.c **** {
+  62              		.loc 1 238 0
+  63              		.cfi_startproc
+  64              		@ args = 0, pretend = 0, frame = 0
+  65              		@ frame_needed = 0, uses_anonymous_args = 0
+  66              		@ link register save eliminated.
+  67              	.LVL0:
+ 239:Generated_Source\PSoC5/water_counter.c ****     water_counter_STATUS_MASK = interruptsMask;
+  68              		.loc 1 239 0
+  69 0000 014B     		ldr	r3, .L4
+  70 0002 1870     		strb	r0, [r3]
+  71 0004 7047     		bx	lr
+  72              	.L5:
+  73 0006 00BF     		.align	2
+  74              	.L4:
+  75 0008 8A640040 		.word	1073767562
+  76              		.cfi_endproc
+  77              	.LFE4:
+  78              		.size	water_counter_SetInterruptMode, .-water_counter_SetInterruptMode
+  79              		.section	.text.water_counter_ReadStatusRegister,"ax",%progbits
+  80              		.align	2
+  81              		.global	water_counter_ReadStatusRegister
+  82              		.thumb
+  83              		.thumb_func
+  84              		.type	water_counter_ReadStatusRegister, %function
+  85              	water_counter_ReadStatusRegister:
+  86              	.LFB5:
+ 240:Generated_Source\PSoC5/water_counter.c **** }
+ 241:Generated_Source\PSoC5/water_counter.c **** 
+ 242:Generated_Source\PSoC5/water_counter.c **** 
+ 243:Generated_Source\PSoC5/water_counter.c **** /*******************************************************************************
+ 244:Generated_Source\PSoC5/water_counter.c **** * Function Name: water_counter_ReadStatusRegister
+ 245:Generated_Source\PSoC5/water_counter.c **** ********************************************************************************
+ 246:Generated_Source\PSoC5/water_counter.c **** * Summary:
+ 247:Generated_Source\PSoC5/water_counter.c **** *   Reads the status register and returns it's state. This function should use
+ 248:Generated_Source\PSoC5/water_counter.c **** *       defined types for the bit-field information as the bits in this
+ 249:Generated_Source\PSoC5/water_counter.c **** *       register may be permuteable.
+ 250:Generated_Source\PSoC5/water_counter.c **** *
+ 251:Generated_Source\PSoC5/water_counter.c **** * Parameters:  
+ 252:Generated_Source\PSoC5/water_counter.c **** *  void
+ 253:Generated_Source\PSoC5/water_counter.c **** *
+ 254:Generated_Source\PSoC5/water_counter.c **** * Return: 
+ 255:Generated_Source\PSoC5/water_counter.c **** *  (uint8) The contents of the status register
+ 256:Generated_Source\PSoC5/water_counter.c **** *
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 7
+
+
+ 257:Generated_Source\PSoC5/water_counter.c **** * Side Effects:
+ 258:Generated_Source\PSoC5/water_counter.c **** *   Status register bits may be clear on read. 
+ 259:Generated_Source\PSoC5/water_counter.c **** *
+ 260:Generated_Source\PSoC5/water_counter.c **** *******************************************************************************/
+ 261:Generated_Source\PSoC5/water_counter.c **** uint8   water_counter_ReadStatusRegister(void) 
+ 262:Generated_Source\PSoC5/water_counter.c **** {
+  87              		.loc 1 262 0
+  88              		.cfi_startproc
+  89              		@ args = 0, pretend = 0, frame = 0
+  90              		@ frame_needed = 0, uses_anonymous_args = 0
+  91              		@ link register save eliminated.
+ 263:Generated_Source\PSoC5/water_counter.c ****     return water_counter_STATUS;
+  92              		.loc 1 263 0
+  93 0000 014B     		ldr	r3, .L7
+  94 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 264:Generated_Source\PSoC5/water_counter.c **** }
+  95              		.loc 1 264 0
+  96 0004 7047     		bx	lr
+  97              	.L8:
+  98 0006 00BF     		.align	2
+  99              	.L7:
+ 100 0008 6A640040 		.word	1073767530
+ 101              		.cfi_endproc
+ 102              	.LFE5:
+ 103              		.size	water_counter_ReadStatusRegister, .-water_counter_ReadStatusRegister
+ 104              		.section	.text.water_counter_WriteCounter,"ax",%progbits
+ 105              		.align	2
+ 106              		.global	water_counter_WriteCounter
+ 107              		.thumb
+ 108              		.thumb_func
+ 109              		.type	water_counter_WriteCounter, %function
+ 110              	water_counter_WriteCounter:
+ 111              	.LFB6:
+ 265:Generated_Source\PSoC5/water_counter.c **** 
+ 266:Generated_Source\PSoC5/water_counter.c **** 
+ 267:Generated_Source\PSoC5/water_counter.c **** #if(!water_counter_ControlRegRemoved)
+ 268:Generated_Source\PSoC5/water_counter.c **** /*******************************************************************************
+ 269:Generated_Source\PSoC5/water_counter.c **** * Function Name: water_counter_ReadControlRegister
+ 270:Generated_Source\PSoC5/water_counter.c **** ********************************************************************************
+ 271:Generated_Source\PSoC5/water_counter.c **** * Summary:
+ 272:Generated_Source\PSoC5/water_counter.c **** *   Reads the control register and returns it's state. This function should use
+ 273:Generated_Source\PSoC5/water_counter.c **** *       defined types for the bit-field information as the bits in this
+ 274:Generated_Source\PSoC5/water_counter.c **** *       register may be permuteable.
+ 275:Generated_Source\PSoC5/water_counter.c **** *
+ 276:Generated_Source\PSoC5/water_counter.c **** * Parameters:  
+ 277:Generated_Source\PSoC5/water_counter.c **** *  void
+ 278:Generated_Source\PSoC5/water_counter.c **** *
+ 279:Generated_Source\PSoC5/water_counter.c **** * Return: 
+ 280:Generated_Source\PSoC5/water_counter.c **** *  (uint8) The contents of the control register
+ 281:Generated_Source\PSoC5/water_counter.c **** *
+ 282:Generated_Source\PSoC5/water_counter.c **** *******************************************************************************/
+ 283:Generated_Source\PSoC5/water_counter.c **** uint8   water_counter_ReadControlRegister(void) 
+ 284:Generated_Source\PSoC5/water_counter.c **** {
+ 285:Generated_Source\PSoC5/water_counter.c ****     return water_counter_CONTROL;
+ 286:Generated_Source\PSoC5/water_counter.c **** }
+ 287:Generated_Source\PSoC5/water_counter.c **** 
+ 288:Generated_Source\PSoC5/water_counter.c **** 
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 8
+
+
+ 289:Generated_Source\PSoC5/water_counter.c **** /*******************************************************************************
+ 290:Generated_Source\PSoC5/water_counter.c **** * Function Name: water_counter_WriteControlRegister
+ 291:Generated_Source\PSoC5/water_counter.c **** ********************************************************************************
+ 292:Generated_Source\PSoC5/water_counter.c **** * Summary:
+ 293:Generated_Source\PSoC5/water_counter.c **** *   Sets the bit-field of the control register.  This function should use
+ 294:Generated_Source\PSoC5/water_counter.c **** *       defined types for the bit-field information as the bits in this
+ 295:Generated_Source\PSoC5/water_counter.c **** *       register may be permuteable.
+ 296:Generated_Source\PSoC5/water_counter.c **** *
+ 297:Generated_Source\PSoC5/water_counter.c **** * Parameters:  
+ 298:Generated_Source\PSoC5/water_counter.c **** *  void
+ 299:Generated_Source\PSoC5/water_counter.c **** *
+ 300:Generated_Source\PSoC5/water_counter.c **** * Return: 
+ 301:Generated_Source\PSoC5/water_counter.c **** *  (uint8) The contents of the control register
+ 302:Generated_Source\PSoC5/water_counter.c **** *
+ 303:Generated_Source\PSoC5/water_counter.c **** *******************************************************************************/
+ 304:Generated_Source\PSoC5/water_counter.c **** void    water_counter_WriteControlRegister(uint8 control) 
+ 305:Generated_Source\PSoC5/water_counter.c **** {
+ 306:Generated_Source\PSoC5/water_counter.c ****     water_counter_CONTROL = control;
+ 307:Generated_Source\PSoC5/water_counter.c **** }
+ 308:Generated_Source\PSoC5/water_counter.c **** 
+ 309:Generated_Source\PSoC5/water_counter.c **** #endif  /* (!water_counter_ControlRegRemoved) */
+ 310:Generated_Source\PSoC5/water_counter.c **** 
+ 311:Generated_Source\PSoC5/water_counter.c **** 
+ 312:Generated_Source\PSoC5/water_counter.c **** #if (!(water_counter_UsingFixedFunction && (CY_PSOC5A)))
+ 313:Generated_Source\PSoC5/water_counter.c **** /*******************************************************************************
+ 314:Generated_Source\PSoC5/water_counter.c **** * Function Name: water_counter_WriteCounter
+ 315:Generated_Source\PSoC5/water_counter.c **** ********************************************************************************
+ 316:Generated_Source\PSoC5/water_counter.c **** * Summary:
+ 317:Generated_Source\PSoC5/water_counter.c **** *   This funtion is used to set the counter to a specific value
+ 318:Generated_Source\PSoC5/water_counter.c **** *
+ 319:Generated_Source\PSoC5/water_counter.c **** * Parameters:  
+ 320:Generated_Source\PSoC5/water_counter.c **** *  counter:  New counter value. 
+ 321:Generated_Source\PSoC5/water_counter.c **** *
+ 322:Generated_Source\PSoC5/water_counter.c **** * Return: 
+ 323:Generated_Source\PSoC5/water_counter.c **** *  void 
+ 324:Generated_Source\PSoC5/water_counter.c **** *
+ 325:Generated_Source\PSoC5/water_counter.c **** *******************************************************************************/
+ 326:Generated_Source\PSoC5/water_counter.c **** void water_counter_WriteCounter(uint32 counter) \
+ 327:Generated_Source\PSoC5/water_counter.c ****                                    
+ 328:Generated_Source\PSoC5/water_counter.c **** {
+ 112              		.loc 1 328 0
+ 113              		.cfi_startproc
+ 114              		@ args = 0, pretend = 0, frame = 0
+ 115              		@ frame_needed = 0, uses_anonymous_args = 0
+ 116              	.LVL1:
+ 117 0000 08B5     		push	{r3, lr}
+ 118              		.cfi_def_cfa_offset 8
+ 119              		.cfi_offset 3, -8
+ 120              		.cfi_offset 14, -4
+ 329:Generated_Source\PSoC5/water_counter.c ****     #if(water_counter_UsingFixedFunction)
+ 330:Generated_Source\PSoC5/water_counter.c ****         /* assert if block is already enabled */
+ 331:Generated_Source\PSoC5/water_counter.c ****         CYASSERT (0u == (water_counter_GLOBAL_ENABLE & water_counter_BLOCK_EN_MASK));
+ 332:Generated_Source\PSoC5/water_counter.c ****         /* If block is disabled, enable it and then write the counter */
+ 333:Generated_Source\PSoC5/water_counter.c ****         water_counter_GLOBAL_ENABLE |= water_counter_BLOCK_EN_MASK;
+ 334:Generated_Source\PSoC5/water_counter.c ****         CY_SET_REG16(water_counter_COUNTER_LSB_PTR, (uint16)counter);
+ 335:Generated_Source\PSoC5/water_counter.c ****         water_counter_GLOBAL_ENABLE &= ((uint8)(~water_counter_BLOCK_EN_MASK));
+ 336:Generated_Source\PSoC5/water_counter.c ****     #else
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 9
+
+
+ 337:Generated_Source\PSoC5/water_counter.c ****         CY_SET_REG24(water_counter_COUNTER_LSB_PTR, counter);
+ 121              		.loc 1 337 0
+ 122 0002 0146     		mov	r1, r0
+ 123 0004 0148     		ldr	r0, .L11
+ 124              	.LVL2:
+ 125 0006 FFF7FEFF 		bl	CySetReg24
+ 126              	.LVL3:
+ 127 000a 08BD     		pop	{r3, pc}
+ 128              	.L12:
+ 129              		.align	2
+ 130              	.L11:
+ 131 000c 08640040 		.word	1073767432
+ 132              		.cfi_endproc
+ 133              	.LFE6:
+ 134              		.size	water_counter_WriteCounter, .-water_counter_WriteCounter
+ 135              		.section	.text.water_counter_ReadCounter,"ax",%progbits
+ 136              		.align	2
+ 137              		.global	water_counter_ReadCounter
+ 138              		.thumb
+ 139              		.thumb_func
+ 140              		.type	water_counter_ReadCounter, %function
+ 141              	water_counter_ReadCounter:
+ 142              	.LFB7:
+ 338:Generated_Source\PSoC5/water_counter.c ****     #endif /* (water_counter_UsingFixedFunction) */
+ 339:Generated_Source\PSoC5/water_counter.c **** }
+ 340:Generated_Source\PSoC5/water_counter.c **** #endif /* (!(water_counter_UsingFixedFunction && (CY_PSOC5A))) */
+ 341:Generated_Source\PSoC5/water_counter.c **** 
+ 342:Generated_Source\PSoC5/water_counter.c **** 
+ 343:Generated_Source\PSoC5/water_counter.c **** /*******************************************************************************
+ 344:Generated_Source\PSoC5/water_counter.c **** * Function Name: water_counter_ReadCounter
+ 345:Generated_Source\PSoC5/water_counter.c **** ********************************************************************************
+ 346:Generated_Source\PSoC5/water_counter.c **** * Summary:
+ 347:Generated_Source\PSoC5/water_counter.c **** * Returns the current value of the counter.  It doesn't matter
+ 348:Generated_Source\PSoC5/water_counter.c **** * if the counter is enabled or running.
+ 349:Generated_Source\PSoC5/water_counter.c **** *
+ 350:Generated_Source\PSoC5/water_counter.c **** * Parameters:  
+ 351:Generated_Source\PSoC5/water_counter.c **** *  void:  
+ 352:Generated_Source\PSoC5/water_counter.c **** *
+ 353:Generated_Source\PSoC5/water_counter.c **** * Return: 
+ 354:Generated_Source\PSoC5/water_counter.c **** *  (uint32) The present value of the counter.
+ 355:Generated_Source\PSoC5/water_counter.c **** *
+ 356:Generated_Source\PSoC5/water_counter.c **** *******************************************************************************/
+ 357:Generated_Source\PSoC5/water_counter.c **** uint32 water_counter_ReadCounter(void) 
+ 358:Generated_Source\PSoC5/water_counter.c **** {
+ 143              		.loc 1 358 0
+ 144              		.cfi_startproc
+ 145              		@ args = 0, pretend = 0, frame = 0
+ 146              		@ frame_needed = 0, uses_anonymous_args = 0
+ 147              		@ link register save eliminated.
+ 359:Generated_Source\PSoC5/water_counter.c ****     /* Force capture by reading Accumulator */
+ 360:Generated_Source\PSoC5/water_counter.c ****     /* Must first do a software capture to be able to read the counter */
+ 361:Generated_Source\PSoC5/water_counter.c ****     /* It is up to the user code to make sure there isn't already captured data in the FIFO */
+ 362:Generated_Source\PSoC5/water_counter.c ****     #if(water_counter_UsingFixedFunction)
+ 363:Generated_Source\PSoC5/water_counter.c **** 		(void)CY_GET_REG16(water_counter_COUNTER_LSB_PTR);
+ 364:Generated_Source\PSoC5/water_counter.c **** 	#else
+ 365:Generated_Source\PSoC5/water_counter.c **** 		(void)CY_GET_REG8(water_counter_COUNTER_LSB_PTR_8BIT);
+ 148              		.loc 1 365 0
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 10
+
+
+ 149 0000 034B     		ldr	r3, .L14
+ 150 0002 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 366:Generated_Source\PSoC5/water_counter.c **** 	#endif/* (water_counter_UsingFixedFunction) */
+ 367:Generated_Source\PSoC5/water_counter.c ****     
+ 368:Generated_Source\PSoC5/water_counter.c ****     /* Read the data from the FIFO (or capture register for Fixed Function)*/
+ 369:Generated_Source\PSoC5/water_counter.c ****     #if(water_counter_UsingFixedFunction)
+ 370:Generated_Source\PSoC5/water_counter.c ****         return ((uint32)CY_GET_REG16(water_counter_STATICCOUNT_LSB_PTR));
+ 371:Generated_Source\PSoC5/water_counter.c ****     #else
+ 372:Generated_Source\PSoC5/water_counter.c ****         return (CY_GET_REG24(water_counter_STATICCOUNT_LSB_PTR));
+ 151              		.loc 1 372 0
+ 152 0004 034B     		ldr	r3, .L14+4
+ 153 0006 1868     		ldr	r0, [r3]
+ 373:Generated_Source\PSoC5/water_counter.c ****     #endif /* (water_counter_UsingFixedFunction) */
+ 374:Generated_Source\PSoC5/water_counter.c **** }
+ 154              		.loc 1 374 0
+ 155 0008 20F07F40 		bic	r0, r0, #-16777216
+ 156 000c 7047     		bx	lr
+ 157              	.L15:
+ 158 000e 00BF     		.align	2
+ 159              	.L14:
+ 160 0010 08640040 		.word	1073767432
+ 161 0014 48640040 		.word	1073767496
+ 162              		.cfi_endproc
+ 163              	.LFE7:
+ 164              		.size	water_counter_ReadCounter, .-water_counter_ReadCounter
+ 165              		.section	.text.water_counter_ReadCapture,"ax",%progbits
+ 166              		.align	2
+ 167              		.global	water_counter_ReadCapture
+ 168              		.thumb
+ 169              		.thumb_func
+ 170              		.type	water_counter_ReadCapture, %function
+ 171              	water_counter_ReadCapture:
+ 172              	.LFB8:
+ 375:Generated_Source\PSoC5/water_counter.c **** 
+ 376:Generated_Source\PSoC5/water_counter.c **** 
+ 377:Generated_Source\PSoC5/water_counter.c **** /*******************************************************************************
+ 378:Generated_Source\PSoC5/water_counter.c **** * Function Name: water_counter_ReadCapture
+ 379:Generated_Source\PSoC5/water_counter.c **** ********************************************************************************
+ 380:Generated_Source\PSoC5/water_counter.c **** * Summary:
+ 381:Generated_Source\PSoC5/water_counter.c **** *   This function returns the last value captured.
+ 382:Generated_Source\PSoC5/water_counter.c **** *
+ 383:Generated_Source\PSoC5/water_counter.c **** * Parameters:  
+ 384:Generated_Source\PSoC5/water_counter.c **** *  void
+ 385:Generated_Source\PSoC5/water_counter.c **** *
+ 386:Generated_Source\PSoC5/water_counter.c **** * Return: 
+ 387:Generated_Source\PSoC5/water_counter.c **** *  (uint32) Present Capture value.
+ 388:Generated_Source\PSoC5/water_counter.c **** *
+ 389:Generated_Source\PSoC5/water_counter.c **** *******************************************************************************/
+ 390:Generated_Source\PSoC5/water_counter.c **** uint32 water_counter_ReadCapture(void) 
+ 391:Generated_Source\PSoC5/water_counter.c **** {
+ 173              		.loc 1 391 0
+ 174              		.cfi_startproc
+ 175              		@ args = 0, pretend = 0, frame = 0
+ 176              		@ frame_needed = 0, uses_anonymous_args = 0
+ 177              		@ link register save eliminated.
+ 392:Generated_Source\PSoC5/water_counter.c ****     #if(water_counter_UsingFixedFunction)
+ 393:Generated_Source\PSoC5/water_counter.c ****         return ((uint32)CY_GET_REG16(water_counter_STATICCOUNT_LSB_PTR));
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 11
+
+
+ 394:Generated_Source\PSoC5/water_counter.c ****     #else
+ 395:Generated_Source\PSoC5/water_counter.c ****         return (CY_GET_REG24(water_counter_STATICCOUNT_LSB_PTR));
+ 178              		.loc 1 395 0
+ 179 0000 024B     		ldr	r3, .L17
+ 180 0002 1868     		ldr	r0, [r3]
+ 396:Generated_Source\PSoC5/water_counter.c ****     #endif /* (water_counter_UsingFixedFunction) */
+ 397:Generated_Source\PSoC5/water_counter.c **** }
+ 181              		.loc 1 397 0
+ 182 0004 20F07F40 		bic	r0, r0, #-16777216
+ 183 0008 7047     		bx	lr
+ 184              	.L18:
+ 185 000a 00BF     		.align	2
+ 186              	.L17:
+ 187 000c 48640040 		.word	1073767496
+ 188              		.cfi_endproc
+ 189              	.LFE8:
+ 190              		.size	water_counter_ReadCapture, .-water_counter_ReadCapture
+ 191              		.section	.text.water_counter_WritePeriod,"ax",%progbits
+ 192              		.align	2
+ 193              		.global	water_counter_WritePeriod
+ 194              		.thumb
+ 195              		.thumb_func
+ 196              		.type	water_counter_WritePeriod, %function
+ 197              	water_counter_WritePeriod:
+ 198              	.LFB9:
+ 398:Generated_Source\PSoC5/water_counter.c **** 
+ 399:Generated_Source\PSoC5/water_counter.c **** 
+ 400:Generated_Source\PSoC5/water_counter.c **** /*******************************************************************************
+ 401:Generated_Source\PSoC5/water_counter.c **** * Function Name: water_counter_WritePeriod
+ 402:Generated_Source\PSoC5/water_counter.c **** ********************************************************************************
+ 403:Generated_Source\PSoC5/water_counter.c **** * Summary:
+ 404:Generated_Source\PSoC5/water_counter.c **** * Changes the period of the counter.  The new period 
+ 405:Generated_Source\PSoC5/water_counter.c **** * will be loaded the next time terminal count is detected.
+ 406:Generated_Source\PSoC5/water_counter.c **** *
+ 407:Generated_Source\PSoC5/water_counter.c **** * Parameters:  
+ 408:Generated_Source\PSoC5/water_counter.c **** *  period: (uint32) A value of 0 will result in
+ 409:Generated_Source\PSoC5/water_counter.c **** *         the counter remaining at zero.  
+ 410:Generated_Source\PSoC5/water_counter.c **** *
+ 411:Generated_Source\PSoC5/water_counter.c **** * Return: 
+ 412:Generated_Source\PSoC5/water_counter.c **** *  void
+ 413:Generated_Source\PSoC5/water_counter.c **** *
+ 414:Generated_Source\PSoC5/water_counter.c **** *******************************************************************************/
+ 415:Generated_Source\PSoC5/water_counter.c **** void water_counter_WritePeriod(uint32 period) 
+ 416:Generated_Source\PSoC5/water_counter.c **** {
+ 199              		.loc 1 416 0
+ 200              		.cfi_startproc
+ 201              		@ args = 0, pretend = 0, frame = 0
+ 202              		@ frame_needed = 0, uses_anonymous_args = 0
+ 203              	.LVL4:
+ 204 0000 08B5     		push	{r3, lr}
+ 205              		.cfi_def_cfa_offset 8
+ 206              		.cfi_offset 3, -8
+ 207              		.cfi_offset 14, -4
+ 417:Generated_Source\PSoC5/water_counter.c ****     #if(water_counter_UsingFixedFunction)
+ 418:Generated_Source\PSoC5/water_counter.c ****         CY_SET_REG16(water_counter_PERIOD_LSB_PTR,(uint16)period);
+ 419:Generated_Source\PSoC5/water_counter.c ****     #else
+ 420:Generated_Source\PSoC5/water_counter.c ****         CY_SET_REG24(water_counter_PERIOD_LSB_PTR, period);
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 12
+
+
+ 208              		.loc 1 420 0
+ 209 0002 0146     		mov	r1, r0
+ 210 0004 0148     		ldr	r0, .L21
+ 211              	.LVL5:
+ 212 0006 FFF7FEFF 		bl	CySetReg24
+ 213              	.LVL6:
+ 214 000a 08BD     		pop	{r3, pc}
+ 215              	.L22:
+ 216              		.align	2
+ 217              	.L21:
+ 218 000c 28640040 		.word	1073767464
+ 219              		.cfi_endproc
+ 220              	.LFE9:
+ 221              		.size	water_counter_WritePeriod, .-water_counter_WritePeriod
+ 222              		.section	.text.water_counter_ReadPeriod,"ax",%progbits
+ 223              		.align	2
+ 224              		.global	water_counter_ReadPeriod
+ 225              		.thumb
+ 226              		.thumb_func
+ 227              		.type	water_counter_ReadPeriod, %function
+ 228              	water_counter_ReadPeriod:
+ 229              	.LFB10:
+ 421:Generated_Source\PSoC5/water_counter.c ****     #endif /* (water_counter_UsingFixedFunction) */
+ 422:Generated_Source\PSoC5/water_counter.c **** }
+ 423:Generated_Source\PSoC5/water_counter.c **** 
+ 424:Generated_Source\PSoC5/water_counter.c **** 
+ 425:Generated_Source\PSoC5/water_counter.c **** /*******************************************************************************
+ 426:Generated_Source\PSoC5/water_counter.c **** * Function Name: water_counter_ReadPeriod
+ 427:Generated_Source\PSoC5/water_counter.c **** ********************************************************************************
+ 428:Generated_Source\PSoC5/water_counter.c **** * Summary:
+ 429:Generated_Source\PSoC5/water_counter.c **** * Reads the current period value without affecting counter operation.
+ 430:Generated_Source\PSoC5/water_counter.c **** *
+ 431:Generated_Source\PSoC5/water_counter.c **** * Parameters:  
+ 432:Generated_Source\PSoC5/water_counter.c **** *  void:  
+ 433:Generated_Source\PSoC5/water_counter.c **** *
+ 434:Generated_Source\PSoC5/water_counter.c **** * Return: 
+ 435:Generated_Source\PSoC5/water_counter.c **** *  (uint32) Present period value.
+ 436:Generated_Source\PSoC5/water_counter.c **** *
+ 437:Generated_Source\PSoC5/water_counter.c **** *******************************************************************************/
+ 438:Generated_Source\PSoC5/water_counter.c **** uint32 water_counter_ReadPeriod(void) 
+ 439:Generated_Source\PSoC5/water_counter.c **** {
+ 230              		.loc 1 439 0
+ 231              		.cfi_startproc
+ 232              		@ args = 0, pretend = 0, frame = 0
+ 233              		@ frame_needed = 0, uses_anonymous_args = 0
+ 234              		@ link register save eliminated.
+ 440:Generated_Source\PSoC5/water_counter.c ****     #if(water_counter_UsingFixedFunction)
+ 441:Generated_Source\PSoC5/water_counter.c ****         return ((uint32)CY_GET_REG16(water_counter_PERIOD_LSB_PTR));
+ 442:Generated_Source\PSoC5/water_counter.c ****     #else
+ 443:Generated_Source\PSoC5/water_counter.c ****         return (CY_GET_REG24(water_counter_PERIOD_LSB_PTR));
+ 235              		.loc 1 443 0
+ 236 0000 024B     		ldr	r3, .L24
+ 237 0002 1868     		ldr	r0, [r3]
+ 444:Generated_Source\PSoC5/water_counter.c ****     #endif /* (water_counter_UsingFixedFunction) */
+ 445:Generated_Source\PSoC5/water_counter.c **** }
+ 238              		.loc 1 445 0
+ 239 0004 20F07F40 		bic	r0, r0, #-16777216
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 13
+
+
+ 240 0008 7047     		bx	lr
+ 241              	.L25:
+ 242 000a 00BF     		.align	2
+ 243              	.L24:
+ 244 000c 28640040 		.word	1073767464
+ 245              		.cfi_endproc
+ 246              	.LFE10:
+ 247              		.size	water_counter_ReadPeriod, .-water_counter_ReadPeriod
+ 248              		.section	.text.water_counter_WriteCompare,"ax",%progbits
+ 249              		.align	2
+ 250              		.global	water_counter_WriteCompare
+ 251              		.thumb
+ 252              		.thumb_func
+ 253              		.type	water_counter_WriteCompare, %function
+ 254              	water_counter_WriteCompare:
+ 255              	.LFB11:
+ 446:Generated_Source\PSoC5/water_counter.c **** 
+ 447:Generated_Source\PSoC5/water_counter.c **** 
+ 448:Generated_Source\PSoC5/water_counter.c **** #if (!water_counter_UsingFixedFunction)
+ 449:Generated_Source\PSoC5/water_counter.c **** /*******************************************************************************
+ 450:Generated_Source\PSoC5/water_counter.c **** * Function Name: water_counter_WriteCompare
+ 451:Generated_Source\PSoC5/water_counter.c **** ********************************************************************************
+ 452:Generated_Source\PSoC5/water_counter.c **** * Summary:
+ 453:Generated_Source\PSoC5/water_counter.c **** * Changes the compare value.  The compare output will 
+ 454:Generated_Source\PSoC5/water_counter.c **** * reflect the new value on the next UDB clock.  The compare output will be 
+ 455:Generated_Source\PSoC5/water_counter.c **** * driven high when the present counter value compares true based on the 
+ 456:Generated_Source\PSoC5/water_counter.c **** * configured compare mode setting. 
+ 457:Generated_Source\PSoC5/water_counter.c **** *
+ 458:Generated_Source\PSoC5/water_counter.c **** * Parameters:  
+ 459:Generated_Source\PSoC5/water_counter.c **** *  Compare:  New compare value. 
+ 460:Generated_Source\PSoC5/water_counter.c **** *
+ 461:Generated_Source\PSoC5/water_counter.c **** * Return: 
+ 462:Generated_Source\PSoC5/water_counter.c **** *  void
+ 463:Generated_Source\PSoC5/water_counter.c **** *
+ 464:Generated_Source\PSoC5/water_counter.c **** *******************************************************************************/
+ 465:Generated_Source\PSoC5/water_counter.c **** void water_counter_WriteCompare(uint32 compare) \
+ 466:Generated_Source\PSoC5/water_counter.c ****                                    
+ 467:Generated_Source\PSoC5/water_counter.c **** {
+ 256              		.loc 1 467 0
+ 257              		.cfi_startproc
+ 258              		@ args = 0, pretend = 0, frame = 0
+ 259              		@ frame_needed = 0, uses_anonymous_args = 0
+ 260              	.LVL7:
+ 261 0000 08B5     		push	{r3, lr}
+ 262              		.cfi_def_cfa_offset 8
+ 263              		.cfi_offset 3, -8
+ 264              		.cfi_offset 14, -4
+ 468:Generated_Source\PSoC5/water_counter.c ****     #if(water_counter_UsingFixedFunction)
+ 469:Generated_Source\PSoC5/water_counter.c ****         CY_SET_REG16(water_counter_COMPARE_LSB_PTR, (uint16)compare);
+ 470:Generated_Source\PSoC5/water_counter.c ****     #else
+ 471:Generated_Source\PSoC5/water_counter.c ****         CY_SET_REG24(water_counter_COMPARE_LSB_PTR, compare);
+ 265              		.loc 1 471 0
+ 266 0002 0146     		mov	r1, r0
+ 267 0004 0148     		ldr	r0, .L28
+ 268              	.LVL8:
+ 269 0006 FFF7FEFF 		bl	CySetReg24
+ 270              	.LVL9:
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 14
+
+
+ 271 000a 08BD     		pop	{r3, pc}
+ 272              	.L29:
+ 273              		.align	2
+ 274              	.L28:
+ 275 000c 38640040 		.word	1073767480
+ 276              		.cfi_endproc
+ 277              	.LFE11:
+ 278              		.size	water_counter_WriteCompare, .-water_counter_WriteCompare
+ 279              		.section	.text.water_counter_ReadCompare,"ax",%progbits
+ 280              		.align	2
+ 281              		.global	water_counter_ReadCompare
+ 282              		.thumb
+ 283              		.thumb_func
+ 284              		.type	water_counter_ReadCompare, %function
+ 285              	water_counter_ReadCompare:
+ 286              	.LFB12:
+ 472:Generated_Source\PSoC5/water_counter.c ****     #endif /* (water_counter_UsingFixedFunction) */
+ 473:Generated_Source\PSoC5/water_counter.c **** }
+ 474:Generated_Source\PSoC5/water_counter.c **** 
+ 475:Generated_Source\PSoC5/water_counter.c **** 
+ 476:Generated_Source\PSoC5/water_counter.c **** /*******************************************************************************
+ 477:Generated_Source\PSoC5/water_counter.c **** * Function Name: water_counter_ReadCompare
+ 478:Generated_Source\PSoC5/water_counter.c **** ********************************************************************************
+ 479:Generated_Source\PSoC5/water_counter.c **** * Summary:
+ 480:Generated_Source\PSoC5/water_counter.c **** * Returns the compare value.
+ 481:Generated_Source\PSoC5/water_counter.c **** *
+ 482:Generated_Source\PSoC5/water_counter.c **** * Parameters:  
+ 483:Generated_Source\PSoC5/water_counter.c **** *  void:
+ 484:Generated_Source\PSoC5/water_counter.c **** *
+ 485:Generated_Source\PSoC5/water_counter.c **** * Return: 
+ 486:Generated_Source\PSoC5/water_counter.c **** *  (uint32) Present compare value.
+ 487:Generated_Source\PSoC5/water_counter.c **** *
+ 488:Generated_Source\PSoC5/water_counter.c **** *******************************************************************************/
+ 489:Generated_Source\PSoC5/water_counter.c **** uint32 water_counter_ReadCompare(void) 
+ 490:Generated_Source\PSoC5/water_counter.c **** {
+ 287              		.loc 1 490 0
+ 288              		.cfi_startproc
+ 289              		@ args = 0, pretend = 0, frame = 0
+ 290              		@ frame_needed = 0, uses_anonymous_args = 0
+ 291              		@ link register save eliminated.
+ 491:Generated_Source\PSoC5/water_counter.c ****     return (CY_GET_REG24(water_counter_COMPARE_LSB_PTR));
+ 292              		.loc 1 491 0
+ 293 0000 024B     		ldr	r3, .L31
+ 294 0002 1868     		ldr	r0, [r3]
+ 492:Generated_Source\PSoC5/water_counter.c **** }
+ 295              		.loc 1 492 0
+ 296 0004 20F07F40 		bic	r0, r0, #-16777216
+ 297 0008 7047     		bx	lr
+ 298              	.L32:
+ 299 000a 00BF     		.align	2
+ 300              	.L31:
+ 301 000c 38640040 		.word	1073767480
+ 302              		.cfi_endproc
+ 303              	.LFE12:
+ 304              		.size	water_counter_ReadCompare, .-water_counter_ReadCompare
+ 305              		.section	.text.water_counter_ClearFIFO,"ax",%progbits
+ 306              		.align	2
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 15
+
+
+ 307              		.global	water_counter_ClearFIFO
+ 308              		.thumb
+ 309              		.thumb_func
+ 310              		.type	water_counter_ClearFIFO, %function
+ 311              	water_counter_ClearFIFO:
+ 312              	.LFB13:
+ 493:Generated_Source\PSoC5/water_counter.c **** 
+ 494:Generated_Source\PSoC5/water_counter.c **** 
+ 495:Generated_Source\PSoC5/water_counter.c **** #if (water_counter_COMPARE_MODE_SOFTWARE)
+ 496:Generated_Source\PSoC5/water_counter.c **** /*******************************************************************************
+ 497:Generated_Source\PSoC5/water_counter.c **** * Function Name: water_counter_SetCompareMode
+ 498:Generated_Source\PSoC5/water_counter.c **** ********************************************************************************
+ 499:Generated_Source\PSoC5/water_counter.c **** * Summary:
+ 500:Generated_Source\PSoC5/water_counter.c **** *  Sets the software controlled Compare Mode.
+ 501:Generated_Source\PSoC5/water_counter.c **** *
+ 502:Generated_Source\PSoC5/water_counter.c **** * Parameters:
+ 503:Generated_Source\PSoC5/water_counter.c **** *  compareMode:  Compare Mode Enumerated Type.
+ 504:Generated_Source\PSoC5/water_counter.c **** *
+ 505:Generated_Source\PSoC5/water_counter.c **** * Return:
+ 506:Generated_Source\PSoC5/water_counter.c **** *  void
+ 507:Generated_Source\PSoC5/water_counter.c **** *
+ 508:Generated_Source\PSoC5/water_counter.c **** *******************************************************************************/
+ 509:Generated_Source\PSoC5/water_counter.c **** void water_counter_SetCompareMode(uint8 compareMode) 
+ 510:Generated_Source\PSoC5/water_counter.c **** {
+ 511:Generated_Source\PSoC5/water_counter.c ****     /* Clear the compare mode bits in the control register */
+ 512:Generated_Source\PSoC5/water_counter.c ****     water_counter_CONTROL &= ((uint8)(~water_counter_CTRL_CMPMODE_MASK));
+ 513:Generated_Source\PSoC5/water_counter.c ****     
+ 514:Generated_Source\PSoC5/water_counter.c ****     /* Write the new setting */
+ 515:Generated_Source\PSoC5/water_counter.c ****     water_counter_CONTROL |= compareMode;
+ 516:Generated_Source\PSoC5/water_counter.c **** }
+ 517:Generated_Source\PSoC5/water_counter.c **** #endif  /* (water_counter_COMPARE_MODE_SOFTWARE) */
+ 518:Generated_Source\PSoC5/water_counter.c **** 
+ 519:Generated_Source\PSoC5/water_counter.c **** 
+ 520:Generated_Source\PSoC5/water_counter.c **** #if (water_counter_CAPTURE_MODE_SOFTWARE)
+ 521:Generated_Source\PSoC5/water_counter.c **** /*******************************************************************************
+ 522:Generated_Source\PSoC5/water_counter.c **** * Function Name: water_counter_SetCaptureMode
+ 523:Generated_Source\PSoC5/water_counter.c **** ********************************************************************************
+ 524:Generated_Source\PSoC5/water_counter.c **** * Summary:
+ 525:Generated_Source\PSoC5/water_counter.c **** *  Sets the software controlled Capture Mode.
+ 526:Generated_Source\PSoC5/water_counter.c **** *
+ 527:Generated_Source\PSoC5/water_counter.c **** * Parameters:
+ 528:Generated_Source\PSoC5/water_counter.c **** *  captureMode:  Capture Mode Enumerated Type.
+ 529:Generated_Source\PSoC5/water_counter.c **** *
+ 530:Generated_Source\PSoC5/water_counter.c **** * Return:
+ 531:Generated_Source\PSoC5/water_counter.c **** *  void
+ 532:Generated_Source\PSoC5/water_counter.c **** *
+ 533:Generated_Source\PSoC5/water_counter.c **** *******************************************************************************/
+ 534:Generated_Source\PSoC5/water_counter.c **** void water_counter_SetCaptureMode(uint8 captureMode) 
+ 535:Generated_Source\PSoC5/water_counter.c **** {
+ 536:Generated_Source\PSoC5/water_counter.c ****     /* Clear the capture mode bits in the control register */
+ 537:Generated_Source\PSoC5/water_counter.c ****     water_counter_CONTROL &= ((uint8)(~water_counter_CTRL_CAPMODE_MASK));
+ 538:Generated_Source\PSoC5/water_counter.c ****     
+ 539:Generated_Source\PSoC5/water_counter.c ****     /* Write the new setting */
+ 540:Generated_Source\PSoC5/water_counter.c ****     water_counter_CONTROL |= ((uint8)((uint8)captureMode << water_counter_CTRL_CAPMODE0_SHIFT));
+ 541:Generated_Source\PSoC5/water_counter.c **** }
+ 542:Generated_Source\PSoC5/water_counter.c **** #endif  /* (water_counter_CAPTURE_MODE_SOFTWARE) */
+ 543:Generated_Source\PSoC5/water_counter.c **** 
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 16
+
+
+ 544:Generated_Source\PSoC5/water_counter.c **** 
+ 545:Generated_Source\PSoC5/water_counter.c **** /*******************************************************************************
+ 546:Generated_Source\PSoC5/water_counter.c **** * Function Name: water_counter_ClearFIFO
+ 547:Generated_Source\PSoC5/water_counter.c **** ********************************************************************************
+ 548:Generated_Source\PSoC5/water_counter.c **** * Summary:
+ 549:Generated_Source\PSoC5/water_counter.c **** *   This function clears all capture data from the capture FIFO
+ 550:Generated_Source\PSoC5/water_counter.c **** *
+ 551:Generated_Source\PSoC5/water_counter.c **** * Parameters:  
+ 552:Generated_Source\PSoC5/water_counter.c **** *  void:
+ 553:Generated_Source\PSoC5/water_counter.c **** *
+ 554:Generated_Source\PSoC5/water_counter.c **** * Return: 
+ 555:Generated_Source\PSoC5/water_counter.c **** *  None
+ 556:Generated_Source\PSoC5/water_counter.c **** *
+ 557:Generated_Source\PSoC5/water_counter.c **** *******************************************************************************/
+ 558:Generated_Source\PSoC5/water_counter.c **** void water_counter_ClearFIFO(void) 
+ 559:Generated_Source\PSoC5/water_counter.c **** {
+ 313              		.loc 1 559 0
+ 314              		.cfi_startproc
+ 315              		@ args = 0, pretend = 0, frame = 0
+ 316              		@ frame_needed = 0, uses_anonymous_args = 0
+ 317 0000 08B5     		push	{r3, lr}
+ 318              		.cfi_def_cfa_offset 8
+ 319              		.cfi_offset 3, -8
+ 320              		.cfi_offset 14, -4
+ 560:Generated_Source\PSoC5/water_counter.c **** 
+ 561:Generated_Source\PSoC5/water_counter.c ****     while(0u != (water_counter_ReadStatusRegister() & water_counter_STATUS_FIFONEMP))
+ 321              		.loc 1 561 0
+ 322 0002 01E0     		b	.L34
+ 323              	.L35:
+ 562:Generated_Source\PSoC5/water_counter.c ****     {
+ 563:Generated_Source\PSoC5/water_counter.c ****         (void)water_counter_ReadCapture();
+ 324              		.loc 1 563 0
+ 325 0004 FFF7FEFF 		bl	water_counter_ReadCapture
+ 326              	.LVL10:
+ 327              	.L34:
+ 561:Generated_Source\PSoC5/water_counter.c ****     {
+ 328              		.loc 1 561 0
+ 329 0008 FFF7FEFF 		bl	water_counter_ReadStatusRegister
+ 330              	.LVL11:
+ 331 000c 10F0400F 		tst	r0, #64
+ 332 0010 F8D1     		bne	.L35
+ 564:Generated_Source\PSoC5/water_counter.c ****     }
+ 565:Generated_Source\PSoC5/water_counter.c **** 
+ 566:Generated_Source\PSoC5/water_counter.c **** }
+ 333              		.loc 1 566 0
+ 334 0012 08BD     		pop	{r3, pc}
+ 335              		.cfi_endproc
+ 336              	.LFE13:
+ 337              		.size	water_counter_ClearFIFO, .-water_counter_ClearFIFO
+ 338              		.section	.text.water_counter_Init,"ax",%progbits
+ 339              		.align	2
+ 340              		.global	water_counter_Init
+ 341              		.thumb
+ 342              		.thumb_func
+ 343              		.type	water_counter_Init, %function
+ 344              	water_counter_Init:
+ 345              	.LFB0:
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 17
+
+
+  38:Generated_Source\PSoC5/water_counter.c ****         #if (!water_counter_UsingFixedFunction && !water_counter_ControlRegRemoved)
+ 346              		.loc 1 38 0
+ 347              		.cfi_startproc
+ 348              		@ args = 0, pretend = 0, frame = 0
+ 349              		@ frame_needed = 0, uses_anonymous_args = 0
+ 350 0000 08B5     		push	{r3, lr}
+ 351              		.cfi_def_cfa_offset 8
+ 352              		.cfi_offset 3, -8
+ 353              		.cfi_offset 14, -4
+  96:Generated_Source\PSoC5/water_counter.c ****         #endif /* (!water_counter_UsingFixedFunction) */
+ 354              		.loc 1 96 0
+ 355 0002 FFF7FEFF 		bl	water_counter_ClearFIFO
+ 356              	.LVL12:
+ 100:Generated_Source\PSoC5/water_counter.c ****         #if (!(water_counter_UsingFixedFunction && (CY_PSOC5A)))
+ 357              		.loc 1 100 0
+ 358 0006 0C48     		ldr	r0, .L39
+ 359 0008 FFF7FEFF 		bl	water_counter_WritePeriod
+ 360              	.LVL13:
+ 102:Generated_Source\PSoC5/water_counter.c ****         #endif /* (!(water_counter_UsingFixedFunction && (CY_PSOC5A))) */
+ 361              		.loc 1 102 0
+ 362 000c 0020     		movs	r0, #0
+ 363 000e FFF7FEFF 		bl	water_counter_WriteCounter
+ 364              	.LVL14:
+ 104:Generated_Source\PSoC5/water_counter.c ****         
+ 365              		.loc 1 104 0
+ 366 0012 0020     		movs	r0, #0
+ 367 0014 FFF7FEFF 		bl	water_counter_SetInterruptMode
+ 368              	.LVL15:
+ 108:Generated_Source\PSoC5/water_counter.c ****             /* Set the compare value (only available to non-fixed function implementation */
+ 369              		.loc 1 108 0
+ 370 0018 FFF7FEFF 		bl	water_counter_ReadStatusRegister
+ 371              	.LVL16:
+ 110:Generated_Source\PSoC5/water_counter.c ****             /* Use the interrupt output of the status register for IRQ output */
+ 372              		.loc 1 110 0
+ 373 001c 0748     		ldr	r0, .L39+4
+ 374 001e FFF7FEFF 		bl	water_counter_WriteCompare
+ 375              	.LVL17:
+ 115:Generated_Source\PSoC5/water_counter.c ****             
+ 376              		.loc 1 115 0
+ 377 0022 FFF7FEFF 		bl	CyEnterCriticalSection
+ 378              	.LVL18:
+ 117:Generated_Source\PSoC5/water_counter.c ****             
+ 379              		.loc 1 117 0
+ 380 0026 064A     		ldr	r2, .L39+8
+ 381 0028 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 382 002a 43F01003 		orr	r3, r3, #16
+ 383 002e 1370     		strb	r3, [r2]
+ 120:Generated_Source\PSoC5/water_counter.c ****             
+ 384              		.loc 1 120 0
+ 385 0030 FFF7FEFF 		bl	CyExitCriticalSection
+ 386              	.LVL19:
+ 387 0034 08BD     		pop	{r3, pc}
+ 388              	.L40:
+ 389 0036 00BF     		.align	2
+ 390              	.L39:
+ 391 0038 FEFFFF00 		.word	16777214
+ 392 003c FDFFFF00 		.word	16777213
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 18
+
+
+ 393 0040 9A640040 		.word	1073767578
+ 394              		.cfi_endproc
+ 395              	.LFE0:
+ 396              		.size	water_counter_Init, .-water_counter_Init
+ 397              		.section	.text.water_counter_Start,"ax",%progbits
+ 398              		.align	2
+ 399              		.global	water_counter_Start
+ 400              		.thumb
+ 401              		.thumb_func
+ 402              		.type	water_counter_Start, %function
+ 403              	water_counter_Start:
+ 404              	.LFB2:
+ 179:Generated_Source\PSoC5/water_counter.c ****     if(water_counter_initVar == 0u)
+ 405              		.loc 1 179 0
+ 406              		.cfi_startproc
+ 407              		@ args = 0, pretend = 0, frame = 0
+ 408              		@ frame_needed = 0, uses_anonymous_args = 0
+ 409 0000 08B5     		push	{r3, lr}
+ 410              		.cfi_def_cfa_offset 8
+ 411              		.cfi_offset 3, -8
+ 412              		.cfi_offset 14, -4
+ 180:Generated_Source\PSoC5/water_counter.c ****     {
+ 413              		.loc 1 180 0
+ 414 0002 044B     		ldr	r3, .L44
+ 415 0004 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 416 0006 23B9     		cbnz	r3, .L41
+ 182:Generated_Source\PSoC5/water_counter.c ****         
+ 417              		.loc 1 182 0
+ 418 0008 FFF7FEFF 		bl	water_counter_Init
+ 419              	.LVL20:
+ 184:Generated_Source\PSoC5/water_counter.c ****     }
+ 420              		.loc 1 184 0
+ 421 000c 0122     		movs	r2, #1
+ 422 000e 014B     		ldr	r3, .L44
+ 423 0010 1A70     		strb	r2, [r3]
+ 424              	.L41:
+ 425 0012 08BD     		pop	{r3, pc}
+ 426              	.L45:
+ 427              		.align	2
+ 428              	.L44:
+ 429 0014 00000000 		.word	.LANCHOR0
+ 430              		.cfi_endproc
+ 431              	.LFE2:
+ 432              		.size	water_counter_Start, .-water_counter_Start
+ 433              		.global	water_counter_initVar
+ 434              		.bss
+ 435              		.set	.LANCHOR0,. + 0
+ 436              		.type	water_counter_initVar, %object
+ 437              		.size	water_counter_initVar, 1
+ 438              	water_counter_initVar:
+ 439 0000 00       		.space	1
+ 440              		.text
+ 441              	.Letext0:
+ 442              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+ 443              		.file 3 "Generated_Source\\PSoC5\\CyLib.h"
+ 444              		.section	.debug_info,"",%progbits
+ 445              	.Ldebug_info0:
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 19
+
+
+ 446 0000 53030000 		.4byte	0x353
+ 447 0004 0400     		.2byte	0x4
+ 448 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 449 000a 04       		.byte	0x4
+ 450 000b 01       		.uleb128 0x1
+ 451 000c C6000000 		.4byte	.LASF39
+ 452 0010 0C       		.byte	0xc
+ 453 0011 D4020000 		.4byte	.LASF40
+ 454 0015 06000000 		.4byte	.LASF41
+ 455 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 456 001d 00000000 		.4byte	0
+ 457 0021 00000000 		.4byte	.Ldebug_line0
+ 458 0025 02       		.uleb128 0x2
+ 459 0026 01       		.byte	0x1
+ 460 0027 06       		.byte	0x6
+ 461 0028 44030000 		.4byte	.LASF0
+ 462 002c 02       		.uleb128 0x2
+ 463 002d 01       		.byte	0x1
+ 464 002e 08       		.byte	0x8
+ 465 002f 45020000 		.4byte	.LASF1
+ 466 0033 02       		.uleb128 0x2
+ 467 0034 02       		.byte	0x2
+ 468 0035 05       		.byte	0x5
+ 469 0036 B7020000 		.4byte	.LASF2
+ 470 003a 02       		.uleb128 0x2
+ 471 003b 02       		.byte	0x2
+ 472 003c 07       		.byte	0x7
+ 473 003d 4D000000 		.4byte	.LASF3
+ 474 0041 02       		.uleb128 0x2
+ 475 0042 04       		.byte	0x4
+ 476 0043 05       		.byte	0x5
+ 477 0044 2F030000 		.4byte	.LASF4
+ 478 0048 02       		.uleb128 0x2
+ 479 0049 04       		.byte	0x4
+ 480 004a 07       		.byte	0x7
+ 481 004b 71010000 		.4byte	.LASF5
+ 482 004f 02       		.uleb128 0x2
+ 483 0050 08       		.byte	0x8
+ 484 0051 05       		.byte	0x5
+ 485 0052 99020000 		.4byte	.LASF6
+ 486 0056 02       		.uleb128 0x2
+ 487 0057 08       		.byte	0x8
+ 488 0058 07       		.byte	0x7
+ 489 0059 9B000000 		.4byte	.LASF7
+ 490 005d 03       		.uleb128 0x3
+ 491 005e 04       		.byte	0x4
+ 492 005f 05       		.byte	0x5
+ 493 0060 696E7400 		.ascii	"int\000"
+ 494 0064 02       		.uleb128 0x2
+ 495 0065 04       		.byte	0x4
+ 496 0066 07       		.byte	0x7
+ 497 0067 53020000 		.4byte	.LASF8
+ 498 006b 04       		.uleb128 0x4
+ 499 006c 83010000 		.4byte	.LASF9
+ 500 0070 02       		.byte	0x2
+ 501 0071 E401     		.2byte	0x1e4
+ 502 0073 2C000000 		.4byte	0x2c
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 20
+
+
+ 503 0077 04       		.uleb128 0x4
+ 504 0078 27020000 		.4byte	.LASF10
+ 505 007c 02       		.byte	0x2
+ 506 007d E601     		.2byte	0x1e6
+ 507 007f 48000000 		.4byte	0x48
+ 508 0083 02       		.uleb128 0x2
+ 509 0084 04       		.byte	0x4
+ 510 0085 04       		.byte	0x4
+ 511 0086 8D000000 		.4byte	.LASF11
+ 512 008a 02       		.uleb128 0x2
+ 513 008b 08       		.byte	0x8
+ 514 008c 04       		.byte	0x4
+ 515 008d D6010000 		.4byte	.LASF12
+ 516 0091 02       		.uleb128 0x2
+ 517 0092 01       		.byte	0x1
+ 518 0093 08       		.byte	0x8
+ 519 0094 A7020000 		.4byte	.LASF13
+ 520 0098 04       		.uleb128 0x4
+ 521 0099 54010000 		.4byte	.LASF14
+ 522 009d 02       		.byte	0x2
+ 523 009e 8E02     		.2byte	0x28e
+ 524 00a0 A4000000 		.4byte	0xa4
+ 525 00a4 05       		.uleb128 0x5
+ 526 00a5 6B000000 		.4byte	0x6b
+ 527 00a9 04       		.uleb128 0x4
+ 528 00aa 00000000 		.4byte	.LASF15
+ 529 00ae 02       		.byte	0x2
+ 530 00af 9002     		.2byte	0x290
+ 531 00b1 B5000000 		.4byte	0xb5
+ 532 00b5 05       		.uleb128 0x5
+ 533 00b6 77000000 		.4byte	0x77
+ 534 00ba 02       		.uleb128 0x2
+ 535 00bb 08       		.byte	0x8
+ 536 00bc 04       		.byte	0x4
+ 537 00bd 38030000 		.4byte	.LASF16
+ 538 00c1 02       		.uleb128 0x2
+ 539 00c2 04       		.byte	0x4
+ 540 00c3 07       		.byte	0x7
+ 541 00c4 90020000 		.4byte	.LASF17
+ 542 00c8 06       		.uleb128 0x6
+ 543 00c9 12020000 		.4byte	.LASF18
+ 544 00cd 01       		.byte	0x1
+ 545 00ce 8F       		.byte	0x8f
+ 546 00cf 00000000 		.4byte	.LFB1
+ 547 00d3 02000000 		.4byte	.LFE1-.LFB1
+ 548 00d7 01       		.uleb128 0x1
+ 549 00d8 9C       		.byte	0x9c
+ 550 00d9 06       		.uleb128 0x6
+ 551 00da 7A000000 		.4byte	.LASF19
+ 552 00de 01       		.byte	0x1
+ 553 00df D0       		.byte	0xd0
+ 554 00e0 00000000 		.4byte	.LFB3
+ 555 00e4 02000000 		.4byte	.LFE3-.LFB3
+ 556 00e8 01       		.uleb128 0x1
+ 557 00e9 9C       		.byte	0x9c
+ 558 00ea 07       		.uleb128 0x7
+ 559 00eb 58030000 		.4byte	.LASF20
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 21
+
+
+ 560 00ef 01       		.byte	0x1
+ 561 00f0 ED       		.byte	0xed
+ 562 00f1 00000000 		.4byte	.LFB4
+ 563 00f5 0C000000 		.4byte	.LFE4-.LFB4
+ 564 00f9 01       		.uleb128 0x1
+ 565 00fa 9C       		.byte	0x9c
+ 566 00fb 0D010000 		.4byte	0x10d
+ 567 00ff 08       		.uleb128 0x8
+ 568 0100 89010000 		.4byte	.LASF22
+ 569 0104 01       		.byte	0x1
+ 570 0105 ED       		.byte	0xed
+ 571 0106 6B000000 		.4byte	0x6b
+ 572 010a 01       		.uleb128 0x1
+ 573 010b 50       		.byte	0x50
+ 574 010c 00       		.byte	0
+ 575 010d 09       		.uleb128 0x9
+ 576 010e 98010000 		.4byte	.LASF24
+ 577 0112 01       		.byte	0x1
+ 578 0113 0501     		.2byte	0x105
+ 579 0115 6B000000 		.4byte	0x6b
+ 580 0119 00000000 		.4byte	.LFB5
+ 581 011d 0C000000 		.4byte	.LFE5-.LFB5
+ 582 0121 01       		.uleb128 0x1
+ 583 0122 9C       		.byte	0x9c
+ 584 0123 0A       		.uleb128 0xa
+ 585 0124 14030000 		.4byte	.LASF21
+ 586 0128 01       		.byte	0x1
+ 587 0129 4601     		.2byte	0x146
+ 588 012b 00000000 		.4byte	.LFB6
+ 589 012f 10000000 		.4byte	.LFE6-.LFB6
+ 590 0133 01       		.uleb128 0x1
+ 591 0134 9C       		.byte	0x9c
+ 592 0135 64010000 		.4byte	0x164
+ 593 0139 0B       		.uleb128 0xb
+ 594 013a 93000000 		.4byte	.LASF23
+ 595 013e 01       		.byte	0x1
+ 596 013f 4601     		.2byte	0x146
+ 597 0141 77000000 		.4byte	0x77
+ 598 0145 00000000 		.4byte	.LLST0
+ 599 0149 0C       		.uleb128 0xc
+ 600 014a 0A000000 		.4byte	.LVL3
+ 601 014e 34030000 		.4byte	0x334
+ 602 0152 0D       		.uleb128 0xd
+ 603 0153 01       		.uleb128 0x1
+ 604 0154 50       		.byte	0x50
+ 605 0155 05       		.uleb128 0x5
+ 606 0156 0C       		.byte	0xc
+ 607 0157 08640040 		.4byte	0x40006408
+ 608 015b 0D       		.uleb128 0xd
+ 609 015c 01       		.uleb128 0x1
+ 610 015d 51       		.byte	0x51
+ 611 015e 03       		.uleb128 0x3
+ 612 015f F3       		.byte	0xf3
+ 613 0160 01       		.uleb128 0x1
+ 614 0161 50       		.byte	0x50
+ 615 0162 00       		.byte	0
+ 616 0163 00       		.byte	0
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 22
+
+
+ 617 0164 09       		.uleb128 0x9
+ 618 0165 DD010000 		.4byte	.LASF25
+ 619 0169 01       		.byte	0x1
+ 620 016a 6501     		.2byte	0x165
+ 621 016c 77000000 		.4byte	0x77
+ 622 0170 00000000 		.4byte	.LFB7
+ 623 0174 18000000 		.4byte	.LFE7-.LFB7
+ 624 0178 01       		.uleb128 0x1
+ 625 0179 9C       		.byte	0x9c
+ 626 017a 09       		.uleb128 0x9
+ 627 017b 60000000 		.4byte	.LASF26
+ 628 017f 01       		.byte	0x1
+ 629 0180 8601     		.2byte	0x186
+ 630 0182 77000000 		.4byte	0x77
+ 631 0186 00000000 		.4byte	.LFB8
+ 632 018a 10000000 		.4byte	.LFE8-.LFB8
+ 633 018e 01       		.uleb128 0x1
+ 634 018f 9C       		.byte	0x9c
+ 635 0190 0A       		.uleb128 0xa
+ 636 0191 76020000 		.4byte	.LASF27
+ 637 0195 01       		.byte	0x1
+ 638 0196 9F01     		.2byte	0x19f
+ 639 0198 00000000 		.4byte	.LFB9
+ 640 019c 10000000 		.4byte	.LFE9-.LFB9
+ 641 01a0 01       		.uleb128 0x1
+ 642 01a1 9C       		.byte	0x9c
+ 643 01a2 D1010000 		.4byte	0x1d1
+ 644 01a6 0B       		.uleb128 0xb
+ 645 01a7 2C000000 		.4byte	.LASF28
+ 646 01ab 01       		.byte	0x1
+ 647 01ac 9F01     		.2byte	0x19f
+ 648 01ae 77000000 		.4byte	0x77
+ 649 01b2 2C000000 		.4byte	.LLST1
+ 650 01b6 0C       		.uleb128 0xc
+ 651 01b7 0A000000 		.4byte	.LVL6
+ 652 01bb 34030000 		.4byte	0x334
+ 653 01bf 0D       		.uleb128 0xd
+ 654 01c0 01       		.uleb128 0x1
+ 655 01c1 50       		.byte	0x50
+ 656 01c2 05       		.uleb128 0x5
+ 657 01c3 0C       		.byte	0xc
+ 658 01c4 28640040 		.4byte	0x40006428
+ 659 01c8 0D       		.uleb128 0xd
+ 660 01c9 01       		.uleb128 0x1
+ 661 01ca 51       		.byte	0x51
+ 662 01cb 03       		.uleb128 0x3
+ 663 01cc F3       		.byte	0xf3
+ 664 01cd 01       		.uleb128 0x1
+ 665 01ce 50       		.byte	0x50
+ 666 01cf 00       		.byte	0
+ 667 01d0 00       		.byte	0
+ 668 01d1 09       		.uleb128 0x9
+ 669 01d2 FB020000 		.4byte	.LASF29
+ 670 01d6 01       		.byte	0x1
+ 671 01d7 B601     		.2byte	0x1b6
+ 672 01d9 77000000 		.4byte	0x77
+ 673 01dd 00000000 		.4byte	.LFB10
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 23
+
+
+ 674 01e1 10000000 		.4byte	.LFE10-.LFB10
+ 675 01e5 01       		.uleb128 0x1
+ 676 01e6 9C       		.byte	0x9c
+ 677 01e7 0A       		.uleb128 0xa
+ 678 01e8 F7010000 		.4byte	.LASF30
+ 679 01ec 01       		.byte	0x1
+ 680 01ed D101     		.2byte	0x1d1
+ 681 01ef 00000000 		.4byte	.LFB11
+ 682 01f3 10000000 		.4byte	.LFE11-.LFB11
+ 683 01f7 01       		.uleb128 0x1
+ 684 01f8 9C       		.byte	0x9c
+ 685 01f9 28020000 		.4byte	0x228
+ 686 01fd 0B       		.uleb128 0xb
+ 687 01fe 50030000 		.4byte	.LASF31
+ 688 0202 01       		.byte	0x1
+ 689 0203 D101     		.2byte	0x1d1
+ 690 0205 77000000 		.4byte	0x77
+ 691 0209 58000000 		.4byte	.LLST2
+ 692 020d 0C       		.uleb128 0xc
+ 693 020e 0A000000 		.4byte	.LVL9
+ 694 0212 34030000 		.4byte	0x334
+ 695 0216 0D       		.uleb128 0xd
+ 696 0217 01       		.uleb128 0x1
+ 697 0218 50       		.byte	0x50
+ 698 0219 05       		.uleb128 0x5
+ 699 021a 0C       		.byte	0xc
+ 700 021b 38640040 		.4byte	0x40006438
+ 701 021f 0D       		.uleb128 0xd
+ 702 0220 01       		.uleb128 0x1
+ 703 0221 51       		.byte	0x51
+ 704 0222 03       		.uleb128 0x3
+ 705 0223 F3       		.byte	0xf3
+ 706 0224 01       		.uleb128 0x1
+ 707 0225 50       		.byte	0x50
+ 708 0226 00       		.byte	0
+ 709 0227 00       		.byte	0
+ 710 0228 09       		.uleb128 0x9
+ 711 0229 33000000 		.4byte	.LASF32
+ 712 022d 01       		.byte	0x1
+ 713 022e E901     		.2byte	0x1e9
+ 714 0230 77000000 		.4byte	0x77
+ 715 0234 00000000 		.4byte	.LFB12
+ 716 0238 10000000 		.4byte	.LFE12-.LFB12
+ 717 023c 01       		.uleb128 0x1
+ 718 023d 9C       		.byte	0x9c
+ 719 023e 0A       		.uleb128 0xa
+ 720 023f 59010000 		.4byte	.LASF33
+ 721 0243 01       		.byte	0x1
+ 722 0244 2E02     		.2byte	0x22e
+ 723 0246 00000000 		.4byte	.LFB13
+ 724 024a 14000000 		.4byte	.LFE13-.LFB13
+ 725 024e 01       		.uleb128 0x1
+ 726 024f 9C       		.byte	0x9c
+ 727 0250 67020000 		.4byte	0x267
+ 728 0254 0E       		.uleb128 0xe
+ 729 0255 08000000 		.4byte	.LVL10
+ 730 0259 7A010000 		.4byte	0x17a
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 24
+
+
+ 731 025d 0E       		.uleb128 0xe
+ 732 025e 0C000000 		.4byte	.LVL11
+ 733 0262 0D010000 		.4byte	0x10d
+ 734 0266 00       		.byte	0
+ 735 0267 07       		.uleb128 0x7
+ 736 0268 C1020000 		.4byte	.LASF34
+ 737 026c 01       		.byte	0x1
+ 738 026d 25       		.byte	0x25
+ 739 026e 00000000 		.4byte	.LFB0
+ 740 0272 44000000 		.4byte	.LFE0-.LFB0
+ 741 0276 01       		.uleb128 0x1
+ 742 0277 9C       		.byte	0x9c
+ 743 0278 04030000 		.4byte	0x304
+ 744 027c 0F       		.uleb128 0xf
+ 745 027d B9010000 		.4byte	.LASF42
+ 746 0281 01       		.byte	0x1
+ 747 0282 2D       		.byte	0x2d
+ 748 0283 6B000000 		.4byte	0x6b
+ 749 0287 84000000 		.4byte	.LLST3
+ 750 028b 0E       		.uleb128 0xe
+ 751 028c 06000000 		.4byte	.LVL12
+ 752 0290 3E020000 		.4byte	0x23e
+ 753 0294 10       		.uleb128 0x10
+ 754 0295 0C000000 		.4byte	.LVL13
+ 755 0299 90010000 		.4byte	0x190
+ 756 029d AB020000 		.4byte	0x2ab
+ 757 02a1 0D       		.uleb128 0xd
+ 758 02a2 01       		.uleb128 0x1
+ 759 02a3 50       		.byte	0x50
+ 760 02a4 05       		.uleb128 0x5
+ 761 02a5 0C       		.byte	0xc
+ 762 02a6 FEFFFF00 		.4byte	0xfffffe
+ 763 02aa 00       		.byte	0
+ 764 02ab 10       		.uleb128 0x10
+ 765 02ac 12000000 		.4byte	.LVL14
+ 766 02b0 23010000 		.4byte	0x123
+ 767 02b4 BE020000 		.4byte	0x2be
+ 768 02b8 0D       		.uleb128 0xd
+ 769 02b9 01       		.uleb128 0x1
+ 770 02ba 50       		.byte	0x50
+ 771 02bb 01       		.uleb128 0x1
+ 772 02bc 30       		.byte	0x30
+ 773 02bd 00       		.byte	0
+ 774 02be 10       		.uleb128 0x10
+ 775 02bf 18000000 		.4byte	.LVL15
+ 776 02c3 EA000000 		.4byte	0xea
+ 777 02c7 D1020000 		.4byte	0x2d1
+ 778 02cb 0D       		.uleb128 0xd
+ 779 02cc 01       		.uleb128 0x1
+ 780 02cd 50       		.byte	0x50
+ 781 02ce 01       		.uleb128 0x1
+ 782 02cf 30       		.byte	0x30
+ 783 02d0 00       		.byte	0
+ 784 02d1 0E       		.uleb128 0xe
+ 785 02d2 1C000000 		.4byte	.LVL16
+ 786 02d6 0D010000 		.4byte	0x10d
+ 787 02da 10       		.uleb128 0x10
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 25
+
+
+ 788 02db 22000000 		.4byte	.LVL17
+ 789 02df E7010000 		.4byte	0x1e7
+ 790 02e3 F1020000 		.4byte	0x2f1
+ 791 02e7 0D       		.uleb128 0xd
+ 792 02e8 01       		.uleb128 0x1
+ 793 02e9 50       		.byte	0x50
+ 794 02ea 05       		.uleb128 0x5
+ 795 02eb 0C       		.byte	0xc
+ 796 02ec FDFFFF00 		.4byte	0xfffffd
+ 797 02f0 00       		.byte	0
+ 798 02f1 0E       		.uleb128 0xe
+ 799 02f2 26000000 		.4byte	.LVL18
+ 800 02f6 40030000 		.4byte	0x340
+ 801 02fa 0E       		.uleb128 0xe
+ 802 02fb 34000000 		.4byte	.LVL19
+ 803 02ff 4B030000 		.4byte	0x34b
+ 804 0303 00       		.byte	0
+ 805 0304 07       		.uleb128 0x7
+ 806 0305 B2000000 		.4byte	.LASF35
+ 807 0309 01       		.byte	0x1
+ 808 030a B2       		.byte	0xb2
+ 809 030b 00000000 		.4byte	.LFB2
+ 810 030f 18000000 		.4byte	.LFE2-.LFB2
+ 811 0313 01       		.uleb128 0x1
+ 812 0314 9C       		.byte	0x9c
+ 813 0315 23030000 		.4byte	0x323
+ 814 0319 0E       		.uleb128 0xe
+ 815 031a 0C000000 		.4byte	.LVL20
+ 816 031e 67020000 		.4byte	0x267
+ 817 0322 00       		.byte	0
+ 818 0323 11       		.uleb128 0x11
+ 819 0324 77030000 		.4byte	.LASF43
+ 820 0328 01       		.byte	0x1
+ 821 0329 15       		.byte	0x15
+ 822 032a 6B000000 		.4byte	0x6b
+ 823 032e 05       		.uleb128 0x5
+ 824 032f 03       		.byte	0x3
+ 825 0330 00000000 		.4byte	water_counter_initVar
+ 826 0334 12       		.uleb128 0x12
+ 827 0335 AC020000 		.4byte	.LASF36
+ 828 0339 AC020000 		.4byte	.LASF36
+ 829 033d 02       		.byte	0x2
+ 830 033e 2702     		.2byte	0x227
+ 831 0340 13       		.uleb128 0x13
+ 832 0341 2E020000 		.4byte	.LASF37
+ 833 0345 2E020000 		.4byte	.LASF37
+ 834 0349 03       		.byte	0x3
+ 835 034a 7D       		.byte	0x7d
+ 836 034b 13       		.uleb128 0x13
+ 837 034c 60020000 		.4byte	.LASF38
+ 838 0350 60020000 		.4byte	.LASF38
+ 839 0354 03       		.byte	0x3
+ 840 0355 7E       		.byte	0x7e
+ 841 0356 00       		.byte	0
+ 842              		.section	.debug_abbrev,"",%progbits
+ 843              	.Ldebug_abbrev0:
+ 844 0000 01       		.uleb128 0x1
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 26
+
+
+ 845 0001 11       		.uleb128 0x11
+ 846 0002 01       		.byte	0x1
+ 847 0003 25       		.uleb128 0x25
+ 848 0004 0E       		.uleb128 0xe
+ 849 0005 13       		.uleb128 0x13
+ 850 0006 0B       		.uleb128 0xb
+ 851 0007 03       		.uleb128 0x3
+ 852 0008 0E       		.uleb128 0xe
+ 853 0009 1B       		.uleb128 0x1b
+ 854 000a 0E       		.uleb128 0xe
+ 855 000b 55       		.uleb128 0x55
+ 856 000c 17       		.uleb128 0x17
+ 857 000d 11       		.uleb128 0x11
+ 858 000e 01       		.uleb128 0x1
+ 859 000f 10       		.uleb128 0x10
+ 860 0010 17       		.uleb128 0x17
+ 861 0011 00       		.byte	0
+ 862 0012 00       		.byte	0
+ 863 0013 02       		.uleb128 0x2
+ 864 0014 24       		.uleb128 0x24
+ 865 0015 00       		.byte	0
+ 866 0016 0B       		.uleb128 0xb
+ 867 0017 0B       		.uleb128 0xb
+ 868 0018 3E       		.uleb128 0x3e
+ 869 0019 0B       		.uleb128 0xb
+ 870 001a 03       		.uleb128 0x3
+ 871 001b 0E       		.uleb128 0xe
+ 872 001c 00       		.byte	0
+ 873 001d 00       		.byte	0
+ 874 001e 03       		.uleb128 0x3
+ 875 001f 24       		.uleb128 0x24
+ 876 0020 00       		.byte	0
+ 877 0021 0B       		.uleb128 0xb
+ 878 0022 0B       		.uleb128 0xb
+ 879 0023 3E       		.uleb128 0x3e
+ 880 0024 0B       		.uleb128 0xb
+ 881 0025 03       		.uleb128 0x3
+ 882 0026 08       		.uleb128 0x8
+ 883 0027 00       		.byte	0
+ 884 0028 00       		.byte	0
+ 885 0029 04       		.uleb128 0x4
+ 886 002a 16       		.uleb128 0x16
+ 887 002b 00       		.byte	0
+ 888 002c 03       		.uleb128 0x3
+ 889 002d 0E       		.uleb128 0xe
+ 890 002e 3A       		.uleb128 0x3a
+ 891 002f 0B       		.uleb128 0xb
+ 892 0030 3B       		.uleb128 0x3b
+ 893 0031 05       		.uleb128 0x5
+ 894 0032 49       		.uleb128 0x49
+ 895 0033 13       		.uleb128 0x13
+ 896 0034 00       		.byte	0
+ 897 0035 00       		.byte	0
+ 898 0036 05       		.uleb128 0x5
+ 899 0037 35       		.uleb128 0x35
+ 900 0038 00       		.byte	0
+ 901 0039 49       		.uleb128 0x49
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 27
+
+
+ 902 003a 13       		.uleb128 0x13
+ 903 003b 00       		.byte	0
+ 904 003c 00       		.byte	0
+ 905 003d 06       		.uleb128 0x6
+ 906 003e 2E       		.uleb128 0x2e
+ 907 003f 00       		.byte	0
+ 908 0040 3F       		.uleb128 0x3f
+ 909 0041 19       		.uleb128 0x19
+ 910 0042 03       		.uleb128 0x3
+ 911 0043 0E       		.uleb128 0xe
+ 912 0044 3A       		.uleb128 0x3a
+ 913 0045 0B       		.uleb128 0xb
+ 914 0046 3B       		.uleb128 0x3b
+ 915 0047 0B       		.uleb128 0xb
+ 916 0048 27       		.uleb128 0x27
+ 917 0049 19       		.uleb128 0x19
+ 918 004a 11       		.uleb128 0x11
+ 919 004b 01       		.uleb128 0x1
+ 920 004c 12       		.uleb128 0x12
+ 921 004d 06       		.uleb128 0x6
+ 922 004e 40       		.uleb128 0x40
+ 923 004f 18       		.uleb128 0x18
+ 924 0050 9742     		.uleb128 0x2117
+ 925 0052 19       		.uleb128 0x19
+ 926 0053 00       		.byte	0
+ 927 0054 00       		.byte	0
+ 928 0055 07       		.uleb128 0x7
+ 929 0056 2E       		.uleb128 0x2e
+ 930 0057 01       		.byte	0x1
+ 931 0058 3F       		.uleb128 0x3f
+ 932 0059 19       		.uleb128 0x19
+ 933 005a 03       		.uleb128 0x3
+ 934 005b 0E       		.uleb128 0xe
+ 935 005c 3A       		.uleb128 0x3a
+ 936 005d 0B       		.uleb128 0xb
+ 937 005e 3B       		.uleb128 0x3b
+ 938 005f 0B       		.uleb128 0xb
+ 939 0060 27       		.uleb128 0x27
+ 940 0061 19       		.uleb128 0x19
+ 941 0062 11       		.uleb128 0x11
+ 942 0063 01       		.uleb128 0x1
+ 943 0064 12       		.uleb128 0x12
+ 944 0065 06       		.uleb128 0x6
+ 945 0066 40       		.uleb128 0x40
+ 946 0067 18       		.uleb128 0x18
+ 947 0068 9742     		.uleb128 0x2117
+ 948 006a 19       		.uleb128 0x19
+ 949 006b 01       		.uleb128 0x1
+ 950 006c 13       		.uleb128 0x13
+ 951 006d 00       		.byte	0
+ 952 006e 00       		.byte	0
+ 953 006f 08       		.uleb128 0x8
+ 954 0070 05       		.uleb128 0x5
+ 955 0071 00       		.byte	0
+ 956 0072 03       		.uleb128 0x3
+ 957 0073 0E       		.uleb128 0xe
+ 958 0074 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 28
+
+
+ 959 0075 0B       		.uleb128 0xb
+ 960 0076 3B       		.uleb128 0x3b
+ 961 0077 0B       		.uleb128 0xb
+ 962 0078 49       		.uleb128 0x49
+ 963 0079 13       		.uleb128 0x13
+ 964 007a 02       		.uleb128 0x2
+ 965 007b 18       		.uleb128 0x18
+ 966 007c 00       		.byte	0
+ 967 007d 00       		.byte	0
+ 968 007e 09       		.uleb128 0x9
+ 969 007f 2E       		.uleb128 0x2e
+ 970 0080 00       		.byte	0
+ 971 0081 3F       		.uleb128 0x3f
+ 972 0082 19       		.uleb128 0x19
+ 973 0083 03       		.uleb128 0x3
+ 974 0084 0E       		.uleb128 0xe
+ 975 0085 3A       		.uleb128 0x3a
+ 976 0086 0B       		.uleb128 0xb
+ 977 0087 3B       		.uleb128 0x3b
+ 978 0088 05       		.uleb128 0x5
+ 979 0089 27       		.uleb128 0x27
+ 980 008a 19       		.uleb128 0x19
+ 981 008b 49       		.uleb128 0x49
+ 982 008c 13       		.uleb128 0x13
+ 983 008d 11       		.uleb128 0x11
+ 984 008e 01       		.uleb128 0x1
+ 985 008f 12       		.uleb128 0x12
+ 986 0090 06       		.uleb128 0x6
+ 987 0091 40       		.uleb128 0x40
+ 988 0092 18       		.uleb128 0x18
+ 989 0093 9742     		.uleb128 0x2117
+ 990 0095 19       		.uleb128 0x19
+ 991 0096 00       		.byte	0
+ 992 0097 00       		.byte	0
+ 993 0098 0A       		.uleb128 0xa
+ 994 0099 2E       		.uleb128 0x2e
+ 995 009a 01       		.byte	0x1
+ 996 009b 3F       		.uleb128 0x3f
+ 997 009c 19       		.uleb128 0x19
+ 998 009d 03       		.uleb128 0x3
+ 999 009e 0E       		.uleb128 0xe
+ 1000 009f 3A       		.uleb128 0x3a
+ 1001 00a0 0B       		.uleb128 0xb
+ 1002 00a1 3B       		.uleb128 0x3b
+ 1003 00a2 05       		.uleb128 0x5
+ 1004 00a3 27       		.uleb128 0x27
+ 1005 00a4 19       		.uleb128 0x19
+ 1006 00a5 11       		.uleb128 0x11
+ 1007 00a6 01       		.uleb128 0x1
+ 1008 00a7 12       		.uleb128 0x12
+ 1009 00a8 06       		.uleb128 0x6
+ 1010 00a9 40       		.uleb128 0x40
+ 1011 00aa 18       		.uleb128 0x18
+ 1012 00ab 9742     		.uleb128 0x2117
+ 1013 00ad 19       		.uleb128 0x19
+ 1014 00ae 01       		.uleb128 0x1
+ 1015 00af 13       		.uleb128 0x13
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 29
+
+
+ 1016 00b0 00       		.byte	0
+ 1017 00b1 00       		.byte	0
+ 1018 00b2 0B       		.uleb128 0xb
+ 1019 00b3 05       		.uleb128 0x5
+ 1020 00b4 00       		.byte	0
+ 1021 00b5 03       		.uleb128 0x3
+ 1022 00b6 0E       		.uleb128 0xe
+ 1023 00b7 3A       		.uleb128 0x3a
+ 1024 00b8 0B       		.uleb128 0xb
+ 1025 00b9 3B       		.uleb128 0x3b
+ 1026 00ba 05       		.uleb128 0x5
+ 1027 00bb 49       		.uleb128 0x49
+ 1028 00bc 13       		.uleb128 0x13
+ 1029 00bd 02       		.uleb128 0x2
+ 1030 00be 17       		.uleb128 0x17
+ 1031 00bf 00       		.byte	0
+ 1032 00c0 00       		.byte	0
+ 1033 00c1 0C       		.uleb128 0xc
+ 1034 00c2 898201   		.uleb128 0x4109
+ 1035 00c5 01       		.byte	0x1
+ 1036 00c6 11       		.uleb128 0x11
+ 1037 00c7 01       		.uleb128 0x1
+ 1038 00c8 31       		.uleb128 0x31
+ 1039 00c9 13       		.uleb128 0x13
+ 1040 00ca 00       		.byte	0
+ 1041 00cb 00       		.byte	0
+ 1042 00cc 0D       		.uleb128 0xd
+ 1043 00cd 8A8201   		.uleb128 0x410a
+ 1044 00d0 00       		.byte	0
+ 1045 00d1 02       		.uleb128 0x2
+ 1046 00d2 18       		.uleb128 0x18
+ 1047 00d3 9142     		.uleb128 0x2111
+ 1048 00d5 18       		.uleb128 0x18
+ 1049 00d6 00       		.byte	0
+ 1050 00d7 00       		.byte	0
+ 1051 00d8 0E       		.uleb128 0xe
+ 1052 00d9 898201   		.uleb128 0x4109
+ 1053 00dc 00       		.byte	0
+ 1054 00dd 11       		.uleb128 0x11
+ 1055 00de 01       		.uleb128 0x1
+ 1056 00df 31       		.uleb128 0x31
+ 1057 00e0 13       		.uleb128 0x13
+ 1058 00e1 00       		.byte	0
+ 1059 00e2 00       		.byte	0
+ 1060 00e3 0F       		.uleb128 0xf
+ 1061 00e4 34       		.uleb128 0x34
+ 1062 00e5 00       		.byte	0
+ 1063 00e6 03       		.uleb128 0x3
+ 1064 00e7 0E       		.uleb128 0xe
+ 1065 00e8 3A       		.uleb128 0x3a
+ 1066 00e9 0B       		.uleb128 0xb
+ 1067 00ea 3B       		.uleb128 0x3b
+ 1068 00eb 0B       		.uleb128 0xb
+ 1069 00ec 49       		.uleb128 0x49
+ 1070 00ed 13       		.uleb128 0x13
+ 1071 00ee 02       		.uleb128 0x2
+ 1072 00ef 17       		.uleb128 0x17
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 30
+
+
+ 1073 00f0 00       		.byte	0
+ 1074 00f1 00       		.byte	0
+ 1075 00f2 10       		.uleb128 0x10
+ 1076 00f3 898201   		.uleb128 0x4109
+ 1077 00f6 01       		.byte	0x1
+ 1078 00f7 11       		.uleb128 0x11
+ 1079 00f8 01       		.uleb128 0x1
+ 1080 00f9 31       		.uleb128 0x31
+ 1081 00fa 13       		.uleb128 0x13
+ 1082 00fb 01       		.uleb128 0x1
+ 1083 00fc 13       		.uleb128 0x13
+ 1084 00fd 00       		.byte	0
+ 1085 00fe 00       		.byte	0
+ 1086 00ff 11       		.uleb128 0x11
+ 1087 0100 34       		.uleb128 0x34
+ 1088 0101 00       		.byte	0
+ 1089 0102 03       		.uleb128 0x3
+ 1090 0103 0E       		.uleb128 0xe
+ 1091 0104 3A       		.uleb128 0x3a
+ 1092 0105 0B       		.uleb128 0xb
+ 1093 0106 3B       		.uleb128 0x3b
+ 1094 0107 0B       		.uleb128 0xb
+ 1095 0108 49       		.uleb128 0x49
+ 1096 0109 13       		.uleb128 0x13
+ 1097 010a 3F       		.uleb128 0x3f
+ 1098 010b 19       		.uleb128 0x19
+ 1099 010c 02       		.uleb128 0x2
+ 1100 010d 18       		.uleb128 0x18
+ 1101 010e 00       		.byte	0
+ 1102 010f 00       		.byte	0
+ 1103 0110 12       		.uleb128 0x12
+ 1104 0111 2E       		.uleb128 0x2e
+ 1105 0112 00       		.byte	0
+ 1106 0113 3F       		.uleb128 0x3f
+ 1107 0114 19       		.uleb128 0x19
+ 1108 0115 3C       		.uleb128 0x3c
+ 1109 0116 19       		.uleb128 0x19
+ 1110 0117 6E       		.uleb128 0x6e
+ 1111 0118 0E       		.uleb128 0xe
+ 1112 0119 03       		.uleb128 0x3
+ 1113 011a 0E       		.uleb128 0xe
+ 1114 011b 3A       		.uleb128 0x3a
+ 1115 011c 0B       		.uleb128 0xb
+ 1116 011d 3B       		.uleb128 0x3b
+ 1117 011e 05       		.uleb128 0x5
+ 1118 011f 00       		.byte	0
+ 1119 0120 00       		.byte	0
+ 1120 0121 13       		.uleb128 0x13
+ 1121 0122 2E       		.uleb128 0x2e
+ 1122 0123 00       		.byte	0
+ 1123 0124 3F       		.uleb128 0x3f
+ 1124 0125 19       		.uleb128 0x19
+ 1125 0126 3C       		.uleb128 0x3c
+ 1126 0127 19       		.uleb128 0x19
+ 1127 0128 6E       		.uleb128 0x6e
+ 1128 0129 0E       		.uleb128 0xe
+ 1129 012a 03       		.uleb128 0x3
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 31
+
+
+ 1130 012b 0E       		.uleb128 0xe
+ 1131 012c 3A       		.uleb128 0x3a
+ 1132 012d 0B       		.uleb128 0xb
+ 1133 012e 3B       		.uleb128 0x3b
+ 1134 012f 0B       		.uleb128 0xb
+ 1135 0130 00       		.byte	0
+ 1136 0131 00       		.byte	0
+ 1137 0132 00       		.byte	0
+ 1138              		.section	.debug_loc,"",%progbits
+ 1139              	.Ldebug_loc0:
+ 1140              	.LLST0:
+ 1141 0000 00000000 		.4byte	.LVL1
+ 1142 0004 06000000 		.4byte	.LVL2
+ 1143 0008 0100     		.2byte	0x1
+ 1144 000a 50       		.byte	0x50
+ 1145 000b 06000000 		.4byte	.LVL2
+ 1146 000f 09000000 		.4byte	.LVL3-1
+ 1147 0013 0100     		.2byte	0x1
+ 1148 0015 51       		.byte	0x51
+ 1149 0016 09000000 		.4byte	.LVL3-1
+ 1150 001a 10000000 		.4byte	.LFE6
+ 1151 001e 0400     		.2byte	0x4
+ 1152 0020 F3       		.byte	0xf3
+ 1153 0021 01       		.uleb128 0x1
+ 1154 0022 50       		.byte	0x50
+ 1155 0023 9F       		.byte	0x9f
+ 1156 0024 00000000 		.4byte	0
+ 1157 0028 00000000 		.4byte	0
+ 1158              	.LLST1:
+ 1159 002c 00000000 		.4byte	.LVL4
+ 1160 0030 06000000 		.4byte	.LVL5
+ 1161 0034 0100     		.2byte	0x1
+ 1162 0036 50       		.byte	0x50
+ 1163 0037 06000000 		.4byte	.LVL5
+ 1164 003b 09000000 		.4byte	.LVL6-1
+ 1165 003f 0100     		.2byte	0x1
+ 1166 0041 51       		.byte	0x51
+ 1167 0042 09000000 		.4byte	.LVL6-1
+ 1168 0046 10000000 		.4byte	.LFE9
+ 1169 004a 0400     		.2byte	0x4
+ 1170 004c F3       		.byte	0xf3
+ 1171 004d 01       		.uleb128 0x1
+ 1172 004e 50       		.byte	0x50
+ 1173 004f 9F       		.byte	0x9f
+ 1174 0050 00000000 		.4byte	0
+ 1175 0054 00000000 		.4byte	0
+ 1176              	.LLST2:
+ 1177 0058 00000000 		.4byte	.LVL7
+ 1178 005c 06000000 		.4byte	.LVL8
+ 1179 0060 0100     		.2byte	0x1
+ 1180 0062 50       		.byte	0x50
+ 1181 0063 06000000 		.4byte	.LVL8
+ 1182 0067 09000000 		.4byte	.LVL9-1
+ 1183 006b 0100     		.2byte	0x1
+ 1184 006d 51       		.byte	0x51
+ 1185 006e 09000000 		.4byte	.LVL9-1
+ 1186 0072 10000000 		.4byte	.LFE11
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 32
+
+
+ 1187 0076 0400     		.2byte	0x4
+ 1188 0078 F3       		.byte	0xf3
+ 1189 0079 01       		.uleb128 0x1
+ 1190 007a 50       		.byte	0x50
+ 1191 007b 9F       		.byte	0x9f
+ 1192 007c 00000000 		.4byte	0
+ 1193 0080 00000000 		.4byte	0
+ 1194              	.LLST3:
+ 1195 0084 26000000 		.4byte	.LVL18
+ 1196 0088 33000000 		.4byte	.LVL19-1
+ 1197 008c 0100     		.2byte	0x1
+ 1198 008e 50       		.byte	0x50
+ 1199 008f 00000000 		.4byte	0
+ 1200 0093 00000000 		.4byte	0
+ 1201              		.section	.debug_aranges,"",%progbits
+ 1202 0000 84000000 		.4byte	0x84
+ 1203 0004 0200     		.2byte	0x2
+ 1204 0006 00000000 		.4byte	.Ldebug_info0
+ 1205 000a 04       		.byte	0x4
+ 1206 000b 00       		.byte	0
+ 1207 000c 0000     		.2byte	0
+ 1208 000e 0000     		.2byte	0
+ 1209 0010 00000000 		.4byte	.LFB1
+ 1210 0014 02000000 		.4byte	.LFE1-.LFB1
+ 1211 0018 00000000 		.4byte	.LFB3
+ 1212 001c 02000000 		.4byte	.LFE3-.LFB3
+ 1213 0020 00000000 		.4byte	.LFB4
+ 1214 0024 0C000000 		.4byte	.LFE4-.LFB4
+ 1215 0028 00000000 		.4byte	.LFB5
+ 1216 002c 0C000000 		.4byte	.LFE5-.LFB5
+ 1217 0030 00000000 		.4byte	.LFB6
+ 1218 0034 10000000 		.4byte	.LFE6-.LFB6
+ 1219 0038 00000000 		.4byte	.LFB7
+ 1220 003c 18000000 		.4byte	.LFE7-.LFB7
+ 1221 0040 00000000 		.4byte	.LFB8
+ 1222 0044 10000000 		.4byte	.LFE8-.LFB8
+ 1223 0048 00000000 		.4byte	.LFB9
+ 1224 004c 10000000 		.4byte	.LFE9-.LFB9
+ 1225 0050 00000000 		.4byte	.LFB10
+ 1226 0054 10000000 		.4byte	.LFE10-.LFB10
+ 1227 0058 00000000 		.4byte	.LFB11
+ 1228 005c 10000000 		.4byte	.LFE11-.LFB11
+ 1229 0060 00000000 		.4byte	.LFB12
+ 1230 0064 10000000 		.4byte	.LFE12-.LFB12
+ 1231 0068 00000000 		.4byte	.LFB13
+ 1232 006c 14000000 		.4byte	.LFE13-.LFB13
+ 1233 0070 00000000 		.4byte	.LFB0
+ 1234 0074 44000000 		.4byte	.LFE0-.LFB0
+ 1235 0078 00000000 		.4byte	.LFB2
+ 1236 007c 18000000 		.4byte	.LFE2-.LFB2
+ 1237 0080 00000000 		.4byte	0
+ 1238 0084 00000000 		.4byte	0
+ 1239              		.section	.debug_ranges,"",%progbits
+ 1240              	.Ldebug_ranges0:
+ 1241 0000 00000000 		.4byte	.LFB1
+ 1242 0004 02000000 		.4byte	.LFE1
+ 1243 0008 00000000 		.4byte	.LFB3
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 33
+
+
+ 1244 000c 02000000 		.4byte	.LFE3
+ 1245 0010 00000000 		.4byte	.LFB4
+ 1246 0014 0C000000 		.4byte	.LFE4
+ 1247 0018 00000000 		.4byte	.LFB5
+ 1248 001c 0C000000 		.4byte	.LFE5
+ 1249 0020 00000000 		.4byte	.LFB6
+ 1250 0024 10000000 		.4byte	.LFE6
+ 1251 0028 00000000 		.4byte	.LFB7
+ 1252 002c 18000000 		.4byte	.LFE7
+ 1253 0030 00000000 		.4byte	.LFB8
+ 1254 0034 10000000 		.4byte	.LFE8
+ 1255 0038 00000000 		.4byte	.LFB9
+ 1256 003c 10000000 		.4byte	.LFE9
+ 1257 0040 00000000 		.4byte	.LFB10
+ 1258 0044 10000000 		.4byte	.LFE10
+ 1259 0048 00000000 		.4byte	.LFB11
+ 1260 004c 10000000 		.4byte	.LFE11
+ 1261 0050 00000000 		.4byte	.LFB12
+ 1262 0054 10000000 		.4byte	.LFE12
+ 1263 0058 00000000 		.4byte	.LFB13
+ 1264 005c 14000000 		.4byte	.LFE13
+ 1265 0060 00000000 		.4byte	.LFB0
+ 1266 0064 44000000 		.4byte	.LFE0
+ 1267 0068 00000000 		.4byte	.LFB2
+ 1268 006c 18000000 		.4byte	.LFE2
+ 1269 0070 00000000 		.4byte	0
+ 1270 0074 00000000 		.4byte	0
+ 1271              		.section	.debug_line,"",%progbits
+ 1272              	.Ldebug_line0:
+ 1273 0000 5D010000 		.section	.debug_str,"MS",%progbits,1
+ 1273      02005500 
+ 1273      00000201 
+ 1273      FB0E0D00 
+ 1273      01010101 
+ 1274              	.LASF15:
+ 1275 0000 72656733 		.ascii	"reg32\000"
+ 1275      3200
+ 1276              	.LASF41:
+ 1277 0006 453A5C61 		.ascii	"E:\\aquadoc\\psoc\\psoc\\water_flow.cydsn\000"
+ 1277      71756164 
+ 1277      6F635C70 
+ 1277      736F635C 
+ 1277      70736F63 
+ 1278              	.LASF28:
+ 1279 002c 70657269 		.ascii	"period\000"
+ 1279      6F6400
+ 1280              	.LASF32:
+ 1281 0033 77617465 		.ascii	"water_counter_ReadCompare\000"
+ 1281      725F636F 
+ 1281      756E7465 
+ 1281      725F5265 
+ 1281      6164436F 
+ 1282              	.LASF3:
+ 1283 004d 73686F72 		.ascii	"short unsigned int\000"
+ 1283      7420756E 
+ 1283      7369676E 
+ 1283      65642069 
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 34
+
+
+ 1283      6E7400
+ 1284              	.LASF26:
+ 1285 0060 77617465 		.ascii	"water_counter_ReadCapture\000"
+ 1285      725F636F 
+ 1285      756E7465 
+ 1285      725F5265 
+ 1285      61644361 
+ 1286              	.LASF19:
+ 1287 007a 77617465 		.ascii	"water_counter_Stop\000"
+ 1287      725F636F 
+ 1287      756E7465 
+ 1287      725F5374 
+ 1287      6F7000
+ 1288              	.LASF11:
+ 1289 008d 666C6F61 		.ascii	"float\000"
+ 1289      7400
+ 1290              	.LASF23:
+ 1291 0093 636F756E 		.ascii	"counter\000"
+ 1291      74657200 
+ 1292              	.LASF7:
+ 1293 009b 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1293      206C6F6E 
+ 1293      6720756E 
+ 1293      7369676E 
+ 1293      65642069 
+ 1294              	.LASF35:
+ 1295 00b2 77617465 		.ascii	"water_counter_Start\000"
+ 1295      725F636F 
+ 1295      756E7465 
+ 1295      725F5374 
+ 1295      61727400 
+ 1296              	.LASF39:
+ 1297 00c6 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1297      43313120 
+ 1297      352E342E 
+ 1297      31203230 
+ 1297      31363036 
+ 1298 00f9 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1298      20726576 
+ 1298      6973696F 
+ 1298      6E203233 
+ 1298      37373135 
+ 1299 012c 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1299      66756E63 
+ 1299      74696F6E 
+ 1299      2D736563 
+ 1299      74696F6E 
+ 1300              	.LASF14:
+ 1301 0154 72656738 		.ascii	"reg8\000"
+ 1301      00
+ 1302              	.LASF33:
+ 1303 0159 77617465 		.ascii	"water_counter_ClearFIFO\000"
+ 1303      725F636F 
+ 1303      756E7465 
+ 1303      725F436C 
+ 1303      65617246 
+ 1304              	.LASF5:
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 35
+
+
+ 1305 0171 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1305      20756E73 
+ 1305      69676E65 
+ 1305      6420696E 
+ 1305      7400
+ 1306              	.LASF9:
+ 1307 0183 75696E74 		.ascii	"uint8\000"
+ 1307      3800
+ 1308              	.LASF22:
+ 1309 0189 696E7465 		.ascii	"interruptsMask\000"
+ 1309      72727570 
+ 1309      74734D61 
+ 1309      736B00
+ 1310              	.LASF24:
+ 1311 0198 77617465 		.ascii	"water_counter_ReadStatusRegister\000"
+ 1311      725F636F 
+ 1311      756E7465 
+ 1311      725F5265 
+ 1311      61645374 
+ 1312              	.LASF42:
+ 1313 01b9 77617465 		.ascii	"water_counter_interruptState\000"
+ 1313      725F636F 
+ 1313      756E7465 
+ 1313      725F696E 
+ 1313      74657272 
+ 1314              	.LASF12:
+ 1315 01d6 646F7562 		.ascii	"double\000"
+ 1315      6C6500
+ 1316              	.LASF25:
+ 1317 01dd 77617465 		.ascii	"water_counter_ReadCounter\000"
+ 1317      725F636F 
+ 1317      756E7465 
+ 1317      725F5265 
+ 1317      6164436F 
+ 1318              	.LASF30:
+ 1319 01f7 77617465 		.ascii	"water_counter_WriteCompare\000"
+ 1319      725F636F 
+ 1319      756E7465 
+ 1319      725F5772 
+ 1319      69746543 
+ 1320              	.LASF18:
+ 1321 0212 77617465 		.ascii	"water_counter_Enable\000"
+ 1321      725F636F 
+ 1321      756E7465 
+ 1321      725F456E 
+ 1321      61626C65 
+ 1322              	.LASF10:
+ 1323 0227 75696E74 		.ascii	"uint32\000"
+ 1323      333200
+ 1324              	.LASF37:
+ 1325 022e 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 1325      74657243 
+ 1325      72697469 
+ 1325      63616C53 
+ 1325      65637469 
+ 1326              	.LASF1:
+ 1327 0245 756E7369 		.ascii	"unsigned char\000"
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 36
+
+
+ 1327      676E6564 
+ 1327      20636861 
+ 1327      7200
+ 1328              	.LASF8:
+ 1329 0253 756E7369 		.ascii	"unsigned int\000"
+ 1329      676E6564 
+ 1329      20696E74 
+ 1329      00
+ 1330              	.LASF38:
+ 1331 0260 43794578 		.ascii	"CyExitCriticalSection\000"
+ 1331      69744372 
+ 1331      69746963 
+ 1331      616C5365 
+ 1331      6374696F 
+ 1332              	.LASF27:
+ 1333 0276 77617465 		.ascii	"water_counter_WritePeriod\000"
+ 1333      725F636F 
+ 1333      756E7465 
+ 1333      725F5772 
+ 1333      69746550 
+ 1334              	.LASF17:
+ 1335 0290 73697A65 		.ascii	"sizetype\000"
+ 1335      74797065 
+ 1335      00
+ 1336              	.LASF6:
+ 1337 0299 6C6F6E67 		.ascii	"long long int\000"
+ 1337      206C6F6E 
+ 1337      6720696E 
+ 1337      7400
+ 1338              	.LASF13:
+ 1339 02a7 63686172 		.ascii	"char\000"
+ 1339      00
+ 1340              	.LASF36:
+ 1341 02ac 43795365 		.ascii	"CySetReg24\000"
+ 1341      74526567 
+ 1341      323400
+ 1342              	.LASF2:
+ 1343 02b7 73686F72 		.ascii	"short int\000"
+ 1343      7420696E 
+ 1343      7400
+ 1344              	.LASF34:
+ 1345 02c1 77617465 		.ascii	"water_counter_Init\000"
+ 1345      725F636F 
+ 1345      756E7465 
+ 1345      725F496E 
+ 1345      697400
+ 1346              	.LASF40:
+ 1347 02d4 47656E65 		.ascii	"Generated_Source\\PSoC5\\water_counter.c\000"
+ 1347      72617465 
+ 1347      645F536F 
+ 1347      75726365 
+ 1347      5C50536F 
+ 1348              	.LASF29:
+ 1349 02fb 77617465 		.ascii	"water_counter_ReadPeriod\000"
+ 1349      725F636F 
+ 1349      756E7465 
+ 1349      725F5265 
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\ccpZvuXd.s 			page 37
+
+
+ 1349      61645065 
+ 1350              	.LASF21:
+ 1351 0314 77617465 		.ascii	"water_counter_WriteCounter\000"
+ 1351      725F636F 
+ 1351      756E7465 
+ 1351      725F5772 
+ 1351      69746543 
+ 1352              	.LASF4:
+ 1353 032f 6C6F6E67 		.ascii	"long int\000"
+ 1353      20696E74 
+ 1353      00
+ 1354              	.LASF16:
+ 1355 0338 6C6F6E67 		.ascii	"long double\000"
+ 1355      20646F75 
+ 1355      626C6500 
+ 1356              	.LASF0:
+ 1357 0344 7369676E 		.ascii	"signed char\000"
+ 1357      65642063 
+ 1357      68617200 
+ 1358              	.LASF31:
+ 1359 0350 636F6D70 		.ascii	"compare\000"
+ 1359      61726500 
+ 1360              	.LASF20:
+ 1361 0358 77617465 		.ascii	"water_counter_SetInterruptMode\000"
+ 1361      725F636F 
+ 1361      756E7465 
+ 1361      725F5365 
+ 1361      74496E74 
+ 1362              	.LASF43:
+ 1363 0377 77617465 		.ascii	"water_counter_initVar\000"
+ 1363      725F636F 
+ 1363      756E7465 
+ 1363      725F696E 
+ 1363      69745661 
+ 1364              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
