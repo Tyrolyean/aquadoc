@@ -158,6 +158,7 @@ Datum & Beschreibung & Stunden \\ \hline
 25.03.19 & Batteriestandmessung + DS1722 Temperatursensor programmieren & 3h \\ \hline
 01.04.19 & DS1722 Temperatursensor programmieren& 3h \\ \hline
 08.04.19 & BMP180 Temperatursensor programmieren & 3h \\ \hline
+29.04.19 & BMP180 Temperatursensor programmieren & 3h \\ \hline
 \end{tabular}
 \end{table}
 
@@ -177,6 +178,7 @@ Datum & Beschreibung & Stunden \\ \hline
 25.03.19 & DS1722 Temperatursensor programmieren & 3h \\ \hline
 01.04.19 & DS1722 Temperatursensor programmieren& 3h \\ \hline
 08.04.19 & BMP180 Temperatursensor programmieren & 3h \\ \hline
+29.04.19 & BMP180 Temperatursensor programmieren & 3h \\ \hline
 \end{tabular}
 \end{table}
 
@@ -196,6 +198,7 @@ Datum & Beschreibung & Stunden \\ \hline
 25.03.19 & Dokumentation + DS1722 Temperatursensor programmieren & 3h \\ \hline
 01.04.19 & Dokumentation & 3h \\ \hline
 08.04.19 & Dokumentation & 3h \\ \hline
+29.04.19 & Dokumentation & 3h \\ \hline
 \end{tabular}
 \end{table}
 
@@ -236,6 +239,9 @@ Gefundene Bauteile auf neuhold-elektronik.at:
 \begin{itemize}
 	\item{DS1722}: \\
 	SPI Digital Thermometer. 8-12 bit Auflösung.
+	
+	Wird nicht mehr verwendet, da über die SPI keine Ausgabe erfolgt
+	\item{BMP180}: \\
 
 	\item{HC - SR04}: \\
 	PWM Ultraschall Messmodul. 2mA standby strom.
@@ -261,7 +267,7 @@ jeweiligen Sensoren verbunden ebenfalls wird auf die Verwendung der richtigen Ve
  {./arduino/HC-SR04/HC-SR04.ino}
 
 \newpage
-\subsection{DS1722}
+\subsection{BMP180}
 
 \lstinputlisting[language=C++, numbers=left, frame=trBL, breaklines=true,
  breakautoindent=true, formfeed=\newpage, label={lst:ardu_ds1722},
@@ -412,12 +418,12 @@ used to
 
 	
 	
-\subsection{DS1722}
+\subsection{BMP180}
 
 	Der DS1722 ist ein digitaler Temeperatur-Mess-IC von MAXIM Integrated.
-	Er hat einen Messbereich von -55°C bis +120°C welchen er wahlweise mit
+	Er hat einen Messbereich von -60°C bis +120°C welchen er wahlweise mit
 	8, 9, 10, 11 oder 12 bit auflösen kann. Als Schnittstellen hat er
-	wahlweise 3-Wire oder SPI
+	wahlweise 3-Wire oder SPI.
 	\footnote{Serial Peripherial Interface, Standart von Motorola}. Welches
 	Protokoll verwendet wird ist abhängig vom Spannungspegel am SERMODE
 	Pin. Wenn am SERMODE Pin 5V anliegen, wird SPI verwendet, wenn 0V
