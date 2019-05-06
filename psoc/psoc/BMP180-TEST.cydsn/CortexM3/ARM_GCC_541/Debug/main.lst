@@ -1,0 +1,1370 @@
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\cciuKSkM.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.get_temperature,"ax",%progbits
+  20              		.align	2
+  21              		.global	get_temperature
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	get_temperature, %function
+  25              	get_temperature:
+  26              	.LFB64:
+  27              		.file 1 "main.c"
+   1:main.c        **** /* ========================================
+   2:main.c        ****  *
+   3:main.c        ****  * Copyright YOUR COMPANY, THE YEAR
+   4:main.c        ****  * All Rights Reserved
+   5:main.c        ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:main.c        ****  *
+   7:main.c        ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:main.c        ****  * WHICH IS THE PROPERTY OF your company.
+   9:main.c        ****  *
+  10:main.c        ****  * ========================================
+  11:main.c        **** */
+  12:main.c        **** 
+  13:main.c        **** #include <stdint.h>
+  14:main.c        **** #include <stdio.h>
+  15:main.c        **** 
+  16:main.c        **** #include "project.h"
+  17:main.c        **** 
+  18:main.c        **** uint16_t get_temperature(){
+  28              		.loc 1 18 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 38B5     		push	{r3, r4, r5, lr}
+  33              		.cfi_def_cfa_offset 16
+  34              		.cfi_offset 3, -16
+  35              		.cfi_offset 4, -12
+  36              		.cfi_offset 5, -8
+  37              		.cfi_offset 14, -4
+  19:main.c        ****     static char buf [100];
+  20:main.c        ****     
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\cciuKSkM.s 			page 2
+
+
+  21:main.c        ****     UART_PutString("Start of conversion\r\n");
+  38              		.loc 1 21 0
+  39 0002 2648     		ldr	r0, .L9
+  40 0004 FFF7FEFF 		bl	UART_PutString
+  41              	.LVL0:
+  22:main.c        ****     uint8_t read = I2C_MasterSendStart(0x77, 0);
+  42              		.loc 1 22 0
+  43 0008 0021     		movs	r1, #0
+  44 000a 7720     		movs	r0, #119
+  45 000c FFF7FEFF 		bl	I2C_MasterSendStart
+  46              	.LVL1:
+  23:main.c        **** 
+  24:main.c        ****     if(read != I2C_MSTR_NO_ERROR){
+  47              		.loc 1 24 0
+  48 0010 28B1     		cbz	r0, .L2
+  25:main.c        ****         I2C_MasterSendStop();
+  49              		.loc 1 25 0
+  50 0012 FFF7FEFF 		bl	I2C_MasterSendStop
+  51              	.LVL2:
+  26:main.c        ****         UART_PutString("Failed to address SLAVE\r\n");
+  52              		.loc 1 26 0
+  53 0016 2248     		ldr	r0, .L9+4
+  54 0018 FFF7FEFF 		bl	UART_PutString
+  55              	.LVL3:
+  27:main.c        ****         return 0;
+  56              		.loc 1 27 0
+  57 001c 3CE0     		b	.L3
+  58              	.LVL4:
+  59              	.L2:
+  60              	.LBB2:
+  28:main.c        ****     }else{
+  29:main.c        ****         
+  30:main.c        ****         read = I2C_MasterWriteByte(0xD0);
+  61              		.loc 1 30 0
+  62 001e D020     		movs	r0, #208
+  63              	.LVL5:
+  64 0020 FFF7FEFF 		bl	I2C_MasterWriteByte
+  65              	.LVL6:
+  31:main.c        ****         if(read != I2C_MSTR_NO_ERROR){
+  66              		.loc 1 31 0
+  67 0024 0446     		mov	r4, r0
+  68 0026 60B1     		cbz	r0, .L4
+  32:main.c        ****             I2C_MasterSendStop();
+  69              		.loc 1 32 0
+  70 0028 FFF7FEFF 		bl	I2C_MasterSendStop
+  71              	.LVL7:
+  33:main.c        ****             snprintf(buf, sizeof(buf), "FAIL RECV: %u \r\n", read);
+  72              		.loc 1 33 0
+  73 002c 1D4D     		ldr	r5, .L9+8
+  74 002e 2346     		mov	r3, r4
+  75 0030 1D4A     		ldr	r2, .L9+12
+  76 0032 6421     		movs	r1, #100
+  77 0034 2846     		mov	r0, r5
+  78 0036 FFF7FEFF 		bl	snprintf
+  79              	.LVL8:
+  34:main.c        ****             UART_PutString(buf);
+  80              		.loc 1 34 0
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\cciuKSkM.s 			page 3
+
+
+  81 003a 2846     		mov	r0, r5
+  82 003c FFF7FEFF 		bl	UART_PutString
+  83              	.LVL9:
+  35:main.c        ****             return 0;
+  84              		.loc 1 35 0
+  85 0040 2AE0     		b	.L3
+  86              	.LVL10:
+  87              	.L4:
+  36:main.c        ****         }
+  37:main.c        ****         read = I2C_MasterSendRestart(0x77, 1);
+  88              		.loc 1 37 0
+  89 0042 0121     		movs	r1, #1
+  90 0044 7720     		movs	r0, #119
+  91              	.LVL11:
+  92 0046 FFF7FEFF 		bl	I2C_MasterSendRestart
+  93              	.LVL12:
+  38:main.c        ****         if(read != I2C_MSTR_NO_ERROR){
+  94              		.loc 1 38 0
+  95 004a 0446     		mov	r4, r0
+  96 004c 60B1     		cbz	r0, .L5
+  39:main.c        ****             I2C_MasterSendStop();
+  97              		.loc 1 39 0
+  98 004e FFF7FEFF 		bl	I2C_MasterSendStop
+  99              	.LVL13:
+  40:main.c        ****             snprintf(buf, sizeof(buf), "FAIL RECV rest: %u \r\n", read);
+ 100              		.loc 1 40 0
+ 101 0052 144D     		ldr	r5, .L9+8
+ 102 0054 2346     		mov	r3, r4
+ 103 0056 154A     		ldr	r2, .L9+16
+ 104 0058 6421     		movs	r1, #100
+ 105 005a 2846     		mov	r0, r5
+ 106 005c FFF7FEFF 		bl	snprintf
+ 107              	.LVL14:
+  41:main.c        ****             UART_PutString(buf);
+ 108              		.loc 1 41 0
+ 109 0060 2846     		mov	r0, r5
+ 110 0062 FFF7FEFF 		bl	UART_PutString
+ 111              	.LVL15:
+  42:main.c        ****             return 0;
+ 112              		.loc 1 42 0
+ 113 0066 17E0     		b	.L3
+ 114              	.LVL16:
+ 115              	.L5:
+  43:main.c        ****         }
+  44:main.c        ****         uint8_t data = I2C_MasterReadByte(I2C_ACK_DATA);
+ 116              		.loc 1 44 0
+ 117 0068 0120     		movs	r0, #1
+ 118              	.LVL17:
+ 119 006a FFF7FEFF 		bl	I2C_MasterReadByte
+ 120              	.LVL18:
+ 121 006e 0546     		mov	r5, r0
+ 122              	.LVL19:
+  45:main.c        ****         I2C_MasterSendStop();
+ 123              		.loc 1 45 0
+ 124 0070 FFF7FEFF 		bl	I2C_MasterSendStop
+ 125              	.LVL20:
+  46:main.c        ****         if(read == I2C_MSTR_NO_ERROR){
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\cciuKSkM.s 			page 4
+
+
+ 126              		.loc 1 46 0
+ 127 0074 1CB9     		cbnz	r4, .L6
+  47:main.c        ****             UART_PutString("Successfully addressed SLAVE\r\n");
+ 128              		.loc 1 47 0
+ 129 0076 0E48     		ldr	r0, .L9+20
+ 130 0078 FFF7FEFF 		bl	UART_PutString
+ 131              	.LVL21:
+ 132 007c 02E0     		b	.L7
+ 133              	.L6:
+  48:main.c        ****         }else{
+  49:main.c        ****             UART_PutString("NOT sucessfully addressed SLAVE\r\n");
+ 134              		.loc 1 49 0
+ 135 007e 0D48     		ldr	r0, .L9+24
+ 136 0080 FFF7FEFF 		bl	UART_PutString
+ 137              	.LVL22:
+ 138              	.L7:
+  50:main.c        ****         }
+  51:main.c        ****         
+  52:main.c        ****         snprintf(buf, sizeof(buf), "RECV: %u \r\n", data);
+ 139              		.loc 1 52 0
+ 140 0084 074C     		ldr	r4, .L9+8
+ 141 0086 2B46     		mov	r3, r5
+ 142 0088 0B4A     		ldr	r2, .L9+28
+ 143 008a 6421     		movs	r1, #100
+ 144 008c 2046     		mov	r0, r4
+ 145 008e FFF7FEFF 		bl	snprintf
+ 146              	.LVL23:
+  53:main.c        ****         UART_PutString(buf);
+ 147              		.loc 1 53 0
+ 148 0092 2046     		mov	r0, r4
+ 149 0094 FFF7FEFF 		bl	UART_PutString
+ 150              	.LVL24:
+ 151              	.L3:
+ 152              	.LBE2:
+  54:main.c        ****     }
+  55:main.c        ****      return 0;
+  56:main.c        **** }
+ 153              		.loc 1 56 0
+ 154 0098 0020     		movs	r0, #0
+ 155 009a 38BD     		pop	{r3, r4, r5, pc}
+ 156              	.L10:
+ 157              		.align	2
+ 158              	.L9:
+ 159 009c 00000000 		.word	.LC0
+ 160 00a0 18000000 		.word	.LC1
+ 161 00a4 00000000 		.word	.LANCHOR0
+ 162 00a8 34000000 		.word	.LC2
+ 163 00ac 48000000 		.word	.LC3
+ 164 00b0 60000000 		.word	.LC4
+ 165 00b4 80000000 		.word	.LC5
+ 166 00b8 A4000000 		.word	.LC6
+ 167              		.cfi_endproc
+ 168              	.LFE64:
+ 169              		.size	get_temperature, .-get_temperature
+ 170              		.section	.text.main,"ax",%progbits
+ 171              		.align	2
+ 172              		.global	main
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\cciuKSkM.s 			page 5
+
+
+ 173              		.thumb
+ 174              		.thumb_func
+ 175              		.type	main, %function
+ 176              	main:
+ 177              	.LFB65:
+  57:main.c        **** 
+  58:main.c        **** int main(void)
+  59:main.c        **** {
+ 178              		.loc 1 59 0
+ 179              		.cfi_startproc
+ 180              		@ Volatile: function does not return.
+ 181              		@ args = 0, pretend = 0, frame = 0
+ 182              		@ frame_needed = 0, uses_anonymous_args = 0
+ 183 0000 08B5     		push	{r3, lr}
+ 184              		.cfi_def_cfa_offset 8
+ 185              		.cfi_offset 3, -8
+ 186              		.cfi_offset 14, -4
+  60:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+ 187              		.loc 1 60 0
+ 188              		.syntax unified
+ 189              	@ 60 "main.c" 1
+ 190 0002 62B6     		CPSIE   i
+ 191              	@ 0 "" 2
+  61:main.c        **** 
+  62:main.c        ****     I2C_Start();
+ 192              		.loc 1 62 0
+ 193              		.thumb
+ 194              		.syntax unified
+ 195 0004 FFF7FEFF 		bl	I2C_Start
+ 196              	.LVL25:
+  63:main.c        ****     UART_Start();
+ 197              		.loc 1 63 0
+ 198 0008 FFF7FEFF 		bl	UART_Start
+ 199              	.LVL26:
+  64:main.c        ****     UART_PutString("INIT\r\n");
+ 200              		.loc 1 64 0
+ 201 000c 0248     		ldr	r0, .L14
+ 202 000e FFF7FEFF 		bl	UART_PutString
+ 203              	.LVL27:
+ 204              	.L12:
+  65:main.c        ****     
+  66:main.c        ****     
+  67:main.c        ****     for(;;){
+  68:main.c        ****         get_temperature();
+ 205              		.loc 1 68 0 discriminator 1
+ 206 0012 FFF7FEFF 		bl	get_temperature
+ 207              	.LVL28:
+ 208 0016 FCE7     		b	.L12
+ 209              	.L15:
+ 210              		.align	2
+ 211              	.L14:
+ 212 0018 B0000000 		.word	.LC7
+ 213              		.cfi_endproc
+ 214              	.LFE65:
+ 215              		.size	main, .-main
+ 216              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 217              		.align	2
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\cciuKSkM.s 			page 6
+
+
+ 218              	.LC0:
+ 219 0000 53746172 		.ascii	"Start of conversion\015\012\000"
+ 219      74206F66 
+ 219      20636F6E 
+ 219      76657273 
+ 219      696F6E0D 
+ 220 0016 0000     		.space	2
+ 221              	.LC1:
+ 222 0018 4661696C 		.ascii	"Failed to address SLAVE\015\012\000"
+ 222      65642074 
+ 222      6F206164 
+ 222      64726573 
+ 222      7320534C 
+ 223 0032 0000     		.space	2
+ 224              	.LC2:
+ 225 0034 4641494C 		.ascii	"FAIL RECV: %u \015\012\000"
+ 225      20524543 
+ 225      563A2025 
+ 225      75200D0A 
+ 225      00
+ 226 0045 000000   		.space	3
+ 227              	.LC3:
+ 228 0048 4641494C 		.ascii	"FAIL RECV rest: %u \015\012\000"
+ 228      20524543 
+ 228      56207265 
+ 228      73743A20 
+ 228      2575200D 
+ 229 005e 0000     		.space	2
+ 230              	.LC4:
+ 231 0060 53756363 		.ascii	"Successfully addressed SLAVE\015\012\000"
+ 231      65737366 
+ 231      756C6C79 
+ 231      20616464 
+ 231      72657373 
+ 232 007f 00       		.space	1
+ 233              	.LC5:
+ 234 0080 4E4F5420 		.ascii	"NOT sucessfully addressed SLAVE\015\012\000"
+ 234      73756365 
+ 234      73736675 
+ 234      6C6C7920 
+ 234      61646472 
+ 235 00a2 0000     		.space	2
+ 236              	.LC6:
+ 237 00a4 52454356 		.ascii	"RECV: %u \015\012\000"
+ 237      3A202575 
+ 237      200D0A00 
+ 238              	.LC7:
+ 239 00b0 494E4954 		.ascii	"INIT\015\012\000"
+ 239      0D0A00
+ 240              		.bss
+ 241              		.align	2
+ 242              		.set	.LANCHOR0,. + 0
+ 243              		.type	buf.6456, %object
+ 244              		.size	buf.6456, 100
+ 245              	buf.6456:
+ 246 0000 00000000 		.space	100
+ 246      00000000 
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\cciuKSkM.s 			page 7
+
+
+ 246      00000000 
+ 246      00000000 
+ 246      00000000 
+ 247              		.text
+ 248              	.Letext0:
+ 249              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 250              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 251              		.file 4 "Generated_Source\\PSoC5/I2C.h"
+ 252              		.file 5 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 253              		.file 6 "Generated_Source\\PSoC5/UART.h"
+ 254              		.file 7 "Generated_Source\\PSoC5/core_cm3.h"
+ 255              		.section	.debug_info,"",%progbits
+ 256              	.Ldebug_info0:
+ 257 0000 7C030000 		.4byte	0x37c
+ 258 0004 0400     		.2byte	0x4
+ 259 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 260 000a 04       		.byte	0x4
+ 261 000b 01       		.uleb128 0x1
+ 262 000c 67000000 		.4byte	.LASF31
+ 263 0010 0C       		.byte	0xc
+ 264 0011 C3010000 		.4byte	.LASF32
+ 265 0015 F5010000 		.4byte	.LASF33
+ 266 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 267 001d 00000000 		.4byte	0
+ 268 0021 00000000 		.4byte	.Ldebug_line0
+ 269 0025 02       		.uleb128 0x2
+ 270 0026 01       		.byte	0x1
+ 271 0027 06       		.byte	0x6
+ 272 0028 41020000 		.4byte	.LASF0
+ 273 002c 03       		.uleb128 0x3
+ 274 002d 00000000 		.4byte	.LASF3
+ 275 0031 02       		.byte	0x2
+ 276 0032 1D       		.byte	0x1d
+ 277 0033 37000000 		.4byte	0x37
+ 278 0037 02       		.uleb128 0x2
+ 279 0038 01       		.byte	0x1
+ 280 0039 08       		.byte	0x8
+ 281 003a 59000000 		.4byte	.LASF1
+ 282 003e 02       		.uleb128 0x2
+ 283 003f 02       		.byte	0x2
+ 284 0040 05       		.byte	0x5
+ 285 0041 E2010000 		.4byte	.LASF2
+ 286 0045 03       		.uleb128 0x3
+ 287 0046 46010000 		.4byte	.LASF4
+ 288 004a 02       		.byte	0x2
+ 289 004b 2B       		.byte	0x2b
+ 290 004c 50000000 		.4byte	0x50
+ 291 0050 02       		.uleb128 0x2
+ 292 0051 02       		.byte	0x2
+ 293 0052 07       		.byte	0x7
+ 294 0053 07010000 		.4byte	.LASF5
+ 295 0057 03       		.uleb128 0x3
+ 296 0058 1D000000 		.4byte	.LASF6
+ 297 005c 02       		.byte	0x2
+ 298 005d 3F       		.byte	0x3f
+ 299 005e 62000000 		.4byte	0x62
+ 300 0062 02       		.uleb128 0x2
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\cciuKSkM.s 			page 8
+
+
+ 301 0063 04       		.byte	0x4
+ 302 0064 05       		.byte	0x5
+ 303 0065 2C020000 		.4byte	.LASF7
+ 304 0069 02       		.uleb128 0x2
+ 305 006a 04       		.byte	0x4
+ 306 006b 07       		.byte	0x7
+ 307 006c F5000000 		.4byte	.LASF8
+ 308 0070 02       		.uleb128 0x2
+ 309 0071 08       		.byte	0x8
+ 310 0072 05       		.byte	0x5
+ 311 0073 B5010000 		.4byte	.LASF9
+ 312 0077 02       		.uleb128 0x2
+ 313 0078 08       		.byte	0x8
+ 314 0079 07       		.byte	0x7
+ 315 007a 6F010000 		.4byte	.LASF10
+ 316 007e 04       		.uleb128 0x4
+ 317 007f 04       		.byte	0x4
+ 318 0080 05       		.byte	0x5
+ 319 0081 696E7400 		.ascii	"int\000"
+ 320 0085 02       		.uleb128 0x2
+ 321 0086 04       		.byte	0x4
+ 322 0087 07       		.byte	0x7
+ 323 0088 62010000 		.4byte	.LASF11
+ 324 008c 03       		.uleb128 0x3
+ 325 008d 86010000 		.4byte	.LASF12
+ 326 0091 03       		.byte	0x3
+ 327 0092 18       		.byte	0x18
+ 328 0093 2C000000 		.4byte	0x2c
+ 329 0097 03       		.uleb128 0x3
+ 330 0098 EC010000 		.4byte	.LASF13
+ 331 009c 03       		.byte	0x3
+ 332 009d 24       		.byte	0x24
+ 333 009e 45000000 		.4byte	0x45
+ 334 00a2 03       		.uleb128 0x3
+ 335 00a3 A4010000 		.4byte	.LASF14
+ 336 00a7 03       		.byte	0x3
+ 337 00a8 2C       		.byte	0x2c
+ 338 00a9 57000000 		.4byte	0x57
+ 339 00ad 02       		.uleb128 0x2
+ 340 00ae 08       		.byte	0x8
+ 341 00af 04       		.byte	0x4
+ 342 00b0 35020000 		.4byte	.LASF15
+ 343 00b4 02       		.uleb128 0x2
+ 344 00b5 04       		.byte	0x4
+ 345 00b6 07       		.byte	0x7
+ 346 00b7 AC010000 		.4byte	.LASF16
+ 347 00bb 02       		.uleb128 0x2
+ 348 00bc 01       		.byte	0x1
+ 349 00bd 08       		.byte	0x8
+ 350 00be CA010000 		.4byte	.LASF17
+ 351 00c2 02       		.uleb128 0x2
+ 352 00c3 04       		.byte	0x4
+ 353 00c4 04       		.byte	0x4
+ 354 00c5 4E000000 		.4byte	.LASF18
+ 355 00c9 02       		.uleb128 0x2
+ 356 00ca 08       		.byte	0x8
+ 357 00cb 04       		.byte	0x4
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\cciuKSkM.s 			page 9
+
+
+ 358 00cc 51010000 		.4byte	.LASF19
+ 359 00d0 05       		.uleb128 0x5
+ 360 00d1 1C020000 		.4byte	.LASF34
+ 361 00d5 01       		.byte	0x1
+ 362 00d6 12       		.byte	0x12
+ 363 00d7 97000000 		.4byte	0x97
+ 364 00db 00000000 		.4byte	.LFB64
+ 365 00df BC000000 		.4byte	.LFE64-.LFB64
+ 366 00e3 01       		.uleb128 0x1
+ 367 00e4 9C       		.byte	0x9c
+ 368 00e5 AF020000 		.4byte	0x2af
+ 369 00e9 06       		.uleb128 0x6
+ 370 00ea 62756600 		.ascii	"buf\000"
+ 371 00ee 01       		.byte	0x1
+ 372 00ef 13       		.byte	0x13
+ 373 00f0 AF020000 		.4byte	0x2af
+ 374 00f4 05       		.uleb128 0x5
+ 375 00f5 03       		.byte	0x3
+ 376 00f6 00000000 		.4byte	buf.6456
+ 377 00fa 07       		.uleb128 0x7
+ 378 00fb 5D010000 		.4byte	.LASF20
+ 379 00ff 01       		.byte	0x1
+ 380 0100 16       		.byte	0x16
+ 381 0101 8C000000 		.4byte	0x8c
+ 382 0105 00000000 		.4byte	.LLST0
+ 383 0109 08       		.uleb128 0x8
+ 384 010a 1E000000 		.4byte	.LBB2
+ 385 010e 7A000000 		.4byte	.LBE2-.LBB2
+ 386 0112 62020000 		.4byte	0x262
+ 387 0116 07       		.uleb128 0x7
+ 388 0117 54000000 		.4byte	.LASF21
+ 389 011b 01       		.byte	0x1
+ 390 011c 2C       		.byte	0x2c
+ 391 011d 8C000000 		.4byte	0x8c
+ 392 0121 4A000000 		.4byte	.LLST1
+ 393 0125 09       		.uleb128 0x9
+ 394 0126 24000000 		.4byte	.LVL6
+ 395 012a 1C030000 		.4byte	0x31c
+ 396 012e 39010000 		.4byte	0x139
+ 397 0132 0A       		.uleb128 0xa
+ 398 0133 01       		.uleb128 0x1
+ 399 0134 50       		.byte	0x50
+ 400 0135 02       		.uleb128 0x2
+ 401 0136 09       		.byte	0x9
+ 402 0137 D0       		.byte	0xd0
+ 403 0138 00       		.byte	0
+ 404 0139 0B       		.uleb128 0xb
+ 405 013a 2C000000 		.4byte	.LVL7
+ 406 013e 27030000 		.4byte	0x327
+ 407 0142 09       		.uleb128 0x9
+ 408 0143 3A000000 		.4byte	.LVL8
+ 409 0147 32030000 		.4byte	0x332
+ 410 014b 6B010000 		.4byte	0x16b
+ 411 014f 0A       		.uleb128 0xa
+ 412 0150 01       		.uleb128 0x1
+ 413 0151 50       		.byte	0x50
+ 414 0152 02       		.uleb128 0x2
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\cciuKSkM.s 			page 10
+
+
+ 415 0153 75       		.byte	0x75
+ 416 0154 00       		.sleb128 0
+ 417 0155 0A       		.uleb128 0xa
+ 418 0156 01       		.uleb128 0x1
+ 419 0157 51       		.byte	0x51
+ 420 0158 02       		.uleb128 0x2
+ 421 0159 08       		.byte	0x8
+ 422 015a 64       		.byte	0x64
+ 423 015b 0A       		.uleb128 0xa
+ 424 015c 01       		.uleb128 0x1
+ 425 015d 52       		.byte	0x52
+ 426 015e 05       		.uleb128 0x5
+ 427 015f 03       		.byte	0x3
+ 428 0160 34000000 		.4byte	.LC2
+ 429 0164 0A       		.uleb128 0xa
+ 430 0165 01       		.uleb128 0x1
+ 431 0166 53       		.byte	0x53
+ 432 0167 02       		.uleb128 0x2
+ 433 0168 74       		.byte	0x74
+ 434 0169 00       		.sleb128 0
+ 435 016a 00       		.byte	0
+ 436 016b 09       		.uleb128 0x9
+ 437 016c 40000000 		.4byte	.LVL9
+ 438 0170 3D030000 		.4byte	0x33d
+ 439 0174 7F010000 		.4byte	0x17f
+ 440 0178 0A       		.uleb128 0xa
+ 441 0179 01       		.uleb128 0x1
+ 442 017a 50       		.byte	0x50
+ 443 017b 02       		.uleb128 0x2
+ 444 017c 75       		.byte	0x75
+ 445 017d 00       		.sleb128 0
+ 446 017e 00       		.byte	0
+ 447 017f 09       		.uleb128 0x9
+ 448 0180 4A000000 		.4byte	.LVL12
+ 449 0184 48030000 		.4byte	0x348
+ 450 0188 98010000 		.4byte	0x198
+ 451 018c 0A       		.uleb128 0xa
+ 452 018d 01       		.uleb128 0x1
+ 453 018e 50       		.byte	0x50
+ 454 018f 02       		.uleb128 0x2
+ 455 0190 08       		.byte	0x8
+ 456 0191 77       		.byte	0x77
+ 457 0192 0A       		.uleb128 0xa
+ 458 0193 01       		.uleb128 0x1
+ 459 0194 51       		.byte	0x51
+ 460 0195 01       		.uleb128 0x1
+ 461 0196 31       		.byte	0x31
+ 462 0197 00       		.byte	0
+ 463 0198 0B       		.uleb128 0xb
+ 464 0199 52000000 		.4byte	.LVL13
+ 465 019d 27030000 		.4byte	0x327
+ 466 01a1 09       		.uleb128 0x9
+ 467 01a2 60000000 		.4byte	.LVL14
+ 468 01a6 32030000 		.4byte	0x332
+ 469 01aa CA010000 		.4byte	0x1ca
+ 470 01ae 0A       		.uleb128 0xa
+ 471 01af 01       		.uleb128 0x1
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\cciuKSkM.s 			page 11
+
+
+ 472 01b0 50       		.byte	0x50
+ 473 01b1 02       		.uleb128 0x2
+ 474 01b2 75       		.byte	0x75
+ 475 01b3 00       		.sleb128 0
+ 476 01b4 0A       		.uleb128 0xa
+ 477 01b5 01       		.uleb128 0x1
+ 478 01b6 51       		.byte	0x51
+ 479 01b7 02       		.uleb128 0x2
+ 480 01b8 08       		.byte	0x8
+ 481 01b9 64       		.byte	0x64
+ 482 01ba 0A       		.uleb128 0xa
+ 483 01bb 01       		.uleb128 0x1
+ 484 01bc 52       		.byte	0x52
+ 485 01bd 05       		.uleb128 0x5
+ 486 01be 03       		.byte	0x3
+ 487 01bf 48000000 		.4byte	.LC3
+ 488 01c3 0A       		.uleb128 0xa
+ 489 01c4 01       		.uleb128 0x1
+ 490 01c5 53       		.byte	0x53
+ 491 01c6 02       		.uleb128 0x2
+ 492 01c7 74       		.byte	0x74
+ 493 01c8 00       		.sleb128 0
+ 494 01c9 00       		.byte	0
+ 495 01ca 09       		.uleb128 0x9
+ 496 01cb 66000000 		.4byte	.LVL15
+ 497 01cf 3D030000 		.4byte	0x33d
+ 498 01d3 DE010000 		.4byte	0x1de
+ 499 01d7 0A       		.uleb128 0xa
+ 500 01d8 01       		.uleb128 0x1
+ 501 01d9 50       		.byte	0x50
+ 502 01da 02       		.uleb128 0x2
+ 503 01db 75       		.byte	0x75
+ 504 01dc 00       		.sleb128 0
+ 505 01dd 00       		.byte	0
+ 506 01de 09       		.uleb128 0x9
+ 507 01df 6E000000 		.4byte	.LVL18
+ 508 01e3 53030000 		.4byte	0x353
+ 509 01e7 F1010000 		.4byte	0x1f1
+ 510 01eb 0A       		.uleb128 0xa
+ 511 01ec 01       		.uleb128 0x1
+ 512 01ed 50       		.byte	0x50
+ 513 01ee 01       		.uleb128 0x1
+ 514 01ef 31       		.byte	0x31
+ 515 01f0 00       		.byte	0
+ 516 01f1 0B       		.uleb128 0xb
+ 517 01f2 74000000 		.4byte	.LVL20
+ 518 01f6 27030000 		.4byte	0x327
+ 519 01fa 09       		.uleb128 0x9
+ 520 01fb 7C000000 		.4byte	.LVL21
+ 521 01ff 3D030000 		.4byte	0x33d
+ 522 0203 11020000 		.4byte	0x211
+ 523 0207 0A       		.uleb128 0xa
+ 524 0208 01       		.uleb128 0x1
+ 525 0209 50       		.byte	0x50
+ 526 020a 05       		.uleb128 0x5
+ 527 020b 03       		.byte	0x3
+ 528 020c 60000000 		.4byte	.LC4
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\cciuKSkM.s 			page 12
+
+
+ 529 0210 00       		.byte	0
+ 530 0211 09       		.uleb128 0x9
+ 531 0212 84000000 		.4byte	.LVL22
+ 532 0216 3D030000 		.4byte	0x33d
+ 533 021a 28020000 		.4byte	0x228
+ 534 021e 0A       		.uleb128 0xa
+ 535 021f 01       		.uleb128 0x1
+ 536 0220 50       		.byte	0x50
+ 537 0221 05       		.uleb128 0x5
+ 538 0222 03       		.byte	0x3
+ 539 0223 80000000 		.4byte	.LC5
+ 540 0227 00       		.byte	0
+ 541 0228 09       		.uleb128 0x9
+ 542 0229 92000000 		.4byte	.LVL23
+ 543 022d 32030000 		.4byte	0x332
+ 544 0231 51020000 		.4byte	0x251
+ 545 0235 0A       		.uleb128 0xa
+ 546 0236 01       		.uleb128 0x1
+ 547 0237 50       		.byte	0x50
+ 548 0238 02       		.uleb128 0x2
+ 549 0239 74       		.byte	0x74
+ 550 023a 00       		.sleb128 0
+ 551 023b 0A       		.uleb128 0xa
+ 552 023c 01       		.uleb128 0x1
+ 553 023d 51       		.byte	0x51
+ 554 023e 02       		.uleb128 0x2
+ 555 023f 08       		.byte	0x8
+ 556 0240 64       		.byte	0x64
+ 557 0241 0A       		.uleb128 0xa
+ 558 0242 01       		.uleb128 0x1
+ 559 0243 52       		.byte	0x52
+ 560 0244 05       		.uleb128 0x5
+ 561 0245 03       		.byte	0x3
+ 562 0246 A4000000 		.4byte	.LC6
+ 563 024a 0A       		.uleb128 0xa
+ 564 024b 01       		.uleb128 0x1
+ 565 024c 53       		.byte	0x53
+ 566 024d 02       		.uleb128 0x2
+ 567 024e 75       		.byte	0x75
+ 568 024f 00       		.sleb128 0
+ 569 0250 00       		.byte	0
+ 570 0251 0C       		.uleb128 0xc
+ 571 0252 98000000 		.4byte	.LVL24
+ 572 0256 3D030000 		.4byte	0x33d
+ 573 025a 0A       		.uleb128 0xa
+ 574 025b 01       		.uleb128 0x1
+ 575 025c 50       		.byte	0x50
+ 576 025d 02       		.uleb128 0x2
+ 577 025e 74       		.byte	0x74
+ 578 025f 00       		.sleb128 0
+ 579 0260 00       		.byte	0
+ 580 0261 00       		.byte	0
+ 581 0262 09       		.uleb128 0x9
+ 582 0263 08000000 		.4byte	.LVL0
+ 583 0267 3D030000 		.4byte	0x33d
+ 584 026b 79020000 		.4byte	0x279
+ 585 026f 0A       		.uleb128 0xa
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\cciuKSkM.s 			page 13
+
+
+ 586 0270 01       		.uleb128 0x1
+ 587 0271 50       		.byte	0x50
+ 588 0272 05       		.uleb128 0x5
+ 589 0273 03       		.byte	0x3
+ 590 0274 00000000 		.4byte	.LC0
+ 591 0278 00       		.byte	0
+ 592 0279 09       		.uleb128 0x9
+ 593 027a 10000000 		.4byte	.LVL1
+ 594 027e 5E030000 		.4byte	0x35e
+ 595 0282 92020000 		.4byte	0x292
+ 596 0286 0A       		.uleb128 0xa
+ 597 0287 01       		.uleb128 0x1
+ 598 0288 50       		.byte	0x50
+ 599 0289 02       		.uleb128 0x2
+ 600 028a 08       		.byte	0x8
+ 601 028b 77       		.byte	0x77
+ 602 028c 0A       		.uleb128 0xa
+ 603 028d 01       		.uleb128 0x1
+ 604 028e 51       		.byte	0x51
+ 605 028f 01       		.uleb128 0x1
+ 606 0290 30       		.byte	0x30
+ 607 0291 00       		.byte	0
+ 608 0292 0B       		.uleb128 0xb
+ 609 0293 16000000 		.4byte	.LVL2
+ 610 0297 27030000 		.4byte	0x327
+ 611 029b 0C       		.uleb128 0xc
+ 612 029c 1C000000 		.4byte	.LVL3
+ 613 02a0 3D030000 		.4byte	0x33d
+ 614 02a4 0A       		.uleb128 0xa
+ 615 02a5 01       		.uleb128 0x1
+ 616 02a6 50       		.byte	0x50
+ 617 02a7 05       		.uleb128 0x5
+ 618 02a8 03       		.byte	0x3
+ 619 02a9 18000000 		.4byte	.LC1
+ 620 02ad 00       		.byte	0
+ 621 02ae 00       		.byte	0
+ 622 02af 0D       		.uleb128 0xd
+ 623 02b0 BB000000 		.4byte	0xbb
+ 624 02b4 BF020000 		.4byte	0x2bf
+ 625 02b8 0E       		.uleb128 0xe
+ 626 02b9 B4000000 		.4byte	0xb4
+ 627 02bd 63       		.byte	0x63
+ 628 02be 00       		.byte	0
+ 629 02bf 0F       		.uleb128 0xf
+ 630 02c0 58010000 		.4byte	.LASF35
+ 631 02c4 01       		.byte	0x1
+ 632 02c5 3A       		.byte	0x3a
+ 633 02c6 7E000000 		.4byte	0x7e
+ 634 02ca 00000000 		.4byte	.LFB65
+ 635 02ce 1C000000 		.4byte	.LFE65-.LFB65
+ 636 02d2 01       		.uleb128 0x1
+ 637 02d3 9C       		.byte	0x9c
+ 638 02d4 0B030000 		.4byte	0x30b
+ 639 02d8 0B       		.uleb128 0xb
+ 640 02d9 08000000 		.4byte	.LVL25
+ 641 02dd 69030000 		.4byte	0x369
+ 642 02e1 0B       		.uleb128 0xb
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\cciuKSkM.s 			page 14
+
+
+ 643 02e2 0C000000 		.4byte	.LVL26
+ 644 02e6 74030000 		.4byte	0x374
+ 645 02ea 09       		.uleb128 0x9
+ 646 02eb 12000000 		.4byte	.LVL27
+ 647 02ef 3D030000 		.4byte	0x33d
+ 648 02f3 01030000 		.4byte	0x301
+ 649 02f7 0A       		.uleb128 0xa
+ 650 02f8 01       		.uleb128 0x1
+ 651 02f9 50       		.byte	0x50
+ 652 02fa 05       		.uleb128 0x5
+ 653 02fb 03       		.byte	0x3
+ 654 02fc B0000000 		.4byte	.LC7
+ 655 0300 00       		.byte	0
+ 656 0301 0B       		.uleb128 0xb
+ 657 0302 16000000 		.4byte	.LVL28
+ 658 0306 D0000000 		.4byte	0xd0
+ 659 030a 00       		.byte	0
+ 660 030b 10       		.uleb128 0x10
+ 661 030c 39010000 		.4byte	.LASF36
+ 662 0310 07       		.byte	0x7
+ 663 0311 1207     		.2byte	0x712
+ 664 0313 17030000 		.4byte	0x317
+ 665 0317 11       		.uleb128 0x11
+ 666 0318 A2000000 		.4byte	0xa2
+ 667 031c 12       		.uleb128 0x12
+ 668 031d 27000000 		.4byte	.LASF22
+ 669 0321 27000000 		.4byte	.LASF22
+ 670 0325 04       		.byte	0x4
+ 671 0326 B6       		.byte	0xb6
+ 672 0327 12       		.uleb128 0x12
+ 673 0328 0A000000 		.4byte	.LASF23
+ 674 032c 0A000000 		.4byte	.LASF23
+ 675 0330 04       		.byte	0x4
+ 676 0331 B5       		.byte	0xb5
+ 677 0332 12       		.uleb128 0x12
+ 678 0333 3B000000 		.4byte	.LASF24
+ 679 0337 3B000000 		.4byte	.LASF24
+ 680 033b 05       		.byte	0x5
+ 681 033c FD       		.byte	0xfd
+ 682 033d 12       		.uleb128 0x12
+ 683 033e 4D020000 		.4byte	.LASF25
+ 684 0342 4D020000 		.4byte	.LASF25
+ 685 0346 06       		.byte	0x6
+ 686 0347 8B       		.byte	0x8b
+ 687 0348 12       		.uleb128 0x12
+ 688 0349 8E010000 		.4byte	.LASF26
+ 689 034d 8E010000 		.4byte	.LASF26
+ 690 0351 04       		.byte	0x4
+ 691 0352 B3       		.byte	0xb3
+ 692 0353 12       		.uleb128 0x12
+ 693 0354 CF010000 		.4byte	.LASF27
+ 694 0358 CF010000 		.4byte	.LASF27
+ 695 035c 04       		.byte	0x4
+ 696 035d B7       		.byte	0xb7
+ 697 035e 12       		.uleb128 0x12
+ 698 035f 25010000 		.4byte	.LASF28
+ 699 0363 25010000 		.4byte	.LASF28
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\cciuKSkM.s 			page 15
+
+
+ 700 0367 04       		.byte	0x4
+ 701 0368 B1       		.byte	0xb1
+ 702 0369 12       		.uleb128 0x12
+ 703 036a 44000000 		.4byte	.LASF29
+ 704 036e 44000000 		.4byte	.LASF29
+ 705 0372 04       		.byte	0x4
+ 706 0373 93       		.byte	0x93
+ 707 0374 12       		.uleb128 0x12
+ 708 0375 1A010000 		.4byte	.LASF30
+ 709 0379 1A010000 		.4byte	.LASF30
+ 710 037d 06       		.byte	0x6
+ 711 037e 54       		.byte	0x54
+ 712 037f 00       		.byte	0
+ 713              		.section	.debug_abbrev,"",%progbits
+ 714              	.Ldebug_abbrev0:
+ 715 0000 01       		.uleb128 0x1
+ 716 0001 11       		.uleb128 0x11
+ 717 0002 01       		.byte	0x1
+ 718 0003 25       		.uleb128 0x25
+ 719 0004 0E       		.uleb128 0xe
+ 720 0005 13       		.uleb128 0x13
+ 721 0006 0B       		.uleb128 0xb
+ 722 0007 03       		.uleb128 0x3
+ 723 0008 0E       		.uleb128 0xe
+ 724 0009 1B       		.uleb128 0x1b
+ 725 000a 0E       		.uleb128 0xe
+ 726 000b 55       		.uleb128 0x55
+ 727 000c 17       		.uleb128 0x17
+ 728 000d 11       		.uleb128 0x11
+ 729 000e 01       		.uleb128 0x1
+ 730 000f 10       		.uleb128 0x10
+ 731 0010 17       		.uleb128 0x17
+ 732 0011 00       		.byte	0
+ 733 0012 00       		.byte	0
+ 734 0013 02       		.uleb128 0x2
+ 735 0014 24       		.uleb128 0x24
+ 736 0015 00       		.byte	0
+ 737 0016 0B       		.uleb128 0xb
+ 738 0017 0B       		.uleb128 0xb
+ 739 0018 3E       		.uleb128 0x3e
+ 740 0019 0B       		.uleb128 0xb
+ 741 001a 03       		.uleb128 0x3
+ 742 001b 0E       		.uleb128 0xe
+ 743 001c 00       		.byte	0
+ 744 001d 00       		.byte	0
+ 745 001e 03       		.uleb128 0x3
+ 746 001f 16       		.uleb128 0x16
+ 747 0020 00       		.byte	0
+ 748 0021 03       		.uleb128 0x3
+ 749 0022 0E       		.uleb128 0xe
+ 750 0023 3A       		.uleb128 0x3a
+ 751 0024 0B       		.uleb128 0xb
+ 752 0025 3B       		.uleb128 0x3b
+ 753 0026 0B       		.uleb128 0xb
+ 754 0027 49       		.uleb128 0x49
+ 755 0028 13       		.uleb128 0x13
+ 756 0029 00       		.byte	0
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\cciuKSkM.s 			page 16
+
+
+ 757 002a 00       		.byte	0
+ 758 002b 04       		.uleb128 0x4
+ 759 002c 24       		.uleb128 0x24
+ 760 002d 00       		.byte	0
+ 761 002e 0B       		.uleb128 0xb
+ 762 002f 0B       		.uleb128 0xb
+ 763 0030 3E       		.uleb128 0x3e
+ 764 0031 0B       		.uleb128 0xb
+ 765 0032 03       		.uleb128 0x3
+ 766 0033 08       		.uleb128 0x8
+ 767 0034 00       		.byte	0
+ 768 0035 00       		.byte	0
+ 769 0036 05       		.uleb128 0x5
+ 770 0037 2E       		.uleb128 0x2e
+ 771 0038 01       		.byte	0x1
+ 772 0039 3F       		.uleb128 0x3f
+ 773 003a 19       		.uleb128 0x19
+ 774 003b 03       		.uleb128 0x3
+ 775 003c 0E       		.uleb128 0xe
+ 776 003d 3A       		.uleb128 0x3a
+ 777 003e 0B       		.uleb128 0xb
+ 778 003f 3B       		.uleb128 0x3b
+ 779 0040 0B       		.uleb128 0xb
+ 780 0041 49       		.uleb128 0x49
+ 781 0042 13       		.uleb128 0x13
+ 782 0043 11       		.uleb128 0x11
+ 783 0044 01       		.uleb128 0x1
+ 784 0045 12       		.uleb128 0x12
+ 785 0046 06       		.uleb128 0x6
+ 786 0047 40       		.uleb128 0x40
+ 787 0048 18       		.uleb128 0x18
+ 788 0049 9742     		.uleb128 0x2117
+ 789 004b 19       		.uleb128 0x19
+ 790 004c 01       		.uleb128 0x1
+ 791 004d 13       		.uleb128 0x13
+ 792 004e 00       		.byte	0
+ 793 004f 00       		.byte	0
+ 794 0050 06       		.uleb128 0x6
+ 795 0051 34       		.uleb128 0x34
+ 796 0052 00       		.byte	0
+ 797 0053 03       		.uleb128 0x3
+ 798 0054 08       		.uleb128 0x8
+ 799 0055 3A       		.uleb128 0x3a
+ 800 0056 0B       		.uleb128 0xb
+ 801 0057 3B       		.uleb128 0x3b
+ 802 0058 0B       		.uleb128 0xb
+ 803 0059 49       		.uleb128 0x49
+ 804 005a 13       		.uleb128 0x13
+ 805 005b 02       		.uleb128 0x2
+ 806 005c 18       		.uleb128 0x18
+ 807 005d 00       		.byte	0
+ 808 005e 00       		.byte	0
+ 809 005f 07       		.uleb128 0x7
+ 810 0060 34       		.uleb128 0x34
+ 811 0061 00       		.byte	0
+ 812 0062 03       		.uleb128 0x3
+ 813 0063 0E       		.uleb128 0xe
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\cciuKSkM.s 			page 17
+
+
+ 814 0064 3A       		.uleb128 0x3a
+ 815 0065 0B       		.uleb128 0xb
+ 816 0066 3B       		.uleb128 0x3b
+ 817 0067 0B       		.uleb128 0xb
+ 818 0068 49       		.uleb128 0x49
+ 819 0069 13       		.uleb128 0x13
+ 820 006a 02       		.uleb128 0x2
+ 821 006b 17       		.uleb128 0x17
+ 822 006c 00       		.byte	0
+ 823 006d 00       		.byte	0
+ 824 006e 08       		.uleb128 0x8
+ 825 006f 0B       		.uleb128 0xb
+ 826 0070 01       		.byte	0x1
+ 827 0071 11       		.uleb128 0x11
+ 828 0072 01       		.uleb128 0x1
+ 829 0073 12       		.uleb128 0x12
+ 830 0074 06       		.uleb128 0x6
+ 831 0075 01       		.uleb128 0x1
+ 832 0076 13       		.uleb128 0x13
+ 833 0077 00       		.byte	0
+ 834 0078 00       		.byte	0
+ 835 0079 09       		.uleb128 0x9
+ 836 007a 898201   		.uleb128 0x4109
+ 837 007d 01       		.byte	0x1
+ 838 007e 11       		.uleb128 0x11
+ 839 007f 01       		.uleb128 0x1
+ 840 0080 31       		.uleb128 0x31
+ 841 0081 13       		.uleb128 0x13
+ 842 0082 01       		.uleb128 0x1
+ 843 0083 13       		.uleb128 0x13
+ 844 0084 00       		.byte	0
+ 845 0085 00       		.byte	0
+ 846 0086 0A       		.uleb128 0xa
+ 847 0087 8A8201   		.uleb128 0x410a
+ 848 008a 00       		.byte	0
+ 849 008b 02       		.uleb128 0x2
+ 850 008c 18       		.uleb128 0x18
+ 851 008d 9142     		.uleb128 0x2111
+ 852 008f 18       		.uleb128 0x18
+ 853 0090 00       		.byte	0
+ 854 0091 00       		.byte	0
+ 855 0092 0B       		.uleb128 0xb
+ 856 0093 898201   		.uleb128 0x4109
+ 857 0096 00       		.byte	0
+ 858 0097 11       		.uleb128 0x11
+ 859 0098 01       		.uleb128 0x1
+ 860 0099 31       		.uleb128 0x31
+ 861 009a 13       		.uleb128 0x13
+ 862 009b 00       		.byte	0
+ 863 009c 00       		.byte	0
+ 864 009d 0C       		.uleb128 0xc
+ 865 009e 898201   		.uleb128 0x4109
+ 866 00a1 01       		.byte	0x1
+ 867 00a2 11       		.uleb128 0x11
+ 868 00a3 01       		.uleb128 0x1
+ 869 00a4 31       		.uleb128 0x31
+ 870 00a5 13       		.uleb128 0x13
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\cciuKSkM.s 			page 18
+
+
+ 871 00a6 00       		.byte	0
+ 872 00a7 00       		.byte	0
+ 873 00a8 0D       		.uleb128 0xd
+ 874 00a9 01       		.uleb128 0x1
+ 875 00aa 01       		.byte	0x1
+ 876 00ab 49       		.uleb128 0x49
+ 877 00ac 13       		.uleb128 0x13
+ 878 00ad 01       		.uleb128 0x1
+ 879 00ae 13       		.uleb128 0x13
+ 880 00af 00       		.byte	0
+ 881 00b0 00       		.byte	0
+ 882 00b1 0E       		.uleb128 0xe
+ 883 00b2 21       		.uleb128 0x21
+ 884 00b3 00       		.byte	0
+ 885 00b4 49       		.uleb128 0x49
+ 886 00b5 13       		.uleb128 0x13
+ 887 00b6 2F       		.uleb128 0x2f
+ 888 00b7 0B       		.uleb128 0xb
+ 889 00b8 00       		.byte	0
+ 890 00b9 00       		.byte	0
+ 891 00ba 0F       		.uleb128 0xf
+ 892 00bb 2E       		.uleb128 0x2e
+ 893 00bc 01       		.byte	0x1
+ 894 00bd 3F       		.uleb128 0x3f
+ 895 00be 19       		.uleb128 0x19
+ 896 00bf 03       		.uleb128 0x3
+ 897 00c0 0E       		.uleb128 0xe
+ 898 00c1 3A       		.uleb128 0x3a
+ 899 00c2 0B       		.uleb128 0xb
+ 900 00c3 3B       		.uleb128 0x3b
+ 901 00c4 0B       		.uleb128 0xb
+ 902 00c5 27       		.uleb128 0x27
+ 903 00c6 19       		.uleb128 0x19
+ 904 00c7 49       		.uleb128 0x49
+ 905 00c8 13       		.uleb128 0x13
+ 906 00c9 8701     		.uleb128 0x87
+ 907 00cb 19       		.uleb128 0x19
+ 908 00cc 11       		.uleb128 0x11
+ 909 00cd 01       		.uleb128 0x1
+ 910 00ce 12       		.uleb128 0x12
+ 911 00cf 06       		.uleb128 0x6
+ 912 00d0 40       		.uleb128 0x40
+ 913 00d1 18       		.uleb128 0x18
+ 914 00d2 9742     		.uleb128 0x2117
+ 915 00d4 19       		.uleb128 0x19
+ 916 00d5 01       		.uleb128 0x1
+ 917 00d6 13       		.uleb128 0x13
+ 918 00d7 00       		.byte	0
+ 919 00d8 00       		.byte	0
+ 920 00d9 10       		.uleb128 0x10
+ 921 00da 34       		.uleb128 0x34
+ 922 00db 00       		.byte	0
+ 923 00dc 03       		.uleb128 0x3
+ 924 00dd 0E       		.uleb128 0xe
+ 925 00de 3A       		.uleb128 0x3a
+ 926 00df 0B       		.uleb128 0xb
+ 927 00e0 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\cciuKSkM.s 			page 19
+
+
+ 928 00e1 05       		.uleb128 0x5
+ 929 00e2 49       		.uleb128 0x49
+ 930 00e3 13       		.uleb128 0x13
+ 931 00e4 3F       		.uleb128 0x3f
+ 932 00e5 19       		.uleb128 0x19
+ 933 00e6 3C       		.uleb128 0x3c
+ 934 00e7 19       		.uleb128 0x19
+ 935 00e8 00       		.byte	0
+ 936 00e9 00       		.byte	0
+ 937 00ea 11       		.uleb128 0x11
+ 938 00eb 35       		.uleb128 0x35
+ 939 00ec 00       		.byte	0
+ 940 00ed 49       		.uleb128 0x49
+ 941 00ee 13       		.uleb128 0x13
+ 942 00ef 00       		.byte	0
+ 943 00f0 00       		.byte	0
+ 944 00f1 12       		.uleb128 0x12
+ 945 00f2 2E       		.uleb128 0x2e
+ 946 00f3 00       		.byte	0
+ 947 00f4 3F       		.uleb128 0x3f
+ 948 00f5 19       		.uleb128 0x19
+ 949 00f6 3C       		.uleb128 0x3c
+ 950 00f7 19       		.uleb128 0x19
+ 951 00f8 6E       		.uleb128 0x6e
+ 952 00f9 0E       		.uleb128 0xe
+ 953 00fa 03       		.uleb128 0x3
+ 954 00fb 0E       		.uleb128 0xe
+ 955 00fc 3A       		.uleb128 0x3a
+ 956 00fd 0B       		.uleb128 0xb
+ 957 00fe 3B       		.uleb128 0x3b
+ 958 00ff 0B       		.uleb128 0xb
+ 959 0100 00       		.byte	0
+ 960 0101 00       		.byte	0
+ 961 0102 00       		.byte	0
+ 962              		.section	.debug_loc,"",%progbits
+ 963              	.Ldebug_loc0:
+ 964              	.LLST0:
+ 965 0000 10000000 		.4byte	.LVL1
+ 966 0004 15000000 		.4byte	.LVL2-1
+ 967 0008 0100     		.2byte	0x1
+ 968 000a 50       		.byte	0x50
+ 969 000b 1E000000 		.4byte	.LVL4
+ 970 000f 20000000 		.4byte	.LVL5
+ 971 0013 0100     		.2byte	0x1
+ 972 0015 50       		.byte	0x50
+ 973 0016 24000000 		.4byte	.LVL6
+ 974 001a 2B000000 		.4byte	.LVL7-1
+ 975 001e 0100     		.2byte	0x1
+ 976 0020 50       		.byte	0x50
+ 977 0021 42000000 		.4byte	.LVL10
+ 978 0025 46000000 		.4byte	.LVL11
+ 979 0029 0100     		.2byte	0x1
+ 980 002b 50       		.byte	0x50
+ 981 002c 4A000000 		.4byte	.LVL12
+ 982 0030 51000000 		.4byte	.LVL13-1
+ 983 0034 0100     		.2byte	0x1
+ 984 0036 50       		.byte	0x50
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\cciuKSkM.s 			page 20
+
+
+ 985 0037 68000000 		.4byte	.LVL16
+ 986 003b 6A000000 		.4byte	.LVL17
+ 987 003f 0100     		.2byte	0x1
+ 988 0041 50       		.byte	0x50
+ 989 0042 00000000 		.4byte	0
+ 990 0046 00000000 		.4byte	0
+ 991              	.LLST1:
+ 992 004a 70000000 		.4byte	.LVL19
+ 993 004e 98000000 		.4byte	.LVL24
+ 994 0052 0100     		.2byte	0x1
+ 995 0054 55       		.byte	0x55
+ 996 0055 00000000 		.4byte	0
+ 997 0059 00000000 		.4byte	0
+ 998              		.section	.debug_aranges,"",%progbits
+ 999 0000 24000000 		.4byte	0x24
+ 1000 0004 0200     		.2byte	0x2
+ 1001 0006 00000000 		.4byte	.Ldebug_info0
+ 1002 000a 04       		.byte	0x4
+ 1003 000b 00       		.byte	0
+ 1004 000c 0000     		.2byte	0
+ 1005 000e 0000     		.2byte	0
+ 1006 0010 00000000 		.4byte	.LFB64
+ 1007 0014 BC000000 		.4byte	.LFE64-.LFB64
+ 1008 0018 00000000 		.4byte	.LFB65
+ 1009 001c 1C000000 		.4byte	.LFE65-.LFB65
+ 1010 0020 00000000 		.4byte	0
+ 1011 0024 00000000 		.4byte	0
+ 1012              		.section	.debug_ranges,"",%progbits
+ 1013              	.Ldebug_ranges0:
+ 1014 0000 00000000 		.4byte	.LFB64
+ 1015 0004 BC000000 		.4byte	.LFE64
+ 1016 0008 00000000 		.4byte	.LFB65
+ 1017 000c 1C000000 		.4byte	.LFE65
+ 1018 0010 00000000 		.4byte	0
+ 1019 0014 00000000 		.4byte	0
+ 1020              		.section	.debug_line,"",%progbits
+ 1021              	.Ldebug_line0:
+ 1022 0000 0C020000 		.section	.debug_str,"MS",%progbits,1
+ 1022      0200C501 
+ 1022      00000201 
+ 1022      FB0E0D00 
+ 1022      01010101 
+ 1023              	.LASF3:
+ 1024 0000 5F5F7569 		.ascii	"__uint8_t\000"
+ 1024      6E74385F 
+ 1024      7400
+ 1025              	.LASF23:
+ 1026 000a 4932435F 		.ascii	"I2C_MasterSendStop\000"
+ 1026      4D617374 
+ 1026      65725365 
+ 1026      6E645374 
+ 1026      6F7000
+ 1027              	.LASF6:
+ 1028 001d 5F5F696E 		.ascii	"__int32_t\000"
+ 1028      7433325F 
+ 1028      7400
+ 1029              	.LASF22:
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\cciuKSkM.s 			page 21
+
+
+ 1030 0027 4932435F 		.ascii	"I2C_MasterWriteByte\000"
+ 1030      4D617374 
+ 1030      65725772 
+ 1030      69746542 
+ 1030      79746500 
+ 1031              	.LASF24:
+ 1032 003b 736E7072 		.ascii	"snprintf\000"
+ 1032      696E7466 
+ 1032      00
+ 1033              	.LASF29:
+ 1034 0044 4932435F 		.ascii	"I2C_Start\000"
+ 1034      53746172 
+ 1034      7400
+ 1035              	.LASF18:
+ 1036 004e 666C6F61 		.ascii	"float\000"
+ 1036      7400
+ 1037              	.LASF21:
+ 1038 0054 64617461 		.ascii	"data\000"
+ 1038      00
+ 1039              	.LASF1:
+ 1040 0059 756E7369 		.ascii	"unsigned char\000"
+ 1040      676E6564 
+ 1040      20636861 
+ 1040      7200
+ 1041              	.LASF31:
+ 1042 0067 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1042      43313120 
+ 1042      352E342E 
+ 1042      31203230 
+ 1042      31363036 
+ 1043 009a 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1043      20726576 
+ 1043      6973696F 
+ 1043      6E203233 
+ 1043      37373135 
+ 1044 00cd 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1044      66756E63 
+ 1044      74696F6E 
+ 1044      2D736563 
+ 1044      74696F6E 
+ 1045              	.LASF8:
+ 1046 00f5 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1046      20756E73 
+ 1046      69676E65 
+ 1046      6420696E 
+ 1046      7400
+ 1047              	.LASF5:
+ 1048 0107 73686F72 		.ascii	"short unsigned int\000"
+ 1048      7420756E 
+ 1048      7369676E 
+ 1048      65642069 
+ 1048      6E7400
+ 1049              	.LASF30:
+ 1050 011a 55415254 		.ascii	"UART_Start\000"
+ 1050      5F537461 
+ 1050      727400
+ 1051              	.LASF28:
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\cciuKSkM.s 			page 22
+
+
+ 1052 0125 4932435F 		.ascii	"I2C_MasterSendStart\000"
+ 1052      4D617374 
+ 1052      65725365 
+ 1052      6E645374 
+ 1052      61727400 
+ 1053              	.LASF36:
+ 1054 0139 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1054      52784275 
+ 1054      66666572 
+ 1054      00
+ 1055              	.LASF4:
+ 1056 0146 5F5F7569 		.ascii	"__uint16_t\000"
+ 1056      6E743136 
+ 1056      5F7400
+ 1057              	.LASF19:
+ 1058 0151 646F7562 		.ascii	"double\000"
+ 1058      6C6500
+ 1059              	.LASF35:
+ 1060 0158 6D61696E 		.ascii	"main\000"
+ 1060      00
+ 1061              	.LASF20:
+ 1062 015d 72656164 		.ascii	"read\000"
+ 1062      00
+ 1063              	.LASF11:
+ 1064 0162 756E7369 		.ascii	"unsigned int\000"
+ 1064      676E6564 
+ 1064      20696E74 
+ 1064      00
+ 1065              	.LASF10:
+ 1066 016f 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1066      206C6F6E 
+ 1066      6720756E 
+ 1066      7369676E 
+ 1066      65642069 
+ 1067              	.LASF12:
+ 1068 0186 75696E74 		.ascii	"uint8_t\000"
+ 1068      385F7400 
+ 1069              	.LASF26:
+ 1070 018e 4932435F 		.ascii	"I2C_MasterSendRestart\000"
+ 1070      4D617374 
+ 1070      65725365 
+ 1070      6E645265 
+ 1070      73746172 
+ 1071              	.LASF14:
+ 1072 01a4 696E7433 		.ascii	"int32_t\000"
+ 1072      325F7400 
+ 1073              	.LASF16:
+ 1074 01ac 73697A65 		.ascii	"sizetype\000"
+ 1074      74797065 
+ 1074      00
+ 1075              	.LASF9:
+ 1076 01b5 6C6F6E67 		.ascii	"long long int\000"
+ 1076      206C6F6E 
+ 1076      6720696E 
+ 1076      7400
+ 1077              	.LASF32:
+ 1078 01c3 6D61696E 		.ascii	"main.c\000"
+ARM GAS  C:\Users\TYROLY~1\AppData\Local\Temp\cciuKSkM.s 			page 23
+
+
+ 1078      2E6300
+ 1079              	.LASF17:
+ 1080 01ca 63686172 		.ascii	"char\000"
+ 1080      00
+ 1081              	.LASF27:
+ 1082 01cf 4932435F 		.ascii	"I2C_MasterReadByte\000"
+ 1082      4D617374 
+ 1082      65725265 
+ 1082      61644279 
+ 1082      746500
+ 1083              	.LASF2:
+ 1084 01e2 73686F72 		.ascii	"short int\000"
+ 1084      7420696E 
+ 1084      7400
+ 1085              	.LASF13:
+ 1086 01ec 75696E74 		.ascii	"uint16_t\000"
+ 1086      31365F74 
+ 1086      00
+ 1087              	.LASF33:
+ 1088 01f5 453A5C61 		.ascii	"E:\\aquadoc\\psoc\\psoc\\BMP180-TEST.cydsn\000"
+ 1088      71756164 
+ 1088      6F635C70 
+ 1088      736F635C 
+ 1088      70736F63 
+ 1089              	.LASF34:
+ 1090 021c 6765745F 		.ascii	"get_temperature\000"
+ 1090      74656D70 
+ 1090      65726174 
+ 1090      75726500 
+ 1091              	.LASF7:
+ 1092 022c 6C6F6E67 		.ascii	"long int\000"
+ 1092      20696E74 
+ 1092      00
+ 1093              	.LASF15:
+ 1094 0235 6C6F6E67 		.ascii	"long double\000"
+ 1094      20646F75 
+ 1094      626C6500 
+ 1095              	.LASF0:
+ 1096 0241 7369676E 		.ascii	"signed char\000"
+ 1096      65642063 
+ 1096      68617200 
+ 1097              	.LASF25:
+ 1098 024d 55415254 		.ascii	"UART_PutString\000"
+ 1098      5F507574 
+ 1098      53747269 
+ 1098      6E6700
+ 1099              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

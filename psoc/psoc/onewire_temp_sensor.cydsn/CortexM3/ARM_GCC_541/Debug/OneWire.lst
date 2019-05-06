@@ -1,0 +1,1483 @@
+ARM GAS  C:\Users\JACKNE~1\AppData\Local\Temp\ccIxO6oN.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"OneWire.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.OW_Detect,"ax",%progbits
+  20              		.align	2
+  21              		.global	OW_Detect
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	OW_Detect, %function
+  25              	OW_Detect:
+  26              	.LFB64:
+  27              		.file 1 "OneWire.c"
+   1:OneWire.c     **** 
+   2:OneWire.c     **** 
+   3:OneWire.c     **** #include "OneWire.h"
+   4:OneWire.c     **** #include "cypins.h"
+   5:OneWire.c     **** #include <stdio.h>
+   6:OneWire.c     **** 
+   7:OneWire.c     **** 
+   8:OneWire.c     **** // the pin used to communicate with iButton.
+   9:OneWire.c     **** static unsigned int owpin;
+  10:OneWire.c     **** 
+  11:OneWire.c     **** int OW_Detect(unsigned int pin)
+  12:OneWire.c     **** {
+  28              		.loc 1 12 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              	.LVL0:
+  33 0000 10B5     		push	{r4, lr}
+  34              		.cfi_def_cfa_offset 8
+  35              		.cfi_offset 4, -8
+  36              		.cfi_offset 14, -4
+  13:OneWire.c     **** 	owpin=pin;
+  37              		.loc 1 13 0
+  38 0002 0B4C     		ldr	r4, .L3
+  39 0004 2060     		str	r0, [r4]
+  14:OneWire.c     **** 
+  15:OneWire.c     **** 	CyPins_ClearPin(owpin);
+  40              		.loc 1 15 0
+  41 0006 0378     		ldrb	r3, [r0]	@ zero_extendqisi2
+  42 0008 03F0FE03 		and	r3, r3, #254
+ARM GAS  C:\Users\JACKNE~1\AppData\Local\Temp\ccIxO6oN.s 			page 2
+
+
+  43 000c 0370     		strb	r3, [r0]
+  16:OneWire.c     **** 	CyDelayUs(480);
+  44              		.loc 1 16 0
+  45 000e 4FF4F070 		mov	r0, #480
+  46              	.LVL1:
+  47 0012 FFF7FEFF 		bl	CyDelayUs
+  48              	.LVL2:
+  17:OneWire.c     **** 
+  18:OneWire.c     **** 	CyPins_SetPin(owpin);
+  49              		.loc 1 18 0
+  50 0016 2268     		ldr	r2, [r4]
+  51 0018 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  52 001a 43F00103 		orr	r3, r3, #1
+  53 001e 1370     		strb	r3, [r2]
+  19:OneWire.c     **** 	CyDelayUs(150);             // laengere Zeitspanne
+  54              		.loc 1 19 0
+  55 0020 9620     		movs	r0, #150
+  56 0022 FFF7FEFF 		bl	CyDelayUs
+  57              	.LVL3:
+  20:OneWire.c     **** 
+  21:OneWire.c     **** 	return CyPins_ReadPin(owpin);
+  58              		.loc 1 21 0
+  59 0026 2368     		ldr	r3, [r4]
+  60 0028 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+  22:OneWire.c     **** }
+  61              		.loc 1 22 0
+  62 002a 00F01000 		and	r0, r0, #16
+  63 002e 10BD     		pop	{r4, pc}
+  64              	.L4:
+  65              		.align	2
+  66              	.L3:
+  67 0030 00000000 		.word	.LANCHOR0
+  68              		.cfi_endproc
+  69              	.LFE64:
+  70              		.size	OW_Detect, .-OW_Detect
+  71              		.section	.text.OW_WriteByte,"ax",%progbits
+  72              		.align	2
+  73              		.global	OW_WriteByte
+  74              		.thumb
+  75              		.thumb_func
+  76              		.type	OW_WriteByte, %function
+  77              	OW_WriteByte:
+  78              	.LFB65:
+  23:OneWire.c     **** 
+  24:OneWire.c     **** void OW_WriteByte(unsigned char u8)
+  25:OneWire.c     **** {
+  79              		.loc 1 25 0
+  80              		.cfi_startproc
+  81              		@ args = 0, pretend = 0, frame = 0
+  82              		@ frame_needed = 0, uses_anonymous_args = 0
+  83              	.LVL4:
+  84 0000 70B5     		push	{r4, r5, r6, lr}
+  85              		.cfi_def_cfa_offset 16
+  86              		.cfi_offset 4, -16
+  87              		.cfi_offset 5, -12
+  88              		.cfi_offset 6, -8
+  89              		.cfi_offset 14, -4
+ARM GAS  C:\Users\JACKNE~1\AppData\Local\Temp\ccIxO6oN.s 			page 3
+
+
+  90 0002 0546     		mov	r5, r0
+  91              	.LVL5:
+  26:OneWire.c     **** 	int i=0;
+  27:OneWire.c     **** 	for(i=0; i<8; i++)
+  92              		.loc 1 27 0
+  93 0004 0024     		movs	r4, #0
+  94 0006 27E0     		b	.L6
+  95              	.LVL6:
+  96              	.L9:
+  28:OneWire.c     **** 	{
+  29:OneWire.c     **** 		if(u8 & 0x01)
+  97              		.loc 1 29 0
+  98 0008 15F0010F 		tst	r5, #1
+  99 000c 11D0     		beq	.L7
+  30:OneWire.c     **** 		{
+  31:OneWire.c     **** 			CyPins_ClearPin(owpin);
+ 100              		.loc 1 31 0
+ 101 000e 144E     		ldr	r6, .L11
+ 102 0010 3268     		ldr	r2, [r6]
+ 103 0012 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 104 0014 03F0FE03 		and	r3, r3, #254
+ 105 0018 1370     		strb	r3, [r2]
+  32:OneWire.c     **** 			CyDelayUs(6);
+ 106              		.loc 1 32 0
+ 107 001a 0620     		movs	r0, #6
+ 108 001c FFF7FEFF 		bl	CyDelayUs
+ 109              	.LVL7:
+  33:OneWire.c     **** 			CyPins_SetPin(owpin);
+ 110              		.loc 1 33 0
+ 111 0020 3268     		ldr	r2, [r6]
+ 112 0022 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 113 0024 43F00103 		orr	r3, r3, #1
+ 114 0028 1370     		strb	r3, [r2]
+  34:OneWire.c     **** 			CyDelayUs(64);
+ 115              		.loc 1 34 0
+ 116 002a 4020     		movs	r0, #64
+ 117 002c FFF7FEFF 		bl	CyDelayUs
+ 118              	.LVL8:
+ 119 0030 10E0     		b	.L8
+ 120              	.L7:
+  35:OneWire.c     **** 		}
+  36:OneWire.c     **** 		else
+  37:OneWire.c     **** 		{
+  38:OneWire.c     **** 			CyPins_ClearPin(owpin);
+ 121              		.loc 1 38 0
+ 122 0032 0B4E     		ldr	r6, .L11
+ 123 0034 3268     		ldr	r2, [r6]
+ 124 0036 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 125 0038 03F0FE03 		and	r3, r3, #254
+ 126 003c 1370     		strb	r3, [r2]
+  39:OneWire.c     **** 			CyDelayUs(60);
+ 127              		.loc 1 39 0
+ 128 003e 3C20     		movs	r0, #60
+ 129 0040 FFF7FEFF 		bl	CyDelayUs
+ 130              	.LVL9:
+  40:OneWire.c     **** 			CyPins_SetPin(owpin);
+ 131              		.loc 1 40 0
+ARM GAS  C:\Users\JACKNE~1\AppData\Local\Temp\ccIxO6oN.s 			page 4
+
+
+ 132 0044 3268     		ldr	r2, [r6]
+ 133 0046 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 134 0048 43F00103 		orr	r3, r3, #1
+ 135 004c 1370     		strb	r3, [r2]
+  41:OneWire.c     **** 			CyDelayUs(10);
+ 136              		.loc 1 41 0
+ 137 004e 0A20     		movs	r0, #10
+ 138 0050 FFF7FEFF 		bl	CyDelayUs
+ 139              	.LVL10:
+ 140              	.L8:
+  42:OneWire.c     **** 		}
+  43:OneWire.c     **** 
+  44:OneWire.c     **** 		u8>>=1;
+ 141              		.loc 1 44 0 discriminator 2
+ 142 0054 6D08     		lsrs	r5, r5, #1
+ 143              	.LVL11:
+  27:OneWire.c     **** 	{
+ 144              		.loc 1 27 0 discriminator 2
+ 145 0056 0134     		adds	r4, r4, #1
+ 146              	.LVL12:
+ 147              	.L6:
+  27:OneWire.c     **** 	{
+ 148              		.loc 1 27 0 is_stmt 0 discriminator 1
+ 149 0058 072C     		cmp	r4, #7
+ 150 005a D5DD     		ble	.L9
+  45:OneWire.c     **** 	}
+  46:OneWire.c     **** }
+ 151              		.loc 1 46 0 is_stmt 1
+ 152 005c 70BD     		pop	{r4, r5, r6, pc}
+ 153              	.LVL13:
+ 154              	.L12:
+ 155 005e 00BF     		.align	2
+ 156              	.L11:
+ 157 0060 00000000 		.word	.LANCHOR0
+ 158              		.cfi_endproc
+ 159              	.LFE65:
+ 160              		.size	OW_WriteByte, .-OW_WriteByte
+ 161              		.section	.text.OW_ReadByte,"ax",%progbits
+ 162              		.align	2
+ 163              		.global	OW_ReadByte
+ 164              		.thumb
+ 165              		.thumb_func
+ 166              		.type	OW_ReadByte, %function
+ 167              	OW_ReadByte:
+ 168              	.LFB66:
+  47:OneWire.c     **** 
+  48:OneWire.c     **** unsigned char OW_ReadByte()
+  49:OneWire.c     **** {
+ 169              		.loc 1 49 0
+ 170              		.cfi_startproc
+ 171              		@ args = 0, pretend = 0, frame = 0
+ 172              		@ frame_needed = 0, uses_anonymous_args = 0
+ 173 0000 70B5     		push	{r4, r5, r6, lr}
+ 174              		.cfi_def_cfa_offset 16
+ 175              		.cfi_offset 4, -16
+ 176              		.cfi_offset 5, -12
+ 177              		.cfi_offset 6, -8
+ARM GAS  C:\Users\JACKNE~1\AppData\Local\Temp\ccIxO6oN.s 			page 5
+
+
+ 178              		.cfi_offset 14, -4
+ 179              	.LVL14:
+  50:OneWire.c     **** 	unsigned char b=0;
+  51:OneWire.c     **** 	int i=0;
+ 180              		.loc 1 51 0
+ 181 0002 0026     		movs	r6, #0
+  50:OneWire.c     **** 	unsigned char b=0;
+ 182              		.loc 1 50 0
+ 183 0004 3446     		mov	r4, r6
+  52:OneWire.c     **** 
+  53:OneWire.c     **** 	while(i<8)
+ 184              		.loc 1 53 0
+ 185 0006 1EE0     		b	.L14
+ 186              	.LVL15:
+ 187              	.L16:
+  54:OneWire.c     **** 	{
+  55:OneWire.c     **** 		b >>= 1;
+ 188              		.loc 1 55 0
+ 189 0008 6408     		lsrs	r4, r4, #1
+ 190              	.LVL16:
+  56:OneWire.c     **** 		CyPins_ClearPin(owpin);
+ 191              		.loc 1 56 0
+ 192 000a 114D     		ldr	r5, .L19
+ 193 000c 2A68     		ldr	r2, [r5]
+ 194 000e 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 195 0010 03F0FE03 		and	r3, r3, #254
+ 196 0014 1370     		strb	r3, [r2]
+  57:OneWire.c     **** 		CyDelayUs(6);
+ 197              		.loc 1 57 0
+ 198 0016 0620     		movs	r0, #6
+ 199 0018 FFF7FEFF 		bl	CyDelayUs
+ 200              	.LVL17:
+  58:OneWire.c     **** 		CyPins_SetPin(owpin);
+ 201              		.loc 1 58 0
+ 202 001c 2A68     		ldr	r2, [r5]
+ 203 001e 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ 204 0020 43F00103 		orr	r3, r3, #1
+ 205 0024 1370     		strb	r3, [r2]
+  59:OneWire.c     **** 		CyDelayUs(9);
+ 206              		.loc 1 59 0
+ 207 0026 0920     		movs	r0, #9
+ 208 0028 FFF7FEFF 		bl	CyDelayUs
+ 209              	.LVL18:
+  60:OneWire.c     **** 
+  61:OneWire.c     **** 		b |= (CyPins_ReadPin(owpin)>0) ? 0x80 : 0x00;
+ 210              		.loc 1 61 0
+ 211 002c 2B68     		ldr	r3, [r5]
+ 212 002e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 213 0030 13F0100F 		tst	r3, #16
+ 214 0034 01D0     		beq	.L17
+ 215 0036 8023     		movs	r3, #128
+ 216 0038 00E0     		b	.L15
+ 217              	.L17:
+ 218 003a 0023     		movs	r3, #0
+ 219              	.L15:
+ 220              		.loc 1 61 0 is_stmt 0 discriminator 4
+ 221 003c 1C43     		orrs	r4, r4, r3
+ARM GAS  C:\Users\JACKNE~1\AppData\Local\Temp\ccIxO6oN.s 			page 6
+
+
+ 222              	.LVL19:
+  62:OneWire.c     **** 		CyDelayUs(55);
+ 223              		.loc 1 62 0 is_stmt 1 discriminator 4
+ 224 003e 3720     		movs	r0, #55
+ 225 0040 FFF7FEFF 		bl	CyDelayUs
+ 226              	.LVL20:
+  63:OneWire.c     **** 
+  64:OneWire.c     **** 		i++;
+ 227              		.loc 1 64 0 discriminator 4
+ 228 0044 0136     		adds	r6, r6, #1
+ 229              	.LVL21:
+ 230              	.L14:
+  53:OneWire.c     **** 	{
+ 231              		.loc 1 53 0
+ 232 0046 072E     		cmp	r6, #7
+ 233 0048 DEDD     		ble	.L16
+  65:OneWire.c     **** 	}
+  66:OneWire.c     **** 
+  67:OneWire.c     **** 	return b;
+  68:OneWire.c     **** 
+  69:OneWire.c     **** }
+ 234              		.loc 1 69 0
+ 235 004a 2046     		mov	r0, r4
+ 236 004c 70BD     		pop	{r4, r5, r6, pc}
+ 237              	.LVL22:
+ 238              	.L20:
+ 239 004e 00BF     		.align	2
+ 240              	.L19:
+ 241 0050 00000000 		.word	.LANCHOR0
+ 242              		.cfi_endproc
+ 243              	.LFE66:
+ 244              		.size	OW_ReadByte, .-OW_ReadByte
+ 245              		.section	.text.OW_CRC,"ax",%progbits
+ 246              		.align	2
+ 247              		.global	OW_CRC
+ 248              		.thumb
+ 249              		.thumb_func
+ 250              		.type	OW_CRC, %function
+ 251              	OW_CRC:
+ 252              	.LFB67:
+  70:OneWire.c     **** 
+  71:OneWire.c     **** unsigned char OW_CRC(unsigned char *pBuf, int len)
+  72:OneWire.c     **** {
+ 253              		.loc 1 72 0
+ 254              		.cfi_startproc
+ 255              		@ args = 0, pretend = 0, frame = 0
+ 256              		@ frame_needed = 0, uses_anonymous_args = 0
+ 257              		@ link register save eliminated.
+ 258              	.LVL23:
+ 259 0000 30B4     		push	{r4, r5}
+ 260              		.cfi_def_cfa_offset 8
+ 261              		.cfi_offset 4, -8
+ 262              		.cfi_offset 5, -4
+ 263 0002 0546     		mov	r5, r0
+ 264              	.LVL24:
+  73:OneWire.c     **** 	unsigned char loop, i, shiftedBit;
+  74:OneWire.c     **** 	unsigned char crc = 0x00;
+ARM GAS  C:\Users\JACKNE~1\AppData\Local\Temp\ccIxO6oN.s 			page 7
+
+
+ 265              		.loc 1 74 0
+ 266 0004 0020     		movs	r0, #0
+ 267              	.LVL25:
+  75:OneWire.c     **** 
+  76:OneWire.c     **** 	for(loop=0; loop<len; loop++)
+ 268              		.loc 1 76 0
+ 269 0006 0446     		mov	r4, r0
+ 270 0008 10E0     		b	.L22
+ 271              	.LVL26:
+ 272              	.L26:
+  77:OneWire.c     **** 	{
+  78:OneWire.c     **** 		crc = (crc ^ pBuf[loop]);
+ 273              		.loc 1 78 0
+ 274 000a 2B5D     		ldrb	r3, [r5, r4]	@ zero_extendqisi2
+ 275 000c 5840     		eors	r0, r0, r3
+ 276              	.LVL27:
+  79:OneWire.c     **** 
+  80:OneWire.c     **** 		for(i=8; i>0; i--)
+ 277              		.loc 1 80 0
+ 278 000e 0823     		movs	r3, #8
+ 279 0010 08E0     		b	.L23
+ 280              	.LVL28:
+ 281              	.L25:
+  81:OneWire.c     **** 		{
+  82:OneWire.c     **** 			shiftedBit= (crc & 0x01);
+ 282              		.loc 1 82 0
+ 283 0012 00F00102 		and	r2, r0, #1
+ 284              	.LVL29:
+  83:OneWire.c     **** 			crc >>= 1;
+ 285              		.loc 1 83 0
+ 286 0016 4008     		lsrs	r0, r0, #1
+ 287              	.LVL30:
+  84:OneWire.c     **** 
+  85:OneWire.c     **** 			if(shiftedBit)
+ 288              		.loc 1 85 0
+ 289 0018 12B1     		cbz	r2, .L24
+  86:OneWire.c     **** 			{
+  87:OneWire.c     **** 				crc = (crc ^ 0x8c);
+ 290              		.loc 1 87 0
+ 291 001a 80F08C00 		eor	r0, r0, #140
+ 292              	.LVL31:
+ 293 001e C0B2     		uxtb	r0, r0
+ 294              	.LVL32:
+ 295              	.L24:
+  80:OneWire.c     **** 		{
+ 296              		.loc 1 80 0 discriminator 2
+ 297 0020 013B     		subs	r3, r3, #1
+ 298              	.LVL33:
+ 299 0022 DBB2     		uxtb	r3, r3
+ 300              	.LVL34:
+ 301              	.L23:
+  80:OneWire.c     **** 		{
+ 302              		.loc 1 80 0 is_stmt 0 discriminator 1
+ 303 0024 002B     		cmp	r3, #0
+ 304 0026 F4D1     		bne	.L25
+  76:OneWire.c     **** 	{
+ 305              		.loc 1 76 0 is_stmt 1 discriminator 2
+ARM GAS  C:\Users\JACKNE~1\AppData\Local\Temp\ccIxO6oN.s 			page 8
+
+
+ 306 0028 0134     		adds	r4, r4, #1
+ 307              	.LVL35:
+ 308 002a E4B2     		uxtb	r4, r4
+ 309              	.LVL36:
+ 310              	.L22:
+  76:OneWire.c     **** 	{
+ 311              		.loc 1 76 0 is_stmt 0 discriminator 1
+ 312 002c 8C42     		cmp	r4, r1
+ 313 002e ECDB     		blt	.L26
+  88:OneWire.c     **** 			}
+  89:OneWire.c     **** 		}
+  90:OneWire.c     **** 	}
+  91:OneWire.c     **** 
+  92:OneWire.c     **** 	return crc;
+  93:OneWire.c     **** }
+ 314              		.loc 1 93 0 is_stmt 1
+ 315 0030 30BC     		pop	{r4, r5}
+ 316              		.cfi_restore 5
+ 317              		.cfi_restore 4
+ 318              		.cfi_def_cfa_offset 0
+ 319              	.LVL37:
+ 320 0032 7047     		bx	lr
+ 321              		.cfi_endproc
+ 322              	.LFE67:
+ 323              		.size	OW_CRC, .-OW_CRC
+ 324              		.bss
+ 325              		.align	2
+ 326              		.set	.LANCHOR0,. + 0
+ 327              		.type	owpin, %object
+ 328              		.size	owpin, 4
+ 329              	owpin:
+ 330 0000 00000000 		.space	4
+ 331              		.text
+ 332              	.Letext0:
+ 333              		.file 2 "d:\\psoc creator\\psoc_creator\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.1\
+ 334              		.file 3 "d:\\psoc creator\\psoc_creator\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.1\
+ 335              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 336              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+ 337              		.file 6 "Generated_Source\\PSoC5/CyLib.h"
+ 338              		.section	.debug_info,"",%progbits
+ 339              	.Ldebug_info0:
+ 340 0000 94020000 		.4byte	0x294
+ 341 0004 0400     		.2byte	0x4
+ 342 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 343 000a 04       		.byte	0x4
+ 344 000b 01       		.uleb128 0x1
+ 345 000c 56000000 		.4byte	.LASF26
+ 346 0010 0C       		.byte	0xc
+ 347 0011 E7010000 		.4byte	.LASF27
+ 348 0015 0A000000 		.4byte	.LASF28
+ 349 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 350 001d 00000000 		.4byte	0
+ 351 0021 00000000 		.4byte	.Ldebug_line0
+ 352 0025 02       		.uleb128 0x2
+ 353 0026 01       		.byte	0x1
+ 354 0027 06       		.byte	0x6
+ 355 0028 DB010000 		.4byte	.LASF0
+ARM GAS  C:\Users\JACKNE~1\AppData\Local\Temp\ccIxO6oN.s 			page 9
+
+
+ 356 002c 02       		.uleb128 0x2
+ 357 002d 01       		.byte	0x1
+ 358 002e 08       		.byte	0x8
+ 359 002f 21010000 		.4byte	.LASF1
+ 360 0033 02       		.uleb128 0x2
+ 361 0034 02       		.byte	0x2
+ 362 0035 05       		.byte	0x5
+ 363 0036 A9010000 		.4byte	.LASF2
+ 364 003a 02       		.uleb128 0x2
+ 365 003b 02       		.byte	0x2
+ 366 003c 07       		.byte	0x7
+ 367 003d 01010000 		.4byte	.LASF3
+ 368 0041 03       		.uleb128 0x3
+ 369 0042 00000000 		.4byte	.LASF9
+ 370 0046 02       		.byte	0x2
+ 371 0047 3F       		.byte	0x3f
+ 372 0048 4C000000 		.4byte	0x4c
+ 373 004c 02       		.uleb128 0x2
+ 374 004d 04       		.byte	0x4
+ 375 004e 05       		.byte	0x5
+ 376 004f B9010000 		.4byte	.LASF4
+ 377 0053 02       		.uleb128 0x2
+ 378 0054 04       		.byte	0x4
+ 379 0055 07       		.byte	0x7
+ 380 0056 EF000000 		.4byte	.LASF5
+ 381 005a 02       		.uleb128 0x2
+ 382 005b 08       		.byte	0x8
+ 383 005c 05       		.byte	0x5
+ 384 005d 8C010000 		.4byte	.LASF6
+ 385 0061 02       		.uleb128 0x2
+ 386 0062 08       		.byte	0x8
+ 387 0063 07       		.byte	0x7
+ 388 0064 5F010000 		.4byte	.LASF7
+ 389 0068 04       		.uleb128 0x4
+ 390 0069 04       		.byte	0x4
+ 391 006a 05       		.byte	0x5
+ 392 006b 696E7400 		.ascii	"int\000"
+ 393 006f 02       		.uleb128 0x2
+ 394 0070 04       		.byte	0x4
+ 395 0071 07       		.byte	0x7
+ 396 0072 47010000 		.4byte	.LASF8
+ 397 0076 03       		.uleb128 0x3
+ 398 0077 7B010000 		.4byte	.LASF10
+ 399 007b 03       		.byte	0x3
+ 400 007c 2C       		.byte	0x2c
+ 401 007d 41000000 		.4byte	0x41
+ 402 0081 05       		.uleb128 0x5
+ 403 0082 B3010000 		.4byte	.LASF11
+ 404 0086 04       		.byte	0x4
+ 405 0087 E401     		.2byte	0x1e4
+ 406 0089 2C000000 		.4byte	0x2c
+ 407 008d 02       		.uleb128 0x2
+ 408 008e 04       		.byte	0x4
+ 409 008f 04       		.byte	0x4
+ 410 0090 4B000000 		.4byte	.LASF12
+ 411 0094 02       		.uleb128 0x2
+ 412 0095 08       		.byte	0x8
+ARM GAS  C:\Users\JACKNE~1\AppData\Local\Temp\ccIxO6oN.s 			page 10
+
+
+ 413 0096 04       		.byte	0x4
+ 414 0097 2F010000 		.4byte	.LASF13
+ 415 009b 02       		.uleb128 0x2
+ 416 009c 01       		.byte	0x1
+ 417 009d 08       		.byte	0x8
+ 418 009e 9A010000 		.4byte	.LASF14
+ 419 00a2 05       		.uleb128 0x5
+ 420 00a3 EA000000 		.4byte	.LASF15
+ 421 00a7 04       		.byte	0x4
+ 422 00a8 8E02     		.2byte	0x28e
+ 423 00aa AE000000 		.4byte	0xae
+ 424 00ae 06       		.uleb128 0x6
+ 425 00af 81000000 		.4byte	0x81
+ 426 00b3 02       		.uleb128 0x2
+ 427 00b4 08       		.byte	0x8
+ 428 00b5 04       		.byte	0x4
+ 429 00b6 C2010000 		.4byte	.LASF16
+ 430 00ba 02       		.uleb128 0x2
+ 431 00bb 04       		.byte	0x4
+ 432 00bc 07       		.byte	0x7
+ 433 00bd 83010000 		.4byte	.LASF17
+ 434 00c1 07       		.uleb128 0x7
+ 435 00c2 04       		.byte	0x4
+ 436 00c3 2C000000 		.4byte	0x2c
+ 437 00c7 08       		.uleb128 0x8
+ 438 00c8 9F010000 		.4byte	.LASF20
+ 439 00cc 01       		.byte	0x1
+ 440 00cd 0B       		.byte	0xb
+ 441 00ce 68000000 		.4byte	0x68
+ 442 00d2 00000000 		.4byte	.LFB64
+ 443 00d6 34000000 		.4byte	.LFE64-.LFB64
+ 444 00da 01       		.uleb128 0x1
+ 445 00db 9C       		.byte	0x9c
+ 446 00dc 15010000 		.4byte	0x115
+ 447 00e0 09       		.uleb128 0x9
+ 448 00e1 70696E00 		.ascii	"pin\000"
+ 449 00e5 01       		.byte	0x1
+ 450 00e6 0B       		.byte	0xb
+ 451 00e7 6F000000 		.4byte	0x6f
+ 452 00eb 00000000 		.4byte	.LLST0
+ 453 00ef 0A       		.uleb128 0xa
+ 454 00f0 16000000 		.4byte	.LVL2
+ 455 00f4 8C020000 		.4byte	0x28c
+ 456 00f8 04010000 		.4byte	0x104
+ 457 00fc 0B       		.uleb128 0xb
+ 458 00fd 01       		.uleb128 0x1
+ 459 00fe 50       		.byte	0x50
+ 460 00ff 03       		.uleb128 0x3
+ 461 0100 0A       		.byte	0xa
+ 462 0101 E001     		.2byte	0x1e0
+ 463 0103 00       		.byte	0
+ 464 0104 0C       		.uleb128 0xc
+ 465 0105 26000000 		.4byte	.LVL3
+ 466 0109 8C020000 		.4byte	0x28c
+ 467 010d 0B       		.uleb128 0xb
+ 468 010e 01       		.uleb128 0x1
+ 469 010f 50       		.byte	0x50
+ARM GAS  C:\Users\JACKNE~1\AppData\Local\Temp\ccIxO6oN.s 			page 11
+
+
+ 470 0110 02       		.uleb128 0x2
+ 471 0111 08       		.byte	0x8
+ 472 0112 96       		.byte	0x96
+ 473 0113 00       		.byte	0
+ 474 0114 00       		.byte	0
+ 475 0115 0D       		.uleb128 0xd
+ 476 0116 CE010000 		.4byte	.LASF18
+ 477 011a 01       		.byte	0x1
+ 478 011b 18       		.byte	0x18
+ 479 011c 00000000 		.4byte	.LFB65
+ 480 0120 64000000 		.4byte	.LFE65-.LFB65
+ 481 0124 01       		.uleb128 0x1
+ 482 0125 9C       		.byte	0x9c
+ 483 0126 90010000 		.4byte	0x190
+ 484 012a 09       		.uleb128 0x9
+ 485 012b 753800   		.ascii	"u8\000"
+ 486 012e 01       		.byte	0x1
+ 487 012f 18       		.byte	0x18
+ 488 0130 2C000000 		.4byte	0x2c
+ 489 0134 30000000 		.4byte	.LLST1
+ 490 0138 0E       		.uleb128 0xe
+ 491 0139 6900     		.ascii	"i\000"
+ 492 013b 01       		.byte	0x1
+ 493 013c 1A       		.byte	0x1a
+ 494 013d 68000000 		.4byte	0x68
+ 495 0141 4E000000 		.4byte	.LLST2
+ 496 0145 0A       		.uleb128 0xa
+ 497 0146 20000000 		.4byte	.LVL7
+ 498 014a 8C020000 		.4byte	0x28c
+ 499 014e 58010000 		.4byte	0x158
+ 500 0152 0B       		.uleb128 0xb
+ 501 0153 01       		.uleb128 0x1
+ 502 0154 50       		.byte	0x50
+ 503 0155 01       		.uleb128 0x1
+ 504 0156 36       		.byte	0x36
+ 505 0157 00       		.byte	0
+ 506 0158 0A       		.uleb128 0xa
+ 507 0159 30000000 		.4byte	.LVL8
+ 508 015d 8C020000 		.4byte	0x28c
+ 509 0161 6C010000 		.4byte	0x16c
+ 510 0165 0B       		.uleb128 0xb
+ 511 0166 01       		.uleb128 0x1
+ 512 0167 50       		.byte	0x50
+ 513 0168 02       		.uleb128 0x2
+ 514 0169 08       		.byte	0x8
+ 515 016a 40       		.byte	0x40
+ 516 016b 00       		.byte	0
+ 517 016c 0A       		.uleb128 0xa
+ 518 016d 44000000 		.4byte	.LVL9
+ 519 0171 8C020000 		.4byte	0x28c
+ 520 0175 80010000 		.4byte	0x180
+ 521 0179 0B       		.uleb128 0xb
+ 522 017a 01       		.uleb128 0x1
+ 523 017b 50       		.byte	0x50
+ 524 017c 02       		.uleb128 0x2
+ 525 017d 08       		.byte	0x8
+ 526 017e 3C       		.byte	0x3c
+ARM GAS  C:\Users\JACKNE~1\AppData\Local\Temp\ccIxO6oN.s 			page 12
+
+
+ 527 017f 00       		.byte	0
+ 528 0180 0C       		.uleb128 0xc
+ 529 0181 54000000 		.4byte	.LVL10
+ 530 0185 8C020000 		.4byte	0x28c
+ 531 0189 0B       		.uleb128 0xb
+ 532 018a 01       		.uleb128 0x1
+ 533 018b 50       		.byte	0x50
+ 534 018c 01       		.uleb128 0x1
+ 535 018d 3A       		.byte	0x3a
+ 536 018e 00       		.byte	0
+ 537 018f 00       		.byte	0
+ 538 0190 0F       		.uleb128 0xf
+ 539 0191 F1010000 		.4byte	.LASF19
+ 540 0195 01       		.byte	0x1
+ 541 0196 30       		.byte	0x30
+ 542 0197 2C000000 		.4byte	0x2c
+ 543 019b 00000000 		.4byte	.LFB66
+ 544 019f 54000000 		.4byte	.LFE66-.LFB66
+ 545 01a3 01       		.uleb128 0x1
+ 546 01a4 9C       		.byte	0x9c
+ 547 01a5 FA010000 		.4byte	0x1fa
+ 548 01a9 0E       		.uleb128 0xe
+ 549 01aa 6200     		.ascii	"b\000"
+ 550 01ac 01       		.byte	0x1
+ 551 01ad 32       		.byte	0x32
+ 552 01ae 2C000000 		.4byte	0x2c
+ 553 01b2 6D000000 		.4byte	.LLST3
+ 554 01b6 0E       		.uleb128 0xe
+ 555 01b7 6900     		.ascii	"i\000"
+ 556 01b9 01       		.byte	0x1
+ 557 01ba 33       		.byte	0x33
+ 558 01bb 68000000 		.4byte	0x68
+ 559 01bf 8C000000 		.4byte	.LLST4
+ 560 01c3 0A       		.uleb128 0xa
+ 561 01c4 1C000000 		.4byte	.LVL17
+ 562 01c8 8C020000 		.4byte	0x28c
+ 563 01cc D6010000 		.4byte	0x1d6
+ 564 01d0 0B       		.uleb128 0xb
+ 565 01d1 01       		.uleb128 0x1
+ 566 01d2 50       		.byte	0x50
+ 567 01d3 01       		.uleb128 0x1
+ 568 01d4 36       		.byte	0x36
+ 569 01d5 00       		.byte	0
+ 570 01d6 0A       		.uleb128 0xa
+ 571 01d7 2C000000 		.4byte	.LVL18
+ 572 01db 8C020000 		.4byte	0x28c
+ 573 01df E9010000 		.4byte	0x1e9
+ 574 01e3 0B       		.uleb128 0xb
+ 575 01e4 01       		.uleb128 0x1
+ 576 01e5 50       		.byte	0x50
+ 577 01e6 01       		.uleb128 0x1
+ 578 01e7 39       		.byte	0x39
+ 579 01e8 00       		.byte	0
+ 580 01e9 0C       		.uleb128 0xc
+ 581 01ea 44000000 		.4byte	.LVL20
+ 582 01ee 8C020000 		.4byte	0x28c
+ 583 01f2 0B       		.uleb128 0xb
+ARM GAS  C:\Users\JACKNE~1\AppData\Local\Temp\ccIxO6oN.s 			page 13
+
+
+ 584 01f3 01       		.uleb128 0x1
+ 585 01f4 50       		.byte	0x50
+ 586 01f5 02       		.uleb128 0x2
+ 587 01f6 08       		.byte	0x8
+ 588 01f7 37       		.byte	0x37
+ 589 01f8 00       		.byte	0
+ 590 01f9 00       		.byte	0
+ 591 01fa 08       		.uleb128 0x8
+ 592 01fb 36010000 		.4byte	.LASF21
+ 593 01ff 01       		.byte	0x1
+ 594 0200 47       		.byte	0x47
+ 595 0201 2C000000 		.4byte	0x2c
+ 596 0205 00000000 		.4byte	.LFB67
+ 597 0209 34000000 		.4byte	.LFE67-.LFB67
+ 598 020d 01       		.uleb128 0x1
+ 599 020e 9C       		.byte	0x9c
+ 600 020f 6A020000 		.4byte	0x26a
+ 601 0213 10       		.uleb128 0x10
+ 602 0214 76010000 		.4byte	.LASF22
+ 603 0218 01       		.byte	0x1
+ 604 0219 47       		.byte	0x47
+ 605 021a C1000000 		.4byte	0xc1
+ 606 021e AB000000 		.4byte	.LLST5
+ 607 0222 11       		.uleb128 0x11
+ 608 0223 6C656E00 		.ascii	"len\000"
+ 609 0227 01       		.byte	0x1
+ 610 0228 47       		.byte	0x47
+ 611 0229 68000000 		.4byte	0x68
+ 612 022d 01       		.uleb128 0x1
+ 613 022e 51       		.byte	0x51
+ 614 022f 12       		.uleb128 0x12
+ 615 0230 51000000 		.4byte	.LASF23
+ 616 0234 01       		.byte	0x1
+ 617 0235 49       		.byte	0x49
+ 618 0236 2C000000 		.4byte	0x2c
+ 619 023a D7000000 		.4byte	.LLST6
+ 620 023e 0E       		.uleb128 0xe
+ 621 023f 6900     		.ascii	"i\000"
+ 622 0241 01       		.byte	0x1
+ 623 0242 49       		.byte	0x49
+ 624 0243 2C000000 		.4byte	0x2c
+ 625 0247 01010000 		.4byte	.LLST7
+ 626 024b 12       		.uleb128 0x12
+ 627 024c 54010000 		.4byte	.LASF24
+ 628 0250 01       		.byte	0x1
+ 629 0251 49       		.byte	0x49
+ 630 0252 2C000000 		.4byte	0x2c
+ 631 0256 2B010000 		.4byte	.LLST8
+ 632 025a 0E       		.uleb128 0xe
+ 633 025b 63726300 		.ascii	"crc\000"
+ 634 025f 01       		.byte	0x1
+ 635 0260 4A       		.byte	0x4a
+ 636 0261 2C000000 		.4byte	0x2c
+ 637 0265 3E010000 		.4byte	.LLST9
+ 638 0269 00       		.byte	0
+ 639 026a 13       		.uleb128 0x13
+ 640 026b E4000000 		.4byte	.LASF25
+ARM GAS  C:\Users\JACKNE~1\AppData\Local\Temp\ccIxO6oN.s 			page 14
+
+
+ 641 026f 01       		.byte	0x1
+ 642 0270 09       		.byte	0x9
+ 643 0271 6F000000 		.4byte	0x6f
+ 644 0275 05       		.uleb128 0x5
+ 645 0276 03       		.byte	0x3
+ 646 0277 00000000 		.4byte	owpin
+ 647 027b 14       		.uleb128 0x14
+ 648 027c 14010000 		.4byte	.LASF29
+ 649 0280 05       		.byte	0x5
+ 650 0281 1207     		.2byte	0x712
+ 651 0283 87020000 		.4byte	0x287
+ 652 0287 06       		.uleb128 0x6
+ 653 0288 76000000 		.4byte	0x76
+ 654 028c 15       		.uleb128 0x15
+ 655 028d 3D010000 		.4byte	.LASF30
+ 656 0291 3D010000 		.4byte	.LASF30
+ 657 0295 06       		.byte	0x6
+ 658 0296 77       		.byte	0x77
+ 659 0297 00       		.byte	0
+ 660              		.section	.debug_abbrev,"",%progbits
+ 661              	.Ldebug_abbrev0:
+ 662 0000 01       		.uleb128 0x1
+ 663 0001 11       		.uleb128 0x11
+ 664 0002 01       		.byte	0x1
+ 665 0003 25       		.uleb128 0x25
+ 666 0004 0E       		.uleb128 0xe
+ 667 0005 13       		.uleb128 0x13
+ 668 0006 0B       		.uleb128 0xb
+ 669 0007 03       		.uleb128 0x3
+ 670 0008 0E       		.uleb128 0xe
+ 671 0009 1B       		.uleb128 0x1b
+ 672 000a 0E       		.uleb128 0xe
+ 673 000b 55       		.uleb128 0x55
+ 674 000c 17       		.uleb128 0x17
+ 675 000d 11       		.uleb128 0x11
+ 676 000e 01       		.uleb128 0x1
+ 677 000f 10       		.uleb128 0x10
+ 678 0010 17       		.uleb128 0x17
+ 679 0011 00       		.byte	0
+ 680 0012 00       		.byte	0
+ 681 0013 02       		.uleb128 0x2
+ 682 0014 24       		.uleb128 0x24
+ 683 0015 00       		.byte	0
+ 684 0016 0B       		.uleb128 0xb
+ 685 0017 0B       		.uleb128 0xb
+ 686 0018 3E       		.uleb128 0x3e
+ 687 0019 0B       		.uleb128 0xb
+ 688 001a 03       		.uleb128 0x3
+ 689 001b 0E       		.uleb128 0xe
+ 690 001c 00       		.byte	0
+ 691 001d 00       		.byte	0
+ 692 001e 03       		.uleb128 0x3
+ 693 001f 16       		.uleb128 0x16
+ 694 0020 00       		.byte	0
+ 695 0021 03       		.uleb128 0x3
+ 696 0022 0E       		.uleb128 0xe
+ 697 0023 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\JACKNE~1\AppData\Local\Temp\ccIxO6oN.s 			page 15
+
+
+ 698 0024 0B       		.uleb128 0xb
+ 699 0025 3B       		.uleb128 0x3b
+ 700 0026 0B       		.uleb128 0xb
+ 701 0027 49       		.uleb128 0x49
+ 702 0028 13       		.uleb128 0x13
+ 703 0029 00       		.byte	0
+ 704 002a 00       		.byte	0
+ 705 002b 04       		.uleb128 0x4
+ 706 002c 24       		.uleb128 0x24
+ 707 002d 00       		.byte	0
+ 708 002e 0B       		.uleb128 0xb
+ 709 002f 0B       		.uleb128 0xb
+ 710 0030 3E       		.uleb128 0x3e
+ 711 0031 0B       		.uleb128 0xb
+ 712 0032 03       		.uleb128 0x3
+ 713 0033 08       		.uleb128 0x8
+ 714 0034 00       		.byte	0
+ 715 0035 00       		.byte	0
+ 716 0036 05       		.uleb128 0x5
+ 717 0037 16       		.uleb128 0x16
+ 718 0038 00       		.byte	0
+ 719 0039 03       		.uleb128 0x3
+ 720 003a 0E       		.uleb128 0xe
+ 721 003b 3A       		.uleb128 0x3a
+ 722 003c 0B       		.uleb128 0xb
+ 723 003d 3B       		.uleb128 0x3b
+ 724 003e 05       		.uleb128 0x5
+ 725 003f 49       		.uleb128 0x49
+ 726 0040 13       		.uleb128 0x13
+ 727 0041 00       		.byte	0
+ 728 0042 00       		.byte	0
+ 729 0043 06       		.uleb128 0x6
+ 730 0044 35       		.uleb128 0x35
+ 731 0045 00       		.byte	0
+ 732 0046 49       		.uleb128 0x49
+ 733 0047 13       		.uleb128 0x13
+ 734 0048 00       		.byte	0
+ 735 0049 00       		.byte	0
+ 736 004a 07       		.uleb128 0x7
+ 737 004b 0F       		.uleb128 0xf
+ 738 004c 00       		.byte	0
+ 739 004d 0B       		.uleb128 0xb
+ 740 004e 0B       		.uleb128 0xb
+ 741 004f 49       		.uleb128 0x49
+ 742 0050 13       		.uleb128 0x13
+ 743 0051 00       		.byte	0
+ 744 0052 00       		.byte	0
+ 745 0053 08       		.uleb128 0x8
+ 746 0054 2E       		.uleb128 0x2e
+ 747 0055 01       		.byte	0x1
+ 748 0056 3F       		.uleb128 0x3f
+ 749 0057 19       		.uleb128 0x19
+ 750 0058 03       		.uleb128 0x3
+ 751 0059 0E       		.uleb128 0xe
+ 752 005a 3A       		.uleb128 0x3a
+ 753 005b 0B       		.uleb128 0xb
+ 754 005c 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\JACKNE~1\AppData\Local\Temp\ccIxO6oN.s 			page 16
+
+
+ 755 005d 0B       		.uleb128 0xb
+ 756 005e 27       		.uleb128 0x27
+ 757 005f 19       		.uleb128 0x19
+ 758 0060 49       		.uleb128 0x49
+ 759 0061 13       		.uleb128 0x13
+ 760 0062 11       		.uleb128 0x11
+ 761 0063 01       		.uleb128 0x1
+ 762 0064 12       		.uleb128 0x12
+ 763 0065 06       		.uleb128 0x6
+ 764 0066 40       		.uleb128 0x40
+ 765 0067 18       		.uleb128 0x18
+ 766 0068 9742     		.uleb128 0x2117
+ 767 006a 19       		.uleb128 0x19
+ 768 006b 01       		.uleb128 0x1
+ 769 006c 13       		.uleb128 0x13
+ 770 006d 00       		.byte	0
+ 771 006e 00       		.byte	0
+ 772 006f 09       		.uleb128 0x9
+ 773 0070 05       		.uleb128 0x5
+ 774 0071 00       		.byte	0
+ 775 0072 03       		.uleb128 0x3
+ 776 0073 08       		.uleb128 0x8
+ 777 0074 3A       		.uleb128 0x3a
+ 778 0075 0B       		.uleb128 0xb
+ 779 0076 3B       		.uleb128 0x3b
+ 780 0077 0B       		.uleb128 0xb
+ 781 0078 49       		.uleb128 0x49
+ 782 0079 13       		.uleb128 0x13
+ 783 007a 02       		.uleb128 0x2
+ 784 007b 17       		.uleb128 0x17
+ 785 007c 00       		.byte	0
+ 786 007d 00       		.byte	0
+ 787 007e 0A       		.uleb128 0xa
+ 788 007f 898201   		.uleb128 0x4109
+ 789 0082 01       		.byte	0x1
+ 790 0083 11       		.uleb128 0x11
+ 791 0084 01       		.uleb128 0x1
+ 792 0085 31       		.uleb128 0x31
+ 793 0086 13       		.uleb128 0x13
+ 794 0087 01       		.uleb128 0x1
+ 795 0088 13       		.uleb128 0x13
+ 796 0089 00       		.byte	0
+ 797 008a 00       		.byte	0
+ 798 008b 0B       		.uleb128 0xb
+ 799 008c 8A8201   		.uleb128 0x410a
+ 800 008f 00       		.byte	0
+ 801 0090 02       		.uleb128 0x2
+ 802 0091 18       		.uleb128 0x18
+ 803 0092 9142     		.uleb128 0x2111
+ 804 0094 18       		.uleb128 0x18
+ 805 0095 00       		.byte	0
+ 806 0096 00       		.byte	0
+ 807 0097 0C       		.uleb128 0xc
+ 808 0098 898201   		.uleb128 0x4109
+ 809 009b 01       		.byte	0x1
+ 810 009c 11       		.uleb128 0x11
+ 811 009d 01       		.uleb128 0x1
+ARM GAS  C:\Users\JACKNE~1\AppData\Local\Temp\ccIxO6oN.s 			page 17
+
+
+ 812 009e 31       		.uleb128 0x31
+ 813 009f 13       		.uleb128 0x13
+ 814 00a0 00       		.byte	0
+ 815 00a1 00       		.byte	0
+ 816 00a2 0D       		.uleb128 0xd
+ 817 00a3 2E       		.uleb128 0x2e
+ 818 00a4 01       		.byte	0x1
+ 819 00a5 3F       		.uleb128 0x3f
+ 820 00a6 19       		.uleb128 0x19
+ 821 00a7 03       		.uleb128 0x3
+ 822 00a8 0E       		.uleb128 0xe
+ 823 00a9 3A       		.uleb128 0x3a
+ 824 00aa 0B       		.uleb128 0xb
+ 825 00ab 3B       		.uleb128 0x3b
+ 826 00ac 0B       		.uleb128 0xb
+ 827 00ad 27       		.uleb128 0x27
+ 828 00ae 19       		.uleb128 0x19
+ 829 00af 11       		.uleb128 0x11
+ 830 00b0 01       		.uleb128 0x1
+ 831 00b1 12       		.uleb128 0x12
+ 832 00b2 06       		.uleb128 0x6
+ 833 00b3 40       		.uleb128 0x40
+ 834 00b4 18       		.uleb128 0x18
+ 835 00b5 9742     		.uleb128 0x2117
+ 836 00b7 19       		.uleb128 0x19
+ 837 00b8 01       		.uleb128 0x1
+ 838 00b9 13       		.uleb128 0x13
+ 839 00ba 00       		.byte	0
+ 840 00bb 00       		.byte	0
+ 841 00bc 0E       		.uleb128 0xe
+ 842 00bd 34       		.uleb128 0x34
+ 843 00be 00       		.byte	0
+ 844 00bf 03       		.uleb128 0x3
+ 845 00c0 08       		.uleb128 0x8
+ 846 00c1 3A       		.uleb128 0x3a
+ 847 00c2 0B       		.uleb128 0xb
+ 848 00c3 3B       		.uleb128 0x3b
+ 849 00c4 0B       		.uleb128 0xb
+ 850 00c5 49       		.uleb128 0x49
+ 851 00c6 13       		.uleb128 0x13
+ 852 00c7 02       		.uleb128 0x2
+ 853 00c8 17       		.uleb128 0x17
+ 854 00c9 00       		.byte	0
+ 855 00ca 00       		.byte	0
+ 856 00cb 0F       		.uleb128 0xf
+ 857 00cc 2E       		.uleb128 0x2e
+ 858 00cd 01       		.byte	0x1
+ 859 00ce 3F       		.uleb128 0x3f
+ 860 00cf 19       		.uleb128 0x19
+ 861 00d0 03       		.uleb128 0x3
+ 862 00d1 0E       		.uleb128 0xe
+ 863 00d2 3A       		.uleb128 0x3a
+ 864 00d3 0B       		.uleb128 0xb
+ 865 00d4 3B       		.uleb128 0x3b
+ 866 00d5 0B       		.uleb128 0xb
+ 867 00d6 49       		.uleb128 0x49
+ 868 00d7 13       		.uleb128 0x13
+ARM GAS  C:\Users\JACKNE~1\AppData\Local\Temp\ccIxO6oN.s 			page 18
+
+
+ 869 00d8 11       		.uleb128 0x11
+ 870 00d9 01       		.uleb128 0x1
+ 871 00da 12       		.uleb128 0x12
+ 872 00db 06       		.uleb128 0x6
+ 873 00dc 40       		.uleb128 0x40
+ 874 00dd 18       		.uleb128 0x18
+ 875 00de 9742     		.uleb128 0x2117
+ 876 00e0 19       		.uleb128 0x19
+ 877 00e1 01       		.uleb128 0x1
+ 878 00e2 13       		.uleb128 0x13
+ 879 00e3 00       		.byte	0
+ 880 00e4 00       		.byte	0
+ 881 00e5 10       		.uleb128 0x10
+ 882 00e6 05       		.uleb128 0x5
+ 883 00e7 00       		.byte	0
+ 884 00e8 03       		.uleb128 0x3
+ 885 00e9 0E       		.uleb128 0xe
+ 886 00ea 3A       		.uleb128 0x3a
+ 887 00eb 0B       		.uleb128 0xb
+ 888 00ec 3B       		.uleb128 0x3b
+ 889 00ed 0B       		.uleb128 0xb
+ 890 00ee 49       		.uleb128 0x49
+ 891 00ef 13       		.uleb128 0x13
+ 892 00f0 02       		.uleb128 0x2
+ 893 00f1 17       		.uleb128 0x17
+ 894 00f2 00       		.byte	0
+ 895 00f3 00       		.byte	0
+ 896 00f4 11       		.uleb128 0x11
+ 897 00f5 05       		.uleb128 0x5
+ 898 00f6 00       		.byte	0
+ 899 00f7 03       		.uleb128 0x3
+ 900 00f8 08       		.uleb128 0x8
+ 901 00f9 3A       		.uleb128 0x3a
+ 902 00fa 0B       		.uleb128 0xb
+ 903 00fb 3B       		.uleb128 0x3b
+ 904 00fc 0B       		.uleb128 0xb
+ 905 00fd 49       		.uleb128 0x49
+ 906 00fe 13       		.uleb128 0x13
+ 907 00ff 02       		.uleb128 0x2
+ 908 0100 18       		.uleb128 0x18
+ 909 0101 00       		.byte	0
+ 910 0102 00       		.byte	0
+ 911 0103 12       		.uleb128 0x12
+ 912 0104 34       		.uleb128 0x34
+ 913 0105 00       		.byte	0
+ 914 0106 03       		.uleb128 0x3
+ 915 0107 0E       		.uleb128 0xe
+ 916 0108 3A       		.uleb128 0x3a
+ 917 0109 0B       		.uleb128 0xb
+ 918 010a 3B       		.uleb128 0x3b
+ 919 010b 0B       		.uleb128 0xb
+ 920 010c 49       		.uleb128 0x49
+ 921 010d 13       		.uleb128 0x13
+ 922 010e 02       		.uleb128 0x2
+ 923 010f 17       		.uleb128 0x17
+ 924 0110 00       		.byte	0
+ 925 0111 00       		.byte	0
+ARM GAS  C:\Users\JACKNE~1\AppData\Local\Temp\ccIxO6oN.s 			page 19
+
+
+ 926 0112 13       		.uleb128 0x13
+ 927 0113 34       		.uleb128 0x34
+ 928 0114 00       		.byte	0
+ 929 0115 03       		.uleb128 0x3
+ 930 0116 0E       		.uleb128 0xe
+ 931 0117 3A       		.uleb128 0x3a
+ 932 0118 0B       		.uleb128 0xb
+ 933 0119 3B       		.uleb128 0x3b
+ 934 011a 0B       		.uleb128 0xb
+ 935 011b 49       		.uleb128 0x49
+ 936 011c 13       		.uleb128 0x13
+ 937 011d 02       		.uleb128 0x2
+ 938 011e 18       		.uleb128 0x18
+ 939 011f 00       		.byte	0
+ 940 0120 00       		.byte	0
+ 941 0121 14       		.uleb128 0x14
+ 942 0122 34       		.uleb128 0x34
+ 943 0123 00       		.byte	0
+ 944 0124 03       		.uleb128 0x3
+ 945 0125 0E       		.uleb128 0xe
+ 946 0126 3A       		.uleb128 0x3a
+ 947 0127 0B       		.uleb128 0xb
+ 948 0128 3B       		.uleb128 0x3b
+ 949 0129 05       		.uleb128 0x5
+ 950 012a 49       		.uleb128 0x49
+ 951 012b 13       		.uleb128 0x13
+ 952 012c 3F       		.uleb128 0x3f
+ 953 012d 19       		.uleb128 0x19
+ 954 012e 3C       		.uleb128 0x3c
+ 955 012f 19       		.uleb128 0x19
+ 956 0130 00       		.byte	0
+ 957 0131 00       		.byte	0
+ 958 0132 15       		.uleb128 0x15
+ 959 0133 2E       		.uleb128 0x2e
+ 960 0134 00       		.byte	0
+ 961 0135 3F       		.uleb128 0x3f
+ 962 0136 19       		.uleb128 0x19
+ 963 0137 3C       		.uleb128 0x3c
+ 964 0138 19       		.uleb128 0x19
+ 965 0139 6E       		.uleb128 0x6e
+ 966 013a 0E       		.uleb128 0xe
+ 967 013b 03       		.uleb128 0x3
+ 968 013c 0E       		.uleb128 0xe
+ 969 013d 3A       		.uleb128 0x3a
+ 970 013e 0B       		.uleb128 0xb
+ 971 013f 3B       		.uleb128 0x3b
+ 972 0140 0B       		.uleb128 0xb
+ 973 0141 00       		.byte	0
+ 974 0142 00       		.byte	0
+ 975 0143 00       		.byte	0
+ 976              		.section	.debug_loc,"",%progbits
+ 977              	.Ldebug_loc0:
+ 978              	.LLST0:
+ 979 0000 00000000 		.4byte	.LVL0
+ 980 0004 12000000 		.4byte	.LVL1
+ 981 0008 0100     		.2byte	0x1
+ 982 000a 50       		.byte	0x50
+ARM GAS  C:\Users\JACKNE~1\AppData\Local\Temp\ccIxO6oN.s 			page 20
+
+
+ 983 000b 12000000 		.4byte	.LVL1
+ 984 000f 15000000 		.4byte	.LVL2-1
+ 985 0013 0500     		.2byte	0x5
+ 986 0015 03       		.byte	0x3
+ 987 0016 00000000 		.4byte	owpin
+ 988 001a 15000000 		.4byte	.LVL2-1
+ 989 001e 34000000 		.4byte	.LFE64
+ 990 0022 0400     		.2byte	0x4
+ 991 0024 F3       		.byte	0xf3
+ 992 0025 01       		.uleb128 0x1
+ 993 0026 50       		.byte	0x50
+ 994 0027 9F       		.byte	0x9f
+ 995 0028 00000000 		.4byte	0
+ 996 002c 00000000 		.4byte	0
+ 997              	.LLST1:
+ 998 0030 00000000 		.4byte	.LVL4
+ 999 0034 08000000 		.4byte	.LVL6
+ 1000 0038 0100     		.2byte	0x1
+ 1001 003a 50       		.byte	0x50
+ 1002 003b 08000000 		.4byte	.LVL6
+ 1003 003f 5E000000 		.4byte	.LVL13
+ 1004 0043 0100     		.2byte	0x1
+ 1005 0045 55       		.byte	0x55
+ 1006 0046 00000000 		.4byte	0
+ 1007 004a 00000000 		.4byte	0
+ 1008              	.LLST2:
+ 1009 004e 04000000 		.4byte	.LVL5
+ 1010 0052 08000000 		.4byte	.LVL6
+ 1011 0056 0200     		.2byte	0x2
+ 1012 0058 30       		.byte	0x30
+ 1013 0059 9F       		.byte	0x9f
+ 1014 005a 08000000 		.4byte	.LVL6
+ 1015 005e 5E000000 		.4byte	.LVL13
+ 1016 0062 0100     		.2byte	0x1
+ 1017 0064 54       		.byte	0x54
+ 1018 0065 00000000 		.4byte	0
+ 1019 0069 00000000 		.4byte	0
+ 1020              	.LLST3:
+ 1021 006d 02000000 		.4byte	.LVL14
+ 1022 0071 08000000 		.4byte	.LVL15
+ 1023 0075 0200     		.2byte	0x2
+ 1024 0077 30       		.byte	0x30
+ 1025 0078 9F       		.byte	0x9f
+ 1026 0079 08000000 		.4byte	.LVL15
+ 1027 007d 4E000000 		.4byte	.LVL22
+ 1028 0081 0100     		.2byte	0x1
+ 1029 0083 54       		.byte	0x54
+ 1030 0084 00000000 		.4byte	0
+ 1031 0088 00000000 		.4byte	0
+ 1032              	.LLST4:
+ 1033 008c 02000000 		.4byte	.LVL14
+ 1034 0090 08000000 		.4byte	.LVL15
+ 1035 0094 0200     		.2byte	0x2
+ 1036 0096 30       		.byte	0x30
+ 1037 0097 9F       		.byte	0x9f
+ 1038 0098 08000000 		.4byte	.LVL15
+ 1039 009c 4E000000 		.4byte	.LVL22
+ARM GAS  C:\Users\JACKNE~1\AppData\Local\Temp\ccIxO6oN.s 			page 21
+
+
+ 1040 00a0 0100     		.2byte	0x1
+ 1041 00a2 56       		.byte	0x56
+ 1042 00a3 00000000 		.4byte	0
+ 1043 00a7 00000000 		.4byte	0
+ 1044              	.LLST5:
+ 1045 00ab 00000000 		.4byte	.LVL23
+ 1046 00af 06000000 		.4byte	.LVL25
+ 1047 00b3 0100     		.2byte	0x1
+ 1048 00b5 50       		.byte	0x50
+ 1049 00b6 06000000 		.4byte	.LVL25
+ 1050 00ba 32000000 		.4byte	.LVL37
+ 1051 00be 0100     		.2byte	0x1
+ 1052 00c0 55       		.byte	0x55
+ 1053 00c1 32000000 		.4byte	.LVL37
+ 1054 00c5 34000000 		.4byte	.LFE67
+ 1055 00c9 0400     		.2byte	0x4
+ 1056 00cb F3       		.byte	0xf3
+ 1057 00cc 01       		.uleb128 0x1
+ 1058 00cd 50       		.byte	0x50
+ 1059 00ce 9F       		.byte	0x9f
+ 1060 00cf 00000000 		.4byte	0
+ 1061 00d3 00000000 		.4byte	0
+ 1062              	.LLST6:
+ 1063 00d7 04000000 		.4byte	.LVL24
+ 1064 00db 0A000000 		.4byte	.LVL26
+ 1065 00df 0200     		.2byte	0x2
+ 1066 00e1 30       		.byte	0x30
+ 1067 00e2 9F       		.byte	0x9f
+ 1068 00e3 0A000000 		.4byte	.LVL26
+ 1069 00e7 2A000000 		.4byte	.LVL35
+ 1070 00eb 0100     		.2byte	0x1
+ 1071 00ed 54       		.byte	0x54
+ 1072 00ee 2C000000 		.4byte	.LVL36
+ 1073 00f2 32000000 		.4byte	.LVL37
+ 1074 00f6 0100     		.2byte	0x1
+ 1075 00f8 54       		.byte	0x54
+ 1076 00f9 00000000 		.4byte	0
+ 1077 00fd 00000000 		.4byte	0
+ 1078              	.LLST7:
+ 1079 0101 0E000000 		.4byte	.LVL27
+ 1080 0105 12000000 		.4byte	.LVL28
+ 1081 0109 0200     		.2byte	0x2
+ 1082 010b 38       		.byte	0x38
+ 1083 010c 9F       		.byte	0x9f
+ 1084 010d 12000000 		.4byte	.LVL28
+ 1085 0111 22000000 		.4byte	.LVL33
+ 1086 0115 0100     		.2byte	0x1
+ 1087 0117 53       		.byte	0x53
+ 1088 0118 24000000 		.4byte	.LVL34
+ 1089 011c 2C000000 		.4byte	.LVL36
+ 1090 0120 0100     		.2byte	0x1
+ 1091 0122 53       		.byte	0x53
+ 1092 0123 00000000 		.4byte	0
+ 1093 0127 00000000 		.4byte	0
+ 1094              	.LLST8:
+ 1095 012b 16000000 		.4byte	.LVL29
+ 1096 012f 24000000 		.4byte	.LVL34
+ARM GAS  C:\Users\JACKNE~1\AppData\Local\Temp\ccIxO6oN.s 			page 22
+
+
+ 1097 0133 0100     		.2byte	0x1
+ 1098 0135 52       		.byte	0x52
+ 1099 0136 00000000 		.4byte	0
+ 1100 013a 00000000 		.4byte	0
+ 1101              	.LLST9:
+ 1102 013e 04000000 		.4byte	.LVL24
+ 1103 0142 0A000000 		.4byte	.LVL26
+ 1104 0146 0200     		.2byte	0x2
+ 1105 0148 30       		.byte	0x30
+ 1106 0149 9F       		.byte	0x9f
+ 1107 014a 0A000000 		.4byte	.LVL26
+ 1108 014e 1E000000 		.4byte	.LVL31
+ 1109 0152 0100     		.2byte	0x1
+ 1110 0154 50       		.byte	0x50
+ 1111 0155 1E000000 		.4byte	.LVL31
+ 1112 0159 20000000 		.4byte	.LVL32
+ 1113 015d 0600     		.2byte	0x6
+ 1114 015f 70       		.byte	0x70
+ 1115 0160 00       		.sleb128 0
+ 1116 0161 08       		.byte	0x8
+ 1117 0162 8C       		.byte	0x8c
+ 1118 0163 27       		.byte	0x27
+ 1119 0164 9F       		.byte	0x9f
+ 1120 0165 20000000 		.4byte	.LVL32
+ 1121 0169 34000000 		.4byte	.LFE67
+ 1122 016d 0100     		.2byte	0x1
+ 1123 016f 50       		.byte	0x50
+ 1124 0170 00000000 		.4byte	0
+ 1125 0174 00000000 		.4byte	0
+ 1126              		.section	.debug_aranges,"",%progbits
+ 1127 0000 34000000 		.4byte	0x34
+ 1128 0004 0200     		.2byte	0x2
+ 1129 0006 00000000 		.4byte	.Ldebug_info0
+ 1130 000a 04       		.byte	0x4
+ 1131 000b 00       		.byte	0
+ 1132 000c 0000     		.2byte	0
+ 1133 000e 0000     		.2byte	0
+ 1134 0010 00000000 		.4byte	.LFB64
+ 1135 0014 34000000 		.4byte	.LFE64-.LFB64
+ 1136 0018 00000000 		.4byte	.LFB65
+ 1137 001c 64000000 		.4byte	.LFE65-.LFB65
+ 1138 0020 00000000 		.4byte	.LFB66
+ 1139 0024 54000000 		.4byte	.LFE66-.LFB66
+ 1140 0028 00000000 		.4byte	.LFB67
+ 1141 002c 34000000 		.4byte	.LFE67-.LFB67
+ 1142 0030 00000000 		.4byte	0
+ 1143 0034 00000000 		.4byte	0
+ 1144              		.section	.debug_ranges,"",%progbits
+ 1145              	.Ldebug_ranges0:
+ 1146 0000 00000000 		.4byte	.LFB64
+ 1147 0004 34000000 		.4byte	.LFE64
+ 1148 0008 00000000 		.4byte	.LFB65
+ 1149 000c 64000000 		.4byte	.LFE65
+ 1150 0010 00000000 		.4byte	.LFB66
+ 1151 0014 54000000 		.4byte	.LFE66
+ 1152 0018 00000000 		.4byte	.LFB67
+ 1153 001c 34000000 		.4byte	.LFE67
+ARM GAS  C:\Users\JACKNE~1\AppData\Local\Temp\ccIxO6oN.s 			page 23
+
+
+ 1154 0020 00000000 		.4byte	0
+ 1155 0024 00000000 		.4byte	0
+ 1156              		.section	.debug_line,"",%progbits
+ 1157              	.Ldebug_line0:
+ 1158 0000 05020000 		.section	.debug_str,"MS",%progbits,1
+ 1158      02005601 
+ 1158      00000201 
+ 1158      FB0E0D00 
+ 1158      01010101 
+ 1159              	.LASF9:
+ 1160 0000 5F5F696E 		.ascii	"__int32_t\000"
+ 1160      7433325F 
+ 1160      7400
+ 1161              	.LASF28:
+ 1162 000a 433A5C55 		.ascii	"C:\\Users\\Jack Neuner\\aquadoc\\psoc\\psoc\\onewir"
+ 1162      73657273 
+ 1162      5C4A6163 
+ 1162      6B204E65 
+ 1162      756E6572 
+ 1163 0037 655F7465 		.ascii	"e_temp_sensor.cydsn\000"
+ 1163      6D705F73 
+ 1163      656E736F 
+ 1163      722E6379 
+ 1163      64736E00 
+ 1164              	.LASF12:
+ 1165 004b 666C6F61 		.ascii	"float\000"
+ 1165      7400
+ 1166              	.LASF23:
+ 1167 0051 6C6F6F70 		.ascii	"loop\000"
+ 1167      00
+ 1168              	.LASF26:
+ 1169 0056 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1169      43313120 
+ 1169      352E342E 
+ 1169      31203230 
+ 1169      31363036 
+ 1170 0089 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1170      20726576 
+ 1170      6973696F 
+ 1170      6E203233 
+ 1170      37373135 
+ 1171 00bc 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1171      66756E63 
+ 1171      74696F6E 
+ 1171      2D736563 
+ 1171      74696F6E 
+ 1172              	.LASF25:
+ 1173 00e4 6F777069 		.ascii	"owpin\000"
+ 1173      6E00
+ 1174              	.LASF15:
+ 1175 00ea 72656738 		.ascii	"reg8\000"
+ 1175      00
+ 1176              	.LASF5:
+ 1177 00ef 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1177      20756E73 
+ 1177      69676E65 
+ 1177      6420696E 
+ARM GAS  C:\Users\JACKNE~1\AppData\Local\Temp\ccIxO6oN.s 			page 24
+
+
+ 1177      7400
+ 1178              	.LASF3:
+ 1179 0101 73686F72 		.ascii	"short unsigned int\000"
+ 1179      7420756E 
+ 1179      7369676E 
+ 1179      65642069 
+ 1179      6E7400
+ 1180              	.LASF29:
+ 1181 0114 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1181      52784275 
+ 1181      66666572 
+ 1181      00
+ 1182              	.LASF1:
+ 1183 0121 756E7369 		.ascii	"unsigned char\000"
+ 1183      676E6564 
+ 1183      20636861 
+ 1183      7200
+ 1184              	.LASF13:
+ 1185 012f 646F7562 		.ascii	"double\000"
+ 1185      6C6500
+ 1186              	.LASF21:
+ 1187 0136 4F575F43 		.ascii	"OW_CRC\000"
+ 1187      524300
+ 1188              	.LASF30:
+ 1189 013d 43794465 		.ascii	"CyDelayUs\000"
+ 1189      6C617955 
+ 1189      7300
+ 1190              	.LASF8:
+ 1191 0147 756E7369 		.ascii	"unsigned int\000"
+ 1191      676E6564 
+ 1191      20696E74 
+ 1191      00
+ 1192              	.LASF24:
+ 1193 0154 73686966 		.ascii	"shiftedBit\000"
+ 1193      74656442 
+ 1193      697400
+ 1194              	.LASF7:
+ 1195 015f 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1195      206C6F6E 
+ 1195      6720756E 
+ 1195      7369676E 
+ 1195      65642069 
+ 1196              	.LASF22:
+ 1197 0176 70427566 		.ascii	"pBuf\000"
+ 1197      00
+ 1198              	.LASF10:
+ 1199 017b 696E7433 		.ascii	"int32_t\000"
+ 1199      325F7400 
+ 1200              	.LASF17:
+ 1201 0183 73697A65 		.ascii	"sizetype\000"
+ 1201      74797065 
+ 1201      00
+ 1202              	.LASF6:
+ 1203 018c 6C6F6E67 		.ascii	"long long int\000"
+ 1203      206C6F6E 
+ 1203      6720696E 
+ 1203      7400
+ARM GAS  C:\Users\JACKNE~1\AppData\Local\Temp\ccIxO6oN.s 			page 25
+
+
+ 1204              	.LASF14:
+ 1205 019a 63686172 		.ascii	"char\000"
+ 1205      00
+ 1206              	.LASF20:
+ 1207 019f 4F575F44 		.ascii	"OW_Detect\000"
+ 1207      65746563 
+ 1207      7400
+ 1208              	.LASF2:
+ 1209 01a9 73686F72 		.ascii	"short int\000"
+ 1209      7420696E 
+ 1209      7400
+ 1210              	.LASF11:
+ 1211 01b3 75696E74 		.ascii	"uint8\000"
+ 1211      3800
+ 1212              	.LASF4:
+ 1213 01b9 6C6F6E67 		.ascii	"long int\000"
+ 1213      20696E74 
+ 1213      00
+ 1214              	.LASF16:
+ 1215 01c2 6C6F6E67 		.ascii	"long double\000"
+ 1215      20646F75 
+ 1215      626C6500 
+ 1216              	.LASF18:
+ 1217 01ce 4F575F57 		.ascii	"OW_WriteByte\000"
+ 1217      72697465 
+ 1217      42797465 
+ 1217      00
+ 1218              	.LASF0:
+ 1219 01db 7369676E 		.ascii	"signed char\000"
+ 1219      65642063 
+ 1219      68617200 
+ 1220              	.LASF27:
+ 1221 01e7 4F6E6557 		.ascii	"OneWire.c\000"
+ 1221      6972652E 
+ 1221      6300
+ 1222              	.LASF19:
+ 1223 01f1 4F575F52 		.ascii	"OW_ReadByte\000"
+ 1223      65616442 
+ 1223      79746500 
+ 1224              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
