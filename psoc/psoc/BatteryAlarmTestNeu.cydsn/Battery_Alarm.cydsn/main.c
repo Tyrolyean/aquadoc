@@ -1,46 +1,25 @@
-/* ========================================
- *
- * Copyright YOUR COMPANY, THE YEAR
- * All Rights Reserved
- * UNPUBLISHED, LICENSED SOFTWARE.
- *
- * CONFIDENTIAL AND PROPRIETARY INFORMATION
- * WHICH IS THE PROPERTY OF your company.
- *
- * ========================================
-*/
 #include "project.h"
 
-int main(void)
-{
-    CyGlobalIntEnable; /* Enable global interrupts. */
+int main(void){
 
-    /* Place your initialization/startup code here (e.g. MyInst_Start()) */
-    
-    UART_Start();
+	/* Hardware initialisation routines */ 
+	UART_Start();
+	CyGlobalIntEnable;
 
-    for(;;)
-    {
-        /* Place your application code here. */
+	for(;;){
         
-        CyDelay(1000);
-        //UART_PutString("A\r\n");
+		CyDelay(1000);
+		
+		/* If the digital input is beneath the threshold send out an
+		 * alarm, if not, notify otherwise */
+		if(BatteryAlarm_Read() == 0){
         
-        if(BatteryAlarm_Read() == 0){
-        
-            //Does what needs to be done
-            UART_PutString("Reactor 4 is reachig critical temperature, cyka!\r\n");
+			//Does what needs to be done
+			UART_PutString("Reactor 4 is reachig critical "
+				"temperature, cyka!\r\n");
             
-        }
-            
-        else if(BatteryAlarm_Read() == 1){
-            UART_PutString("Reactor 4 up and running, blyat!\r\n");
-        }
-        
-        
-        
-        
-    }
+		} else if(BatteryAlarm_Read() == 1){
+			UART_PutString("Reactor 4 up and running, blyat!\r\n");
+		}
+	}
 }
-
-/* [] END OF FILE */

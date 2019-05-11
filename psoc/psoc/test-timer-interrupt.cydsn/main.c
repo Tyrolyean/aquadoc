@@ -1,15 +1,3 @@
-/* ========================================
- *
- * Copyright YOUR COMPANY, THE YEAR
- * All Rights Reserved
- * UNPUBLISHED, LICENSED SOFTWARE.
- *
- * CONFIDENTIAL AND PROPRIETARY INFORMATION
- * WHICH IS THE PROPERTY OF your company.
- *
- * ========================================
-*/
-
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdbool.h>
@@ -18,23 +6,24 @@
 #include "isrs.h"
 
 int main(void){
-    isr_timer();
-    CyGlobalIntEnable; /* Enable global interrupts. */
-    Timer_1_Start();
-    ISR_1m_Start();
+
+	isr_timer();
+	Timer_1_Start();
+	ISR_1m_Start();
+	
+	CyGlobalIntEnable;
     
-    for(;;){
-        /* Place your application code here. */
-        Timer_1_ReadStatusRegister();
-        LED_OUT_Write(pin_val);
-        if(pin_val){
-            CyDelay(1000);
-            pin_val = false;
-        }
-    }
-    
+	for(;;){
+        
+		Timer_1_ReadStatusRegister();
+		/* Check if flag is set, change leds accordingly */
+		if(pin_val){
+			LED_OUT_Write(1);
+			CyDelay(1000);
+
+			LED_OUT_Write(0);
+			pin_val = false;
+		}
+	}
+
 }
-
-
-
-/* [] END OF FILE */

@@ -1,19 +1,11 @@
-/* ========================================
- *
- * Copyright YOUR COMPANY, THE YEAR
- * All Rights Reserved
- * UNPUBLISHED, LICENSED SOFTWARE.
- *
- * CONFIDENTIAL AND PROPRIETARY INFORMATION
- * WHICH IS THE PROPERTY OF your company.
- *
- * ========================================
-*/
 #include "isrs.h"
 
 /* Initial variable values */
 bool pin_val = false;
 
-void isr_timer(){
+/* Function called by the isr. The inline keyword is used to avoid a call
+ * instruction
+ */
+inline void isr_timer(){
     pin_val = !pin_val;
 }

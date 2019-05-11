@@ -1,5 +1,4 @@
-
-\documentclass[12pt,a4paper]{article}
+\documentclass[12pt,a4paper,german]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[german]{babel}
 \usepackage[T1]{fontenc}
@@ -20,16 +19,35 @@
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \usepackage{titlesec}
 \usepackage{lastpage}
-\usepackage{caption, booktabs}
-
+\usepackage{tabularx}
+\usepackage{svg}
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage[iso]{isodate}
 \usepackage[pdfauthor={tyrolyean},
             pdftitle={AQUADOC},
             pdfproducer={4BHN},
+	    bookmarks=true,
             pdfcreator={xelatex}]{hyperref}
+\usepackage{attachfile2}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
 
 \author{Manuel Ljubic, Jack Neuner, Daniel Plank}
 \title{AquadDoc}
 \setmainfont{Arial}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\thetitle}
+\lhead{HN4-FTKL}
+\cfoot{Seite \thepage von \pageref{LastPage}}
+\rfoot{Ljubic, Plank, Neuner}
+\lfoot{\dategerman{\today}}
+
+\renewcommand{\headrulewidth}{.4mm}
+\renewcommand{\footrulewidth}{.4mm}
+
+\attachfilesetup{color=red}
 
 % #############################################################################
 % Compilation options. Used to enable or disable some parts of the document.
@@ -40,13 +58,6 @@
 
 \def\psocdisasm{0}
 
-\pagestyle{fancy}
-\fancyhf{}
-\rhead{\thetitle}
-\lhead{HN4-FTKL}
-\cfoot{Seite \thepage von \pageref{LastPage}}
-\rfoot{Ljubic, Plank, Neuner}
-\lfoot{}
 
 \renewcommand{\headrulewidth}{.4mm}
 \renewcommand{\footrulewidth}{.4mm}
@@ -133,78 +144,6 @@
 
 Ein Hochbehälter hat ein Fassungsvermögen um 1 Tag Wasser speichern zu können
 oder ein Feuer zu löschen.
-\section{Aufgabenverteilung}
-\begin{itemize}
-  \item{Plank: Programmentwicklung, testen der Sensoren und Anfang der Dokumentation}
-
-  \item{Neuner: Programmentwicklung und erstellen des Top Design}
-
-  \item{Ljubic: Dokumentation}
-\end{itemize}
-
-\begin{table}[H]
-\centering 
-\begin{tabular}{|l|l|l|}
-\hline
-\multicolumn{3}{|c|}{Neuner}   \\ \hline
-Datum & Beschreibung & Stunden \\ \hline
-04.02.19 & Aufgabenbesprechung & 3h \\ \hline
-11.02.19 & Frei & 0h \\ \hline
-18.02.19 & Sensoren ausgewählt & 3h \\ \hline
-25.02.19 & HC-SR04 Ultraschallsensor programmieren & 3h \\ \hline
-04.03.19 & HC-SR04 Ultraschallsensor Verfeinerung& 3h \\ \hline
-11.03.19 & DS1722 Temperatursensor programmieren & 3h \\ \hline
-18.03.19 & Frei & 0h\\ \hline
-25.03.19 & Batteriestandmessung + DS1722 Temperatursensor programmieren & 3h \\ \hline
-01.04.19 & DS1722 Temperatursensor programmieren& 3h \\ \hline
-08.04.19 & BMP180 Temperatursensor programmieren & 3h \\ \hline
-29.04.19 & BMP180 Temperatursensor programmieren & 3h \\ \hline
-06.05.19 & BMP180 Temperatursensor programmieren & 3h \\ \hline
-\end{tabular}
-\end{table}
-
-\begin{table}[H]
-\centering 
-\begin{tabular}{|l|l|l|}
-\hline
-\multicolumn{3}{|c|}{Plank}   \\ \hline
-Datum & Beschreibung & Stunden \\ \hline
-04.02.19 & Aufgabenbesprechung & 3h \\ \hline
-11.02.19 & Frei & 0h \\ \hline
-18.02.19 & Sensoren ausgewählt + Anfang der Dokumentation & 3h \\ \hline
-25.02.19 & HC-SR04 Ultraschallsensor programmieren + Dokumentationserweiterung & 3h \\ \hline
-04.03.19 & HC-SR04 Ultraschallsensor Verfeinerung& 3h \\ \hline
-11.03.19 & DS1722 Temperatursensor programmieren & 3h \\ \hline
-18.03.19 & Frei & 0h\\ \hline
-25.03.19 & DS1722 Temperatursensor programmieren & 3h \\ \hline
-01.04.19 & DS1722 Temperatursensor programmieren& 3h \\ \hline
-08.04.19 & BMP180 Temperatursensor programmieren & 3h \\ \hline
-29.04.19 & BMP180 Temperatursensor programmieren & 3h \\ \hline
-06.05.19 & BMP180 Temperatursensor programmieren & 3h \\ \hline
-\end{tabular}
-\end{table}
-
-\begin{table}[H]
-\centering 
-\begin{tabular}{|l|l|l|}
-\hline
-\multicolumn{3}{|c|}{Ljubic}   \\ \hline
-Datum & Beschreibung & Stunden \\ \hline
-04.02.19 & Aufgabenbesprechung & 3h \\ \hline
-11.02.19 & Frei & 0h \\ \hline
-18.02.19 & Erstellen des Struktogramm  & 3h \\ \hline
-25.02.19 & HC-SR04 Ultraschallsensor programmieren & 3h \\ \hline
-04.03.19 & Dokumentation + Fertigstellen des Struktogramm & 3h \\ \hline
-11.03.19 & Dokumentation & 3h \\ \hline
-18.03.19 & Frei & 0h\\ \hline
-25.03.19 & Dokumentation + DS1722 Temperatursensor programmieren & 3h \\ \hline
-01.04.19 & Dokumentation & 3h \\ \hline
-08.04.19 & Dokumentation & 3h \\ \hline
-29.04.19 & Dokumentation + Nachholen des Zeitplans & 3h \\ \hline
-06.05.19 & Dokumentation + Einfügen der C-Codes in Dokumentation  & 3h \\ \hline
-\end{tabular}
-\end{table}
-
 \subsection{Sensoren}
 
 \begin{itemize}
@@ -243,9 +182,6 @@ Gefundene Bauteile auf neuhold-elektronik.at:
 	\item{DS1722}: \\
 	SPI Digital Thermometer. 8-12 bit Auflösung.
 	
-	Wird nicht mehr verwendet, da über die SPI keine Ausgabe erfolgt
-	\item{BMP180}: \\
-
 	\item{HC - SR04}: \\
 	PWM Ultraschall Messmodul. 2mA standby strom.
 	
@@ -254,6 +190,127 @@ Gefundene Bauteile auf neuhold-elektronik.at:
 
 	
 \end{itemize}
+
+\section{Aufgabenverteilung}
+\begin{itemize}
+	\item{Plank: Programmentwicklung, testen der Sensoren und Teile der 
+		Dokumentation}
+
+	\item{Neuner: Programmentwicklung und erstellen des Top Design}
+
+	\item{Ljubic: Dokumentation}
+\end{itemize}
+
+\subsection{Ljubic}
+
+\begin{table}[H]
+\centering 
+\begin{tabularx}{\textwidth}{|l|X|l|}
+\hline
+\textbf{Datum} & \textbf{Beschreibung} & \textbf{Stunden} \\ 
+\hline
+\hline
+04.02.19 & Aufgabenbesprechung & 3h \\ 
+\hline
+11.02.19 & Entfall & 0h \\ 
+\hline
+18.02.19 & Erstellen des Struktogramm  & 3h \\ 
+\hline
+25.02.19 & HC-SR04 Ultraschallsensor programmieren & 3h \\ 
+\hline
+04.03.19 & Dokumentation + Fertigstellen des Struktogramm & 3h \\ 
+\hline
+11.03.19 & Dokumentation & 3h \\ 
+\hline
+18.03.19 & Entfall & 0h\\ 
+\hline
+25.03.19 & Dokumentation + DS1722 Temperatursensor programmieren & 3h \\ 
+\hline
+01.04.19 & Dokumentation & 3h \\ 
+\hline
+08.04.19 & Dokumentation & 3h \\ 
+\hline
+29.04.19 & Dokumentation + Nachholen des Zeitplans & 3h \\ 
+\hline
+06.05.19 & Dokumentation + Einfügen der C-Codes in Dokumentation  & 3h \\ 
+\hline
+\hline
+\end{tabularx}
+\end{table}
+
+\subsection{Neuner}
+
+\begin{table}[H]
+\centering 
+\begin{tabularx}{\textwidth}{|l|X|l|}
+\hline
+\textbf{Datum} & \textbf{Beschreibung} & \textbf{Stunden} \\ 
+\hline
+\hline
+04.02.19 & Aufgabenbesprechung & 3h \\ 
+\hline
+11.02.19 & Entfall & 0h \\ 
+\hline
+18.02.19 & Sensoren ausgewählt & 3h \\ 
+\hline
+25.02.19 & HC-SR04 Ultraschallsensor programmieren & 3h \\ 
+\hline
+04.03.19 & HC-SR04 Ultraschallsensor Verfeinerung & 3h \\ 
+\hline
+11.03.19 & DS1722 Temperatursensor programmieren & 3h \\ 
+\hline
+18.03.19 & Entfall & 0h\\ 
+\hline
+25.03.19 & Batteriestandmessung + DS1722 Temperatursensor programmieren & 3h \\ 
+\hline
+01.04.19 & DS1722 Temperatursensor programmieren& 3h \\ 
+\hline
+08.04.19 & DS1722 Temperatursensor programmieren & 3h \\ 
+\hline
+29.04.19 & BMP180 Temperatursensor programmieren & 3h \\ 
+\hline
+06.05.19 & BMP180 Temperatursensor programmieren & 3h \\ 
+\hline
+\hline
+\end{tabularx}
+\end{table}
+
+\subsection{Plank}
+\begin{table}[H]
+\centering 
+\begin{tabularx}{\textwidth}{|l|X|l|}
+\hline
+\textbf{Datum} & \textbf{Beschreibung} & \textbf{Stunden} \\ 
+\hline
+\hline
+04.02.19 & Aufgabenbesprechung & 3h \\ 
+\hline
+11.02.19 & Frei & 0h \\ 
+\hline
+18.02.19 & Sensoren ausgewählt + Beginn der Dokumentation & 3h \\ 
+\hline
+25.02.19 & HC-SR04 Ultraschallsensor programmieren + Dokumentationserweiterung & 3h \\ 
+\hline
+04.03.19 & HC-SR04 Ultraschallsensor Verfeinerung& 3h \\ 
+\hline
+11.03.19 & DS1722 Temperatursensor programmieren & 3h \\ 
+\hline
+18.03.19 & Entfall & 0h\\ 
+\hline
+25.03.19 & DS1722 Temperatursensor programmieren & 3h \\ 
+\hline
+01.04.19 & DS1722 Temperatursensor programmieren & 3h \\ 
+\hline
+08.04.19 & DS1722 Temperatursensor programmieren & 3h \\ 
+\hline
+29.04.19 & BMP180 Temperatursensor programmieren & 3h \\ 
+\hline
+06.05.19 & DS1722 Temperatursensor programmieren & 3h \\ 
+\hline
+\hline
+\end{tabularx}
+\end{table}
+
 
 \section{Test mittels Aurduino}
 
@@ -277,44 +334,6 @@ jeweiligen Sensoren verbunden ebenfalls wird auf die Verwendung der richtigen Ve
  caption={Arduino Programm für DS1722}, columns=flexible]
  {./arduino/DS1722/DS1722.ino}
 
-\if\psocdisasm
-
-\section{PSoC}
-
-\subsection{General Information}
-
-The Programmble System on a chip (also known as PSoC) is a family of ARM 32bit
-Microprocessors with a few FPGA elements present on the IC. At the beginning of
-writing of this document neither feasible documentation from the side of Cypress
-nor any sourcecode is present.
-
-The focus of this document is soley on the CY8C5888LTI-LP097 chip, which is part
-of the PSoC 5 series of integrated circuits.
-
-\subsection{Reason}
-
-The reason for this document is, that the PSoC series of chips from cypress is
-used by us in school, but no one actually has knowledge of it's inner workings,
-or how this thing works beyond the PSoC-Creator, which is an IDE for 
-windows(TM).
-
-\subsection{Hardware component Description}
-
-\subsubsection{CPU}
-
-The cpu on the given PSoC is ARM Cortex M3 based clocked at a maximum of 80 MHz.
-The PSoC creator uses a standart ARM-GCC which is developed and maintained by
-the KEIL Software, a subsidary of the ARM Holding. It therefore uses an open
-toolchain, which is freely available and maintained.
-
-\subsection{PGA}
-
-The PSoC has a onboard PGA used to connect internal ports to some gates and
-harware components. The drawing program in the PSoC IDE has a design elaborator,
-used to 
-
-
-\fi
 \newpage
 \section{Durchführung Mittels PSoC}
 
@@ -323,35 +342,57 @@ used to
 	um die gewünschten Funktionalitäten einzeln zu testen. Die
 	Einzelprogramme sollten dann zu einem Gesamtprogramm zusammengeführt
 	werden, welches volle Funktionalität bietet.
+
+	Der verwendete Mikrocontroller ist der PSoC 5LP Bezeichner 
+	CY8C5888LTI-LP097.
+
 \subsection{Timer-Interrupt}
+
+Zum testen des Timer interrupts wird innerhalb der ISR das pin\_val flag gesetzt,
+welches innerhalb der main abgefragt und rückgesetzt wird. Die ISR muss so kurz
+wie möglich gehalten werden, um die überlagerung mehrer Interrupts zu
+verhindern.
 
 \subsubsection{C-Code}
 
 \lstinputlisting[language=C, numbers=left, frame=trBL, breaklines=true,
-	breakautoindent=true, formfeed=\newpage, label={lst:psoc_hc-sr04},
-	caption={Timer-Interrupt Programm}, columns=flexible]
+	breakautoindent=true, formfeed=\newpage, label={lst:psoc_timer_main},
+	caption={Timer-Interrupt Haupt-Programm}, columns=flexible]
 	{psoc/psoc/test-timer-interrupt.cydsn/main.c}
+\lstinputlisting[language=C, numbers=left, frame=trBL, breaklines=true,
+	breakautoindent=true, formfeed=\newpage, label={lst:psoc_timer_isrs},
+	caption={Timer-Interrupt ISR}, columns=flexible]
+	{psoc/psoc/test-timer-interrupt.cydsn/isrsc.c}
+
+
+\subsubsection{Top-Sheet}
+	 
+ \begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{pictures/topsch_timer_int.png}
+	\label{fig:topsch_timer_int}
+	\caption{Top-Sheet des Timer-Interrupts}
+\end{figure}
+
 	
 \subsection{Battery-Alarm}
 
 \subsubsection{C-Code}
 
 \lstinputlisting[language=C, numbers=left, frame=trBL, breaklines=true,
-	breakautoindent=true, formfeed=\newpage, label={lst:psoc_hc-sr04},
+	breakautoindent=true, formfeed=\newpage, label={lst:psoc_battery_main},
 	caption={Batteriestandmessung}, columns=flexible]
 	{psoc/psoc/BatteryAlarmTestNeu.cydsn/Battery_Alarm.cydsn/main.c}
 
+\subsubsection{Top-Sheet}
+	 
+ \begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{pictures/topsch_battery.png}
+	\label{fig:topsch_batter}
+	\caption{Top-Sheet des Batteriestandsmelder}
+\end{figure}
 
-\subsection{Durchflussmessung}
-
-\subsubsection{C-Code}
-
-\lstinputlisting[language=C, numbers=left, frame=trBL, breaklines=true,
-	breakautoindent=true, formfeed=\newpage, label={lst:psoc_hc-sr04},
-	caption={Durchflussmessung}, columns=flexible]
-	{psoc/psoc/water_flow.cydsn/main.c}
-	
-\newpage	
 \subsection{HC-SR04}
 
 \subsubsection{Bauteilerklärung}
@@ -437,7 +478,7 @@ used to
 	Die gemessene Pulslänge in ms soll durch 57 dividiert werden um den
 	Abstand in cm zu erhalten.
 	
-	\subsubsection{C-Code}
+\subsubsection{C-Code}
 	
 	Programm für den Ultraschallsensor zur Messung des Wasserstands im 
 	Hochbehälter
@@ -446,6 +487,14 @@ used to
 	breakautoindent=true, formfeed=\newpage, label={lst:psoc_hc-sr04},
 	caption={PSoC funktionen für HC-SR04}, columns=flexible]
 	{psoc/psoc/Ultrasonic_test.cydsn/hcsr04.c}
+\subsubsection{Top-Sheet}
+	 
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\textwidth]{pictures/topsch_ultrasonic.png}
+		\label{fig:topsch_ultrasonic}
+		\caption{Top-Sheet der Wasserstandsmessung}
+	\end{figure}
 
 	
 \subsection{Durchflussmessung}
@@ -455,12 +504,27 @@ used to
 Die Messung des Wasserdurchflusses wird mittels eines Standard Wasserzählers
 durchgeführt. In diesem befindet sich ein Reed-Schalter welcher bei jeder vollen
 Umdrehung des sich im Zählerbefindenden Schaufelrades einman betätigt wird. Dies
-entspricht einem dem Datenblatt entnehmbaren Volumen an Wasser.
+entspricht einem dem Datenblatt entnehmbaren Volumen an Wasser. In userem Falle
+konnte jedoch kein Datenblatt aufgefunden Werden, anstelle dessen, war jedoch
+die Menge an Wasser pro Impuls am Gerät selbst angeschrieben.
+
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\textwidth]{pictures/wasserzaehler.jpg}
+		\label{fig:counter_hw}
+		\caption{Der Wasserzähler}
+	\end{figure}
 
 \subsubsection{Prellen des REED-Kontaktes}
 
-Da der Reed-Schalter ein Phsischer Schalter ist, welcher ein zwei Metallische
+Da der Reed-Schalter ein physischer Schalter ist, welcher ein zwei Metallische
 Oberflächen aufeinander aufschlagen lässt entsteht ein Schalter-Prellen.
+Mithilfe des AnalogDiscoverys wurde versucht das Schalterprellen zu ermittlen,
+wie man in dder Grafik \ref{fig:prellen} erkennen kann prellt der Schalter
+nicht merklich, weshalb auf ein Entprellen mittles Kondensator, oder in Software
+verzichtet wurde.
+
 \begin{figure}[H]
 	
 	\centering
@@ -486,6 +550,23 @@ Oberflächen aufeinander aufschlagen lässt entsteht ein Schalter-Prellen.
 	\caption{Messung des Schalterprellens mithilfe des Analog-Discovery}
 \end{figure}
 
+
+\subsubsection{C-Code}
+
+\lstinputlisting[language=C, numbers=left, frame=trBL, breaklines=true,
+	breakautoindent=true, formfeed=\newpage, 
+	label={lst:psoc_waterflow_main},
+	caption={Durchflussmessung}, columns=flexible]
+	{psoc/psoc/water_flow.cydsn/main.c}
+
+\subsubsection{Top-Sheet}
+	 
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\textwidth]{pictures/topsch_watercount.png}
+		\label{fig:topsch_watercount}
+		\caption{Top-Sheet de Wasserdurchflussmessung}
+	\end{figure}
 
 \newpage
 \subsection{DS1722}
@@ -520,24 +601,31 @@ Oberflächen aufeinander aufschlagen lässt entsteht ein Schalter-Prellen.
 			{measurements/spi_frame_recv_atmega}
 		\label{fig:spi_frame_atmega}
 		\caption{Erzielltes Ergebnis mit ATMega 2560}
-	\end{figure}	
+	\end{figure}
+
+	Die oben dargestellte Datensequenzentspricht erwarteten Werten. Die
+	funktionstüchtigkeit des Sensors wurde dadurch bestätigt, und die
+	Umsetzung mittels PSoC wurde erneut in angriff genommen. Die Temperatur-
+	Messung mittels des Codes in Listing \ref{lst:psoc_ds1722} ist der
+	aktuelle Stand.
 \newpage
 \subsubsection{C-Code für DS1722}
 
 \lstinputlisting[language=C, numbers=left, frame=trBL, breaklines=true,
-	breakautoindent=true, formfeed=\newpage, label={lst:psoc_hc-sr04},
-	caption={Fehlerhaftiges Temperaturmessungsprogramm mit Ds1722}, columns=flexible]
-	{psoc/psoc/TemperaturSensor_Manuel/main.c}
-	
-\subsection{BMP180}
-	
-\subsubsection{C-Code für BMP180}
+	breakautoindent=true, formfeed=\newpage, label={lst:psoc_ds1722},
+	caption={Fehlerhaftes Temperaturmessungsprogramm für den DS1722}, 
+	columns=flexible]
+	{psoc/psoc/ds1722_test.cydsn/main.c}
 
-\lstinputlisting[language=C, numbers=left, frame=trBL, breaklines=true,
-	breakautoindent=true, formfeed=\newpage, label={lst:psoc_hc-sr04},
-	caption={Nicht vollständiges Temperaturmessungsprogramm mit BMP180}, columns=flexible]
-	{psoc/psoc/BMP180-TEST.cydsn/main.c}	
-	
+\subsubsection{Top-Sheet}
+	 
+ \begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{pictures/topsch_ds1722.png}
+	\label{fig:topsch_ds1722}
+	\caption{Top-Sheet der Aktuellen DS1722 Schaltung}
+\end{figure}
+
 \section{Anhang}
 
 \subsection{Literaturverzeichnis}
@@ -555,6 +643,8 @@ Oberflächen aufeinander aufschlagen lässt entsteht ein Schalter-Prellen.
 	\item{\textbf{Ulrich Tietze Christoph Schenk 
 		Halbleiter-Schaltungstechnik}}\\
 		Vorliegend in 12. Auflage Springer-Verlag Berlin Heidelberg 2002
+	\item{\textbf{BIM-2 Datenblatt}}\\
+		Erhalten von radiometrix.com 2019-05-06.
 
 \end{itemize}
 
@@ -576,6 +666,9 @@ Oberflächen aufeinander aufschlagen lässt entsteht ein Schalter-Prellen.
 
 	\subsubsection{CY8C5888LTI-LP097}
 	\includepdf[pages={1-}]{./datasheets/CY8C5888LTI-LP097.pdf}
+	
+	\subsubsection{BIM-2}
+	\includepdf[pages={1-}]{./datasheets/bim2.pdf}
 
 \fi % End of datasheet section
 \end{document}

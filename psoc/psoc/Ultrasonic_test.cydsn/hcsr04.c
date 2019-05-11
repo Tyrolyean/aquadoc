@@ -13,8 +13,8 @@ uint32_t get_hc_sr04(){
 	 * perceeded to put a linear function through the points (.36, 100) and
 	 * (.72, 100) which resulted in a slope of 2.77777 or 25/9 and an offset
 	 * of 0. Therefore we assumed an only linear distortion. We took further 
-	 * measurements and got errors in the range of 1-3% of the real
-	 * distances, which was deemed enough.
+	 * measurements and got errors in the range of ~1% of the real
+	 * distances, which was deemed enough. 
 	 */
 	#define CORRECTION_FACTOR ((double)25.0/9.0)
 	
