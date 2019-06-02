@@ -164,6 +164,7 @@
 <v>psoc\ds1722_test\Generated_Source\PSoC5\cycodeshareimport.ld</v>
 <v>psoc\ds1722_test\Generated_Source\PSoC5\cycodeshareimport.scat</v>
 <v>psoc\ds1722_test\Generated_Source\PSoC5\cydevice.h</v>
+<v>psoc\ds1722_test\Generated_Source\PSoC5\cydevice_trm.h</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -475,6 +476,7 @@
 <v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
 <v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
 <v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -603,6 +605,7 @@
 <v>psoc\test-timer-interrupt\System Reference Guides\cy_boot_v5_70</v>
 <v>psoc\test-timer-interrupt\cy_clock_v2_20.pdf</v>
 <v>psoc\test-timer-interrupt\cy_isr_v1_70.pdf</v>
+<v>psoc\test-timer-interrupt\cy_pins_v2_20.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -625,7 +628,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1318, 565" SelectedTabbedMdiWindow="21fc2045-b773-4c44-98f2-4bc26840a280"><DocumentWindow Key="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\TopDesign\TopDesign.cysch" Guid="21fc2045-b773-4c44-98f2-4bc26840a280" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1206, 565" SelectedTabbedMdiWindow="21fc2045-b773-4c44-98f2-4bc26840a280"><DocumentWindow Key="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\TopDesign\TopDesign.cysch" Guid="21fc2045-b773-4c44-98f2-4bc26840a280" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
