@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/Arch Linux) (preloaded format=xelatex 2019.4.25)  15 MAY 2019 20:20
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/Arch Linux) (preloaded format=xelatex 2019.4.25)  3 JUN 2019 10:06
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1725,7 +1725,17 @@ Overfull \hbox (1.57489pt too wide) in paragraph at lines 163--166
  Potentiometer mit Schwim-
  []
 
-[2] [3] [4] (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+[2]
+Underfull \hbox (badness 2035) in paragraph at lines 281--281
+[]|\TU/Arial(0)/m/n/12 BMP180 Temperatursensor programmieren + Abgabenbespre-
+ []
+
+[3]
+Underfull \hbox (badness 2035) in paragraph at lines 320--320
+[]|\TU/Arial(0)/m/n/12 BMP180 Temperatursensor programmieren + Abgabenbespre-
+ []
+
+[4] (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2018/09/02 1.7 listings language file
 )
 (./arduino/HC-SR04/HC-SR04.ino) [5] (./arduino/DS1722/DS1722.ino [6] [7])
@@ -1751,7 +1761,7 @@ File: pictures/wasserzaehler.jpg Graphic file (type bmp)
  [14]
 PGFPlots: reading {measurements/Reeeeeed_Schalter.csv}
 
-Overfull \hbox (18.37637pt too wide) in paragraph at lines 547--549
+Overfull \hbox (18.37637pt too wide) in paragraph at lines 556--558
  [][] 
  []
 
@@ -1768,18 +1778,18 @@ File: pictures/topsch_ds1722.png Graphic file (type bmp)
  [19] 
 AED: lastpage setting LastPage
 [20]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 674.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 674.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 683.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 683.
  (./bericht.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 674.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 674.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 683.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 683.
 Package rerunfilecheck Info: File `bericht.out' has not changed.
 (rerunfilecheck)             Checksum: A8A9B1935442B48AD5AC854E747F1AF5.
  ) 
 Here is how much of TeX's memory you used:
  58664 strings out of 492933
  1381274 string characters out of 6138667
- 3794656 words of memory out of 5000000
+ 3794654 words of memory out of 5000000
  61855 multiletter control sequences out of 15000+600000
  543922 words of font info for 100 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
