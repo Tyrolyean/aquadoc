@@ -641,6 +641,73 @@ verzichtet wurde.
 	\caption{Top-Sheet der Aktuellen DS1722 Schaltung}
 \end{figure}
 
+\subsection{BIM2}
+
+Das BIM2 Modul ist ein FM-Transceiver welcher auf 433MHz sendet und empfängt.
+Es kann eine Maximale Übertragungsgeschwindigkeit von 160Kb/s und
+hat dabei eine Reichweite von 200m. Mithilfe einer Empfangsanlage mit
+Richtwirkung kann diese Reichweite jdoch nochmals erhöht werden. Das BIM-Modul
+ermöglicht eine Halb-Duplex Übertragung, was bedeutet, dass nur 1 Teilnehmer
+reden darf. 
+
+\subsubsection{Übertragungsbeispiele}
+
+\begin{figure}[H]
+	
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+		ylabel=$ Spannung $,
+		xlabel=$ Zeit $,
+		width=\textwidth,
+		height=0.5\textwidth
+		% If you want to make the lines thick
+		%every axis plot/.append style={ultra thick},
+	]
+	
+	\addplot table [x=t, y=u, col sep=comma, mark=none, 
+		color=blue] {measurements/rxd_bim_lorentz.csv};
+	
+	\end{axis}
+	\end{tikzpicture}
+	\label{fig:lorentzframe}
+
+	\caption{Messung eines UART Frames über eine Distanz von 10m}
+\end{figure}
+
+\begin{figure}[H]
+	
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+		ylabel=$ Spannung $,
+		xlabel=$ Zeit $,
+		width=\textwidth,
+		height=0.5\textwidth
+		% If you want to make the lines thick
+		%every axis plot/.append style={ultra thick},
+	]
+	
+	\addplot table [x=t, y=u1, col sep=comma, mark=none, 
+		color=blue] {measurements/rx_vs_tx_oszi.csv};
+	\addlegendentry{Mit BIM2}
+	\addplot table [x=t, y=u2, col sep=comma, mark=none, 
+		color=blue] {measurements/rx_vs_tx_oszi.csv};
+	\addlegendentry{Ohne BIM2}
+	
+	\end{axis}
+	\end{tikzpicture}
+	\label{fig:lorentzframe}
+
+	\caption{Messung des Rauschens beim Übertragen über das BIM2}
+\end{figure}
+
+\paragraph{Konklusion}
+
+Es muss eine Art und Weise Implementiert werden um die Übertragenen Daten vom
+Umgebungsrauschen unterscheiden zu können. Dies wird durch ein Preamble
+realisiert welches eine Start Sequenz beinhaltet.
+
 \section{Anhang}
 
 \subsection{Literaturverzeichnis}

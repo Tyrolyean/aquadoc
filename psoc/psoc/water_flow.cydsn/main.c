@@ -13,12 +13,15 @@ int main(void){
 	CyGlobalIntEnable;
 	
 	for(;;){
-	    
+		/* Delay to empty buffer */
 		CyDelay(1);
 		char buffer[30];
 		memset(buffer, 0, sizeof(buffer));
+
+		/* Print out current counter states to the user */
 		snprintf(buffer, sizeof(buffer), "Stand: %lu0L\r\n", water_counter_ReadCounter());
 		UART_PutString(buffer);
 	}
+
 	/* Unreachable */
 }
