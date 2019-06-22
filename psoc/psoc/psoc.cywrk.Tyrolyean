@@ -13,9 +13,10 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="psoc\ds1722_test">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="psoc\Battery_Alarm\TopDesign">
 <ExpandedNodeIds>
 <v>psoc</v>
+<v>psoc\Battery_Alarm</v>
 <v>psoc\Battery_Alarm\TopDesign</v>
 <v>psoc\Battery_Alarm\Battery_Alarm.cydwr</v>
 <v>psoc\Battery_Alarm\Battery_Alarm.cydwr\Pins</v>
@@ -33,6 +34,22 @@
 <v>psoc\Battery_Alarm\Source Files\main.c</v>
 <v>psoc\Battery_Alarm\Generated_Source</v>
 <v>psoc\Battery_Alarm\Generated_Source\PSoC5</v>
+<v>psoc\bim2</v>
+<v>psoc\bim2\TopDesign</v>
+<v>psoc\bim2\bim2.cydwr</v>
+<v>psoc\bim2\bim2.cydwr\Pins</v>
+<v>psoc\bim2\bim2.cydwr\Analog</v>
+<v>psoc\bim2\bim2.cydwr\Clocks</v>
+<v>psoc\bim2\bim2.cydwr\Interrupts</v>
+<v>psoc\bim2\bim2.cydwr\DMA</v>
+<v>psoc\bim2\bim2.cydwr\System</v>
+<v>psoc\bim2\bim2.cydwr\Directives</v>
+<v>psoc\bim2\bim2.cydwr\Flash Security</v>
+<v>psoc\bim2\bim2.cydwr\EEPROM</v>
+<v>psoc\bim2\Header Files</v>
+<v>psoc\bim2\Header Files\cyapicallbacks.h</v>
+<v>psoc\bim2\Source Files</v>
+<v>psoc\bim2\Source Files\main.c</v>
 <v>psoc\BMP180-TEST\TopDesign</v>
 <v>psoc\BMP180-TEST\BMP180-TEST.cydwr</v>
 <v>psoc\BMP180-TEST\BMP180-TEST.cydwr\Pins</v>
@@ -51,7 +68,6 @@
 <v>psoc\BMP180-TEST\Generated_Source</v>
 <v>psoc\BMP180-TEST\Generated_Source\PSoC5</v>
 <v>psoc\BMP180-TEST\Generated_Source\PSoC5\I2C</v>
-<v>psoc\ds1722_test</v>
 <v>psoc\ds1722_test\TopDesign</v>
 <v>psoc\ds1722_test\ds1722_test.cydwr</v>
 <v>psoc\ds1722_test\ds1722_test.cydwr\Pins</v>
@@ -123,48 +139,48 @@
 <VisibleNodeIds>
 <v>psoc</v>
 <v>psoc\Battery_Alarm</v>
-<v>psoc\BMP180-TEST</v>
-<v>psoc\ds1722_test</v>
-<v>psoc\ds1722_test\TopDesign</v>
-<v>psoc\ds1722_test\ds1722_test.cydwr</v>
-<v>psoc\ds1722_test\ds1722_test.cydwr\Pins</v>
-<v>psoc\ds1722_test\ds1722_test.cydwr\Analog</v>
-<v>psoc\ds1722_test\ds1722_test.cydwr\Clocks</v>
-<v>psoc\ds1722_test\ds1722_test.cydwr\Interrupts</v>
-<v>psoc\ds1722_test\ds1722_test.cydwr\DMA</v>
-<v>psoc\ds1722_test\ds1722_test.cydwr\System</v>
-<v>psoc\ds1722_test\ds1722_test.cydwr\Directives</v>
-<v>psoc\ds1722_test\ds1722_test.cydwr\Flash Security</v>
-<v>psoc\ds1722_test\ds1722_test.cydwr\EEPROM</v>
-<v>psoc\ds1722_test\Header Files</v>
-<v>psoc\ds1722_test\Header Files\cyapicallbacks.h</v>
-<v>psoc\ds1722_test\Header Files\ds1722.h</v>
-<v>psoc\ds1722_test\Source Files</v>
-<v>psoc\ds1722_test\Source Files\ds1722.c</v>
-<v>psoc\ds1722_test\Source Files\main.c</v>
-<v>psoc\ds1722_test\Generated_Source</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\CS</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\cy_boot</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\Em_EEPROM_Dynamic</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\MISO</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\MOSI</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\rx_isr_spi</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\rx_isr_spi\rx_isr_spi.c</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\rx_isr_spi\rx_isr_spi.h</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\SCLK</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\SPI</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\SPI_IntClock</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\tx_isr_spi</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\tx_isr_spi\tx_isr_spi.c</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\tx_isr_spi\tx_isr_spi.h</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\UART</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\UART_IntClock</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\cycodeshareexport.ld</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\cycodeshareimport.ld</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\cycodeshareimport.scat</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\cydevice.h</v>
-<v>psoc\ds1722_test\Generated_Source\PSoC5\cydevice_trm.h</v>
+<v>psoc\Battery_Alarm\TopDesign</v>
+<v>psoc\Battery_Alarm\Battery_Alarm.cydwr</v>
+<v>psoc\Battery_Alarm\Battery_Alarm.cydwr\Pins</v>
+<v>psoc\Battery_Alarm\Battery_Alarm.cydwr\Analog</v>
+<v>psoc\Battery_Alarm\Battery_Alarm.cydwr\Clocks</v>
+<v>psoc\Battery_Alarm\Battery_Alarm.cydwr\Interrupts</v>
+<v>psoc\Battery_Alarm\Battery_Alarm.cydwr\DMA</v>
+<v>psoc\Battery_Alarm\Battery_Alarm.cydwr\System</v>
+<v>psoc\Battery_Alarm\Battery_Alarm.cydwr\Directives</v>
+<v>psoc\Battery_Alarm\Battery_Alarm.cydwr\Flash Security</v>
+<v>psoc\Battery_Alarm\Battery_Alarm.cydwr\EEPROM</v>
+<v>psoc\Battery_Alarm\Header Files</v>
+<v>psoc\Battery_Alarm\Header Files\cyapicallbacks.h</v>
+<v>psoc\Battery_Alarm\Source Files</v>
+<v>psoc\Battery_Alarm\Source Files\main.c</v>
+<v>psoc\Battery_Alarm\Generated_Source</v>
+<v>psoc\Battery_Alarm\Generated_Source\PSoC5</v>
+<v>psoc\Battery_Alarm\Generated_Source\PSoC5\BatteryAlarm</v>
+<v>psoc\Battery_Alarm\Generated_Source\PSoC5\cy_boot</v>
+<v>psoc\Battery_Alarm\Generated_Source\PSoC5\Em_EEPROM_Dynamic</v>
+<v>psoc\Battery_Alarm\Generated_Source\PSoC5\Rx_1</v>
+<v>psoc\Battery_Alarm\Generated_Source\PSoC5\UART</v>
+<v>psoc\Battery_Alarm\Generated_Source\PSoC5\UART_IntClock</v>
+<v>psoc\Battery_Alarm\Generated_Source\PSoC5\cycodeshareexport.ld</v>
+<v>psoc\Battery_Alarm\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>psoc\Battery_Alarm\Generated_Source\PSoC5\cycodeshareimport.scat</v>
+<v>psoc\Battery_Alarm\Generated_Source\PSoC5\cydevice.h</v>
+<v>psoc\Battery_Alarm\Generated_Source\PSoC5\cydevice_trm.h</v>
+<v>psoc\Battery_Alarm\Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>psoc\Battery_Alarm\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
+<v>psoc\Battery_Alarm\Generated_Source\PSoC5\cydeviceiar.inc</v>
+<v>psoc\Battery_Alarm\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
+<v>psoc\Battery_Alarm\Generated_Source\PSoC5\cydevicerv.inc</v>
+<v>psoc\Battery_Alarm\Generated_Source\PSoC5\cydevicerv_trm.inc</v>
+<v>psoc\Battery_Alarm\Generated_Source\PSoC5\cydisabledsheets.h</v>
+<v>psoc\Battery_Alarm\Generated_Source\PSoC5\cyfitter.h</v>
+<v>psoc\Battery_Alarm\Generated_Source\PSoC5\cyfitter_cfg.c</v>
+<v>psoc\Battery_Alarm\Generated_Source\PSoC5\cyfitter_cfg.h</v>
+<v>psoc\Battery_Alarm\Generated_Source\PSoC5\cyfittergnu.inc</v>
+<v>psoc\Battery_Alarm\Generated_Source\PSoC5\cyfitteriar.inc</v>
+<v>psoc\Battery_Alarm\Generated_Source\PSoC5\cyfitterrv.inc</v>
+<v>psoc\Battery_Alarm\Generated_Source\PSoC5\cymetadata.c</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -173,6 +189,10 @@
 <v>psoc\Battery_Alarm</v>
 <v>psoc\Battery_Alarm\TopDesign</v>
 <v>psoc\Battery_Alarm\TopDesign\TopDesign.cysch</v>
+<v>psoc\bim2</v>
+<v>psoc\bim2\TopDesign</v>
+<v>psoc\bim2\TopDesign\TopDesign.cysch</v>
+<v>psoc\bim2\TopDesign\TopDesign.cysym</v>
 <v>psoc\BMP180-TEST</v>
 <v>psoc\BMP180-TEST\TopDesign</v>
 <v>psoc\BMP180-TEST\TopDesign\TopDesign.cysch</v>
@@ -191,6 +211,10 @@
 <v>psoc\Battery_Alarm</v>
 <v>psoc\Battery_Alarm\TopDesign</v>
 <v>psoc\Battery_Alarm\TopDesign\TopDesign.cysch</v>
+<v>psoc\bim2</v>
+<v>psoc\bim2\TopDesign</v>
+<v>psoc\bim2\TopDesign\TopDesign.cysch</v>
+<v>psoc\bim2\TopDesign\TopDesign.cysym</v>
 <v>psoc\BMP180-TEST</v>
 <v>psoc\BMP180-TEST\TopDesign</v>
 <v>psoc\BMP180-TEST\TopDesign\TopDesign.cysch</v>
@@ -240,6 +264,10 @@
 <v>psoc\Battery_Alarm\Battery_Alarm.gpdsc</v>
 <v>psoc\Battery_Alarm\Battery_Alarm.rpt</v>
 <v>psoc\Battery_Alarm\Battery_Alarm_timing.html</v>
+<v>psoc\bim2</v>
+<v>psoc\bim2\bim2.gpdsc</v>
+<v>psoc\bim2\bim2.rpt</v>
+<v>psoc\bim2\bim2_timing.html</v>
 <v>psoc\BMP180-TEST</v>
 <v>psoc\BMP180-TEST\CortexM3</v>
 <v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541</v>
@@ -464,6 +492,10 @@
 <v>psoc\Battery_Alarm\Battery_Alarm.gpdsc</v>
 <v>psoc\Battery_Alarm\Battery_Alarm.rpt</v>
 <v>psoc\Battery_Alarm\Battery_Alarm_timing.html</v>
+<v>psoc\bim2</v>
+<v>psoc\bim2\bim2.gpdsc</v>
+<v>psoc\bim2\bim2.rpt</v>
+<v>psoc\bim2\bim2_timing.html</v>
 <v>psoc\BMP180-TEST</v>
 <v>psoc\BMP180-TEST\CortexM3</v>
 <v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541</v>
@@ -473,10 +505,6 @@
 <v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
 <v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
 <v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
-<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
-<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
-<v>psoc\BMP180-TEST\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -500,6 +528,11 @@
 <v>psoc\Battery_Alarm\Resistor_v1_0</v>
 <v>psoc\Battery_Alarm\Resistor_v1_0\Resistor_v1_0.pdf</v>
 <v>psoc\Battery_Alarm\UART_v2_50.pdf</v>
+<v>psoc\bim2</v>
+<v>psoc\bim2\PSoC 5LP Architecture TRM</v>
+<v>psoc\bim2\CY8C58LP Family Datasheet</v>
+<v>psoc\bim2\System Reference Guides</v>
+<v>psoc\bim2\System Reference Guides\cy_boot_v5_70</v>
 <v>psoc\BMP180-TEST</v>
 <v>psoc\BMP180-TEST\PSoC 5LP Architecture TRM</v>
 <v>psoc\BMP180-TEST\CY8C58LP Family Datasheet</v>
@@ -576,6 +609,11 @@
 <v>psoc\Battery_Alarm\Resistor_v1_0</v>
 <v>psoc\Battery_Alarm\Resistor_v1_0\Resistor_v1_0.pdf</v>
 <v>psoc\Battery_Alarm\UART_v2_50.pdf</v>
+<v>psoc\bim2</v>
+<v>psoc\bim2\PSoC 5LP Architecture TRM</v>
+<v>psoc\bim2\CY8C58LP Family Datasheet</v>
+<v>psoc\bim2\System Reference Guides</v>
+<v>psoc\bim2\System Reference Guides\cy_boot_v5_70</v>
 <v>psoc\BMP180-TEST</v>
 <v>psoc\BMP180-TEST\PSoC 5LP Architecture TRM</v>
 <v>psoc\BMP180-TEST\CY8C58LP Family Datasheet</v>
@@ -601,11 +639,6 @@
 <v>psoc\test-timer-interrupt</v>
 <v>psoc\test-timer-interrupt\PSoC 5LP Architecture TRM</v>
 <v>psoc\test-timer-interrupt\CY8C58LP Family Datasheet</v>
-<v>psoc\test-timer-interrupt\System Reference Guides</v>
-<v>psoc\test-timer-interrupt\System Reference Guides\cy_boot_v5_70</v>
-<v>psoc\test-timer-interrupt\cy_clock_v2_20.pdf</v>
-<v>psoc\test-timer-interrupt\cy_isr_v1_70.pdf</v>
-<v>psoc\test-timer-interrupt\cy_pins_v2_20.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -621,6 +654,8 @@
 <Unloaded />
 <OpenDocs>
 <name v=".\ds1722_test.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\bim2.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\BatteryAlarmTestNeu.cydsn\Battery_Alarm.cydsn\TopDesign\TopDesign.cysch" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -628,7 +663,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1206, 565" SelectedTabbedMdiWindow="21fc2045-b773-4c44-98f2-4bc26840a280"><DocumentWindow Key="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\TopDesign\TopDesign.cysch" Guid="21fc2045-b773-4c44-98f2-4bc26840a280" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1206, 565" SelectedTabbedMdiWindow="b9ac9a11-31d0-49e7-acf8-0a8ae35d27f8"><DocumentWindow Key="E:\aquadoc\psoc\psoc\ds1722_test.cydsn\TopDesign\TopDesign.cysch" Guid="21fc2045-b773-4c44-98f2-4bc26840a280" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="6756dd68-6c3e-4e5e-923e-1d7875cbcc88" /><DocumentWindow Key="E:\aquadoc\psoc\psoc\bim2.cydsn\TopDesign\TopDesign.cysch" Guid="5348dbc2-a257-4c78-a894-810047945e8a" /><DocumentWindow Key="E:\aquadoc\psoc\psoc\BatteryAlarmTestNeu.cydsn\Battery_Alarm.cydsn\TopDesign\TopDesign.cysch" Guid="b9ac9a11-31d0-49e7-acf8-0a8ae35d27f8" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

@@ -3,7 +3,7 @@
 <!--This file is machine generated and read. It is not intended to be edited by hand.-->
 <!--Due to this, there is no schema for this file.-->
 <CyGuid_2867d519-54d2-4c01-9830-c51cb08bc3dd type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWorkspaceSerialize" version="5" xml_contents_version="3" name="psoc" persistent="psoc.cywrk" platform="NOT_USED">
-<current_project name=".\BatteryAlarmTestNeu.cydsn\Battery_Alarm.cydsn\Battery_Alarm.cyprj" />
+<current_project name=".\bim2.cydsn\bim2.cyprj" />
 <wrkspc_folders />
 <files />
 <projects>
@@ -14,6 +14,7 @@
 <v>.\onewire_temp_sensor.cydsn\onewire_temp_sensor.cyprj</v>
 <v>.\water_flow.cydsn\water_flow.cyprj</v>
 <v>.\BatteryAlarmTestNeu.cydsn\Battery_Alarm.cydsn\Battery_Alarm.cyprj</v>
+<v>.\bim2.cydsn\bim2.cyprj</v>
 </projects>
 <workspace_id v="69847ed0-6c41-41be-9da8-91fe88d88600" />
 <WriteAppVersionLastSavedWith v="4.2.0.641" />

@@ -402,11 +402,26 @@ verhindern.
 \subsubsection{Top-Sheet}
 	 
  \begin{figure}[H]
+	
 	\centering
 	\includegraphics[width=\textwidth]{pictures/topsch_battery.png}
 	\label{fig:topsch_batter}
 	\caption{Top-Sheet des Batteriestandsmelder}
+
 \end{figure}
+
+Es wird der IC MAX639 verwendet um die 5V Versorgungsspannung düe den PSoC zu
+erzeugen. Der MAX639 ist dabei ein sogenannter Back- oder Step-Down-Converter
+welcher effizient arbeiten kann, jedoch einen "Rippel" in der Spannung erzeugt.
+Zur verminderung selbigen wird ein Ausgangsseitiger Kondensator verwendet.
+
+Die maximale Eingangsseitige Spannung liegt dabei bei 11,5V, was unter der
+Batteriespannung ist. Um die Spannung zu reduzieren wurden daher 2 Dioden
+vorgeschalten.
+
+$R_1$ und $R_2$ bilden einen Laut Datenblatt vorgeschriebenen Spannungsteiler
+welcher benötigt wird um den LOW-Battery Detector Input zu Schalten falls
+die Spannung 1.28V unterschreitet.
 
 \subsection{HC-SR04}
 
