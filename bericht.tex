@@ -390,7 +390,22 @@ verhindern.
 \end{figure}
 
 	
-\subsection{Battery-Alarm}
+\subsection{Spannungsversorgung}
+
+\subsection{Bauteilerklärung}
+
+Es wird der IC MAX639 verwendet um die 5V Versorgungsspannung für den PSoC zu
+erzeugen. Der MAX639 ist dabei ein sogenannter Back- oder Step-Down-Converter
+welcher effizient arbeiten kann, jedoch einen "Rippel" in der Spannung erzeugt.
+Zur verminderung selbigen wird ein Ausgangsseitiger Kondensator verwendet.
+
+Die maximale Eingangsseitige Spannung liegt dabei bei 11,5V, was unter der
+Batteriespannung ist. Um die Spannung zu reduzieren wurden daher 2 Dioden
+vorgeschalten.
+
+$R_1$ und $R_2$ bilden einen Laut Datenblatt vorgeschriebenen Spannungsteiler
+welcher benötigt wird um den LOW-Battery Detector Input zu Schalten falls
+die Spannung 1.28V unterschreitet.
 
 \subsubsection{C-Code}
 
@@ -410,18 +425,6 @@ verhindern.
 
 \end{figure}
 
-Es wird der IC MAX639 verwendet um die 5V Versorgungsspannung düe den PSoC zu
-erzeugen. Der MAX639 ist dabei ein sogenannter Back- oder Step-Down-Converter
-welcher effizient arbeiten kann, jedoch einen "Rippel" in der Spannung erzeugt.
-Zur verminderung selbigen wird ein Ausgangsseitiger Kondensator verwendet.
-
-Die maximale Eingangsseitige Spannung liegt dabei bei 11,5V, was unter der
-Batteriespannung ist. Um die Spannung zu reduzieren wurden daher 2 Dioden
-vorgeschalten.
-
-$R_1$ und $R_2$ bilden einen Laut Datenblatt vorgeschriebenen Spannungsteiler
-welcher benötigt wird um den LOW-Battery Detector Input zu Schalten falls
-die Spannung 1.28V unterschreitet.
 
 \subsection{HC-SR04}
 
@@ -601,6 +604,8 @@ verzichtet wurde.
 \newpage
 \subsection{DS1722}
 
+	\subsubsection{Bauteilerklärung}
+	
 	Der DS1722 ist ein digitaler Temeperatur-Mess-IC von MAXIM Integrated.
 	Er hat einen Messbereich von -60°C bis +120°C welchen er wahlweise mit
 	8, 9, 10, 11 oder 12 bit auflösen kann. Als Schnittstellen hat er
@@ -658,12 +663,41 @@ verzichtet wurde.
 
 \subsection{BIM2}
 
+\subsubsection{Bauteilerklärung}
+
 Das BIM2 Modul ist ein FM-Transceiver welcher auf 433MHz sendet und empfängt.
 Es kann eine Maximale Übertragungsgeschwindigkeit von 160Kb/s und
 hat dabei eine Reichweite von 200m. Mithilfe einer Empfangsanlage mit
 Richtwirkung kann diese Reichweite jdoch nochmals erhöht werden. Das BIM-Modul
 ermöglicht eine Halb-Duplex Übertragung, was bedeutet, dass nur 1 Teilnehmer
-reden darf. 
+reden darf.
+
+\subsubsection{Anschluss}
+
+\begin{figure}[H]
+	
+	\centering
+	\includesvg[width=\textwidth]{"pictures/bim2_pinout.svg"}\\
+
+	\label{fig:bimpino}
+	\caption{Ersatzschaltbild des BIM2 laut Datenblatt}
+
+\end{figure}
+
+Jedes BIM2 Modul kann sowohl als Receiving-End als auch als Transmitting-End
+dienen. Zum auswählen muss entweder RX-Select oder TX-Select auf GND gezogen
+werden, und die nicht benötigte Leitung auf $V_{CC}$. Dann kann entweder, je
+nach Auswahl, an TXD Daten versendet, oder an Data out Daten empfangen werden.
+Die folgenden Beispielübertragungen wurden mittels PSoC durchgeführt.
+
+\subsubsection{C-Code für BIM2}
+
+\lstinputlisting[language=C, numbers=left, frame=trBL, breaklines=true,
+	breakautoindent=true, formfeed=\newpage, label={lst:psoc_bim2},
+	caption={Übertragungstestdes BIM2}, 
+	columns=flexible]
+	{psoc/bim_fake.c}
+
 
 \subsubsection{Übertragungsbeispiele}
 
@@ -712,16 +746,44 @@ reden darf.
 	
 	\end{axis}
 	\end{tikzpicture}
-	\label{fig:lorentzframe}
+	\label{fig:bimrxtx}
 
 	\caption{Messung des Rauschens beim Übertragen über das BIM2}
 \end{figure}
 
-\paragraph{Konklusion}
+\begin{figure}[H]
+	
+	\centering
+	\begin{tikzpicture}
+	\begin{axis}[
+		ylabel=$ Spannung $,
+		xlabel=$ Zeit $,
+		width=\textwidth,
+		height=0.5\textwidth,
+		xmin=-0.001,
+		xmax=0.013
+		% If you want to make the lines thick
+		%every axis plot/.append style={ultra thick},
+	]
+	
+	\addplot table [x=t, y=u, col sep=comma, mark=none, 
+		color=blue] {measurements/antenna_sent_bim.csv};
+	
+	\end{axis}
+	\end{tikzpicture}
+	\label{fig:bimant}
+
+	\caption{Messung des Antennenausganges des BIM2}
+\end{figure}
+
+\paragraph{Conclusio}
 
 Es muss eine Art und Weise Implementiert werden um die Übertragenen Daten vom
 Umgebungsrauschen unterscheiden zu können. Dies wird durch ein Preamble
-realisiert welches eine Start Sequenz beinhaltet.
+realisiert welches eine Start Sequenz beinhaltet. Diese soll möglichst leicht
+vom Rauschen zu unterscheiden sein. Dafür wurde 3 mal 0x55 verwendet, da dies
+Binär 01010101 darstellt. Regelmäßige und schnelle Bitfolgen dieser At sind in
+einer normalen Umgebung im Rauschen unwarscheinlich.
 
 \section{Anhang}
 
