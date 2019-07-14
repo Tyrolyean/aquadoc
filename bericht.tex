@@ -33,7 +33,7 @@
 \usepackage{fancyhdr}
 
 \author{Manuel Ljubic, Jack Neuner, Daniel Plank}
-\title{AquadDoc}
+\title{AquaDoc}
 \setmainfont{Arial}
 
 \pagestyle{fancy}
@@ -54,7 +54,7 @@
 % #############################################################################
 
 % Include the used datasheets in the document
-\def\datasheets{0}
+\def\datasheets{1}
 
 \def\psocdisasm{0}
 
@@ -374,6 +374,7 @@ verhindern.
 	breakautoindent=true, formfeed=\newpage, label={lst:psoc_timer_main},
 	caption={Timer-Interrupt Haupt-Programm}, columns=flexible]
 	{psoc/psoc/test-timer-interrupt.cydsn/main.c}
+
 \lstinputlisting[language=C, numbers=left, frame=trBL, breaklines=true,
 	breakautoindent=true, formfeed=\newpage, label={lst:psoc_timer_isrs},
 	caption={Timer-Interrupt ISR}, columns=flexible]
@@ -392,7 +393,7 @@ verhindern.
 	
 \subsection{Spannungsversorgung}
 
-\subsection{Bauteilerklärung}
+\subsubsection{Bauteilerklärung}
 
 Es wird der IC MAX639 verwendet um die 5V Versorgungsspannung für den PSoC zu
 erzeugen. Der MAX639 ist dabei ein sogenannter Back- oder Step-Down-Converter

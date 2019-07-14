@@ -15,27 +15,33 @@
 \contentsline {subsubsection}{\numberline {4.1.1}C-Code}{10}{subsubsection.4.1.1}% 
 \contentsline {subsubsection}{\numberline {4.1.2}Top-Sheet}{11}{subsubsection.4.1.2}% 
 \contentsline {subsection}{\numberline {4.2}Spannungsversorgung}{11}{subsection.4.2}% 
-\contentsline {subsection}{\numberline {4.3}Bauteilerklärung}{11}{subsection.4.3}% 
-\contentsline {subsubsection}{\numberline {4.3.1}C-Code}{11}{subsubsection.4.3.1}% 
-\contentsline {subsubsection}{\numberline {4.3.2}Top-Sheet}{13}{subsubsection.4.3.2}% 
-\contentsline {subsection}{\numberline {4.4}HC-SR04}{13}{subsection.4.4}% 
-\contentsline {subsubsection}{\numberline {4.4.1}Bauteilerklärung}{13}{subsubsection.4.4.1}% 
-\contentsline {subsubsection}{\numberline {4.4.2}C-Code}{14}{subsubsection.4.4.2}% 
-\contentsline {subsubsection}{\numberline {4.4.3}Top-Sheet}{16}{subsubsection.4.4.3}% 
-\contentsline {subsection}{\numberline {4.5}Durchflussmessung}{16}{subsection.4.5}% 
-\contentsline {subsubsection}{\numberline {4.5.1}Bauteilerklärung}{16}{subsubsection.4.5.1}% 
-\contentsline {subsubsection}{\numberline {4.5.2}Prellen des REED-Kontaktes}{17}{subsubsection.4.5.2}% 
-\contentsline {subsubsection}{\numberline {4.5.3}C-Code}{18}{subsubsection.4.5.3}% 
-\contentsline {subsubsection}{\numberline {4.5.4}Top-Sheet}{19}{subsubsection.4.5.4}% 
-\contentsline {subsection}{\numberline {4.6}DS1722}{20}{subsection.4.6}% 
-\contentsline {subsubsection}{\numberline {4.6.1}Bauteilerklärung}{20}{subsubsection.4.6.1}% 
-\contentsline {subsubsection}{\numberline {4.6.2}C-Code für DS1722}{21}{subsubsection.4.6.2}% 
-\contentsline {subsubsection}{\numberline {4.6.3}Top-Sheet}{22}{subsubsection.4.6.3}% 
-\contentsline {subsection}{\numberline {4.7}BIM2}{22}{subsection.4.7}% 
-\contentsline {subsubsection}{\numberline {4.7.1}Bauteilerklärung}{22}{subsubsection.4.7.1}% 
-\contentsline {subsubsection}{\numberline {4.7.2}Anschluss}{23}{subsubsection.4.7.2}% 
-\contentsline {subsubsection}{\numberline {4.7.3}C-Code für BIM2}{23}{subsubsection.4.7.3}% 
-\contentsline {subsubsection}{\numberline {4.7.4}Übertragungsbeispiele}{24}{subsubsection.4.7.4}% 
+\contentsline {subsubsection}{\numberline {4.2.1}Bauteilerklärung}{11}{subsubsection.4.2.1}% 
+\contentsline {subsubsection}{\numberline {4.2.2}C-Code}{11}{subsubsection.4.2.2}% 
+\contentsline {subsubsection}{\numberline {4.2.3}Top-Sheet}{13}{subsubsection.4.2.3}% 
+\contentsline {subsection}{\numberline {4.3}HC-SR04}{13}{subsection.4.3}% 
+\contentsline {subsubsection}{\numberline {4.3.1}Bauteilerklärung}{13}{subsubsection.4.3.1}% 
+\contentsline {subsubsection}{\numberline {4.3.2}C-Code}{14}{subsubsection.4.3.2}% 
+\contentsline {subsubsection}{\numberline {4.3.3}Top-Sheet}{16}{subsubsection.4.3.3}% 
+\contentsline {subsection}{\numberline {4.4}Durchflussmessung}{16}{subsection.4.4}% 
+\contentsline {subsubsection}{\numberline {4.4.1}Bauteilerklärung}{16}{subsubsection.4.4.1}% 
+\contentsline {subsubsection}{\numberline {4.4.2}Prellen des REED-Kontaktes}{17}{subsubsection.4.4.2}% 
+\contentsline {subsubsection}{\numberline {4.4.3}C-Code}{18}{subsubsection.4.4.3}% 
+\contentsline {subsubsection}{\numberline {4.4.4}Top-Sheet}{19}{subsubsection.4.4.4}% 
+\contentsline {subsection}{\numberline {4.5}DS1722}{20}{subsection.4.5}% 
+\contentsline {subsubsection}{\numberline {4.5.1}Bauteilerklärung}{20}{subsubsection.4.5.1}% 
+\contentsline {subsubsection}{\numberline {4.5.2}C-Code für DS1722}{21}{subsubsection.4.5.2}% 
+\contentsline {subsubsection}{\numberline {4.5.3}Top-Sheet}{22}{subsubsection.4.5.3}% 
+\contentsline {subsection}{\numberline {4.6}BIM2}{22}{subsection.4.6}% 
+\contentsline {subsubsection}{\numberline {4.6.1}Bauteilerklärung}{22}{subsubsection.4.6.1}% 
+\contentsline {subsubsection}{\numberline {4.6.2}Anschluss}{23}{subsubsection.4.6.2}% 
+\contentsline {subsubsection}{\numberline {4.6.3}C-Code für BIM2}{23}{subsubsection.4.6.3}% 
+\contentsline {subsubsection}{\numberline {4.6.4}Übertragungsbeispiele}{24}{subsubsection.4.6.4}% 
 \contentsline {paragraph}{Conclusio}{25}{paragraph*.1}% 
 \contentsline {section}{\numberline {5}Anhang}{25}{section.5}% 
 \contentsline {subsection}{\numberline {5.1}Literaturverzeichnis}{25}{subsection.5.1}% 
+\contentsline {subsection}{\numberline {5.2}Datenblätter}{26}{subsection.5.2}% 
+\contentsline {subsubsection}{\numberline {5.2.1}HC-SR04}{26}{subsubsection.5.2.1}% 
+\contentsline {subsubsection}{\numberline {5.2.2}DS1722}{31}{subsubsection.5.2.2}% 
+\contentsline {subsubsection}{\numberline {5.2.3}MAX640}{46}{subsubsection.5.2.3}% 
+\contentsline {subsubsection}{\numberline {5.2.4}CY8C5888LTI-LP097}{60}{subsubsection.5.2.4}% 
+\contentsline {subsubsection}{\numberline {5.2.5}BIM-2}{200}{subsubsection.5.2.5}% 
